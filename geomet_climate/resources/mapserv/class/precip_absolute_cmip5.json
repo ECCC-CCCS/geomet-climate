@@ -1,0 +1,254 @@
+[
+  {
+    "__type__": "class",
+    "name": "0.0 2.0",
+    "group": "PRECIPITATION-CMIP5",
+    "expression": "([pixel] >= 0.0 AND [pixel] <  2.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        226,
+        239,
+        218,
+        198,
+        224,
+        180
+      ],
+      "datarange": [
+        0.0,
+        2.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "2.0 4.0",
+    "group": "PRECIPITATION-CMIP5",
+    "expression": "([pixel] >= 2.0 AND [pixel] <  4.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        198,
+        224,
+        180,
+        195,
+        226,
+        191
+      ],
+      "datarange": [
+        2.0,
+        4.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "4.0 6.0",
+    "group": "PRECIPITATION-CMIP5",
+    "expression": "([pixel] >= 4.0 AND [pixel] <  6.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        195,
+        226,
+        191,
+        150,
+        208,
+        167
+      ],
+      "datarange": [
+        4.0,
+        6.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "6.0 8.0",
+    "group": "PRECIPITATION-CMIP5",
+    "expression": "([pixel] >= 6.0 AND [pixel] <  8.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        150,
+        208,
+        167,
+        110,
+        204,
+        179
+      ],
+      "datarange": [
+        6.0,
+        8.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "8.0 10.0",
+    "group": "PRECIPITATION-CMIP5",
+    "expression": "([pixel] >= 8.0 AND [pixel] <  10.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        110,
+        204,
+        179,
+        71,
+        190,
+        160
+      ],
+      "datarange": [
+        8.0,
+        10.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "10.0 12.0",
+    "group": "PRECIPITATION-CMIP5",
+    "expression": "([pixel] >= 10.0 AND [pixel] <  12.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        71,
+        190,
+        160,
+        102,
+        167,
+        195
+      ],
+      "datarange": [
+        10.0,
+        12.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "12.0 14.0",
+    "group": "PRECIPITATION-CMIP5",
+    "expression": "([pixel] >= 12.0 AND [pixel] <  14.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        102,
+        167,
+        195,
+        102,
+        167,
+        180
+      ],
+      "datarange": [
+        12.0,
+        14.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "14.0 16.0",
+    "group": "PRECIPITATION-CMIP5",
+    "expression": "([pixel] >= 14.0 AND [pixel] <  16.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        102,
+        167,
+        180,
+        71,
+        153,
+        166
+      ],
+      "datarange": [
+        14.0,
+        16.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "16.0 18.0",
+    "group": "PRECIPITATION-CMIP5",
+    "expression": "([pixel] >= 16.0 AND [pixel] <  18.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        71,
+        153,
+        166,
+        71,
+        132,
+        160
+      ],
+      "datarange": [
+        16.0,
+        18.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "18.0 20.0",
+    "group": "PRECIPITATION-CMIP5",
+    "expression": "([pixel] >= 18.0 AND [pixel] <  20.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        71,
+        132,
+        160,
+        36,
+        97,
+        128
+      ],
+      "datarange": [
+        18.0,
+        20.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "20.0 22.0",
+    "group": "PRECIPITATION-CMIP5",
+    "expression": "([pixel] >= 20.0 AND [pixel] <  22.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        36,
+        97,
+        128,
+        27,
+        72,
+        95
+      ],
+      "datarange": [
+        20.0,
+        22.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "22.0 24.0",
+    "group": "PRECIPITATION-CMIP5",
+    "expression": "([pixel] >= 22.0 AND [pixel] <  24.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        27,
+        72,
+        95,
+        11,
+        58,
+        91
+      ],
+      "datarange": [
+        22.0,
+        24.0
+      ]
+    }
+  }
+]

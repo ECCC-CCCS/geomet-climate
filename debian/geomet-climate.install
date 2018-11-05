@@ -1,0 +1,2 @@
+deploy/default/geomet-climate.wsgi opt/geomet-climate/app/
+geomet-climate.yml opt/geomet-climate/

@@ -1,0 +1,422 @@
+[
+  {
+    "__type__": "class",
+    "name": "-100.0 -90.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= -100.0 AND [pixel] <  -90.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        103,
+        0,
+        31,
+        140,
+        12,
+        37
+      ],
+      "datarange": [
+        -100.0,
+        -90.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-90.0 -80.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= -90.0 AND [pixel] <  -80.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        140,
+        12,
+        37,
+        178,
+        24,
+        43
+      ],
+      "datarange": [
+        -90.0,
+        -80.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-80.0 -70.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= -80.0 AND [pixel] <  -70.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        178,
+        24,
+        43,
+        196,
+        60,
+        60
+      ],
+      "datarange": [
+        -80.0,
+        -70.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-70.0 -60.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= -70.0 AND [pixel] <  -60.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        196,
+        60,
+        60,
+        214,
+        96,
+        77
+      ],
+      "datarange": [
+        -70.0,
+        -60.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-60.0 -50.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= -60.0 AND [pixel] <  -50.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        214,
+        96,
+        77,
+        229,
+        130,
+        103
+      ],
+      "datarange": [
+        -60.0,
+        -50.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-50.0 -40.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= -50.0 AND [pixel] <  -40.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        229,
+        130,
+        103,
+        244,
+        165,
+        130
+      ],
+      "datarange": [
+        -50.0,
+        -40.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-40.0 -30.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= -40.0 AND [pixel] <  -30.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        244,
+        165,
+        130,
+        248,
+        192,
+        164
+      ],
+      "datarange": [
+        -40.0,
+        -30.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-30.0 -20.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= -30.0 AND [pixel] <  -20.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        248,
+        192,
+        164,
+        253,
+        219,
+        199
+      ],
+      "datarange": [
+        -30.0,
+        -20.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-20.0 -10.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= -20.0 AND [pixel] <  -10.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        253,
+        219,
+        199,
+        254,
+        237,
+        227
+      ],
+      "datarange": [
+        -20.0,
+        -10.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-10.0 0.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= -10.0 AND [pixel] <  0.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        254,
+        237,
+        227,
+        255,
+        255,
+        255
+      ],
+      "datarange": [
+        -10.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.0 10.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= 0.0 AND [pixel] <  10.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        255,
+        255,
+        255,
+        232,
+        242,
+        247
+      ],
+      "datarange": [
+        0.0,
+        10.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "10.0 20.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= 10.0 AND [pixel] <  20.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        232,
+        242,
+        247,
+        209,
+        229,
+        240
+      ],
+      "datarange": [
+        10.0,
+        20.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "20.0 30.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= 20.0 AND [pixel] <  30.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        209,
+        229,
+        240,
+        177,
+        213,
+        231
+      ],
+      "datarange": [
+        20.0,
+        30.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "30.0 40.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= 30.0 AND [pixel] <  40.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        177,
+        213,
+        231,
+        146,
+        197,
+        222
+      ],
+      "datarange": [
+        30.0,
+        40.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "40.0 50.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= 40.0 AND [pixel] <  50.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        146,
+        197,
+        222,
+        106,
+        172,
+        208
+      ],
+      "datarange": [
+        40.0,
+        50.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "50.0 60.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= 50.0 AND [pixel] <  60.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        106,
+        172,
+        208,
+        67,
+        147,
+        195
+      ],
+      "datarange": [
+        50.0,
+        60.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "60.0 70.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= 60.0 AND [pixel] <  70.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        67,
+        147,
+        195,
+        49,
+        124,
+        183
+      ],
+      "datarange": [
+        60.0,
+        70.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "70.0 80.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= 70.0 AND [pixel] <  80.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        49,
+        124,
+        183,
+        33,
+        102,
+        172
+      ],
+      "datarange": [
+        70.0,
+        80.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "80.0 90.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= 80.0 AND [pixel] <  90.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        33,
+        102,
+        172,
+        18,
+        74,
+        134
+      ],
+      "datarange": [
+        80.0,
+        90.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "90.0 100.0",
+    "group": "SNOWDEPTH-ANOMALY-AVERAGE",
+    "expression": "([pixel] >= 90.0 AND [pixel] <  100.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        18,
+        74,
+        134,
+        5,
+        48,
+        97
+      ],
+      "datarange": [
+        90.0,
+        100.0
+      ]
+    }
+  }
+]

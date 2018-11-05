@@ -1,0 +1,7 @@
+[{
+    "__type__": "symbol",
+    "name": "circle",
+    "type": "ellipse",
+    "filled": true,
+    "points": [[1, 1]]
+}]

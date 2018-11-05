@@ -1,0 +1,422 @@
+[
+  {
+    "__type__": "class",
+    "name": "27.0 30.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= 27.0 AND [pixel] <  30.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        103,
+        0,
+        31,
+        140,
+        12,
+        37
+      ],
+      "datarange": [
+        27.0,
+        30.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "24.0 27.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= 24.0 AND [pixel] <  27.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        140,
+        12,
+        37,
+        178,
+        24,
+        43
+      ],
+      "datarange": [
+        24.0,
+        27.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "21.0 24.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= 21.0 AND [pixel] <  24.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        178,
+        24,
+        43,
+        196,
+        60,
+        60
+      ],
+      "datarange": [
+        21.0,
+        24.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "18.0 21.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= 18.0 AND [pixel] <  21.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        196,
+        60,
+        60,
+        214,
+        96,
+        77
+      ],
+      "datarange": [
+        18.0,
+        21.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "15.0 18.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= 15.0 AND [pixel] <  18.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        214,
+        96,
+        77,
+        229,
+        130,
+        103
+      ],
+      "datarange": [
+        15.0,
+        18.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "12.0 15.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= 12.0 AND [pixel] <  15.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        229,
+        130,
+        103,
+        244,
+        165,
+        130
+      ],
+      "datarange": [
+        12.0,
+        15.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "9.0 12.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= 9.0 AND [pixel] <  12.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        244,
+        165,
+        130,
+        248,
+        192,
+        164
+      ],
+      "datarange": [
+        9.0,
+        12.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "6.0 9.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= 6.0 AND [pixel] <  9.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        248,
+        192,
+        164,
+        253,
+        219,
+        199
+      ],
+      "datarange": [
+        6.0,
+        9.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "3.0 6.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= 3.0 AND [pixel] <  6.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        253,
+        219,
+        199,
+        254,
+        237,
+        227
+      ],
+      "datarange": [
+        3.0,
+        6.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.0 3.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= 0.0 AND [pixel] <  3.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        254,
+        237,
+        227,
+        255,
+        255,
+        255
+      ],
+      "datarange": [
+        0.0,
+        3.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-3.0 0.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= -3.0 AND [pixel] <  0.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        255,
+        255,
+        255,
+        232,
+        242,
+        247
+      ],
+      "datarange": [
+        -3.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-6.0 -3.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= -6.0 AND [pixel] <  -3.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        232,
+        242,
+        247,
+        209,
+        229,
+        240
+      ],
+      "datarange": [
+        -6.0,
+        -3.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-9.0 -6.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= -9.0 AND [pixel] <  -6.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        209,
+        229,
+        240,
+        177,
+        213,
+        231
+      ],
+      "datarange": [
+        -9.0,
+        -6.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-12.0 -9.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= -12.0 AND [pixel] <  -9.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        177,
+        213,
+        231,
+        146,
+        197,
+        222
+      ],
+      "datarange": [
+        -12.0,
+        -9.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-15.0 -12.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= -15.0 AND [pixel] <  -12.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        146,
+        197,
+        222,
+        106,
+        172,
+        208
+      ],
+      "datarange": [
+        -15.0,
+        -12.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-18.0 -15.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= -18.0 AND [pixel] <  -15.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        106,
+        172,
+        208,
+        67,
+        147,
+        195
+      ],
+      "datarange": [
+        -18.0,
+        -15.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-21.0 -18.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= -21.0 AND [pixel] <  -18.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        67,
+        147,
+        195,
+        49,
+        124,
+        183
+      ],
+      "datarange": [
+        -21.0,
+        -18.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-24.0 -21.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= -24.0 AND [pixel] <  -21.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        49,
+        124,
+        183,
+        33,
+        102,
+        172
+      ],
+      "datarange": [
+        -24.0,
+        -21.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-27.0 -24.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= -27.0 AND [pixel] <  -24.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        33,
+        102,
+        172,
+        18,
+        74,
+        134
+      ],
+      "datarange": [
+        -27.0,
+        -24.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-30.0 -27.0",
+    "group": "SFCWINDSPEED-ANOMALY",
+    "expression": "([pixel] >= -30.0 AND [pixel] <  -27.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        18,
+        74,
+        134,
+        5,
+        48,
+        97
+      ],
+      "datarange": [
+        -30.0,
+        -27.0
+      ]
+    }
+  }
+]

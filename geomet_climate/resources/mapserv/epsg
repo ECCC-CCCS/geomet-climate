@@ -1,0 +1,54 @@
+<4326> +proj=longlat +datum=WGS84 +no_defs  <>
+<3857> +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +over +wktext  +no_defs <>
+<3978> +proj=lcc +lat_1=49 +lat_2=77 +lat_0=49 +lon_0=-95 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs  <>
+<102100> +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs <>
+<900913> +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs <>
+
+<2294> +proj=tmerc +lat_0=0 +lon_0=-61.5 +k=0.9999 +x_0=4500000 +y_0=0 +a=6378135 +b=6356750.304921594 +units=m +no_defs  <>
+<2295> +proj=tmerc +lat_0=0 +lon_0=-64.5 +k=0.9999 +x_0=5500000 +y_0=0 +a=6378135 +b=6356750.304921594 +units=m +no_defs  <>
+<2950> +proj=tmerc +lat_0=0 +lon_0=-73.5 +k=0.9999 +x_0=304800 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs  <>
+<3408> +proj=laea +lat_0=90 +lon_0=0 +x_0=0 +y_0=0 +a=6371228 +b=6371228 +units=m +no_defs  <>
+<3410> +proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +a=6371228 +b=6371228 +units=m +no_defs  <>
+<3571> +proj=laea +lat_0=90 +lon_0=180 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs  <>
+<3576> +proj=laea +lat_0=90 +lon_0=90 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs  <>
+<4267> +proj=longlat +datum=NAD27 +no_defs  <>
+<4269> +proj=longlat +datum=NAD83 +no_defs  <>
+<26707> +proj=utm +zone=7 +datum=NAD27 +units=m +no_defs  <>
+<26708> +proj=utm +zone=8 +datum=NAD27 +units=m +no_defs  <>
+<26709> +proj=utm +zone=9 +datum=NAD27 +units=m +no_defs  <>
+<26710> +proj=utm +zone=10 +datum=NAD27 +units=m +no_defs  <>
+<26711> +proj=utm +zone=11 +datum=NAD27 +units=m +no_defs  <>
+<26712> +proj=utm +zone=12 +datum=NAD27 +units=m +no_defs  <>
+<26713> +proj=utm +zone=13 +datum=NAD27 +units=m +no_defs  <>
+<26714> +proj=utm +zone=14 +datum=NAD27 +units=m +no_defs  <>
+<26715> +proj=utm +zone=15 +datum=NAD27 +units=m +no_defs  <>
+<26716> +proj=utm +zone=16 +datum=NAD27 +units=m +no_defs  <>
+<26717> +proj=utm +zone=17 +datum=NAD27 +units=m +no_defs  <>
+<26718> +proj=utm +zone=18 +datum=NAD27 +units=m +no_defs  <>
+<26719> +proj=utm +zone=19 +datum=NAD27 +units=m +no_defs  <>
+<26720> +proj=utm +zone=20 +datum=NAD27 +units=m +no_defs  <>
+<26721> +proj=utm +zone=21 +datum=NAD27 +units=m +no_defs  <>
+<26722> +proj=utm +zone=22 +datum=NAD27 +units=m +no_defs  <>
+<26907> +proj=utm +zone=7 +datum=NAD83 +units=m +no_defs  <>
+<26908> +proj=utm +zone=8 +datum=NAD83 +units=m +no_defs  <>
+<26909> +proj=utm +zone=9 +datum=NAD83 +units=m +no_defs  <>
+<26910> +proj=utm +zone=10 +datum=NAD83 +units=m +no_defs  <>
+<26911> +proj=utm +zone=11 +datum=NAD83 +units=m +no_defs  <>
+<26912> +proj=utm +zone=12 +datum=NAD83 +units=m +no_defs  <>
+<26913> +proj=utm +zone=13 +datum=NAD83 +units=m +no_defs  <>
+<26914> +proj=utm +zone=14 +datum=NAD83 +units=m +no_defs  <>
+<26915> +proj=utm +zone=15 +datum=NAD83 +units=m +no_defs  <>
+<26916> +proj=utm +zone=16 +datum=NAD83 +units=m +no_defs  <>
+<26917> +proj=utm +zone=17 +datum=NAD83 +units=m +no_defs  <>
+<26918> +proj=utm +zone=18 +datum=NAD83 +units=m +no_defs  <>
+<26919> +proj=utm +zone=19 +datum=NAD83 +units=m +no_defs  <>
+<26920> +proj=utm +zone=20 +datum=NAD83 +units=m +no_defs  <>
+<26921> +proj=utm +zone=21 +datum=NAD83 +units=m +no_defs  <>
+<26922> +proj=utm +zone=22 +datum=NAD83 +units=m +no_defs  <>
+<32188> +proj=tmerc +lat_0=0 +lon_0=-73.5 +k=0.9999 +x_0=304800 +y_0=0 +datum=NAD83 +units=m +no_defs  <>
+<32198> +proj=lcc +lat_1=60 +lat_2=46 +lat_0=44 +lon_0=-68.5 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs  <>
+<32661> +proj=stere +lat_0=90 +lat_ts=90 +lon_0=0 +k=0.994 +x_0=2000000 +y_0=2000000 +datum=WGS84 +units=m +no_defs  <>
+
+# custom projections (for local projection definitions -- not for advertisement)
+<102998> +proj=stere +lat_0=90 +lat_ts=71 +lon_0=0 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs <>
+<102999> +proj=stere +lat_0=90 +lat_ts=60 +lon_0=-110 +k=1 +x_0=1884770 +y_0=5220000 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +to_meter=50000 +no_defs  <>

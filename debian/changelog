@@ -1,0 +1,46 @@
+geomet-climate (1.0.0) trusty; urgency=medium
+
+  * fix WMS layer tree
+  * fix mapfile outputformat
+  * update layer tolerance
+  * add filename/extension for WCS GetCoverage requests
+  * add discovery metadata links
+  * fix some layer colour ramps
+
+ -- Tom Kralidis <tom.kralidis@canada.ca>  Mon, 15 Oct 2018 20:01:04 +0000
+
+geomet-climate (1.0.0~beta6) trusty; urgency=medium
+
+  * add missing CMIP5 layer
+
+ -- Tom Kralidis <tom.kralidis@canada.ca>  Fri, 07 Sep 2018 19:27:26 +0000
+
+geomet-climate (1.0.0~beta5) trusty; urgency=medium
+
+  * fix ref to CanGRD basepath
+
+ -- Tom Kralidis <tom.kralidis@canada.ca>  Thu, 06 Sep 2018 16:04:37 +0000
+
+geomet-climate (1.0.0~beta4) trusty; urgency=medium
+
+  * adjust layer query tolerance
+
+ -- Tom Kralidis <tom.kralidis@canada.ca>  Wed, 05 Sep 2018 19:52:27 +0000
+
+geomet-climate (1.0.0~beta3) trusty; urgency=medium
+
+  * fix build
+
+ -- Tom Kralidis <tom.kralidis@canada.ca>  Wed, 05 Sep 2018 15:52:00 +0000
+
+geomet-climate (1.0.0~beta2) trusty; urgency=medium
+
+  * fix build
+
+ -- Tom Kralidis <tom.kralidis@canada.ca>  Wed, 05 Sep 2018 12:17:26 +0000
+
+geomet-climate (1.0.0~beta1) trusty; urgency=medium
+
+  * initial release
+
+ -- Tom Kralidis <tom.kralidis@canada.ca>  Tue, 04 Sep 2018 18:48:20 +0000

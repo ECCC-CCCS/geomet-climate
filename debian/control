@@ -1,0 +1,15 @@
+Source: geomet-climate
+Section: non-free/web
+Priority: optional
+Maintainer: Tom Kralidis <tom.kralidis@canada.ca>
+Build-Depends: debhelper (>= 9), dh-python, python, python-setuptools
+Vcs-Git: https://github.com/ECCC-CCCS/geomet-climate.git
+
+Package: geomet-climate
+Architecture: all
+Depends: curl, mapserver-bin, python, python-click, python-gdal, python-mappyfile, python-mapscript, python-pyproj, python-yaml, proj-bin, proj-data
+Suggests: gdal-bin
+Homepage: https://github.com/ECCC-CCCS/geomet-climate
+Description: MSC GeoMet climate services
+ This package provides the MapServer setup and configuration for deployment
+ of MSC GeoMet climate service data OGC Web Services.

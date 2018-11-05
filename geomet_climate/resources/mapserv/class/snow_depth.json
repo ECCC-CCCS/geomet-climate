@@ -1,0 +1,170 @@
+[
+  {
+    "__type__": "class",
+    "name": "-1.5 -1.125",
+    "group": "SNOWDEPTH-ABSOLUTE",
+    "expression": "([pixel] <  -1.125 AND [pixel] >=  -3.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        179,
+        88,
+        6,
+        224,
+        130,
+        20
+      ],
+      "datarange": [
+        -3.0,
+        -1.125
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-1.125 -0.75",
+    "group": "SNOWDEPTH-ABSOLUTE",
+    "expression": "([pixel] >= -1.125 AND [pixel] <  -0.75)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        224,
+        130,
+        20,
+        253,
+        184,
+        99
+      ],
+      "datarange": [
+        -1.125,
+        -0.75
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-0.75 -0.375",
+    "group": "SNOWDEPTH-ABSOLUTE",
+    "expression": "([pixel] >= -0.75 AND [pixel] <  -0.375)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        253,
+        184,
+        99,
+        254,
+        224,
+        182
+      ],
+      "datarange": [
+        -0.75,
+        -0.375
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-0.375 0.0",
+    "group": "SNOWDEPTH-ABSOLUTE",
+    "expression": "([pixel] >= -0.375 AND [pixel] <  0.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        254,
+        224,
+        182,
+        255,
+        255,
+        255
+      ],
+      "datarange": [
+        -0.375,
+        0.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.0 0.375",
+    "group": "SNOWDEPTH-ABSOLUTE",
+    "expression": "([pixel] >= 0.0 AND [pixel] <  0.375)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        255,
+        255,
+        255,
+        216,
+        218,
+        235
+      ],
+      "datarange": [
+        0.0,
+        0.375
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.375 0.75",
+    "group": "SNOWDEPTH-ABSOLUTE",
+    "expression": "([pixel] >= 0.375 AND [pixel] <  0.75)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        216,
+        218,
+        235,
+        178,
+        171,
+        210
+      ],
+      "datarange": [
+        0.375,
+        0.75
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.75 1.125",
+    "group": "SNOWDEPTH-ABSOLUTE",
+    "expression": "([pixel] >= 0.75 AND [pixel] <  1.125)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        178,
+        171,
+        210,
+        128,
+        115,
+        172
+      ],
+      "datarange": [
+        0.75,
+        1.125
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "1.125 1.5",
+    "group": "SNOWDEPTH-ABSOLUTE",
+    "expression": "([pixel] >= 1.125 AND [pixel] <  3.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        128,
+        115,
+        172,
+        84,
+        39,
+        136
+      ],
+      "datarange": [
+        1.125,
+        3.0
+      ]
+    }
+  }
+]

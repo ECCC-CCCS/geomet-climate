@@ -1,0 +1,422 @@
+[
+  {
+    "__type__": "class",
+    "name": "-1.0 -0.9",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= -1.0 AND [pixel] <  -0.9)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        177,
+        105,
+        42,
+        186,
+        114,
+        50
+      ],
+      "datarange": [
+        -1.0,
+        -0.9
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-0.9 -0.8",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= -0.9 AND [pixel] <  -0.8)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        186,
+        114,
+        50,
+        195,
+        124,
+        59
+      ],
+      "datarange": [
+        -0.9,
+        -0.8
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-0.8 -0.7",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= -0.8 AND [pixel] <  -0.7)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        195,
+        124,
+        59,
+        205,
+        135,
+        69
+      ],
+      "datarange": [
+        -0.8,
+        -0.7
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-0.7 -0.6",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= -0.7 AND [pixel] <  -0.6)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        205,
+        135,
+        69,
+        215,
+        151,
+        86
+      ],
+      "datarange": [
+        -0.7,
+        -0.6
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-0.6 -0.5",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= -0.6 AND [pixel] <  -0.5)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        215,
+        151,
+        86,
+        224,
+        168,
+        103
+      ],
+      "datarange": [
+        -0.6,
+        -0.5
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-0.5 -0.4",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= -0.5 AND [pixel] <  -0.4)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        224,
+        168,
+        103,
+        233,
+        185,
+        118
+      ],
+      "datarange": [
+        -0.5,
+        -0.4
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-0.4 -0.3",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= -0.4 AND [pixel] <  -0.3)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        233,
+        185,
+        118,
+        242,
+        202,
+        133
+      ],
+      "datarange": [
+        -0.4,
+        -0.3
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-0.3 -0.2",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= -0.3 AND [pixel] <  -0.2)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        242,
+        202,
+        133,
+        246,
+        216,
+        150
+      ],
+      "datarange": [
+        -0.3,
+        -0.2
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-0.2 -0.1",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= -0.2 AND [pixel] <  -0.1)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        246,
+        216,
+        150,
+        247,
+        227,
+        168
+      ],
+      "datarange": [
+        -0.2,
+        -0.1
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-0.1 0.0",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= -0.1 AND [pixel] <  0.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        247,
+        227,
+        168,
+        235,
+        250,
+        193
+      ],
+      "datarange": [
+        -0.1,
+        0.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.0 0.1",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= 0.0 AND [pixel] <  0.1)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        235,
+        250,
+        193,
+        184,
+        244,
+        186
+      ],
+      "datarange": [
+        0.0,
+        0.1
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.1 0.2",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= 0.1 AND [pixel] <  0.2)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        184,
+        244,
+        186,
+        109,
+        202,
+        169
+      ],
+      "datarange": [
+        0.1,
+        0.2
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.2 0.3",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= 0.2 AND [pixel] <  0.3)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        109,
+        202,
+        169,
+        105,
+        179,
+        188
+      ],
+      "datarange": [
+        0.2,
+        0.3
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.3 0.4",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= 0.3 AND [pixel] <  0.4)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        105,
+        179,
+        188,
+        97,
+        160,
+        186
+      ],
+      "datarange": [
+        0.3,
+        0.4
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.4 0.5",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= 0.4 AND [pixel] <  0.5)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        97,
+        160,
+        186,
+        87,
+        143,
+        175
+      ],
+      "datarange": [
+        0.4,
+        0.5
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.5 0.6",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= 0.5 AND [pixel] <  0.6)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        87,
+        143,
+        175,
+        69,
+        123,
+        157
+      ],
+      "datarange": [
+        0.5,
+        0.6
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.6 0.7",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= 0.6 AND [pixel] <  0.7)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        69,
+        123,
+        157,
+        49,
+        103,
+        137
+      ],
+      "datarange": [
+        0.6,
+        0.7
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.7 0.8",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= 0.7 AND [pixel] <  0.8)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        49,
+        103,
+        137,
+        36,
+        86,
+        120
+      ],
+      "datarange": [
+        0.7,
+        0.8
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.8 0.9",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= 0.8 AND [pixel] <  0.9)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        36,
+        86,
+        120,
+        27,
+        72,
+        104
+      ],
+      "datarange": [
+        0.8,
+        0.9
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.9 1.0",
+    "group": "PRECIP-TREND",
+    "expression": "([pixel] >= 0.9 AND [pixel] <  1.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        27,
+        72,
+        104,
+        19,
+        58,
+        89
+      ],
+      "datarange": [
+        0.9,
+        1.0
+      ]
+    }
+  }
+]
