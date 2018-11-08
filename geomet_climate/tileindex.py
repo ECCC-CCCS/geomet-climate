@@ -221,8 +221,9 @@ def generate(ctx, layer):
     with open(CONFIG) as fh:
         cfg = yaml.load(fh)
 
-        if layer is not None and cfg['layers'][layer] != 'POINT':
-            create_shp(cfg['layers'][layer], input_dir, output_dir)
+        if layer is not None:
+            if not cfg['layers'][layer]['type'] == 'POINT':
+                create_shp(cfg['layers'][layer], input_dir, output_dir)
         else:
             for layers, values in cfg['layers'].items():
                 if not values['type'] == 'POINT':

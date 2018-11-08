@@ -1,0 +1,24 @@
+// mapserver template
+[resultset layer={}]
+{
+  "type": "FeatureCollection",
+  "features": [
+    [feature trimlast=","]
+    {
+      "type": "Feature",
+      "id": "[x]/[y]",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            [x],
+            [y]
+        ]
+      },
+      "properties": {
+        "value": "[value_0]"
+      }
+    },
+    [/feature]
+  ]
+}
+[/resultset]
