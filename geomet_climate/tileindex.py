@@ -28,6 +28,41 @@ from geomet_climate.env import BASEDIR, CONFIG, DATADIR
 
 LOGGER = logging.getLogger(__name__)
 
+VRT_TEMPLATE_FULL = '''<VRTDataset rasterXSize="{}" rasterYSize="{}">
+ <GeoTransform>{}</GeoTransform>
+  <VRTRasterBand dataType="Float64" band="1">
+    <SimpleSource>
+      <SourceFilename relativeToVRT="0">{}</SourceFilename>
+      <SourceBand>{}</SourceBand>
+      <SourceProperties RasterXSize="{}" RasterYSize="{}"
+          DataType="Float64" BlockXSize="{}" BlockYSize="1" />
+    </SimpleSource>
+  </VRTRasterBand>
+</VRTDataset>'''
+
+
+def generate_vrt_list(layer_info):
+    """
+    This script creates a VRT file per file band.
+    This is needed for creating the tile index.
+    in the DCS and CMIP5 netcdf files, 1 band = 1 time step
+    So for the tile index we create various VRTs which each
+    represent a band of the file
+    """
+
+    vrt_name_list = []
+    if layer_info['climate_model']['is_vrt'] and layer_info['num_bands'] > 1:
+
+        LOGGER.debug('Creating VRT files for {} bands'.format(
+            layer_info['num_bands']))
+        for i in range(1, layer_info['num_bands'] + 1):
+            LOGGER.debug('Creating VRT file for band {}'.format(i))
+            f_end = '_{}.vrt'.format(i)
+            vrt_name = layer_info['filename'].replace('.nc', f_end)
+            vrt_name_list.append(vrt_name)
+
+    return vrt_name_list
+
 
 def get_time_index_novrt(layer_info):
     """
@@ -59,7 +94,7 @@ def get_time_index_novrt(layer_info):
     return cangrd_dict
 
 
-def get_time_index_vrt(layer_info, input_dir):
+def get_time_index_vrt(layer_info):
     """
     This function is to create a dictionnary to associate
     the file (vrt) with the associated time stamp
@@ -72,11 +107,7 @@ def get_time_index_vrt(layer_info, input_dir):
 
     vrt_name, extension = os.path.splitext(layer_info['filename'])
 
-    input_ = '{}{}{}{}{}'.format(input_dir, os.sep,
-                                 layer_info['climate_model']['basepath'],
-                                 os.sep, layer_info['filepath'])
-
-    for f in os.listdir(input_):
+    for f in generate_vrt_list(layer_info):
         if f.startswith(vrt_name):
             vrts.append(f)
 
@@ -130,15 +161,15 @@ def create_shp(layer_info, input_dir, output_dir):
         if all(['is_vrt' in layer_info['climate_model'],
                 layer_info['num_bands'] > 1]):
             LOGGER.info('Creating tileindex')
-            file_time = get_time_index_vrt(layer_info, input_dir)
+            file_time = get_time_index_vrt(layer_info)
             shp_name = layer_info['filename'].replace('.nc', '')
             shp_path = os.path.join(output, layer_info['filename'].replace(
-                                    '.nc', '.shp'))
+                                    '.nc', '.gpkg'))
 
         elif 'timestep' in layer_info and layer_info['num_bands'] == 1:
             file_time = get_time_index_novrt(layer_info)
             shp_name = layer_info['filename']
-            shp_path = '{}.shp'.format(
+            shp_path = '{}.gpkg'.format(
                 os.path.join(output, layer_info['filename']))
 
         else:
@@ -148,7 +179,7 @@ def create_shp(layer_info, input_dir, output_dir):
 
     if file_time:
         LOGGER.debug('Creating dataset')
-        driver = ogr.GetDriverByName('ESRI Shapefile')
+        driver = ogr.GetDriverByName('GPKG')
 
         srs = osr.SpatialReference()
         srs.ImportFromWkt(layer_info['climate_model']['projection'])
@@ -161,17 +192,22 @@ def create_shp(layer_info, input_dir, output_dir):
 
         extent = layer_info['climate_model']['extent']
         extent = [int(s) for s in extent]
+        xsize, ysize = layer_info['climate_model']['dimensions']
+        filename = os.path.join(DATADIR,
+                                layer_info['climate_model']['basepath'],
+                                layer_info['filepath'],
+                                layer_info['filename'])
 
         LOGGER.info('Generating shape file')
         for key in file_time:
             LOGGER.debug('Adding feature to layer')
             if not key.endswith('.tif'):
-                filename = os.path.abspath(os.path.join(
-                    input_dir,
-                    layer_info['climate_model']['basepath'],
-                    layer_info['filepath'], key))
+                band = key.split('_')[-1].replace('.vrt', '')
+                filename_gpkg = VRT_TEMPLATE_FULL.format(
+                xsize, ysize, layer_info['climate_model']['geo_transform'],
+                filename, band, xsize, ysize, xsize)
             elif key.endswith('.tif'):
-                filename = os.path.abspath(
+                filename_gpkg = os.path.abspath(
                     os.path.join(
                         DATADIR,
                         layer_info['climate_model']['basepath'],
@@ -193,7 +229,7 @@ def create_shp(layer_info, input_dir, output_dir):
             LOGGER.debug('Creating geometry')
             feature.SetGeometry(poly)
             LOGGER.debug('Adding fields')
-            feature.SetField('location', filename)
+            feature.SetField('location', filename_gpkg)
             feature.SetField('timestamp', file_time[key])
             layer.CreateFeature(feature)
 

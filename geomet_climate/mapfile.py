@@ -197,11 +197,18 @@ def gen_layer(layer_name, layer_info, lang,  template_path, service='WMS'):
         layer_tileindex['type'] = 'POLYGON'
         layer_tileindex['name'] = layer_tileindex_name
         layer_tileindex['status'] = 'OFF'
+        layer_tileindex['CONNECTIONTYPE'] = 'OGR'
+
+        if layer_info['filename'].startswith('CANGRD'):
+            filename = '{}.gpkg'.format(layer_info['filename'])
+        else:
+            filename = layer_info['filename'].replace('.nc', '.gpkg')
         data = os.path.join(BASEDIR, 'tileindex',
                             layer_info['climate_model']['basepath'],
                             layer_info['filepath'],
-                            layer_info['filename'].replace('.nc', '.shp'))
-        layer_tileindex['data'] = data
+                            filename)
+
+        layer_tileindex['CONNECTION'] = data
         layer_tileindex['metadata'] = {
             '__type__': 'metadata',
             'ows_enable_request': '!*'
