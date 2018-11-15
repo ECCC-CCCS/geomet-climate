@@ -40,32 +40,6 @@ LOGGER = logging.getLogger(__name__)
 
 THISDIR = os.path.dirname(os.path.realpath(__file__))
 
-TEMPLATE = '''// mapserver template
-[resultset layer={}]
-{{
-  "type": "FeatureCollection",
-  "features": [
-    [feature trimlast=","]
-    {{
-      "type": "Feature",
-      "id": "[x]/[y]",
-      "geometry": {{
-        "type": "Point",
-        "coordinates": [
-            [x],
-            [y]
-        ]
-      }},
-      "properties": {{
-        "value": "[value_0]"
-      }}
-    }},
-    [/feature]
-  ]
-}}
-[/resultset]
-'''
-
 
 def gen_web_metadata(m, c, lang, service, url):
     """
@@ -433,7 +407,16 @@ def generate(ctx, lang, service, layer):
         template_path = '{}{}{}'.format(template_dir, os.sep, template_name)
 
         with io.open(template_path, 'w', encoding='utf-8') as fh:
-            fh.write(unicode(TEMPLATE.format(key)))
+            template_dir = os.path.join(THISDIR, 'resources', 'mapserv', 'templates')
+            if key not in ['CLIMATE.STATIONS', 'HYDROMETRIC.STATIONS', 'AHCCD.STATIONS']:
+                with open(os.path.join(template_dir, 'TEMPLATE_RASTER.json')) as template_raster:
+                    template_raster = template_raster.read().replace('{}', key)
+                    fh.write(unicode(template_raster))
+            else:
+                template_tmp_name = 'TEMPLATE_{}.json'.format(key)
+                with open(os.path.join(template_dir, template_tmp_name)) as template_vector:
+                    template_vector = template_vector.read().replace('{}', key)
+                    fh.write(unicode(template_vector))
 
         layers = gen_layer(key, value, lang, template_path, service)
 
