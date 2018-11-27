@@ -1,5 +1,7 @@
 # geomet-climate
 
+[![Build Status](https://travis-ci.org/ECCC-CCCS/geomet-climate.png)](https://travis-ci.org/ECCC-CCCS/geomet-climate)
+
 ## Overview
 
 geomet-climate provides the MapServer setup and configuration for deployment
