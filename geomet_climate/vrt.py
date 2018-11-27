@@ -27,18 +27,6 @@ from geomet_climate.env import BASEDIR, CONFIG, DATADIR
 
 LOGGER = logging.getLogger(__name__)
 
-VRT_TEMPLATE_FULL = '''<VRTDataset rasterXSize="{}" rasterYSize="{}">
- <GeoTransform>{}</GeoTransform>
-  <VRTRasterBand dataType="Float64" band="1">
-    <SimpleSource>
-      <SourceFilename relativeToVRT="0">{}</SourceFilename>
-      <SourceBand>{}</SourceBand>
-      <SourceProperties RasterXSize="{}" RasterYSize="{}"
-          DataType="Float64" BlockXSize="{}" BlockYSize="1" />
-    </SimpleSource>
-  </VRTRasterBand>
-</VRTDataset>'''
-
 VRT_TEMPLATE_HEADER = '''<VRTDataset rasterXSize="{}" rasterYSize="{}">
  <GeoTransform>{}</GeoTransform>'''
 
@@ -108,33 +96,7 @@ def generate_vrt_list(layer_info, output_dir):
 
     basepath = layer_info['climate_model']['basepath']
 
-    if layer_info['climate_model']['is_vrt'] and layer_info['num_bands'] > 1:
-        xsize, ysize = layer_info['climate_model']['dimensions']
-        filename = os.path.join(DATADIR,
-                                layer_info['climate_model']['basepath'],
-                                layer_info['filepath'],
-                                layer_info['filename'])
-
-        LOGGER.debug('Creating VRT files for {} bands'.format(
-            layer_info['num_bands']))
-        for i in range(1, layer_info['num_bands'] + 1):
-            LOGGER.debug('Creating VRT file for band {}'.format(i))
-            f_end = '_{}.vrt'.format(i)
-            vrt_name = layer_info['filename'].replace('.nc', f_end)
-            vrt = VRT_TEMPLATE_FULL.format(
-                xsize, ysize, layer_info['climate_model']['geo_transform'],
-                filename, i, xsize, ysize, xsize)
-
-            output = '{}{}{}{}{}'.format(output_dir, os.sep,
-                                         basepath,
-                                         os.sep, layer_info['filepath'])
-            if not os.path.exists(output):
-                os.makedirs(output)
-            filepath = os.path.join(output, vrt_name)
-
-            with open(filepath, 'w') as fh:
-                fh.write(vrt)
-    elif (not layer_info['climate_model']['is_vrt'] and
+    if (not layer_info['climate_model']['is_vrt'] and
           layer_info['type'] == 'RASTER'
           and layer_info['filename'].startswith('CANGRD')):
         dirname = os.path.join(DATADIR,
