@@ -350,7 +350,7 @@ def gen_layer(layer_name, layer_info, lang,  template_path, service='WMS'):
     if 'styles' in layer_info:
         for style in layer_info['styles']:
             style_filepath = os.path.join(THISDIR, 'resources', style)
-            with open(style_filepath) as fh:
+            with io.open(style_filepath) as fh:
                 new_class = json.load(fh)
                 for class_ in new_class:
                     layer['classes'].append(class_)
@@ -388,13 +388,13 @@ def generate(ctx, lang, service, layer):
     if not os.path.exists(template_dir):
         os.makedirs(template_dir)
 
-    with open(MAPFILE_BASE) as fh:
+    with io.open(MAPFILE_BASE) as fh:
         mapfile = json.load(fh, object_pairs_hook=OrderedDict)
         symbols_file = os.path.join(THISDIR, 'resources/mapserv/symbols.json')
-        with open(symbols_file) as fh2:
+        with io.open(symbols_file) as fh2:
             mapfile['symbols'] = json.load(fh2)
 
-    with open(CONFIG) as fh:
+    with io.open(CONFIG) as fh:
         cfg = yaml.load(fh)
 
     if layer is not None:
@@ -414,16 +414,23 @@ def generate(ctx, lang, service, layer):
         template_path = '{}{}{}'.format(template_dir, os.sep, template_name)
 
         with io.open(template_path, 'w', encoding='utf-8') as fh:
-            template_dir = os.path.join(THISDIR, 'resources', 'mapserv', 'templates')
-            if key not in ['CLIMATE.STATIONS', 'HYDROMETRIC.STATIONS', 'AHCCD.STATIONS']:
-                with open(os.path.join(template_dir, 'TEMPLATE_RASTER.json')) as template_raster:
+            template_dir = os.path.join(THISDIR, 'resources', 'mapserv',
+                                        'templates')
+
+            stations_layers = ['CLIMATE.STATIONS', 'HYDROMETRIC.STATIONS',
+                               'AHCCD.STATIONS']
+
+            if key not in stations_layers:
+                trf = os.path.join(template_dir, 'TEMPLATE_RASTER.json')
+                with io.open(trf, encoding='utf-8') as template_raster:
                     template_raster = template_raster.read().replace('{}', key)
-                    fh.write(unicode(template_raster))
+                    fh.write(template_raster)
             else:
                 template_tmp_name = 'TEMPLATE_{}.json'.format(key)
-                with open(os.path.join(template_dir, template_tmp_name)) as template_vector:
+                tvf = os.path.join(template_dir, template_tmp_name)
+                with io.open(tvf, encoding='utf-8') as template_vector:
                     template_vector = template_vector.read().replace('{}', key)
-                    fh.write(unicode(template_vector))
+                    fh.write(template_vector)
 
         layers = gen_layer(key, value, lang, template_path, service)
 
