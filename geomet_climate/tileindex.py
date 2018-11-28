@@ -17,6 +17,7 @@
 #
 ###############################################################################
 
+import io
 import logging
 import os
 
@@ -141,12 +142,12 @@ def get_time_index_vrt(layer_info):
     return file_time
 
 
-def create_shp(layer_info, input_dir, output_dir):
+def create_dataset(layer_info, input_dir, output_dir):
     """
-    This function is needed to craete the tile index shapefile
-    for every layer, we will want to create a shapefile tile index.
+    This function is needed to create the tile index
+    for every layer, we will want to create a gpkg tile index.
 
-    Every shapefile will have a column with the absolute path to the VRT
+    Every gpkg will have a column with the absolute path to the VRT
     and a timestamp column for the time value associated with each band
     """
     file_time = None
@@ -162,14 +163,14 @@ def create_shp(layer_info, input_dir, output_dir):
                 layer_info['num_bands'] > 1]):
             LOGGER.info('Creating tileindex')
             file_time = get_time_index_vrt(layer_info)
-            shp_name = layer_info['filename'].replace('.nc', '')
-            shp_path = os.path.join(output, layer_info['filename'].replace(
+            ds_name = layer_info['filename'].replace('.nc', '')
+            ds_path = os.path.join(output, layer_info['filename'].replace(
                                     '.nc', '.gpkg'))
 
         elif 'timestep' in layer_info and layer_info['num_bands'] == 1:
             file_time = get_time_index_novrt(layer_info)
-            shp_name = layer_info['filename']
-            shp_path = '{}.gpkg'.format(
+            ds_name = layer_info['filename']
+            ds_path = '{}.gpkg'.format(
                 os.path.join(output, layer_info['filename']))
 
         else:
@@ -184,8 +185,8 @@ def create_shp(layer_info, input_dir, output_dir):
         srs = osr.SpatialReference()
         srs.ImportFromWkt(layer_info['climate_model']['projection'])
 
-        shapedata = driver.CreateDataSource(shp_path)
-        layer = shapedata.CreateLayer(shp_name, srs, ogr.wkbPolygon)
+        ds = driver.CreateDataSource(ds_path)
+        layer = ds.CreateLayer(ds_name, srs, ogr.wkbPolygon)
         layerdefinition = layer.GetLayerDefn()
         layer.CreateField(ogr.FieldDefn('location', ogr.OFTString))
         layer.CreateField(ogr.FieldDefn('timestamp', ogr.OFTString))
@@ -198,14 +199,14 @@ def create_shp(layer_info, input_dir, output_dir):
                                 layer_info['filepath'],
                                 layer_info['filename'])
 
-        LOGGER.info('Generating shape file')
+        LOGGER.info('Generating GPKG')
         for key in file_time:
             LOGGER.debug('Adding feature to layer')
             if not key.endswith('.tif'):
                 band = key.split('_')[-1].replace('.vrt', '')
                 filename_gpkg = VRT_TEMPLATE_FULL.format(
-                xsize, ysize, layer_info['climate_model']['geo_transform'],
-                filename, band, xsize, ysize, xsize)
+                    xsize, ysize, layer_info['climate_model']['geo_transform'],
+                    filename, band, xsize, ysize, xsize)
             elif key.endswith('.tif'):
                 filename_gpkg = os.path.abspath(
                     os.path.join(
@@ -233,9 +234,6 @@ def create_shp(layer_info, input_dir, output_dir):
             feature.SetField('timestamp', file_time[key])
             layer.CreateFeature(feature)
 
-        LOGGER.debug('Generating index')
-        shapedata.ExecuteSQL('CREATE SPATIAL INDEX ON {}'.format(shp_name))
-
 
 @click.group()
 def tileindex():
@@ -254,16 +252,16 @@ def generate(ctx, layer):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    with open(CONFIG) as fh:
+    with io.open(CONFIG) as fh:
         cfg = yaml.load(fh)
 
         if layer is not None:
             if not cfg['layers'][layer]['type'] == 'POINT':
-                create_shp(cfg['layers'][layer], input_dir, output_dir)
+                create_dataset(cfg['layers'][layer], input_dir, output_dir)
         else:
             for layers, values in cfg['layers'].items():
                 if not values['type'] == 'POINT':
-                    create_shp(values, input_dir, output_dir)
+                    create_dataset(values, input_dir, output_dir)
 
 
 tileindex.add_command(generate)

@@ -17,6 +17,7 @@
 #
 ###############################################################################
 
+import io
 import logging
 import os
 
@@ -81,8 +82,8 @@ def create_vrt(layer_info, vrt_list, output_dir, vrt_name):
 
     vrt = '{}{}{}'.format(vrt_header, '\n'.join(sources), vrt_footer)
 
-    with open(filepath, 'w') as fh:
-        fh.write(vrt)
+    with io.open(filepath, 'w', encoding='utf-8') as fh:
+        fh.write(vrt.decode('utf-8'))
 
 
 def generate_vrt_list(layer_info, output_dir):
@@ -97,8 +98,9 @@ def generate_vrt_list(layer_info, output_dir):
     basepath = layer_info['climate_model']['basepath']
 
     if (not layer_info['climate_model']['is_vrt'] and
-          layer_info['type'] == 'RASTER'
-          and layer_info['filename'].startswith('CANGRD')):
+            layer_info['type'] == 'RASTER' and
+            layer_info['filename'].startswith('CANGRD')):
+
         dirname = os.path.join(DATADIR,
                                basepath,
                                layer_info['filepath'])
@@ -129,7 +131,7 @@ def generate(ctx, layer):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    with open(CONFIG) as fh:
+    with io.open(CONFIG) as fh:
         cfg = yaml.load(fh)
 
         if layer is not None:

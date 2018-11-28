@@ -17,6 +17,7 @@
 #
 ###############################################################################
 
+import io
 import logging
 import os
 
@@ -113,7 +114,7 @@ def application(env, start_response):
 
         if os.path.isfile(cached_caps):
             start_response('200 OK', [('Content-type', 'application/xml')])
-            with open(cached_caps) as fh:
+            with io.open(cached_caps) as fh:
                 return [fh.read()]
 
     LOGGER.debug('Loading mapfile: {}'.format(mapfile_))
