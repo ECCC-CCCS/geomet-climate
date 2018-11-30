@@ -44,6 +44,14 @@ WCS_FORMATS = {
     'image/netcdf': 'nc'
 }
 
+SERVICE_EXCEPTION = '''<?xml version='1.0' encoding="UTF-8" standalone="no"?>
+<ServiceExceptionReport version="1.3.0" xmlns="http://www.opengis.net/ogc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.opengis.net/ogc
+    http://schemas.opengis.net/wms/1.3.0/exceptions_1_3_0.xsd">
+  <ServiceException>{}</ServiceException>
+</ServiceExceptionReport>'''
+
 
 def application(env, start_response):
     """WSGI application for WMS/WCS"""
@@ -80,11 +88,7 @@ def application(env, start_response):
         layer = coverageid_
     else:
         layer = None
-    if service_ is not None:
-        service = service_
-    else:
-        service_ = 'WMS'
-    if service_ not in ['WMS', 'WCS']:
+    if service_ is None:
         service_ = 'WMS'
 
     if layer is not None and len(layer) == 0:
@@ -99,22 +103,28 @@ def application(env, start_response):
     if mapfile_ is None or not os.path.exists(mapfile_):
         mapfile_ = '{}/mapfile/geomet-climate-{}-{}.map'.format(
             BASEDIR, service_, lang)
+    if not os.path.exists(mapfile_):
+        start_response('400 Bad Request',
+                       [('Content-Type', 'application/xml')])
+        msg = 'Unsupported service'
+        return [SERVICE_EXCEPTION.format(msg)]
 
     # if requesting GetCapabilities for entire service, return cache
     if all([request_ == 'GetCapabilities', layer is None,
             force_refresh is None]):
-        if service == 'WMS':
+
+        if service_ == 'WMS':
             filename = 'geomet-climate-WMS-1.3.0-capabilities-{}.xml'.format(
                 lang)
             cached_caps = os.path.join(BASEDIR, 'mapfile', filename)
-        elif service == 'WCS':
+        elif service_ == 'WCS':
             filename = 'geomet-climate-WCS-2.0.1-capabilities-{}.xml'.format(
                 lang)
             cached_caps = os.path.join(BASEDIR, 'mapfile', filename)
 
         if os.path.isfile(cached_caps):
-            start_response('200 OK', [('Content-type', 'application/xml')])
-            with io.open(cached_caps) as fh:
+            start_response('200 OK', [('Content-Type', 'application/xml')])
+            with io.open(cached_caps, 'rb') as fh:
                 return [fh.read()]
 
     LOGGER.debug('Loading mapfile: {}'.format(mapfile_))
