@@ -74,7 +74,6 @@ def application(env, start_response):
     layer_ = request.getValueByName('LAYER')
     coverageid_ = request.getValueByName('COVERAGEID')
     format_ = request.getValueByName('FORMAT')
-    force_refresh = request.getValueByName('FORCE_REFRESH')
 
     if lang_ is not None and lang_ in ['f', 'fr', 'fra']:
         lang = 'fr'
@@ -110,9 +109,7 @@ def application(env, start_response):
         return [SERVICE_EXCEPTION.format(msg)]
 
     # if requesting GetCapabilities for entire service, return cache
-    if all([request_ == 'GetCapabilities', layer is None,
-            force_refresh is None]):
-
+    if request_ == 'GetCapabilities' and layer is None:
         if service_ == 'WMS':
             filename = 'geomet-climate-WMS-1.3.0-capabilities-{}.xml'.format(
                 lang)
