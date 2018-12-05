@@ -152,11 +152,12 @@ def create_dataset(layer_info, input_dir, output_dir):
     """
     file_time = None
 
-    output = '{}{}{}{}{}'.format(output_dir, os.sep,
-                                 layer_info['climate_model']['basepath'],
-                                 os.sep, layer_info['filepath'])
-    if not os.path.exists(output):
-        os.makedirs(output)
+    if 'filepath' in layer_info:
+        output = '{}{}{}{}{}'.format(output_dir, os.sep,
+                                     layer_info['climate_model']['basepath'],
+                                     os.sep, layer_info['filepath'])
+        if not os.path.exists(output):
+            os.makedirs(output)
 
     if layer_info['type'] == 'RASTER':
         if all(['is_vrt' in layer_info['climate_model'],
