@@ -5,7 +5,7 @@
     "__type__": "class",
     "name": "< -1.5",
     "group": "TEMP-ANOMALIES",
-    "expression": "([pixel] < -1.5 AND [pixel] >= -2)",
+    "expression": "([pixel] < -1.5)",
     "style": {
       "__type__": "style",
       "colorrange": [

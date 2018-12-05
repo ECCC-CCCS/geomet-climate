@@ -3,7 +3,7 @@
     "__type__": "class",
     "name": "-40.0 -36.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= -40.0 AND [pixel] <  -36.0)",
+    "expression": "([pixel] <  -36.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -15,7 +15,7 @@
         37
       ],
       "datarange": [
-        -40.0,
+        -50.0,
         -36.0
       ]
     }
@@ -402,7 +402,7 @@
     "__type__": "class",
     "name": "36.0 40.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= 36.0 AND [pixel] <  40.0)",
+    "expression": "([pixel] >= 36.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -415,7 +415,7 @@
       ],
       "datarange": [
         36.0,
-        40.0
+        50.0
       ]
     }
   }

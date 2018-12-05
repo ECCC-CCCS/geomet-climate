@@ -3,7 +3,7 @@
     "__type__": "class",
     "name": "-1.0 -0.9",
     "group": "PRECIP-TREND",
-    "expression": "([pixel] >= -1.0 AND [pixel] <  -0.9)",
+    "expression": "([pixel] <  -0.9)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -15,7 +15,7 @@
         50
       ],
       "datarange": [
-        -1.0,
+        -2.0,
         -0.9
       ]
     }
@@ -402,7 +402,7 @@
     "__type__": "class",
     "name": "0.9 1.0",
     "group": "PRECIP-TREND",
-    "expression": "([pixel] >= 0.9 AND [pixel] <  1.0)",
+    "expression": "([pixel] >= 0.9)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -415,7 +415,7 @@
       ],
       "datarange": [
         0.9,
-        1.0
+        2.0
       ]
     }
   }
