@@ -3,7 +3,7 @@
     "__type__": "class",
     "name": "0.0 150.0",
     "group": "PRECIPITATION",
-    "expression": "([pixel] >= 0.0 AND [pixel] <  150.0)",
+    "expression": "([pixel] <  150.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -654,7 +654,7 @@
     "__type__": "class",
     "name": "4650.0 4800.0",
     "group": "PRECIPITATION",
-    "expression": "([pixel] >= 4650.0AND [pixel] <  7000.0)",
+    "expression": "([pixel] >= 4650.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -667,7 +667,7 @@
       ],
       "datarange": [
         4650.0,
-        7000.0
+        10000.0
       ]
     }
   }

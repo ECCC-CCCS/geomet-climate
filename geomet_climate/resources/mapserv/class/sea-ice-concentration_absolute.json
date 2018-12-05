@@ -3,7 +3,7 @@
     "__type__": "class",
     "name": "-31.5 -28.0",
     "group": "SEAICECONCENTRATION-ABSOLUTE",
-    "expression": "([pixel] <  -28.0 AND [pixel] >=  -50.0)",
+    "expression": "([pixel] <  -28.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -15,7 +15,7 @@
         0
       ],
       "datarange": [
-        -50.0,
+        -70.0,
         -28.0
       ]
     }
@@ -318,7 +318,7 @@
     "__type__": "class",
     "name": "28.0 31.5",
     "group": "SEAICECONCENTRATION-ABSOLUTE",
-    "expression": "([pixel] >= 28.0 AND [pixel] <  45.0)",
+    "expression": "([pixel] >= 28.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -331,7 +331,7 @@
       ],
       "datarange": [
         28.0,
-        45
+        65
       ]
     }
   }

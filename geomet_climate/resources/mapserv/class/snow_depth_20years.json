@@ -3,7 +3,7 @@
     "__type__": "class",
     "name": "-100.0 -90.0",
     "group": "SNOWDEPTH-ANOMALY-AVERAGE",
-    "expression": "([pixel] >= -100.0 AND [pixel] <  -90.0)",
+    "expression": "([pixel] <  -90.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -15,7 +15,7 @@
         37
       ],
       "datarange": [
-        -100.0,
+        -1000.0,
         -90.0
       ]
     }
@@ -402,7 +402,7 @@
     "__type__": "class",
     "name": "90.0 100.0",
     "group": "SNOWDEPTH-ANOMALY-AVERAGE",
-    "expression": "([pixel] >= 90.0 AND [pixel] <  100.0)",
+    "expression": "([pixel] >= 90.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -415,7 +415,7 @@
       ],
       "datarange": [
         90.0,
-        100.0
+        1000.0
       ]
     }
   }

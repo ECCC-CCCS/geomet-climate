@@ -3,7 +3,7 @@
     "__type__": "class",
     "name": "-33.0 -30.0",
     "group": "TEMP-ABSOLUTE",
-    "expression": "([pixel] <  -30.0 AND [pixel] >=  -60.0)",
+    "expression": "([pixel] <  -30.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -444,7 +444,7 @@
     "__type__": "class",
     "name": "30.0 33.0",
     "group": "TEMP-ABSOLUTE",
-    "expression": "([pixel] >= 30.0 AND [pixel] <  60.0)",
+    "expression": "([pixel] >= 30.0)",
     "style": {
       "__type__": "style",
       "colorrange": [

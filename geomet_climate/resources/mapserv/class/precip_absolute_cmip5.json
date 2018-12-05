@@ -3,7 +3,7 @@
     "__type__": "class",
     "name": "0.0 2.0",
     "group": "PRECIPITATION-CMIP5",
-    "expression": "([pixel] >= 0.0 AND [pixel] <  2.0)",
+    "expression": "([pixel] <  2.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -234,7 +234,7 @@
     "__type__": "class",
     "name": "22.0 24.0",
     "group": "PRECIPITATION-CMIP5",
-    "expression": "([pixel] >= 22.0 AND [pixel] <  24.0)",
+    "expression": "([pixel] >= 22.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -247,7 +247,7 @@
       ],
       "datarange": [
         22.0,
-        24.0
+        45.0
       ]
     }
   }

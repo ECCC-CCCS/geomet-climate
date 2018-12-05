@@ -3,7 +3,7 @@
     "__type__": "class",
     "name": "27.0 30.0",
     "group": "SFCWINDSPEED-ANOMALY",
-    "expression": "([pixel] >= 27.0 AND [pixel] <  30.0)",
+    "expression": "([pixel] >=  27.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -16,7 +16,7 @@
       ],
       "datarange": [
         27.0,
-        30.0
+        60.0
       ]
     }
   },
@@ -402,7 +402,7 @@
     "__type__": "class",
     "name": "-30.0 -27.0",
     "group": "SFCWINDSPEED-ANOMALY",
-    "expression": "([pixel] >= -30.0 AND [pixel] <  -27.0)",
+    "expression": "([pixel] <  -27.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -414,7 +414,7 @@
         97
       ],
       "datarange": [
-        -30.0,
+        -45.0,
         -27.0
       ]
     }
