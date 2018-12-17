@@ -26,6 +26,8 @@ install:
   - pip install -e .
 
 script:
+  - . tests/geomet-climate-test.env
+  - python setup.py test
   - find . -type f -name "*.py" | xargs flake8
   - geomet-climate vrt generate
   - geomet-climate tileindex generate
@@ -39,5 +41,6 @@ script:
   - mapserv -nh QUERY_STRING="map=$GEOMET_CLIMATE_BASEDIR/mapfile/geomet-climate-WCS-fr.map&lang=fr&service=WCS&version=2.1.0&request=GetCapabilities" > $GEOMET_CLIMATE_BASEDIR/geomet-climate-WCS-2.0.1-capabilities-fr.xml
 
 after_success:
+  - python setup.py cleanbuild
   - python setup.py sdist bdist_wheel --universal
   - debuild -b -uc -us
