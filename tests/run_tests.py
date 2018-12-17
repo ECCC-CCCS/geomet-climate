@@ -135,12 +135,8 @@ class GeoMetClimateTest(unittest.TestCase):
 
         result = get_time_index_novrt(layer_info)
 
-        self.assertEqual(result['{}{}'.format(tif_name, '_2004-01.tif')],
-                         '2004-01')
-        self.assertEqual(result['{}{}'.format(tif_name, '_1968-10.tif')],
-                         '1968-10')
-        self.assertEqual(result['{}{}'.format(tif_name, '_1991-04.tif')],
-                         '1991-04')
+        self.assertEqual(result['{}{}'.format(tif_name, '_1929-05.tif')],
+                         '1929-05')
 
     def test_get_time_index_vrt(self):
         """Assign the right date to a file (with VRT)"""
@@ -285,7 +281,7 @@ class GeoMetClimateTest(unittest.TestCase):
                                                     ' +datum=WGS84 +no_defs'])
         self.assertTrue(result[0]['name'] == 'CMIP5.TT.RCP26.SPRING.'
                                              '2021-2040_PCTL50')
-        self.assertTrue(result[0]['data'] == '/data/geomet/amqp/climate/'
+        self.assertTrue(result[0]['data'] == 'tests/data/climate/'
                                              'cmip5/netcdf/scenarios/RCP2.6/'
                                              'seasonal/MAM/avg_20years/'
                                              'CMIP5_rcp2.6_MAM_2021-2040_'
@@ -313,7 +309,7 @@ class GeoMetClimateTest(unittest.TestCase):
                                                     ' +datum=WGS84 +no_defs'])
         self.assertTrue(result[0]['name'] == 'CMIP5.TT.RCP26.SPRING.'
                                              '2021-2040_PCTL50')
-        self.assertTrue(result[0]['data'] == '/data/geomet/amqp/climate/'
+        self.assertTrue(result[0]['data'] == 'tests/data/climate/'
                                              'cmip5/netcdf/scenarios/RCP2.6/'
                                              'seasonal/MAM/avg_20years/'
                                              'CMIP5_rcp2.6_MAM_2021-2040_'
