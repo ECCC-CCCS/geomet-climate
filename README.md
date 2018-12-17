@@ -95,7 +95,15 @@ mapserv -nh QUERY_STRING="map=$GEOMET_CLIMATE_BASEDIR/mapfile/geomet-climate-WCS
 
 ### Running Tests
 
-TODO
+```bash
+. test/geomet-climate-test.env
+python setup.py test
+```
+
+### Cleaning the build of artifacts
+```bash
+python setup.py cleanbuild
+```
 
 ## Releasing
 

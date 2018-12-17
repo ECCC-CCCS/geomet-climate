@@ -40,7 +40,11 @@ class PyCleanBuild(Command):
             'debian/geomet-climate.debhelper.log',
             'debian/geomet-climate.postinst.debhelper',
             'debian/geomet-climate.prerm.debhelper',
-            'debian/geomet-climate.substvars'
+            'debian/geomet-climate.substvars',
+            'tests/data/climate/cangrd/geotiff/historical/monthly_ens/anomaly/CANGRD_hist_monthly_anom_ps50km_PCP.vrt',  # noqa
+            'tests/data/climate/cangrd/geotiff/historical/seasonal/JJA/anomaly/CANGRD_hist_JJA_anom_ps50km_TMAX.gpkg',  # noqa
+            'tests/data/climate/cangrd/geotiff/historical/seasonal/JJA/anomaly/CANGRD_hist_JJA_anom_ps50km_TMAX.vrt',  # noqa
+            'tests/data/climate/cmip5/netcdf/scenarios/RCP4.5/annual/anomaly/CMIP5_rcp4.5_annual_anom_latlon1x1_SICETHKN_pctl50_P1Y.gpkg'  # noqa
         ]
 
         remove_dirs = [
@@ -75,8 +79,7 @@ class PyTest(Command):
 
     def run(self):
         import subprocess
-        errno = subprocess.call([sys.executable,
-                                 'geomet_climate/tests/run_tests.py'])
+        errno = subprocess.call([sys.executable, 'tests/run_tests.py'])
         raise SystemExit(errno)
 
 

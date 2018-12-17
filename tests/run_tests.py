@@ -44,7 +44,7 @@ THISDIR = os.path.dirname(os.path.realpath(__file__))
 
 def msg(test_id, test_description):
     """convenience function to print out test id and desc"""
-    return '%s: %s' % (test_id, test_description)
+    return '{}: {}'.format(test_id, test_description)
 
 
 class GeoMetClimateTest(unittest.TestCase):
@@ -154,7 +154,7 @@ class GeoMetClimateTest(unittest.TestCase):
                          '2068')
 
     def test_create_dataset_no_raster(self):
-        """Should not create a GPCK (Vector layer)"""
+        """Should not create a GPKG (Vector layer)"""
         layer_name = 'CLIMATE.STATIONS'
         layer_info = self.cfg['layers'][layer_name]
 
@@ -163,7 +163,7 @@ class GeoMetClimateTest(unittest.TestCase):
         self.assertIsNone(result)
 
     def test_create_dataset_raster_no_time(self):
-        """Should not create a GPCK (not a time enabled layer)"""
+        """Should not create a GPKG (not a time enabled layer)"""
         layer_name = 'DCS.TM.RCP85.YEAR.2041-2060_PCTL50'
         layer_info = self.cfg['layers'][layer_name]
 
@@ -172,7 +172,7 @@ class GeoMetClimateTest(unittest.TestCase):
         self.assertIsNone(result)
 
     def test_create_dataset_raster_Bands(self):
-        """Should create a GPCK (from a layer with multiple bands)"""
+        """Should create a GPKG (from a layer with multiple bands)"""
         layer_name = 'CMIP5.SIT.RCP45.YEAR.ANO_PCTL50'
         var = 'CMIP5_rcp4.5_annual_anom_latlon1x1_SICETHKN_pctl50_P1Y.gpkg'
         out_file = os.path.join(self.data_dir,
@@ -188,7 +188,7 @@ class GeoMetClimateTest(unittest.TestCase):
         self.assertTrue(os.path.isfile(out_file))
 
     def test_create_dataset_raster_1Band(self):
-        """Should create a GPCK (from a layer with 1 band files)"""
+        """Should create a GPKG (from a layer with 1 band files)"""
         layer_name = 'CANGRD.ANO.TX_SUMMER'
         var = 'CANGRD_hist_JJA_anom_ps50km_TMAX.gpkg'
         out_file = os.path.join(self.data_dir,
