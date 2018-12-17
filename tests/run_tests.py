@@ -281,6 +281,9 @@ class GeoMetClimateTest(unittest.TestCase):
                                                     ' +datum=WGS84 +no_defs'])
         self.assertTrue(result[0]['name'] == 'CMIP5.TT.RCP26.SPRING.'
                                              '2021-2040_PCTL50')
+
+        print(result[0]['data'])
+
         self.assertTrue(result[0]['data'] == 'tests/data/climate/'
                                              'cmip5/netcdf/scenarios/RCP2.6/'
                                              'seasonal/MAM/avg_20years/'
