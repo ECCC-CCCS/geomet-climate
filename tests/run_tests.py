@@ -1,7 +1,6 @@
 ###############################################################################
 #
-# Copyright (C) 2018
-# Developer: Louis-Philippe R.-Lambert
+# Copyright (C) 2018 Louis-Philippe Rousseau-Lambert
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
