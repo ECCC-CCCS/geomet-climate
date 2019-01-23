@@ -22,7 +22,7 @@ import logging
 import os
 
 import click
-from osgeo import ogr, osr
+from osgeo import gdal, ogr, osr
 import yaml
 
 from geomet_climate.env import BASEDIR, CONFIG, DATADIR
@@ -38,6 +38,8 @@ VRT_TEMPLATE_FULL = '''<VRTDataset rasterXSize="{}" rasterYSize="{}">
       <SourceProperties RasterXSize="{}" RasterYSize="{}"
           DataType="Float64" BlockXSize="{}" BlockYSize="1" />
     </SimpleSource>
+    <NoDataValue>{}</NoDataValue>
+    <HideNoDataValue>0</HideNoDataValue>
   </VRTRasterBand>
 </VRTDataset>'''
 
@@ -201,13 +203,20 @@ def create_dataset(layer_info, input_dir, output_dir):
                                 layer_info['filename'])
 
         LOGGER.info('Generating GPKG')
+        nodata_check = False
         for key in file_time:
             LOGGER.debug('Adding feature to layer')
             if not key.endswith('.tif'):
+                if nodata_check is False:
+                    netcdf_ds = gdal.Open(filename)
+                    srcband = netcdf_ds.GetRasterBand(1)
+                    nodata = srcband.GetNoDataValue()
+                    nodata_check = True
+                    netcdf_ds = None
                 band = key.split('_')[-1].replace('.vrt', '')
                 filename_gpkg = VRT_TEMPLATE_FULL.format(
                     xsize, ysize, layer_info['climate_model']['geo_transform'],
-                    filename, band, xsize, ysize, xsize)
+                    filename, band, xsize, ysize, xsize, nodata)
             elif key.endswith('.tif'):
                 filename_gpkg = os.path.abspath(
                     os.path.join(
