@@ -23,6 +23,7 @@ import os
 
 import click
 import yaml
+from yaml import CLoader
 
 from geomet_climate.env import BASEDIR, CONFIG, DATADIR
 
@@ -132,7 +133,7 @@ def generate(ctx, layer):
         os.makedirs(output_dir)
 
     with io.open(CONFIG) as fh:
-        cfg = yaml.load(fh)
+        cfg = yaml.load(fh, Loader=CLoader)
 
         if layer is not None:
             generate_vrt_list(cfg['layers'][layer], output_dir)

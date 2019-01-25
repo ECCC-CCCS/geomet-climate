@@ -29,6 +29,7 @@ import click
 import mappyfile
 from osgeo import osr
 import yaml
+from yaml import CLoader
 
 from geomet_climate import __version__
 from geomet_climate.env import BASEDIR, CONFIG, DATADIR, URL
@@ -395,7 +396,7 @@ def generate(ctx, lang, service, layer):
             mapfile['symbols'] = json.load(fh2)
 
     with io.open(CONFIG) as fh:
-        cfg = yaml.load(fh)
+        cfg = yaml.load(fh, Loader=CLoader)
 
     if layer is not None:
         mapfiles = {
