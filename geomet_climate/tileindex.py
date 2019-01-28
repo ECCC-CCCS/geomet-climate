@@ -245,6 +245,9 @@ def create_dataset(layer_info, input_dir, output_dir):
             feature.SetField('timestamp', file_time[key])
             layer.CreateFeature(feature)
 
+            ds.ExecuteSQL('VACUUM')
+            ds.Destroy()
+
 
 @click.group()
 def tileindex():
