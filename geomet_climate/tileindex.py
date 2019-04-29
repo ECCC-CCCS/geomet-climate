@@ -127,8 +127,8 @@ def get_time_index_vrt(layer_info):
             year = (time/12)
             month = (time - (year * 12))
             if month == 0:
-                    year = year - 1
-                    month = 12
+                year = year - 1
+                month = 12
             time_stamp = '{}-{}'.format(year, str(month).zfill(2))
             band_time[i] = str(time_stamp)
             num += 1
