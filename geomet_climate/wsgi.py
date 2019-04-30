@@ -145,10 +145,12 @@ def application(env, start_response):
     ]
 
     # for WCS requests, generate useful filename for response
-    if service_ == 'WCS' and request_ == 'GetCoverage':
-        filename = 'geomet-climate-{}.{}'.format(layer, WCS_FORMATS[format_])
-        headers_.append(('Content-Disposition',
-                         'attachment; filename="{}"'.format(filename)))
+    if not headers['Content-Type'].startswith('text/xml'):
+        if service_ == 'WCS' and request_ == 'GetCoverage':
+            filename = 'geomet-climate-{}.{}'.format(layer,
+                                                     WCS_FORMATS[format_])
+            headers_.append(('Content-Disposition',
+                             'attachment; filename="{}"'.format(filename)))
 
     content = mapscript.msIO_getStdoutBufferBytes()
 
