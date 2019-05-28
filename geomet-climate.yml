@@ -15536,6 +15536,19 @@ layers:
     timestep: P1M
     num_bands: 1140
 
+  DCS.PR.RCP26.ENS.ABS_PCTL95:
+    <<: *template_precip_absolute
+    climate_model: *id_dcs_rcp_ensemble
+    filepath: RCP2.6/monthly_ens/absolute
+    filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_PCP_pctl95_P1M.nc
+    label_en: Total Precipitation/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+      ensembles of statistically downscaled total precipitation projections (95th percentile)
+    label_fr: Précipitation totale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
+      mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
+      à l'échelle de manière statistique (95e percentile)
+    timestep: P1M
+    num_bands: 1140
+
   DCS.PR.RCP45.ENS.ABS_PCTL5:
     <<: *template_precip_absolute
     climate_model: *id_dcs_rcp_ensemble
