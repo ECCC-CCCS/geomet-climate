@@ -260,14 +260,14 @@ layer_groups:
       -1.0310705172642663e+04
     temporal_extent:
       begin: 1900
-      end: 2017
+      end: 2018
     is_vrt: false
 
   CANGRD_MONTHLY: &id_cangrd_monthly
     <<: *id_cangrd
     temporal_extent:
       begin: 1900-01
-      end: 2017-12
+      end: 2018-12
 
   CANGRD_PRECIP: &id_cangrd_precip
     <<: *id_cangrd
@@ -39094,55 +39094,55 @@ layers:
     <<: *template_temp_anomalies
     climate_model: *id_cangrd_trend
     filepath: annual/trend
-    filename: CANGRD_hist_annual_trend_ps50km_TMEAN_1948-2016.tif
+    filename: CANGRD_hist_annual_trend_ps50km_TMEAN_1948-2018.tif
     label_en: Trend/Mean temperature/CANGRD (Annual)- Absolute trend of Mean Temperature
-      (1948-2016)
-    label_fr: Tendance/Température moyenne/CANGRD (annuel)- Tendance relative des
-      précipitations totales (1948 à 2016)
+      (1948-2018)
+    label_fr: Tendance/Température moyenne/CANGRD (annuel)- Tendance absolue de
+      la température moyenne (1948 à 2018)
     num_bands: 1
 
   CANGRD.TREND.TM_WINTER:
     <<: *template_temp_anomalies
     climate_model: *id_cangrd_trend
     filepath: seasonal/DJF/trend
-    filename: CANGRD_hist_DJF_trend_ps50km_TMEAN_1948-2016.tif
+    filename: CANGRD_hist_DJF_trend_ps50km_TMEAN_1948-2018.tif
     label_en: Trend/Mean temperature/CANGRD (Winter)- Absolute trend of Mean Temperature
-      (1948-2016)
-    label_fr: Tendance/Température moyenne/CANGRD (hiver)- Tendance relative des précipitations
-      totales (1948 à 2016)
+      (1948-2018)
+    label_fr: Tendance/Température moyenne/CANGRD (hiver)- Tendance absolue de
+      la température moyenne (1948 à 2018)
     num_bands: 1
 
   CANGRD.TREND.TM_SPRING:
     <<: *template_temp_anomalies
     climate_model: *id_cangrd_trend
     filepath: seasonal/MAM/trend
-    filename: CANGRD_hist_MAM_trend_ps50km_TMEAN_1948-2016.tif
+    filename: CANGRD_hist_MAM_trend_ps50km_TMEAN_1948-2018.tif
     label_en: Trend/Mean temperature/CANGRD (Spring)- Absolute trend of Mean Temperature
-      (1948-2016)
+      (1948-2018)
     label_fr: Tendance/Température moyenne/CANGRD (printemps)- Tendance relative des
-      précipitations totales (1948 à 2016)
+      précipitations totales (1948 à 2018)
     num_bands: 1
 
   CANGRD.TREND.TM_SUMMER:
     <<: *template_temp_anomalies
     climate_model: *id_cangrd_trend
     filepath: seasonal/JJA/trend
-    filename: CANGRD_hist_JJA_trend_ps50km_TMEAN_1948-2016.tif
+    filename: CANGRD_hist_JJA_trend_ps50km_TMEAN_1948-2018.tif
     label_en: Trend/Mean temperature/CANGRD (Summer)- Absolute trend of Mean Temperature
-      (1948-2016)
-    label_fr: Tendance/Température moyenne/CANGRD (été)- Tendance relative des précipitations
-      totales (1948 à 2016)
+      (1948-2018)
+    label_fr: Tendance/Température moyenne/CANGRD (été)- Tendance absolue de
+      la température moyenne (1948 à 2018)
     num_bands: 1
 
   CANGRD.TREND.TM_FALL:
     <<: *template_temp_anomalies
     climate_model: *id_cangrd_trend
     filepath: seasonal/SON/trend
-    filename: CANGRD_hist_SON_trend_ps50km_TMEAN_1948-2016.tif
+    filename: CANGRD_hist_SON_trend_ps50km_TMEAN_1948-2018.tif
     label_en: Trend/Mean temperature/CANGRD (Fall)- Absolute trend of Mean Temperature
-      (1948-2016)
-    label_fr: Tendance/Température moyenne/CANGRD (automne)- Tendance relative des
-      précipitations totales (1948 à 2016)
+      (1948-2018)
+    label_fr: Tendance/Température moyenne/CANGRD (automne)- Tendance absolue de
+      la température moyenne (1948 à 2018)
     num_bands: 1
 
   CANGRD.TREND.PR_ANNUAL:
@@ -39152,8 +39152,8 @@ layers:
     filename: CANGRD_hist_annual_trend_ps50km_PCP_1948-2012.tif
     label_en: Trend/Total Precipitation/CANGRD (Annual)- Relative trend of Total Precipitation
       (1948-2012)
-    label_fr: Tendance/Précipitation totale/CANGRD (annuel)- Tendance absolue de la
-      température moyenne (1948 à 2012)
+    label_fr: Tendance/Précipitation totale/CANGRD (annuel)- Tendance relative des
+      précipitations totales (1948 à 2012)
     num_bands: 1
 
   CANGRD.TREND.PR_WINTER:
@@ -39163,8 +39163,8 @@ layers:
     filename: CANGRD_hist_DJF_trend_ps50km_PCP_1948-2012.tif
     label_en: Trend/Total Precipitation/CANGRD (Winter)- Relative trend of Total Precipitation
       (1948-2012)
-    label_fr: Tendance/Précipitation totale/CANGRD (hiver)- Tendance absolue de la
-      température moyenne (1948 à 2012)
+    label_fr: Tendance/Précipitation totale/CANGRD (hiver)- Tendance relative des
+      précipitations totales (1948 à 2012)
     num_bands: 1
 
   CANGRD.TREND.PR_SPRING:
@@ -39174,8 +39174,8 @@ layers:
     filename: CANGRD_hist_MAM_trend_ps50km_PCP_1948-2012.tif
     label_en: Trend/Total Precipitation/CANGRD (Spring)- Relative trend of Total Precipitation
       (1948-2012)
-    label_fr: Tendance/Précipitation totale/CANGRD (printemps)- Tendance absolue de
-      la température moyenne (1948 à 2012)
+    label_fr: Tendance/Précipitation totale/CANGRD (printemps)- Tendance relative des
+      précipitations totales (1948 à 2012)
     num_bands: 1
 
   CANGRD.TREND.PR_SUMMER:
@@ -39185,8 +39185,8 @@ layers:
     filename: CANGRD_hist_JJA_trend_ps50km_PCP_1948-2012.tif
     label_en: Trend/Total Precipitation/CANGRD (Summer)- Relative trend of Total Precipitation
       (1948-2012)
-    label_fr: Tendance/Précipitation totale/CANGRD (été)- Tendance absolue de la température
-      moyenne (1948 à 2012)
+    label_fr: Tendance/Précipitation totale/CANGRD (été)- Tendance relative des
+      précipitations totales (1948 à 2012)
     num_bands: 1
 
   CANGRD.TREND.PR_FALL:
@@ -39196,8 +39196,8 @@ layers:
     filename: CANGRD_hist_SON_trend_ps50km_PCP_1948-2012.tif
     label_en: Trend/Total Precipitation/CANGRD (Fall)- Relative trend of Total Precipitation
       (1948-2012)
-    label_fr: Tendance/Précipitation totale/CANGRD (automne)- Tendance absolue de
-      la température moyenne (1948 à 2012)
+    label_fr: Tendance/Précipitation totale/CANGRD (automne)- Tendance relative des
+      précipitations totales (1948 à 2012)
     num_bands: 1
 
   CLIMATE.STATIONS:
