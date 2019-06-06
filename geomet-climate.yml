@@ -14624,7 +14624,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMIN_pctl5_P1M.nc
-    label_en: Minimum temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Minimum temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical minimum
       temperature simulations (5th percentile)
     label_fr: Température minimale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14638,7 +14638,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMIN_pctl25_P1M.nc
-    label_en: Minimum temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Minimum temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical minimum
       temperature simulations (25th percentile)
     label_fr: Température minimale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14652,7 +14652,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMIN_pctl50_P1M.nc
-    label_en: Minimum temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Minimum temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical minimum
       temperature simulations (50th percentile)
     label_fr: Température minimale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14666,7 +14666,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMIN_pctl75_P1M.nc
-    label_en: Minimum temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Minimum temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical minimum
       temperature simulations (75th percentile)
     label_fr: Température minimale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14680,7 +14680,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMIN_pctl95_P1M.nc
-    label_en: Minimum temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Minimum temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical minimum
       temperature simulations (95th percentile)
     label_fr: Température minimale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14694,7 +14694,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMEAN_pctl5_P1M.nc
-    label_en: Mean temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Mean temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical mean
       temperature simulations (5th percentile)
     label_fr: Température moyenne/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14708,7 +14708,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMEAN_pctl25_P1M.nc
-    label_en: Mean temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Mean temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical mean
       temperature simulations (25th percentile)
     label_fr: Température moyenne/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14722,7 +14722,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMEAN_pctl50_P1M.nc
-    label_en: Mean temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Mean temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical mean
       temperature simulations (50th percentile)
     label_fr: Température moyenne/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14736,7 +14736,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMEAN_pctl75_P1M.nc
-    label_en: Mean temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Mean temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical mean
       temperature simulations (75th percentile)
     label_fr: Température moyenne/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14750,7 +14750,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMEAN_pctl95_P1M.nc
-    label_en: Mean temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Mean temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical mean
       temperature simulations (95th percentile)
     label_fr: Température moyenne/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14764,7 +14764,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMAX_pctl5_P1M.nc
-    label_en: Maximum temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Maximum temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical maximum
       temperature simulations (5th percentile)
     label_fr: Température maximale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14778,7 +14778,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMAX_pctl25_P1M.nc
-    label_en: Maximum temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Maximum temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical maximum
       temperature simulations (25th percentile)
     label_fr: Température maximale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14792,7 +14792,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMAX_pctl50_P1M.nc
-    label_en: Maximum temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Maximum temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical maximum
       temperature simulations (50th percentile)
     label_fr: Température maximale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14806,7 +14806,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMAX_pctl75_P1M.nc
-    label_en: Maximum temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Maximum temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical maximum
       temperature simulations (75th percentile)
     label_fr: Température maximale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14820,7 +14820,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_TMAX_pctl95_P1M.nc
-    label_en: Maximum temperature/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Maximum temperature/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled historical maximum
       temperature simulations (95th percentile)
     label_fr: Température maximale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -14834,7 +14834,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMIN_pctl5_P1M.nc
-    label_en: Minimum temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (5th percentile)
     label_fr: Température minimale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -14847,7 +14847,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMIN_pctl25_P1M.nc
-    label_en: Minimum temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (25th percentile)
     label_fr: Température minimale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -14860,7 +14860,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMIN_pctl50_P1M.nc
-    label_en: Minimum temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (50th percentile)
     label_fr: Température minimale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -14873,7 +14873,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMIN_pctl75_P1M.nc
-    label_en: Minimum temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (75th percentile)
     label_fr: Température minimale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -14886,7 +14886,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMIN_pctl95_P1M.nc
-    label_en: Minimum temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (95th percentile)
     label_fr: Température minimale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -14899,7 +14899,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMEAN_pctl5_P1M.nc
-    label_en: Mean temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (5th percentile)
     label_fr: Température moyenne/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -14912,7 +14912,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMEAN_pctl25_P1M.nc
-    label_en: Mean temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (25th percentile)
     label_fr: Température moyenne/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -14925,7 +14925,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMEAN_pctl50_P1M.nc
-    label_en: Mean temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (50th percentile)
     label_fr: Température moyenne/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -14938,7 +14938,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMEAN_pctl75_P1M.nc
-    label_en: Mean temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (75th percentile)
     label_fr: Température moyenne/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -14951,7 +14951,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMEAN_pctl95_P1M.nc
-    label_en: Mean temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (95th percentile)
     label_fr: Température moyenne/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -14964,7 +14964,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMAX_pctl5_P1M.nc
-    label_en: Maximum temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (5th percentile)
     label_fr: Température maximale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -14977,7 +14977,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMAX_pctl25_P1M.nc
-    label_en: Maximum temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (25th percentile)
     label_fr: Température maximale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -14990,7 +14990,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMAX_pctl50_P1M.nc
-    label_en: Maximum temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (50th percentile)
     label_fr: Température maximale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -15003,7 +15003,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMAX_pctl75_P1M.nc
-    label_en: Maximum temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (75th percentile)
     label_fr: Température maximale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -15016,7 +15016,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_TMAX_pctl95_P1M.nc
-    label_en: Maximum temperature/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (95th percentile)
     label_fr: Température maximale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -15029,7 +15029,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMIN_pctl5_P1M.nc
-    label_en: Minimum temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (5th percentile)
     label_fr: Température minimale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -15042,7 +15042,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMIN_pctl25_P1M.nc
-    label_en: Minimum temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (25th percentile)
     label_fr: Température minimale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -15055,7 +15055,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMIN_pctl50_P1M.nc
-    label_en: Minimum temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (50th percentile)
     label_fr: Température minimale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -15068,7 +15068,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMIN_pctl75_P1M.nc
-    label_en: Minimum temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (75th percentile)
     label_fr: Température minimale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -15081,7 +15081,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMIN_pctl95_P1M.nc
-    label_en: Minimum temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (95th percentile)
     label_fr: Température minimale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -15094,7 +15094,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMEAN_pctl5_P1M.nc
-    label_en: Mean temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (5th percentile)
     label_fr: Température moyenne/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -15107,7 +15107,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMEAN_pctl25_P1M.nc
-    label_en: Mean temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (25th percentile)
     label_fr: Température moyenne/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -15120,7 +15120,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMEAN_pctl50_P1M.nc
-    label_en: Mean temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (50th percentile)
     label_fr: Température moyenne/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -15133,7 +15133,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMEAN_pctl75_P1M.nc
-    label_en: Mean temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (75th percentile)
     label_fr: Température moyenne/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -15146,7 +15146,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMEAN_pctl95_P1M.nc
-    label_en: Mean temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (95th percentile)
     label_fr: Température moyenne/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -15159,7 +15159,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMAX_pctl5_P1M.nc
-    label_en: Maximum temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (5th percentile)
     label_fr: Température maximale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -15172,7 +15172,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMAX_pctl25_P1M.nc
-    label_en: Maximum temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (25th percentile)
     label_fr: Température maximale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -15185,7 +15185,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMAX_pctl50_P1M.nc
-    label_en: Maximum temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (50th percentile)
     label_fr: Température maximale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -15198,7 +15198,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMAX_pctl75_P1M.nc
-    label_en: Maximum temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (75th percentile)
     label_fr: Température maximale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -15211,7 +15211,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_TMAX_pctl95_P1M.nc
-    label_en: Maximum temperature/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (95th percentile)
     label_fr: Température maximale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -15224,7 +15224,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMIN_pctl5_P1M.nc
-    label_en: Minimum temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (5th percentile)
     label_fr: Température minimale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -15237,7 +15237,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMIN_pctl25_P1M.nc
-    label_en: Minimum temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (25th percentile)
     label_fr: Température minimale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -15250,7 +15250,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMIN_pctl50_P1M.nc
-    label_en: Minimum temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (50th percentile)
     label_fr: Température minimale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -15263,7 +15263,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMIN_pctl75_P1M.nc
-    label_en: Minimum temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (75th percentile)
     label_fr: Température minimale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -15276,7 +15276,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMIN_pctl95_P1M.nc
-    label_en: Minimum temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Minimum temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled minimum temperature projections (95th percentile)
     label_fr: Température minimale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température minimale mises
@@ -15289,7 +15289,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMEAN_pctl5_P1M.nc
-    label_en: Mean temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (5th percentile)
     label_fr: Température moyenne/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -15302,7 +15302,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMEAN_pctl25_P1M.nc
-    label_en: Mean temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (25th percentile)
     label_fr: Température moyenne/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -15315,7 +15315,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMEAN_pctl50_P1M.nc
-    label_en: Mean temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (50th percentile)
     label_fr: Température moyenne/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -15328,7 +15328,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMEAN_pctl75_P1M.nc
-    label_en: Mean temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (75th percentile)
     label_fr: Température moyenne/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -15341,7 +15341,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMEAN_pctl95_P1M.nc
-    label_en: Mean temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Mean temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled mean temperature projections (95th percentile)
     label_fr: Température moyenne/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température moyenne mises
@@ -15354,7 +15354,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMAX_pctl5_P1M.nc
-    label_en: Maximum temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (5th percentile)
     label_fr: Température maximale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -15367,7 +15367,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMAX_pctl25_P1M.nc
-    label_en: Maximum temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (25th percentile)
     label_fr: Température maximale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -15380,7 +15380,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMAX_pctl50_P1M.nc
-    label_en: Maximum temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (50th percentile)
     label_fr: Température maximale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -15393,7 +15393,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMAX_pctl75_P1M.nc
-    label_en: Maximum temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (75th percentile)
     label_fr: Température maximale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -15406,7 +15406,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_TMAX_pctl95_P1M.nc
-    label_en: Maximum temperature/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Maximum temperature/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled maximum temperature projections (95th percentile)
     label_fr: Température maximale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la température maximale mises
@@ -15419,7 +15419,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_PCP_pctl5_P1M.nc
-    label_en: Total Precipitation/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Total Precipitation/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled 
       total precipitation simulations (5th percentile)
     label_fr: Précipitation totale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -15433,7 +15433,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_PCP_pctl25_P1M.nc
-    label_en: Total Precipitation/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Total Precipitation/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled 
       total precipitation simulations (25th percentile)
     label_fr: Précipitation totale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -15447,7 +15447,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_PCP_pctl50_P1M.nc
-    label_en: Total Precipitation/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Total Precipitation/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled 
       total precipitation simulations (50th percentile)
     label_fr: Précipitation totale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -15461,7 +15461,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_PCP_pctl75_P1M.nc
-    label_en: Total Precipitation/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Total Precipitation/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled 
       total precipitation simulations (75th percentile)
     label_fr: Précipitation totale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -15475,7 +15475,7 @@ layers:
     climate_model: *id_dcs_historical_ensemble
     filepath: monthly_ens/absolute
     filename: DCS_hist_monthly_abs_latlon0.086x0.086_PCP_pctl95_P1M.nc
-    label_en: Total Precipitation/Historical (1951-2005)/Monthly Ensembles/DCS (Ensembles)-
+    label_en: Total Precipitation/Historical (1951-2005)/Monthly Ensembles/Absolute/DCS (Ensembles)-
       Monthly ensembles of statistically downscaled 
       total precipitation simulations (95th percentile)
     label_fr: Précipitation totale/(Historique 1951-01 à 2005-12)/Ensembles mensuels/Absolue/SCME
@@ -15489,7 +15489,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_PCP_pctl5_P1M.nc
-    label_en: Total Precipitation/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (5th percentile)
     label_fr: Précipitation totale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15502,7 +15502,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_PCP_pctl25_P1M.nc
-    label_en: Total Precipitation/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (25th percentile)
     label_fr: Précipitation totale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15515,7 +15515,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_PCP_pctl50_P1M.nc
-    label_en: Total Precipitation/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (50th percentile)
     label_fr: Précipitation totale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15528,7 +15528,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_PCP_pctl75_P1M.nc
-    label_en: Total Precipitation/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (75th percentile)
     label_fr: Précipitation totale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15541,7 +15541,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: DCS_rcp2.6_monthly_abs_latlon0.086x0.086_PCP_pctl95_P1M.nc
-    label_en: Total Precipitation/RCP 2.6/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 2.6/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (95th percentile)
     label_fr: Précipitation totale/RCP 2.6/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15554,7 +15554,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_PCP_pctl5_P1M.nc
-    label_en: Total Precipitation/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (5th percentile)
     label_fr: Précipitation totale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15567,7 +15567,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_PCP_pctl25_P1M.nc
-    label_en: Total Precipitation/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (25th percentile)
     label_fr: Précipitation totale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15580,7 +15580,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_PCP_pctl50_P1M.nc
-    label_en: Total Precipitation/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (50th percentile)
     label_fr: Précipitation totale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15593,7 +15593,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_PCP_pctl75_P1M.nc
-    label_en: Total Precipitation/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (75th percentile)
     label_fr: Précipitation totale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15606,7 +15606,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: DCS_rcp4.5_monthly_abs_latlon0.086x0.086_PCP_pctl95_P1M.nc
-    label_en: Total Precipitation/RCP 4.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 4.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (95th percentile)
     label_fr: Précipitation totale/RCP 4.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15619,7 +15619,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_PCP_pctl5_P1M.nc
-    label_en: Total Precipitation/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (5th percentile)
     label_fr: Précipitation totale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15632,7 +15632,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_PCP_pctl25_P1M.nc
-    label_en: Total Precipitation/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (25th percentile)
     label_fr: Précipitation totale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15645,7 +15645,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_PCP_pctl50_P1M.nc
-    label_en: Total Precipitation/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (50th percentile)
     label_fr: Précipitation totale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15658,7 +15658,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_PCP_pctl75_P1M.nc
-    label_en: Total Precipitation/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (75th percentile)
     label_fr: Précipitation totale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -15671,7 +15671,7 @@ layers:
     climate_model: *id_dcs_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: DCS_rcp8.5_monthly_abs_latlon0.086x0.086_PCP_pctl95_P1M.nc
-    label_en: Total Precipitation/RCP 8.5/Monthly Ensembles/DCS (Ensembles)- Monthly
+    label_en: Total Precipitation/RCP 8.5/Monthly Ensembles/Absolute/DCS (Ensembles)- Monthly
       ensembles of statistically downscaled total precipitation projections (95th percentile)
     label_fr: Précipitation totale/RCP 8.5/Ensembles mensuels/Absolue/SCME (ensembles
       mensuels)- Ensemble de projections mensuelles de la précipitation totale mises
@@ -21743,7 +21743,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_wind
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SFCWND_pctl5_P1M.nc
-    label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/CMIP5
+    label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Wind Speed simulations simulations (5th
       percentile)
     label_fr: Vitesse du vent près de la surface/(Historique 1900-01 à 2005-11)/Ensembles
@@ -21757,7 +21757,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_wind
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SFCWND_pctl25_P1M.nc
-    label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/CMIP5
+    label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Wind Speed simulations simulations (25th
       percentile)
     label_fr: Vitesse du vent près de la surface/(Historique 1900-01 à 2005-11)/Ensembles
@@ -21771,7 +21771,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_wind
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SFCWND_pctl50_P1M.nc
-    label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/CMIP5
+    label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Wind Speed simulations simulations (50th
       percentile)
     label_fr: Vitesse du vent près de la surface/(Historique 1900-01 à 2005-11)/Ensembles
@@ -21785,7 +21785,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_wind
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SFCWND_pctl75_P1M.nc
-    label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/CMIP5
+    label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Wind Speed simulations simulations (75th
       percentile)
     label_fr: Vitesse du vent près de la surface/(Historique 1900-01 à 2005-11)/Ensembles
@@ -21799,7 +21799,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_wind
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SFCWND_pctl95_P1M.nc
-    label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/CMIP5
+    label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Wind Speed simulations simulations (95th
       percentile)
     label_fr: Vitesse du vent près de la surface/(Historique 1900-01 à 2005-11)/Ensembles
@@ -21813,7 +21813,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SFCWND_pctl5_P1M.nc
-    label_en: Near surface wind speed/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (5th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21826,7 +21826,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SFCWND_pctl25_P1M.nc
-    label_en: Near surface wind speed/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (25th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21839,7 +21839,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SFCWND_pctl50_P1M.nc
-    label_en: Near surface wind speed/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (50th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21852,7 +21852,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SFCWND_pctl75_P1M.nc
-    label_en: Near surface wind speed/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (75th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21865,7 +21865,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SFCWND_pctl95_P1M.nc
-    label_en: Near surface wind speed/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (95th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21878,7 +21878,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SFCWND_pctl5_P1M.nc
-    label_en: Near surface wind speed/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (5th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21891,7 +21891,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SFCWND_pctl25_P1M.nc
-    label_en: Near surface wind speed/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (25th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21904,7 +21904,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SFCWND_pctl50_P1M.nc
-    label_en: Near surface wind speed/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (50th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21917,7 +21917,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SFCWND_pctl75_P1M.nc
-    label_en: Near surface wind speed/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (75th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21930,7 +21930,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SFCWND_pctl95_P1M.nc
-    label_en: Near surface wind speed/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (95th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21943,7 +21943,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SFCWND_pctl5_P1M.nc
-    label_en: Near surface wind speed/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (5th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21956,7 +21956,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SFCWND_pctl25_P1M.nc
-    label_en: Near surface wind speed/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (25th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21969,7 +21969,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SFCWND_pctl50_P1M.nc
-    label_en: Near surface wind speed/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (50th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21982,7 +21982,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SFCWND_pctl75_P1M.nc
-    label_en: Near surface wind speed/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (75th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -21995,7 +21995,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SFCWND_pctl95_P1M.nc
-    label_en: Near surface wind speed/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Near surface wind speed/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Wind Speed projections (95th percentile)
     label_fr: Vitesse du vent près de la surface/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la vitesse du vent
@@ -25101,7 +25101,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SNDPT_pctl5_P1M.nc
-    label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Snow Depth simulations simulations (5th percentile)
     label_fr: Profondeur de la neige/(Historique 1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
@@ -25114,7 +25114,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SNDPT_pctl25_P1M.nc
-    label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Snow Depth simulations simulations (25th percentile)
     label_fr: Profondeur de la neige/(Historique 1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
@@ -25127,7 +25127,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SNDPT_pctl50_P1M.nc
-    label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Snow Depth simulations simulations (50th percentile)
     label_fr: Profondeur de la neige/(Historique 1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
@@ -25140,7 +25140,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SNDPT_pctl75_P1M.nc
-    label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Snow Depth simulations simulations (75th percentile)
     label_fr: Profondeur de la neige/(Historique 1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
@@ -25153,7 +25153,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SNDPT_pctl95_P1M.nc
-    label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Snow Depth simulations simulations (95th percentile)
     label_fr: Profondeur de la neige/(Historique 1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
@@ -25166,7 +25166,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SNDPT_pctl5_P1M.nc
-    label_en: Snow depth/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (5th percentile)
     label_fr: Profondeur de la neige/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25179,7 +25179,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SNDPT_pctl25_P1M.nc
-    label_en: Snow depth/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (25th percentile)
     label_fr: Profondeur de la neige/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25192,7 +25192,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SNDPT_pctl50_P1M.nc
-    label_en: Snow depth/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (50th percentile)
     label_fr: Profondeur de la neige/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25205,7 +25205,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SNDPT_pctl75_P1M.nc
-    label_en: Snow depth/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (75th percentile)
     label_fr: Profondeur de la neige/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25218,7 +25218,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SNDPT_pctl95_P1M.nc
-    label_en: Snow depth/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (95th percentile)
     label_fr: Profondeur de la neige/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25231,7 +25231,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SNDPT_pctl5_P1M.nc
-    label_en: Snow depth/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (5th percentile)
     label_fr: Profondeur de la neige/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25244,7 +25244,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SNDPT_pctl25_P1M.nc
-    label_en: Snow depth/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (25th percentile)
     label_fr: Profondeur de la neige/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25257,7 +25257,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SNDPT_pctl50_P1M.nc
-    label_en: Snow depth/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (50th percentile)
     label_fr: Profondeur de la neige/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25270,7 +25270,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SNDPT_pctl75_P1M.nc
-    label_en: Snow depth/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (75th percentile)
     label_fr: Profondeur de la neige/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25283,7 +25283,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SNDPT_pctl95_P1M.nc
-    label_en: Snow depth/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (95th percentile)
     label_fr: Profondeur de la neige/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25296,7 +25296,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SNDPT_pctl5_P1M.nc
-    label_en: Snow depth/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (5th percentile)
     label_fr: Profondeur de la neige/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25309,7 +25309,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SNDPT_pctl25_P1M.nc
-    label_en: Snow depth/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (25th percentile)
     label_fr: Profondeur de la neige/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25322,7 +25322,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SNDPT_pctl50_P1M.nc
-    label_en: Snow depth/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (50th percentile)
     label_fr: Profondeur de la neige/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25335,7 +25335,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SNDPT_pctl75_P1M.nc
-    label_en: Snow depth/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (75th percentile)
     label_fr: Profondeur de la neige/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -25348,7 +25348,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SNDPT_pctl95_P1M.nc
-    label_en: Snow depth/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly ensembles
+    label_en: Snow depth/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly ensembles
       of Snow Depth projections (95th percentile)
     label_fr: Profondeur de la neige/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la profondeur de la neige
@@ -28436,7 +28436,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_1901
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_TEMP_pctl5_P1M.nc
-    label_en: Air temperature/Historical (1901-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Air temperature/Historical (1901-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Air Temperature simulations simulations (5th percentile)
     label_fr: Température de l'air/(Historique 1901-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
@@ -28449,7 +28449,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_1901
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_TEMP_pctl25_P1M.nc
-    label_en: Air temperature/Historical (1901-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Air temperature/Historical (1901-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Air Temperature simulations simulations (25th percentile)
     label_fr: Température de l'air/(Historique 1901-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
@@ -28462,7 +28462,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_1901
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_TEMP_pctl50_P1M.nc
-    label_en: Air temperature/Historical (1901-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Air temperature/Historical (1901-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Air Temperature simulations simulations (50th percentile)
     label_fr: Température de l'air/(Historique 1901-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
@@ -28475,7 +28475,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_1901
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_TEMP_pctl75_P1M.nc
-    label_en: Air temperature/Historical (1901-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Air temperature/Historical (1901-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Air Temperature simulations simulations (75th percentile)
     label_fr: Température de l'air/(Historique 1901-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
@@ -28488,7 +28488,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_1901
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_TEMP_pctl95_P1M.nc
-    label_en: Air temperature/Historical (1901-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Air temperature/Historical (1901-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Air Temperature simulations simulations (95th percentile)
     label_fr: Température de l'air/(Historique 1901-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
@@ -28501,7 +28501,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_TEMP_pctl5_P1M.nc
-    label_en: Air temperature/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (5th percentile)
     label_fr: Température de l'air/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (5e
@@ -28514,7 +28514,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_TEMP_pctl25_P1M.nc
-    label_en: Air temperature/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (25th percentile)
     label_fr: Température de l'air/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (25e
@@ -28527,7 +28527,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_TEMP_pctl50_P1M.nc
-    label_en: Air temperature/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (50th percentile)
     label_fr: Température de l'air/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (50e
@@ -28540,7 +28540,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_TEMP_pctl75_P1M.nc
-    label_en: Air temperature/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (75th percentile)
     label_fr: Température de l'air/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (75e
@@ -28553,7 +28553,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_TEMP_pctl95_P1M.nc
-    label_en: Air temperature/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (95th percentile)
     label_fr: Température de l'air/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (95e
@@ -28566,7 +28566,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_TEMP_pctl5_P1M.nc
-    label_en: Air temperature/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (5th percentile)
     label_fr: Température de l'air/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (5e
@@ -28579,7 +28579,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_TEMP_pctl25_P1M.nc
-    label_en: Air temperature/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (25th percentile)
     label_fr: Température de l'air/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (25e
@@ -28592,7 +28592,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_TEMP_pctl50_P1M.nc
-    label_en: Air temperature/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (50th percentile)
     label_fr: Température de l'air/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (50e
@@ -28605,7 +28605,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_TEMP_pctl75_P1M.nc
-    label_en: Air temperature/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (75th percentile)
     label_fr: Température de l'air/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (75e
@@ -28618,7 +28618,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_TEMP_pctl95_P1M.nc
-    label_en: Air temperature/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (95th percentile)
     label_fr: Température de l'air/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (95e
@@ -28631,7 +28631,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_TEMP_pctl5_P1M.nc
-    label_en: Air temperature/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (5th percentile)
     label_fr: Température de l'air/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (5e
@@ -28644,7 +28644,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_TEMP_pctl25_P1M.nc
-    label_en: Air temperature/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (25th percentile)
     label_fr: Température de l'air/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (25e
@@ -28657,7 +28657,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_TEMP_pctl50_P1M.nc
-    label_en: Air temperature/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (50th percentile)
     label_fr: Température de l'air/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (50e
@@ -28670,7 +28670,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_TEMP_pctl75_P1M.nc
-    label_en: Air temperature/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (75th percentile)
     label_fr: Température de l'air/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (75e
@@ -28683,7 +28683,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_TEMP_pctl95_P1M.nc
-    label_en: Air temperature/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Air temperature/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Air Temperature projections (95th percentile)
     label_fr: Température de l'air/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la température de l'air (95e
@@ -31760,7 +31760,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_1901
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_PCP_pctl5_P1M.nc
-    label_en: Total precipitation/Historical (1901-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Total precipitation/Historical (1901-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Total Precipitation simulations simulations (5th percentile)
     label_fr: Précipitation totale/(Historique 1901-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
@@ -31773,7 +31773,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_1901
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_PCP_pctl25_P1M.nc
-    label_en: Total precipitation/Historical (1901-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Total precipitation/Historical (1901-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Total Precipitation simulations simulations (25th
       percentile)
     label_fr: Précipitation totale/(Historique 1901-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
@@ -31787,7 +31787,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_1901
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_PCP_pctl50_P1M.nc
-    label_en: Total precipitation/Historical (1901-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Total precipitation/Historical (1901-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Total Precipitation simulations simulations (50th
       percentile)
     label_fr: Précipitation totale/(Historique 1901-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
@@ -31801,7 +31801,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_1901
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_PCP_pctl75_P1M.nc
-    label_en: Total precipitation/Historical (1901-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Total precipitation/Historical (1901-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Total Precipitation simulations simulations (75th
       percentile)
     label_fr: Précipitation totale/(Historique 1901-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
@@ -31815,7 +31815,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble_1901
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_PCP_pctl95_P1M.nc
-    label_en: Total precipitation/Historical (1901-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Total precipitation/Historical (1901-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Total Precipitation simulations simulations (95th
       percentile)
     label_fr: Précipitation totale/(Historique 1901-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
@@ -31829,7 +31829,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_PCP_pctl5_P1M.nc
-    label_en: Total precipitation/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (5th percentile)
     label_fr: Précipitation totale/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (5e
@@ -31842,7 +31842,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_PCP_pctl25_P1M.nc
-    label_en: Total precipitation/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (25th percentile)
     label_fr: Précipitation totale/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (25e
@@ -31855,7 +31855,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_PCP_pctl50_P1M.nc
-    label_en: Total precipitation/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (50th percentile)
     label_fr: Précipitation totale/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (50e
@@ -31868,7 +31868,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_PCP_pctl75_P1M.nc
-    label_en: Total precipitation/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (75th percentile)
     label_fr: Précipitation totale/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (75e
@@ -31881,7 +31881,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_PCP_pctl95_P1M.nc
-    label_en: Total precipitation/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (95th percentile)
     label_fr: Précipitation totale/RCP 2.6/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (95e
@@ -31894,7 +31894,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_PCP_pctl5_P1M.nc
-    label_en: Total precipitation/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (5th percentile)
     label_fr: Précipitation totale/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (5e
@@ -31907,7 +31907,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_PCP_pctl25_P1M.nc
-    label_en: Total precipitation/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (25th percentile)
     label_fr: Précipitation totale/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (25e
@@ -31920,7 +31920,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_PCP_pctl50_P1M.nc
-    label_en: Total precipitation/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (50th percentile)
     label_fr: Précipitation totale/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (50e
@@ -31933,7 +31933,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_PCP_pctl75_P1M.nc
-    label_en: Total precipitation/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (75th percentile)
     label_fr: Précipitation totale/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (75e
@@ -31946,7 +31946,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_PCP_pctl95_P1M.nc
-    label_en: Total precipitation/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (95th percentile)
     label_fr: Précipitation totale/RCP 4.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (95e
@@ -31959,7 +31959,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_PCP_pctl5_P1M.nc
-    label_en: Total precipitation/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (5th percentile)
     label_fr: Précipitation totale/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (5e
@@ -31972,7 +31972,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_PCP_pctl25_P1M.nc
-    label_en: Total precipitation/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (25th percentile)
     label_fr: Précipitation totale/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (25e
@@ -31985,7 +31985,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_PCP_pctl50_P1M.nc
-    label_en: Total precipitation/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (50th percentile)
     label_fr: Précipitation totale/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (50e
@@ -31998,7 +31998,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_PCP_pctl75_P1M.nc
-    label_en: Total precipitation/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (75th percentile)
     label_fr: Précipitation totale/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (75e
@@ -32011,7 +32011,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_PCP_pctl95_P1M.nc
-    label_en: Total precipitation/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Total precipitation/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Total Precipitation projections (95th percentile)
     label_fr: Précipitation totale/RCP 8.5/Ensembles mensuels/Absolue/CMIP5 (ensembles
       mensuels)- Ensemble des projections mensuelles de la précipitation totale (95e
@@ -35166,7 +35166,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICECONC_pctl5_P1M.nc
-    label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/CMIP5
+    label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Sea Ice Concentration simulations
       simulations (5th percentile)
     label_fr: Concentration de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
@@ -35180,7 +35180,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICECONC_pctl25_P1M.nc
-    label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/CMIP5
+    label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Sea Ice Concentration simulations
       simulations (25th percentile)
     label_fr: Concentration de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
@@ -35194,7 +35194,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICECONC_pctl50_P1M.nc
-    label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/CMIP5
+    label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Sea Ice Concentration simulations
       simulations (50th percentile)
     label_fr: Concentration de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
@@ -35208,7 +35208,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICECONC_pctl75_P1M.nc
-    label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/CMIP5
+    label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Sea Ice Concentration simulations
       simulations (75th percentile)
     label_fr: Concentration de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
@@ -35222,7 +35222,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICECONC_pctl95_P1M.nc
-    label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/CMIP5
+    label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Sea Ice Concentration simulations
       simulations (95th percentile)
     label_fr: Concentration de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
@@ -35236,7 +35236,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SICECONC_pctl5_P1M.nc
-    label_en: Sea ice concentration/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (5th percentile)
     label_fr: Concentration de la glace de mer/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35249,7 +35249,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SICECONC_pctl25_P1M.nc
-    label_en: Sea ice concentration/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (25th percentile)
     label_fr: Concentration de la glace de mer/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35262,7 +35262,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SICECONC_pctl50_P1M.nc
-    label_en: Sea ice concentration/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (50th percentile)
     label_fr: Concentration de la glace de mer/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35275,7 +35275,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SICECONC_pctl75_P1M.nc
-    label_en: Sea ice concentration/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (75th percentile)
     label_fr: Concentration de la glace de mer/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35288,7 +35288,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SICECONC_pctl95_P1M.nc
-    label_en: Sea ice concentration/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (95th percentile)
     label_fr: Concentration de la glace de mer/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35301,7 +35301,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SICECONC_pctl5_P1M.nc
-    label_en: Sea ice concentration/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (5th percentile)
     label_fr: Concentration de la glace de mer/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35314,7 +35314,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SICECONC_pctl25_P1M.nc
-    label_en: Sea ice concentration/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (25th percentile)
     label_fr: Concentration de la glace de mer/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35327,7 +35327,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SICECONC_pctl50_P1M.nc
-    label_en: Sea ice concentration/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (50th percentile)
     label_fr: Concentration de la glace de mer/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35340,7 +35340,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SICECONC_pctl75_P1M.nc
-    label_en: Sea ice concentration/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (75th percentile)
     label_fr: Concentration de la glace de mer/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35353,7 +35353,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SICECONC_pctl95_P1M.nc
-    label_en: Sea ice concentration/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (95th percentile)
     label_fr: Concentration de la glace de mer/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35366,7 +35366,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SICECONC_pctl5_P1M.nc
-    label_en: Sea ice concentration/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (5th percentile)
     label_fr: Concentration de la glace de mer/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35379,7 +35379,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SICECONC_pctl25_P1M.nc
-    label_en: Sea ice concentration/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (25th percentile)
     label_fr: Concentration de la glace de mer/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35392,7 +35392,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SICECONC_pctl50_P1M.nc
-    label_en: Sea ice concentration/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (50th percentile)
     label_fr: Concentration de la glace de mer/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35405,7 +35405,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SICECONC_pctl75_P1M.nc
-    label_en: Sea ice concentration/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (75th percentile)
     label_fr: Concentration de la glace de mer/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -35418,7 +35418,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SICECONC_pctl95_P1M.nc
-    label_en: Sea ice concentration/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice concentration/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Concentration projections (95th percentile)
     label_fr: Concentration de la glace de mer/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de la concentration
@@ -38552,7 +38552,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICETHKN_pctl5_P1M.nc
-    label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Sea Ice Thickness simulations simulations (5th percentile)
     label_fr: Épaisseur de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
@@ -38565,7 +38565,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICETHKN_pctl25_P1M.nc
-    label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Sea Ice Thickness simulations simulations (25th percentile)
     label_fr: Épaisseur de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
@@ -38578,7 +38578,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICETHKN_pctl50_P1M.nc
-    label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Sea Ice Thickness simulations simulations (50th percentile)
     label_fr: Épaisseur de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
@@ -38591,7 +38591,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICETHKN_pctl75_P1M.nc
-    label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Sea Ice Thickness simulations simulations (75th percentile)
     label_fr: Épaisseur de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
@@ -38604,7 +38604,7 @@ layers:
     climate_model: *id_cmip5_historical_ensemble
     filepath: monthly_ens/absolute
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICETHKN_pctl95_P1M.nc
-    label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/CMIP5 (Ensembles)-
+    label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Sea Ice Thickness simulations simulations (95th percentile)
     label_fr: Épaisseur de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
@@ -38617,7 +38617,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SICETHKN_pctl5_P1M.nc
-    label_en: Sea ice thickness/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (5th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38630,7 +38630,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SICETHKN_pctl25_P1M.nc
-    label_en: Sea ice thickness/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (25th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38643,7 +38643,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SICETHKN_pctl50_P1M.nc
-    label_en: Sea ice thickness/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (50th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38656,7 +38656,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SICETHKN_pctl75_P1M.nc
-    label_en: Sea ice thickness/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (75th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38669,7 +38669,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP2.6/monthly_ens/absolute
     filename: CMIP5_rcp2.6_monthly_abs_latlon1x1_SICETHKN_pctl95_P1M.nc
-    label_en: Sea ice thickness/RCP 2.6/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 2.6/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (95th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 2.6/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38682,7 +38682,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SICETHKN_pctl5_P1M.nc
-    label_en: Sea ice thickness/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (5th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38695,7 +38695,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SICETHKN_pctl25_P1M.nc
-    label_en: Sea ice thickness/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (25th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38708,7 +38708,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SICETHKN_pctl50_P1M.nc
-    label_en: Sea ice thickness/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (50th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38721,7 +38721,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SICETHKN_pctl75_P1M.nc
-    label_en: Sea ice thickness/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (75th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38734,7 +38734,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP4.5/monthly_ens/absolute
     filename: CMIP5_rcp4.5_monthly_abs_latlon1x1_SICETHKN_pctl95_P1M.nc
-    label_en: Sea ice thickness/RCP 4.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 4.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (95th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 4.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38747,7 +38747,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SICETHKN_pctl5_P1M.nc
-    label_en: Sea ice thickness/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (5th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38760,7 +38760,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SICETHKN_pctl25_P1M.nc
-    label_en: Sea ice thickness/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (25th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38773,7 +38773,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SICETHKN_pctl50_P1M.nc
-    label_en: Sea ice thickness/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (50th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38786,7 +38786,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SICETHKN_pctl75_P1M.nc
-    label_en: Sea ice thickness/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (75th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
@@ -38799,7 +38799,7 @@ layers:
     climate_model: *id_cmip5_rcp_ensemble
     filepath: RCP8.5/monthly_ens/absolute
     filename: CMIP5_rcp8.5_monthly_abs_latlon1x1_SICETHKN_pctl95_P1M.nc
-    label_en: Sea ice thickness/RCP 8.5/Monthly Ensembles/CMIP5 (Ensembles)- Monthly
+    label_en: Sea ice thickness/RCP 8.5/Monthly Ensembles/Absolute/CMIP5 (Ensembles)- Monthly
       ensembles of Sea Ice Thickness projections (95th percentile)
     label_fr: Épaisseur de la glace de mer/RCP 8.5/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des projections mensuelles de l'épaisseur de
