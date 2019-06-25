@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+USER="geoadm"
+HOMEDIR="/local/home/$USER"
+
+id -u $USER >/dev/null 2>&1 || (mkdir $HOMEDIR; useradd -d $HOMEDIR -s /bin/sh $USER)
+
+exit 0
