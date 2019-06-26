@@ -1,2 +1,2 @@
 opt/geomet-climate/app/geomet-climate.wsgi
-opt/geomet-climate/amqp.conf
+opt/geomet-climate/etc/amqp-climate.dd-ops.conf
