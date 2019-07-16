@@ -1,3 +1,16 @@
+geomet-climate (1.4.0) trusty; urgency=medium
+
+  * added NoData value handling to tileindexing
+  * add yaml CLoader for faster config processing
+  * optimized tileindex generation
+  * update layer styles
+  * fix WCS GetCoverage error handling
+  * added missing DCS.PR.RCP26.ENS.ABS_PCTL95 layer
+  * update CANGRD timestep
+  * update labels for monthly ensembles
+
+ -- Tom Kralidis <tom.kralidis@canada.ca>  Tue, 16 Jul 2019 10:39:43 +0000
+
 geomet-climate (1.2.0) trusty; urgency=medium
 
   * generate tileindexes as GeoPackage files, remove VRT files
