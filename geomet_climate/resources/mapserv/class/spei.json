@@ -1,0 +1,170 @@
+[
+  {
+    "__type__": "class",
+    "name": "2.5 - 3",
+    "group": "SPEI",
+    "expression": "([pixel] >= 2.5)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        1,
+        0,
+        145
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "2.0 - 2.5",
+    "group": "SPEI",
+    "expression": "([pixel] >= 2.0 AND [pixel] <  2.5)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        1,
+        0,
+        200
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "1.5 - 2.0",
+    "group": "SPEI",
+    "expression": "([pixel] >= 1.5 AND [pixel] <  2.0)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        29,
+        41,
+        239
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "1.0 - 1.5",
+    "group": "SPEI",
+    "expression": "([pixel] >= 1.0 AND [pixel] <  1.5)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        92,
+        135,
+        239
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.5 - 1.0",
+    "group": "SPEI",
+    "expression": "([pixel] >= 0.5 AND [pixel] <  1.0)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        122,
+        197,
+        237
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "0.0 - 0.5",
+    "group": "SPEI",
+    "expression": "([pixel] >= 0.0 AND [pixel] <  0.5)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        190,
+        234,
+        250
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-0.5 - 0.0",
+    "group": "SPEI",
+    "expression": "([pixel] >= -0.5 AND [pixel] <  0.0)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        253,
+        198,
+        195
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-1.0 - -0.5",
+    "group": "SPEI",
+    "expression": "([pixel] >= -1.0 AND [pixel] < -0.5)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        252,
+        159,
+        154
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-1.5 - -1.0",
+    "group": "SPEI",
+    "expression": "([pixel] >= -1.5 AND [pixel] <  -1.0)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        251,
+        123,
+        117
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-2.0 - -1.5",
+    "group": "SPEI",
+    "expression": "([pixel] >= -2.0 AND [pixel] <  -1.5)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        249,
+        76,
+        69
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-2.5 - -2.0",
+    "group": "SPEI",
+    "expression": "([pixel] >= -2.5 AND [pixel] <  -2.0)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        211,
+        41,
+        38
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "-3.0 - -2.5",
+    "group": "SPEI",
+    "expression": "([pixel] <  -2.5)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        140,
+        26,
+        24
+      ]
+    }
+  }
+]
