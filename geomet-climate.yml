@@ -423,6 +423,30 @@ layer_groups:
       begin: 2006-01
       end: 2100-12
 
+  SPEI_HISTORICAL: &id_SPEI_historical
+    metadata_id:
+      spei-1: 55fa8f11-aa8c-4232-86da-2e370239e096
+      spei-3: 55fa8f11-aa8c-4232-86da-2e370239e096
+      spei-12: 55fa8f11-aa8c-4232-86da-2e370239e096
+    projection: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4326"]]
+    extent: [-150.5, 39.5, -49.5, 85.5]
+    basepath: spei/netcdf/historical
+    label_en:  Standardized Precipitation Evapotranspiration Index (SPEI)
+    label_fr: Indice de précipitations et d’évapotranspiration normalisé (IPEN)
+    dimensions: [101, 46]
+    geo_transform: -1.5050000000000000e+02,  1.0000000000000000e+00,  0.0000000000000000e+00,  8.5500000000000000e+01,  0.0000000000000000e+00, -1.0000000000000000e+00
+    temporal_extent:
+      begin: 1900-01
+      end: 2005-11
+    is_vrt: true
+
+  SPEI_RCP: &id_SPEI_rcp
+    <<: *id_SPEI_historical
+    basepath: spei/netcdf/scenarios
+    temporal_extent:
+      begin: 2006-01
+      end: 2100-01
+
   HYDROMETRIC: &id_hydrometric
     projection: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4326"]]
     metadata_id:
@@ -544,6 +568,12 @@ layer_templates:
     classgroup: SEAICETHICKNESS-ABSOLUTE
     styles:
     - mapserv/class/sea-ice-thickness_absolute.json
+
+  spei: &template_spei
+    type: RASTER
+    classgroup: SPEI
+    styles:
+    - mapserv/class/spei.json
 
   stations: &template_stations
     type: POINT
@@ -15678,6 +15708,438 @@ layers:
       à l'échelle de manière statistique (95e percentile)
     timestep: P1M
     num_bands: 1140
+
+  SPEI-1.HISTO.ENS_PCTL25:
+    <<: *template_spei
+    climate_model: *id_SPEI_historical
+    filepath: SPEI-1
+    filename: CMIP5_hist_SPEI-1_1900-2005_latlon1x1_SPEI_pctl25.nc
+    label_en: SPEI-1/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 1 month (25th percentile)
+    label_fr: IPEN-1/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 1 mois (25e percentile)
+    timestep: P1M
+    num_bands: 1271
+
+  SPEI-1.HISTO.ENS_PCTL50:
+    <<: *template_spei
+    climate_model: *id_SPEI_historical
+    filepath: SPEI-1
+    filename: CMIP5_hist_SPEI-1_1900-2005_latlon1x1_SPEI_pctl50.nc
+    label_en: SPEI-1/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 1 month (50th percentile)
+    label_fr: IPEN-1/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 1 mois (50e percentile)
+    timestep: P1M
+    num_bands: 1271
+
+  SPEI-1.HISTO.ENS_PCTL75:
+    <<: *template_spei
+    climate_model: *id_SPEI_historical
+    filepath: SPEI-1
+    filename: CMIP5_hist_SPEI-1_1900-2005_latlon1x1_SPEI_pctl75.nc
+    label_en: SPEI-1/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 1 month (75th percentile)
+    label_fr: IPEN-1/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 1 mois (75e percentile)
+    timestep: P1M
+    num_bands: 1271
+
+  SPEI-3.HISTO.ENS_PCTL25:
+    <<: *template_spei
+    climate_model: *id_SPEI_historical
+    filepath: SPEI-3
+    filename: CMIP5_hist_SPEI-3_1900-2005_latlon1x1_SPEI_pctl25.nc
+    label_en: SPEI-3/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 3 month (25th percentile)
+    label_fr: IPEN-3/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 3 mois (25e percentile)
+    timestep: P1M
+    num_bands: 1271
+
+  SPEI-3.HISTO.ENS_PCTL50:
+    <<: *template_spei
+    climate_model: *id_SPEI_historical
+    filepath: SPEI-3
+    filename: CMIP5_hist_SPEI-3_1900-2005_latlon1x1_SPEI_pctl50.nc
+    label_en: SPEI-3/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 3 month (50th percentile)
+    label_fr: IPEN-1/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 3 mois (50e percentile)
+    timestep: P1M
+    num_bands: 1271
+
+  SPEI-3.HISTO.ENS_PCTL75:
+    <<: *template_spei
+    climate_model: *id_SPEI_historical
+    filepath: SPEI-3
+    filename: CMIP5_hist_SPEI-3_1900-2005_latlon1x1_SPEI_pctl75.nc
+    label_en: SPEI-3/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 3 month (75th percentile)
+    label_fr: IPEN-3/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 3 mois (75e percentile)
+    timestep: P1M
+    num_bands: 1271
+
+  SPEI-12.HISTO.ENS_PCTL25:
+    <<: *template_spei
+    climate_model: *id_SPEI_historical
+    filepath: SPEI-12
+    filename: CMIP5_hist_SPEI-12_1900-2005_latlon1x1_SPEI_pctl25.nc
+    label_en: SPEI-12/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 12 month (25th percentile)
+    label_fr: IPEN-12/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 12 mois (25e percentile)
+    timestep: P1M
+    num_bands: 1271
+
+  SPEI-12.HISTO.ENS_PCTL50:
+    <<: *template_spei
+    climate_model: *id_SPEI_historical
+    filepath: SPEI-12
+    filename: CMIP5_hist_SPEI-12_1900-2005_latlon1x1_SPEI_pctl50.nc
+    label_en: SPEI-12/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 12 month (50th percentile)
+    label_fr: IPEN-12/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 12 mois (50e percentile)
+    timestep: P1M
+    num_bands: 1271
+
+  SPEI-12.HISTO.ENS_PCTL75:
+    <<: *template_spei
+    climate_model: *id_SPEI_historical
+    filepath: SPEI-12
+    filename: CMIP5_hist_SPEI-12_1900-2005_latlon1x1_SPEI_pctl75.nc
+    label_en: SPEI-12/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 12 month (75th percentile)
+    label_fr: IPEN-12/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 12 mois (75e percentile)
+    timestep: P1M
+    num_bands: 1271
+
+  SPEI-1.RCP2.6.ENS_PCTL25:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP2.6/SPEI-1
+    filename: CMIP5_rcp2.6_SPEI-1_2006-2100_latlon1x1_SPEI_pctl25.nc
+    label_en: SPEI-1/RCP 2.6/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 1 month (25th percentile)
+    label_fr: IPEN-1/RCP 2.6/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 1 mois (25e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-1.RCP2.6.ENS_PCTL50:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP2.6/SPEI-1
+    filename: CMIP5_rcp2.6_SPEI-1_2006-2100_latlon1x1_SPEI_pctl50.nc
+    label_en: SPEI-1/RCP 2.6/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 1 month (50th percentile)
+    label_fr: IPEN-1/RCP 2.6/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 1 mois (50e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-1.RCP2.6.ENS_PCTL75:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP2.6/SPEI-1
+    filename: CMIP5_rcp2.6_SPEI-1_2006-2100_latlon1x1_SPEI_pctl75.nc
+    label_en: SPEI-1/RCP 2.6/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 1 month (75th percentile)
+    label_fr: IPEN-1/RCP 2.6/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 1 mois (75e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-3.RCP2.6.ENS_PCTL25:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP2.6/SPEI-3
+    filename: CMIP5_rcp2.6_SPEI-3_2006-2100_latlon1x1_SPEI_pctl25.nc
+    label_en: SPEI-3/RCP 2.6/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 3 month (25th percentile)
+    label_fr: IPEN-3/RCP 2.6/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 3 mois (25e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-3.RCP2.6.ENS_PCTL50:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP2.6/SPEI-3
+    filename: CMIP5_rcp2.6_SPEI-3_2006-2100_latlon1x1_SPEI_pctl50.nc
+    label_en: SPEI-3/RCP 2.6/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 3 month (50th percentile)
+    label_fr: IPEN-1/RCP 2.6/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 3 mois (50e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-3.RCP2.6.ENS_PCTL75:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP2.6/SPEI-3
+    filename: CMIP5_rcp2.6_SPEI-3_2006-2100_latlon1x1_SPEI_pctl75.nc
+    label_en: SPEI-3/RCP 2.6/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 3 month (75th percentile)
+    label_fr: IPEN-3/RCP 2.6/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 3 mois (75e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-12.RCP2.6.ENS_PCTL25:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP2.6/SPEI-12
+    filename: CMIP5_rcp2.6_SPEI-12_2006-2100_latlon1x1_SPEI_pctl25.nc
+    label_en: SPEI-12/RCP 2.6/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 12 month (25th percentile)
+    label_fr: IPEN-12/RCP 2.6/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 12 mois (25e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-12.RCP2.6.ENS_PCTL50:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP2.6/SPEI-12
+    filename: CMIP5_rcp2.6_SPEI-12_2006-2100_latlon1x1_SPEI_pctl50.nc
+    label_en: SPEI-12/RCP 2.6/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 12 month (50th percentile)
+    label_fr: IPEN-12/RCP 2.6/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 12 mois (50e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-12.RCP2.6.ENS_PCTL75:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP2.6/SPEI-12
+    filename: CMIP5_rcp2.6_SPEI-12_2006-2100_latlon1x1_SPEI_pctl75.nc
+    label_en: SPEI-12/RCP 2.6/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 12 month (75th percentile)
+    label_fr: IPEN-12/RCP 2.6/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 12 mois (75e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-1.RCP4.5.ENS_PCTL25:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP4.5/SPEI-1
+    filename: CMIP5_rcp4.5_SPEI-1_2006-2100_latlon1x1_SPEI_pctl25.nc
+    label_en: SPEI-1/RCP 4.5/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 1 month (25th percentile)
+    label_fr: IPEN-1/RCP 4.5/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 1 mois (25e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-1.RCP4.5.ENS_PCTL50:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP4.5/SPEI-1
+    filename: CMIP5_rcp4.5_SPEI-1_2006-2100_latlon1x1_SPEI_pctl50.nc
+    label_en: SPEI-1/RCP 4.5/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 1 month (50th percentile)
+    label_fr: IPEN-1/RCP 4.5/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 1 mois (50e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-1.RCP4.5.ENS_PCTL75:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP4.5/SPEI-1
+    filename: CMIP5_rcp4.5_SPEI-1_2006-2100_latlon1x1_SPEI_pctl75.nc
+    label_en: SPEI-1/RCP 4.5/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 1 month (75th percentile)
+    label_fr: IPEN-1/RCP 4.5/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 1 mois (75e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-3.RCP4.5.ENS_PCTL25:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP4.5/SPEI-3
+    filename: CMIP5_rcp4.5_SPEI-3_2006-2100_latlon1x1_SPEI_pctl25.nc
+    label_en: SPEI-3/RCP 4.5/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 3 month (25th percentile)
+    label_fr: IPEN-3/RCP 4.5/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 3 mois (25e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-3.RCP4.5.ENS_PCTL50:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP4.5/SPEI-3
+    filename: CMIP5_rcp4.5_SPEI-3_2006-2100_latlon1x1_SPEI_pctl50.nc
+    label_en: SPEI-3/RCP 4.5/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 3 month (50th percentile)
+    label_fr: IPEN-1/RCP 4.5/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 3 mois (50e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-3.RCP4.5.ENS_PCTL75:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP4.5/SPEI-3
+    filename: CMIP5_rcp4.5_SPEI-3_2006-2100_latlon1x1_SPEI_pctl75.nc
+    label_en: SPEI-3/RCP 4.5/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 3 month (75th percentile)
+    label_fr: IPEN-3/RCP 4.5/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 3 mois (75e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-12.RCP4.5.ENS_PCTL25:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP4.5/SPEI-12
+    filename: CMIP5_rcp4.5_SPEI-12_2006-2100_latlon1x1_SPEI_pctl25.nc
+    label_en: SPEI-12/RCP 4.5/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 12 month (25th percentile)
+    label_fr: IPEN-12/RCP 4.5/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 12 mois (25e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-12.RCP4.5.ENS_PCTL50:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP4.5/SPEI-12
+    filename: CMIP5_rcp4.5_SPEI-12_2006-2100_latlon1x1_SPEI_pctl50.nc
+    label_en: SPEI-12/RCP 4.5/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 12 month (50th percentile)
+    label_fr: IPEN-12/RCP 4.5/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 12 mois (50e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-12.RCP4.5.ENS_PCTL75:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP4.5/SPEI-12
+    filename: CMIP5_rcp4.5_SPEI-12_2006-2100_latlon1x1_SPEI_pctl75.nc
+    label_en: SPEI-12/RCP 4.5/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 12 month (75th percentile)
+    label_fr: IPEN-12/RCP 4.5/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 12 mois (75e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-1.RCP8.5.ENS_PCTL25:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP8.5/SPEI-1
+    filename: CMIP5_rcp8.5_SPEI-1_2006-2100_latlon1x1_SPEI_pctl25.nc
+    label_en: SPEI-1/RCP 8.5/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 1 month (25th percentile)
+    label_fr: IPEN-1/RCP 8.5/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 1 mois (25e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-1.RCP8.5.ENS_PCTL50:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP8.5/SPEI-1
+    filename: CMIP5_rcp8.5_SPEI-1_2006-2100_latlon1x1_SPEI_pctl50.nc
+    label_en: SPEI-1/RCP 8.5/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 1 month (50th percentile)
+    label_fr: IPEN-1/RCP 8.5/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 1 mois (50e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-1.RCP8.5.ENS_PCTL75:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP8.5/SPEI-1
+    filename: CMIP5_rcp8.5_SPEI-1_2006-2100_latlon1x1_SPEI_pctl75.nc
+    label_en: SPEI-1/RCP 8.5/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 1 month (75th percentile)
+    label_fr: IPEN-1/RCP 8.5/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 1 mois (75e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-3.RCP8.5.ENS_PCTL25:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP8.5/SPEI-3
+    filename: CMIP5_rcp8.5_SPEI-3_2006-2100_latlon1x1_SPEI_pctl25.nc
+    label_en: SPEI-3/RCP 8.5/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 3 month (25th percentile)
+    label_fr: IPEN-3/RCP 8.5/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 3 mois (25e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-3.RCP8.5.ENS_PCTL50:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP8.5/SPEI-3
+    filename: CMIP5_rcp8.5_SPEI-3_2006-2100_latlon1x1_SPEI_pctl50.nc
+    label_en: SPEI-3/RCP 8.5/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 3 month (50th percentile)
+    label_fr: IPEN-1/RCP 8.5/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 3 mois (50e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-3.RCP8.5.ENS_PCTL75:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP8.5/SPEI-3
+    filename: CMIP5_rcp8.5_SPEI-3_2006-2100_latlon1x1_SPEI_pctl75.nc
+    label_en: SPEI-3/RCP 8.5/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 3 month (75th percentile)
+    label_fr: IPEN-3/RCP 8.5/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 3 mois (75e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-12.RCP8.5.ENS_PCTL25:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP8.5/SPEI-12
+    filename: CMIP5_rcp8.5_SPEI-12_2006-2100_latlon1x1_SPEI_pctl25.nc
+    label_en: SPEI-12/RCP 8.5/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 12 month (25th percentile)
+    label_fr: IPEN-12/RCP 8.5/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 12 mois (25e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-12.RCP8.5.ENS_PCTL50:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP8.5/SPEI-12
+    filename: CMIP5_rcp8.5_SPEI-12_2006-2100_latlon1x1_SPEI_pctl50.nc
+    label_en: SPEI-12/RCP 8.5/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 12 month (50th percentile)
+    label_fr: IPEN-12/RCP 8.5/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 12 mois (50e percentile)
+    timestep: P1M
+    num_bands: 1129
+
+  SPEI-12.RCP8.5.ENS_PCTL75:
+    <<: *template_spei
+    climate_model: *id_SPEI_rcp
+    filepath: RCP8.5/SPEI-12
+    filename: CMIP5_rcp8.5_SPEI-12_2006-2100_latlon1x1_SPEI_pctl75.nc
+    label_en: SPEI-12/RCP 8.5/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
+      Index calculated for time scale of 12 month (75th percentile)
+    label_fr: IPEN-12/RCP 8.5/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      normalisé calculé pour une période de 12 mois (75e percentile)
+    timestep: P1M
+    num_bands: 1129
 
   CMIP5.SFCWIND.RCP26.YEAR.2021-2040_PCTL5:
     <<: *template_wind_anomaly
