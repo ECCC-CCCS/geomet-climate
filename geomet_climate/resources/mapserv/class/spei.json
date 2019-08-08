@@ -1,7 +1,7 @@
 [
   {
     "__type__": "class",
-    "name": "2.5 - 3",
+    "name": "2.5 — 3",
     "group": "SPEI",
     "expression": "([pixel] >= 2.5)",
     "style": {
@@ -15,7 +15,7 @@
   },
   {
     "__type__": "class",
-    "name": "2.0 - 2.5",
+    "name": "2.0 — 2.5",
     "group": "SPEI",
     "expression": "([pixel] >= 2.0 AND [pixel] <  2.5)",
     "style": {
@@ -29,7 +29,7 @@
   },
   {
     "__type__": "class",
-    "name": "1.5 - 2.0",
+    "name": "1.5 — 2.0",
     "group": "SPEI",
     "expression": "([pixel] >= 1.5 AND [pixel] <  2.0)",
     "style": {
@@ -43,7 +43,7 @@
   },
   {
     "__type__": "class",
-    "name": "1.0 - 1.5",
+    "name": "1.0 — 1.5",
     "group": "SPEI",
     "expression": "([pixel] >= 1.0 AND [pixel] <  1.5)",
     "style": {
@@ -57,7 +57,7 @@
   },
   {
     "__type__": "class",
-    "name": "0.5 - 1.0",
+    "name": "0.5 — 1.0",
     "group": "SPEI",
     "expression": "([pixel] >= 0.5 AND [pixel] <  1.0)",
     "style": {
@@ -71,7 +71,7 @@
   },
   {
     "__type__": "class",
-    "name": "0.0 - 0.5",
+    "name": "0.0 — 0.5",
     "group": "SPEI",
     "expression": "([pixel] >= 0.0 AND [pixel] <  0.5)",
     "style": {
@@ -85,7 +85,7 @@
   },
   {
     "__type__": "class",
-    "name": "-0.5 - 0.0",
+    "name": "(-0.5) — 0.0",
     "group": "SPEI",
     "expression": "([pixel] >= -0.5 AND [pixel] <  0.0)",
     "style": {
@@ -99,7 +99,7 @@
   },
   {
     "__type__": "class",
-    "name": "-1.0 - -0.5",
+    "name": "(-1.0) — (-0.5)",
     "group": "SPEI",
     "expression": "([pixel] >= -1.0 AND [pixel] < -0.5)",
     "style": {
@@ -113,7 +113,7 @@
   },
   {
     "__type__": "class",
-    "name": "-1.5 - -1.0",
+    "name": "(-1.5) — (-1.0)",
     "group": "SPEI",
     "expression": "([pixel] >= -1.5 AND [pixel] <  -1.0)",
     "style": {
@@ -127,7 +127,7 @@
   },
   {
     "__type__": "class",
-    "name": "-2.0 - -1.5",
+    "name": "(-2.0) — (-1.5)",
     "group": "SPEI",
     "expression": "([pixel] >= -2.0 AND [pixel] <  -1.5)",
     "style": {
@@ -141,7 +141,7 @@
   },
   {
     "__type__": "class",
-    "name": "-2.5 - -2.0",
+    "name": "(-2.5) — (-2.0)",
     "group": "SPEI",
     "expression": "([pixel] >= -2.5 AND [pixel] <  -2.0)",
     "style": {
@@ -155,7 +155,7 @@
   },
   {
     "__type__": "class",
-    "name": "-3.0 - -2.5",
+    "name": "(-3.0) — (-2.5)",
     "group": "SPEI",
     "expression": "([pixel] <  -2.5)",
     "style": {

@@ -1,0 +1,86 @@
+[
+  {
+    "__type__": "class",
+    "name": "10",
+    "group": "PREP1",
+    "expression": "([pixel] = 10)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        191,
+        255,
+        255
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "11 — 19",
+    "group": "PREP1",
+    "expression": "([pixel] > 10 AND [pixel] < 20)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        115,
+        255,
+        255
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "20 — 49",
+    "group": "PREP1",
+    "expression": "([pixel] >= 20 AND [pixel] < 50 )",
+    "style": {
+      "__type__": "style",
+      "color": [
+        0,
+        212,
+        255
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "50 — 149",
+    "group": "PREP1",
+    "expression": "([pixel] >= 50 AND [pixel] < 150)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        0,
+        171,
+        255
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "150 — 199",
+    "group": "PREP1",
+    "expression": "([pixel] >= 150 AND [pixel] < 200)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        0,
+        128,
+        255
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": ">= 200",
+    "group": "PREP1",
+    "expression": "([pixel] >= 200)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        0,
+        84,
+        255
+      ]
+    }
+  }
+]
