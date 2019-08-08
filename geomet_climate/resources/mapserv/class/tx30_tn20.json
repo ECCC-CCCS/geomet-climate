@@ -1,0 +1,100 @@
+[
+  {
+    "__type__": "class",
+    "name": "5",
+    "group": "TX30_TN20",
+    "expression": "([pixel] = 5)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        224,
+        224,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "6 — 9",
+    "group": "TX30_TN20",
+    "expression": "([pixel] > 5 AND [pixel] <= 9 )",
+    "style": {
+      "__type__": "style",
+      "color": [
+        255,
+        212,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "10 — 19",
+    "group": "TX30_TN20",
+    "expression": "([pixel] >= 10 AND [pixel] < 20)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        255,
+        171,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "20 — 29",
+    "group": "TX30_TN20",
+    "expression": "([pixel] >= 20 AND [pixel] < 30)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        255,
+        128,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "30 — 39",
+    "group": "TX30_TN20",
+    "expression": "([pixel] >= 30 AND [pixel] < 40)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        255,
+        84,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "40 — 49",
+    "group": "TX30_TN20",
+    "expression": "([pixel] >= 40 AND [pixel] <  50)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        255,
+        43,
+        0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "> 50",
+    "group": "TX30_TN20",
+    "expression": "([pixel] >= 50)",
+    "style": {
+      "__type__": "style",
+      "color": [
+        255,
+        0,
+        0
+      ]
+    }
+  }
+]

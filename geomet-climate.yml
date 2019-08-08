@@ -447,6 +447,36 @@ layer_groups:
       begin: 2006-01
       end: 2100-01
 
+  INDICES_HISTORICAL: &id_INDICES_historical
+    metadata_id:
+      cdd: 0a896af8-f2be-4cf5-a745-2e1792db04a1
+      gsc: 0a896af8-f2be-4cf5-a745-2e1792db04a1
+      gso: 0a896af8-f2be-4cf5-a745-2e1792db04a1
+      gsw: 0a896af8-f2be-4cf5-a745-2e1792db04a1
+      hdd: 0a896af8-f2be-4cf5-a745-2e1792db04a1
+      prep1: 0a896af8-f2be-4cf5-a745-2e1792db04a1
+      tn20: 0a896af8-f2be-4cf5-a745-2e1792db04a1
+      tx30: 0a896af8-f2be-4cf5-a745-2e1792db04a1
+    projection: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4326"]]
+    extent: [-140.9999644, 41.0000051, -52.0000051, 83.4999949]
+    basepath: indices/netcdf
+    label_en: Statistically downscaled climate indices (indices)
+    label_fr: Indices climatiques mis à l’échelle de manière statistique (indices)
+    dimensions: [1068, 510]
+    geo_transform: -1.4099996437709132e+02,  8.3333295198277882e-02,  0.0000000000000000e+00,  8.3499994903744323e+01,  0.0000000000000000e+00,
+      -8.3333313348016941e-02
+    temporal_extent:
+      begin: 1951
+      end: 2005
+    is_vrt: true
+
+  INDICES_RCP: &id_INDICES_rcp
+    <<: *id_INDICES_historical
+    basepath: indices/netcdf/scenarios
+    temporal_extent:
+      begin: 2006
+      end: 2100
+
   HYDROMETRIC: &id_hydrometric
     projection: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4326"]]
     metadata_id:
@@ -574,6 +604,36 @@ layer_templates:
     classgroup: SPEI
     styles:
     - mapserv/class/spei.json
+
+  cdd: &template_cdd
+    type: RASTER
+    classgroup: CDD
+    styles:
+    - mapserv/class/cdd.json
+
+  gsc_gsw_gso: &template_gsc_gsw_gso
+    type: RASTER
+    classgroup: GSC_GSW_GSO
+    styles:
+    - mapserv/class/gsc_gsw_gso.json
+
+  hdd: &template_hdd
+    type: RASTER
+    classgroup: HDD
+    styles:
+    - mapserv/class/hdd.json
+
+  prep1: &template_prep1
+    type: RASTER
+    classgroup: PREP1
+    styles:
+    - mapserv/class/prep1.json
+
+  tx30_tn20: &template_tx30_tn20
+    type: RASTER
+    classgroup: TX30_TN20
+    styles:
+    - mapserv/class/tx30_tn20.json
 
   stations: &template_stations
     type: POINT
@@ -15709,6 +15769,1606 @@ layers:
     timestep: P1M
     num_bands: 1140
 
+  INDICES.CDD.HISTO_PCTL5:
+    <<: *template_cdd
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_CDD_pctl5.nc
+    label_en: Cooling degree days/Historical (1951 to 2005)/Indice - Cooling degree days (5th percentile)
+    label_fr: Degrés-jours de climatisation/Historique (1951 à 2005)/Indice - Degrés-jours de climatisation (5e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.CDD.HISTO_PCTL25:
+    <<: *template_cdd
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_CDD_pctl25.nc
+    label_en: Cooling degree days/Historical (1951 to 2005)/Indice - Cooling degree days (25th percentile)
+    label_fr: Degrés-jours de climatisation/Historique (1951 à 2005)/Indice - Degrés-jours de climatisation (25e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.CDD.HISTO_PCTL50:
+    <<: *template_cdd
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_CDD_pctl50.nc
+    label_en: Cooling degree days/Historical (1951 to 2005)/Indice - Cooling degree days (50th percentile)
+    label_fr: Degrés-jours de climatisation/Historique (1951 à 2005)/Indice - Degrés-jours de climatisation (50e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.CDD.HISTO_PCTL75:
+    <<: *template_cdd
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_CDD_pctl75.nc
+    label_en: Cooling degree days/Historical (1951 to 2005)/Indice - Cooling degree days (75th percentile)
+    label_fr: Degrés-jours de climatisation/Historique (1951 à 2005)/Indice - Degrés-jours de climatisation (75e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.CDD.HISTO_PCTL95:
+    <<: *template_cdd
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_CDD_pctl95.nc
+    label_en: Cooling degree days/Historical (1951 to 2005)/Indice - Cooling degree days (95th percentile)
+    label_fr: Degrés-jours de climatisation/Historique (1951 à 2005)/Indice - Degrés-jours de climatisation (95e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.CDD.RCP26_PCTL5:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_CDD_pctl5.nc
+    label_en: Cooling degree days/RCP 2.6/Indice - Cooling degree days (5th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 2.6/Indice - Degrés-jours de climatisation (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP26_PCTL25:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_CDD_pctl25.nc
+    label_en: Cooling degree days/RCP 2.6/Indice - Cooling degree days (25th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 2.6/Indice - Degrés-jours de climatisation (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP26_PCTL50:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_CDD_pctl50.nc
+    label_en: Cooling degree days/RCP 2.6/Indice - Cooling degree days (50th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 2.6/Indice - Degrés-jours de climatisation (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP26_PCTL75:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_CDD_pctl75.nc
+    label_en: Cooling degree days/RCP 2.6/Indice - Cooling degree days (75th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 2.6/Indice - Degrés-jours de climatisation (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP26_PCTL95:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_CDD_pctl95.nc
+    label_en: Cooling degree days/RCP 2.6/Indice - Cooling degree days (95th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 2.6/Indice - Degrés-jours de climatisation (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP45_PCTL5:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_CDD_pctl5.nc
+    label_en: Cooling degree days/RCP 4.5/Indice - Cooling degree days (5th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 4.5/Indice - Degrés-jours de climatisation (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP45_PCTL25:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_CDD_pctl25.nc
+    label_en: Cooling degree days/RCP 4.5/Indice - Cooling degree days (25th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 4.5/Indice - Degrés-jours de climatisation (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP45_PCTL50:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_CDD_pctl50.nc
+    label_en: Cooling degree days/RCP 4.5/Indice - Cooling degree days (50th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 4.5/Indice - Degrés-jours de climatisation (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP45_PCTL75:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_CDD_pctl75.nc
+    label_en: Cooling degree days/RCP 4.5/Indice - Cooling degree days (75th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 4.5/Indice - Degrés-jours de climatisation (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP45_PCTL95:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_CDD_pctl95.nc
+    label_en: Cooling degree days/RCP 4.5/Indice - Cooling degree days (95th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 4.5/Indice - Degrés-jours de climatisation (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP85_PCTL5:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_CDD_pctl5.nc
+    label_en: Cooling degree days/RCP 8.5/Indice - Cooling degree days (5th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 8.5/Indice - Degrés-jours de climatisation (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP85_PCTL25:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_CDD_pctl25.nc
+    label_en: Cooling degree days/RCP 8.5/Indice - Cooling degree days (25th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 8.5/Indice - Degrés-jours de climatisation (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP85_PCTL50:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_CDD_pctl50.nc
+    label_en: Cooling degree days/RCP 8.5/Indice - Cooling degree days (50th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 8.5/Indice - Degrés-jours de climatisation (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP85_PCTL75:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_CDD_pctl75.nc
+    label_en: Cooling degree days/RCP 8.5/Indice - Cooling degree days (75th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 8.5/Indice - Degrés-jours de climatisation (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.CDD.RCP85_PCTL95:
+    <<: *template_cdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_CDD_pctl95.nc
+    label_en: Cooling degree days/RCP 8.5/Indice - Cooling degree days (95th percentile)
+    label_fr: Degrés-jours de climatisation/RCP 8.5/Indice - Degrés-jours de climatisation (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.HISTO_PCTL5:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSC_pctl5.nc
+    label_en: Growing season length for cool season/Historical (1951 to 2005)/Indice - Growing season length for cool season (5th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour la saison fraîche (5e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSC.HISTO_PCTL25:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSC_pctl25.nc
+    label_en: Growing season length for cool season/Historical (1951 to 2005)/Indice - Growing season length for cool season (25th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour la saison fraîche (25e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSC.HISTO_PCTL50:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSC_pctl50.nc
+    label_en: Growing season length for cool season/Historical (1951 to 2005)/Indice - Growing season length for cool season (50th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour la saison fraîche (50e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSC.HISTO_PCTL75:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSC_pctl75.nc
+    label_en: Growing season length for cool season/Historical (1951 to 2005)/Indice - Growing season length for cool season (75th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour la saison fraîche (75e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSC.HISTO_PCTL95:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSC_pctl95.nc
+    label_en: Growing season length for cool season/Historical (1951 to 2005)/Indice - Growing season length for cool season (95th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour la saison fraîche (95e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSC.RCP26_PCTL5:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSC_pctl5.nc
+    label_en: Growing season length for cool season/RCP 2.6/Indice - Growing season length for cool season (5th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 2.6/Indice - Durée de la saison de croissance pour la saison fraîche (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP26_PCTL25:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSC_pctl25.nc
+    label_en: Growing season length for cool season/RCP 2.6/Indice - Growing season length for cool season (25th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 2.6/Indice - Durée de la saison de croissance pour la saison fraîche (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP26_PCTL50:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSC_pctl50.nc
+    label_en: Growing season length for cool season/RCP 2.6/Indice - Growing season length for cool season (50th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 2.6/Indice - Durée de la saison de croissance pour la saison fraîche (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP26_PCTL75:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSC_pctl75.nc
+    label_en: Growing season length for cool season/RCP 2.6/Indice - Growing season length for cool season (75th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 2.6/Indice - Durée de la saison de croissance pour la saison fraîche (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP26_PCTL95:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSC_pctl95.nc
+    label_en: Growing season length for cool season/RCP 2.6/Indice - Growing season length for cool season (95th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 2.6/Indice - Durée de la saison de croissance pour la saison fraîche (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP45_PCTL5:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSC_pctl5.nc
+    label_en: Growing season length for cool season/RCP 4.5/Indice - Growing season length for cool season (5th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 4.5/Indice - Durée de la saison de croissance pour la saison fraîche (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP45_PCTL25:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSC_pctl25.nc
+    label_en: Growing season length for cool season/RCP 4.5/Indice - Growing season length for cool season (25th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 4.5/Indice - Durée de la saison de croissance pour la saison fraîche (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP45_PCTL50:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSC_pctl50.nc
+    label_en: Growing season length for cool season/RCP 4.5/Indice - Growing season length for cool season (50th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 4.5/Indice - Durée de la saison de croissance pour la saison fraîche (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP45_PCTL75:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSC_pctl75.nc
+    label_en: Growing season length for cool season/RCP 4.5/Indice - Growing season length for cool season (75th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 4.5/Indice - Durée de la saison de croissance pour la saison fraîche (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP45_PCTL95:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSC_pctl95.nc
+    label_en: Growing season length for cool season/RCP 4.5/Indice - Growing season length for cool season (95th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 4.5/Indice - Durée de la saison de croissance pour la saison fraîche (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP85_PCTL5:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSC_pctl5.nc
+    label_en: Growing season length for cool season/RCP 8.5/Indice - Growing season length for cool season (5th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 8.5/Indice - Durée de la saison de croissance pour la saison fraîche (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP85_PCTL25:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSC_pctl25.nc
+    label_en: Growing season length for cool season/RCP 8.5/Indice - Growing season length for cool season (25th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 8.5/Indice - Durée de la saison de croissance pour la saison fraîche (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP85_PCTL50:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSC_pctl50.nc
+    label_en: Growing season length for cool season/RCP 8.5/Indice - Growing season length for cool season (50th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 8.5/Indice - Durée de la saison de croissance pour la saison fraîche (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP85_PCTL75:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSC_pctl75.nc
+    label_en: Growing season length for cool season/RCP 8.5/Indice - Growing season length for cool season (75th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 8.5/Indice - Durée de la saison de croissance pour la saison fraîche (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSC.RCP85_PCTL95:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSC_pctl95.nc
+    label_en: Growing season length for cool season/RCP 8.5/Indice - Growing season length for cool season (95th percentile)
+    label_fr: Durée de la saison de croissance pour la saison fraîche/RCP 8.5/Indice - Durée de la saison de croissance pour la saison fraîche (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.HISTO_PCTL5:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSO_pctl5.nc
+    label_en: Growing season length for overwintering/Historical (1951 to 2005)/Indice - Growing season length for overwintering (5th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour l'hivernage (5e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSO.HISTO_PCTL25:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSO_pctl25.nc
+    label_en: Growing season length for overwintering/Historical (1951 to 2005)/Indice - Growing season length for overwintering (25th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour l'hivernage (25e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSO.HISTO_PCTL50:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSO_pctl50.nc
+    label_en: Growing season length for overwintering/Historical (1951 to 2005)/Indice - Growing season length for overwintering (50th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour l'hivernage (50e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSO.HISTO_PCTL75:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSO_pctl75.nc
+    label_en: Growing season length for overwintering/Historical (1951 to 2005)/Indice - Growing season length for overwintering (75th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour l'hivernage (75e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSO.HISTO_PCTL95:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSO_pctl95.nc
+    label_en: Growing season length for overwintering/Historical (1951 to 2005)/Indice - Growing season length for overwintering (95th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour l'hivernage (95e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSO.RCP26_PCTL5:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSO_pctl5.nc
+    label_en: Growing season length for overwintering/RCP 2.6/Indice - Growing season length for overwintering (5th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 2.6/Indice - Durée de la saison de croissance pour l'hivernage (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP26_PCTL25:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSO_pctl25.nc
+    label_en: Growing season length for overwintering/RCP 2.6/Indice - Growing season length for overwintering (25th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 2.6/Indice - Durée de la saison de croissance pour l'hivernage (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP26_PCTL50:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSO_pctl50.nc
+    label_en: Growing season length for overwintering/RCP 2.6/Indice - Growing season length for overwintering (50th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 2.6/Indice - Durée de la saison de croissance pour l'hivernage (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP26_PCTL75:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSO_pctl75.nc
+    label_en: Growing season length for overwintering/RCP 2.6/Indice - Growing season length for overwintering (75th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 2.6/Indice - Durée de la saison de croissance pour l'hivernage (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP26_PCTL95:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSO_pctl95.nc
+    label_en: Growing season length for overwintering/RCP 2.6/Indice - Growing season length for overwintering (95th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 2.6/Indice - Durée de la saison de croissance pour l'hivernage (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP45_PCTL5:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSO_pctl5.nc
+    label_en: Growing season length for overwintering/RCP 4.5/Indice - Growing season length for overwintering (5th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 4.5/Indice - Durée de la saison de croissance pour l'hivernage (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP45_PCTL25:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSO_pctl25.nc
+    label_en: Growing season length for overwintering/RCP 4.5/Indice - Growing season length for overwintering (25th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 4.5/Indice - Durée de la saison de croissance pour l'hivernage (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP45_PCTL50:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSO_pctl50.nc
+    label_en: Growing season length for overwintering/RCP 4.5/Indice - Growing season length for overwintering (50th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 4.5/Indice - Durée de la saison de croissance pour l'hivernage (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP45_PCTL75:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSO_pctl75.nc
+    label_en: Growing season length for overwintering/RCP 4.5/Indice - Growing season length for overwintering (75th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 4.5/Indice - Durée de la saison de croissance pour l'hivernage (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP45_PCTL95:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSO_pctl95.nc
+    label_en: Growing season length for overwintering/RCP 4.5/Indice - Growing season length for overwintering (95th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 4.5/Indice - Durée de la saison de croissance pour l'hivernage (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP85_PCTL5:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSO_pctl5.nc
+    label_en: Growing season length for overwintering/RCP 8.5/Indice - Growing season length for overwintering (5th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 8.5/Indice - Durée de la saison de croissance pour l'hivernage (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP85_PCTL25:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSO_pctl25.nc
+    label_en: Growing season length for overwintering/RCP 8.5/Indice - Growing season length for overwintering (25th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 8.5/Indice - Durée de la saison de croissance pour l'hivernage (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP85_PCTL50:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSO_pctl50.nc
+    label_en: Growing season length for overwintering/RCP 8.5/Indice - Growing season length for overwintering (50th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 8.5/Indice - Durée de la saison de croissance pour l'hivernage (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP85_PCTL75:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSO_pctl75.nc
+    label_en: Growing season length for overwintering/RCP 8.5/Indice - Growing season length for overwintering (75th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 8.5/Indice - Durée de la saison de croissance pour l'hivernage (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSO.RCP85_PCTL95:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSO_pctl95.nc
+    label_en: Growing season length for overwintering/RCP 8.5/Indice - Growing season length for overwintering (95th percentile)
+    label_fr: Durée de la saison de croissance pour l'hivernage/RCP 8.5/Indice - Durée de la saison de croissance pour l'hivernage (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.HISTO_PCTL5:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSW_pctl5.nc
+    label_en: Growing season length for warm season/Historical (1951 to 2005)/Indice - Growing season length for warm season (5th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour la saison chaude (5e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSW.HISTO_PCTL25:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSW_pctl25.nc
+    label_en: Growing season length for warm season/Historical (1951 to 2005)/Indice - Growing season length for warm season (25th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour la saison chaude (25e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSW.HISTO_PCTL50:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSW_pctl50.nc
+    label_en: Growing season length for warm season/Historical (1951 to 2005)/Indice - Growing season length for warm season (50th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour la saison chaude (50e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSW.HISTO_PCTL75:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSW_pctl75.nc
+    label_en: Growing season length for warm season/Historical (1951 to 2005)/Indice - Growing season length for warm season (75th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour la saison chaude (75e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSW.HISTO_PCTL95:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSW_pctl95.nc
+    label_en: Growing season length for warm season/Historical (1951 to 2005)/Indice - Growing season length for warm season (95th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/Historique (1951 à 2005)/Indice - Durée de la saison de croissance pour la saison chaude (95e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.GSW.RCP26_PCTL5:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSW_pctl5.nc
+    label_en: Growing season length for warm season/RCP 2.6/Indice - Growing season length for warm season (5th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 2.6/Indice - Durée de la saison de croissance pour la saison chaude (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP26_PCTL25:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSW_pctl25.nc
+    label_en: Growing season length for warm season/RCP 2.6/Indice - Growing season length for warm season (25th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 2.6/Indice - Durée de la saison de croissance pour la saison chaude (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP26_PCTL50:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSW_pctl50.nc
+    label_en: Growing season length for warm season/RCP 2.6/Indice - Growing season length for warm season (50th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 2.6/Indice - Durée de la saison de croissance pour la saison chaude (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP26_PCTL75:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSW_pctl75.nc
+    label_en: Growing season length for warm season/RCP 2.6/Indice - Growing season length for warm season (75th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 2.6/Indice - Durée de la saison de croissance pour la saison chaude (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP26_PCTL95:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSW_pctl95.nc
+    label_en: Growing season length for warm season/RCP 2.6/Indice - Growing season length for warm season (95th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 2.6/Indice - Durée de la saison de croissance pour la saison chaude (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP45_PCTL5:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSW_pctl5.nc
+    label_en: Growing season length for warm season/RCP 4.5/Indice - Growing season length for warm season (5th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 4.5/Indice - Durée de la saison de croissance pour la saison chaude (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP45_PCTL25:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSW_pctl25.nc
+    label_en: Growing season length for warm season/RCP 4.5/Indice - Growing season length for warm season (25th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 4.5/Indice - Durée de la saison de croissance pour la saison chaude (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP45_PCTL50:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSW_pctl50.nc
+    label_en: Growing season length for warm season/RCP 4.5/Indice - Growing season length for warm season (50th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 4.5/Indice - Durée de la saison de croissance pour la saison chaude (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP45_PCTL75:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSW_pctl75.nc
+    label_en: Growing season length for warm season/RCP 4.5/Indice - Growing season length for warm season (75th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 4.5/Indice - Durée de la saison de croissance pour la saison chaude (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP45_PCTL95:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSW_pctl95.nc
+    label_en: Growing season length for warm season/RCP 4.5/Indice - Growing season length for warm season (95th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 4.5/Indice - Durée de la saison de croissance pour la saison chaude (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP85_PCTL5:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSW_pctl5.nc
+    label_en: Growing season length for warm season/RCP 8.5/Indice - Growing season length for warm season (5th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 8.5/Indice - Durée de la saison de croissance pour la saison chaude (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP85_PCTL25:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSW_pctl25.nc
+    label_en: Growing season length for warm season/RCP 8.5/Indice - Growing season length for warm season (25th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 8.5/Indice - Durée de la saison de croissance pour la saison chaude (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP85_PCTL50:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSW_pctl50.nc
+    label_en: Growing season length for warm season/RCP 8.5/Indice - Growing season length for warm season (50th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 8.5/Indice - Durée de la saison de croissance pour la saison chaude (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP85_PCTL75:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSW_pctl75.nc
+    label_en: Growing season length for warm season/RCP 8.5/Indice - Growing season length for warm season (75th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 8.5/Indice - Durée de la saison de croissance pour la saison chaude (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.GSW.RCP85_PCTL95:
+    <<: *template_gsc_gsw_gso
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSW_pctl95.nc
+    label_en: Growing season length for warm season/RCP 8.5/Indice - Growing season length for warm season (95th percentile)
+    label_fr: Durée de la saison de croissance pour la saison chaude/RCP 8.5/Indice - Durée de la saison de croissance pour la saison chaude (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.HISTO_PCTL5:
+    <<: *template_hdd
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_HDD_pctl5.nc
+    label_en: Heating degree days/Historical (1951 to 2005)/Indice - Heating degree days (5th percentile)
+    label_fr: Degrés-jours de chauffe/Historique (1951 à 2005)/Indice - Degrés-jours de chauffe (5e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.HDD.HISTO_PCTL25:
+    <<: *template_hdd
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_HDD_pctl25.nc
+    label_en: Heating degree days/Historical (1951 to 2005)/Indice - Heating degree days (25th percentile)
+    label_fr: Degrés-jours de chauffe/Historique (1951 à 2005)/Indice - Degrés-jours de chauffe (25e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.HDD.HISTO_PCTL50:
+    <<: *template_hdd
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_HDD_pctl50.nc
+    label_en: Heating degree days/Historical (1951 to 2005)/Indice - Heating degree days (50th percentile)
+    label_fr: Degrés-jours de chauffe/Historique (1951 à 2005)/Indice - Degrés-jours de chauffe (50e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.HDD.HISTO_PCTL75:
+    <<: *template_hdd
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_HDD_pctl75.nc
+    label_en: Heating degree days/Historical (1951 to 2005)/Indice - Heating degree days (75th percentile)
+    label_fr: Degrés-jours de chauffe/Historique (1951 à 2005)/Indice - Degrés-jours de chauffe (75e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.HDD.HISTO_PCTL95:
+    <<: *template_hdd
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_HDD_pctl95.nc
+    label_en: Heating degree days/Historical (1951 to 2005)/Indice - Heating degree days (95th percentile)
+    label_fr: Degrés-jours de chauffe/Historique (1951 à 2005)/Indice - Degrés-jours de chauffe (95e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.HDD.RCP26_PCTL5:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_HDD_pctl5.nc
+    label_en: Heating degree days/RCP 2.6/Indice - Heating degree days (5th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 2.6/Indice - Degrés-jours de chauffe (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP26_PCTL25:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_HDD_pctl25.nc
+    label_en: Heating degree days/RCP 2.6/Indice - Heating degree days (25th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 2.6/Indice - Degrés-jours de chauffe (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP26_PCTL50:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_HDD_pctl50.nc
+    label_en: Heating degree days/RCP 2.6/Indice - Heating degree days (50th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 2.6/Indice - Degrés-jours de chauffe (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP26_PCTL75:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_HDD_pctl75.nc
+    label_en: Heating degree days/RCP 2.6/Indice - Heating degree days (75th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 2.6/Indice - Degrés-jours de chauffe (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP26_PCTL95:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_HDD_pctl95.nc
+    label_en: Heating degree days/RCP 2.6/Indice - Heating degree days (95th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 2.6/Indice - Degrés-jours de chauffe (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP45_PCTL5:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_HDD_pctl5.nc
+    label_en: Heating degree days/RCP 4.5/Indice - Heating degree days (5th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 4.5/Indice - Degrés-jours de chauffe (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP45_PCTL25:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_HDD_pctl25.nc
+    label_en: Heating degree days/RCP 4.5/Indice - Heating degree days (25th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 4.5/Indice - Degrés-jours de chauffe (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP45_PCTL50:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_HDD_pctl50.nc
+    label_en: Heating degree days/RCP 4.5/Indice - Heating degree days (50th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 4.5/Indice - Degrés-jours de chauffe (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP45_PCTL75:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_HDD_pctl75.nc
+    label_en: Heating degree days/RCP 4.5/Indice - Heating degree days (75th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 4.5/Indice - Degrés-jours de chauffe (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP45_PCTL95:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_HDD_pctl95.nc
+    label_en: Heating degree days/RCP 4.5/Indice - Heating degree days (95th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 4.5/Indice - Degrés-jours de chauffe (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP85_PCTL5:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_HDD_pctl5.nc
+    label_en: Heating degree days/RCP 8.5/Indice - Heating degree days (5th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 8.5/Indice - Degrés-jours de chauffe (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP85_PCTL25:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_HDD_pctl25.nc
+    label_en: Heating degree days/RCP 8.5/Indice - Heating degree days (25th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 8.5/Indice - Degrés-jours de chauffe (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP85_PCTL50:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_HDD_pctl50.nc
+    label_en: Heating degree days/RCP 8.5/Indice - Heating degree days (50th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 8.5/Indice - Degrés-jours de chauffe (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP85_PCTL75:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_HDD_pctl75.nc
+    label_en: Heating degree days/RCP 8.5/Indice - Heating degree days (75th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 8.5/Indice - Degrés-jours de chauffe (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.HDD.RCP85_PCTL95:
+    <<: *template_hdd
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_HDD_pctl95.nc
+    label_en: Heating degree days/RCP 8.5/Indice - Heating degree days (95th percentile)
+    label_fr: Degrés-jours de chauffe/RCP 8.5/Indice - Degrés-jours de chauffe (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.HISTO_PCTL5:
+    <<: *template_prep1
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_PREP1_pctl5.nc
+    label_en: Number of days with precipitation greater than 1mm per day/Historical (1951 to 2005)/Indice - Number of days with precipitation greater than 1mm per day (5th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/Historique (1951 à 2005)/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (5e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.PREP1.HISTO_PCTL25:
+    <<: *template_prep1
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_PREP1_pctl25.nc
+    label_en: Number of days with precipitation greater than 1mm per day/Historical (1951 to 2005)/Indice - Number of days with precipitation greater than 1mm per day (25th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/Historique (1951 à 2005)/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (25e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.PREP1.HISTO_PCTL50:
+    <<: *template_prep1
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_PREP1_pctl50.nc
+    label_en: Number of days with precipitation greater than 1mm per day/Historical (1951 to 2005)/Indice - Number of days with precipitation greater than 1mm per day (50th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/Historique (1951 à 2005)/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (50e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.PREP1.HISTO_PCTL75:
+    <<: *template_prep1
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_PREP1_pctl75.nc
+    label_en: Number of days with precipitation greater than 1mm per day/Historical (1951 to 2005)/Indice - Number of days with precipitation greater than 1mm per day (75th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/Historique (1951 à 2005)/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (75e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.PREP1.HISTO_PCTL95:
+    <<: *template_prep1
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_PREP1_pctl95.nc
+    label_en: Number of days with precipitation greater than 1mm per day/Historical (1951 to 2005)/Indice - Number of days with precipitation greater than 1mm per day (95th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/Historique (1951 à 2005)/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (95e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.PREP1.RCP26_PCTL5:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_PREP1_pctl5.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 2.6/Indice - Number of days with precipitation greater than 1mm per day (5th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 2.6/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP26_PCTL25:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_PREP1_pctl25.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 2.6/Indice - Number of days with precipitation greater than 1mm per day (25th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 2.6/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP26_PCTL50:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_PREP1_pctl50.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 2.6/Indice - Number of days with precipitation greater than 1mm per day (50th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 2.6/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP26_PCTL75:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_PREP1_pctl75.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 2.6/Indice - Number of days with precipitation greater than 1mm per day (75th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 2.6/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP26_PCTL95:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_PREP1_pctl95.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 2.6/Indice - Number of days with precipitation greater than 1mm per day (95th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 2.6/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP45_PCTL5:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_PREP1_pctl5.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 4.5/Indice - Number of days with precipitation greater than 1mm per day (5th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 4.5/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP45_PCTL25:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_PREP1_pctl25.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 4.5/Indice - Number of days with precipitation greater than 1mm per day (25th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 4.5/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP45_PCTL50:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_PREP1_pctl50.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 4.5/Indice - Number of days with precipitation greater than 1mm per day (50th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 4.5/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP45_PCTL75:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_PREP1_pctl75.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 4.5/Indice - Number of days with precipitation greater than 1mm per day (75th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 4.5/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP45_PCTL95:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_PREP1_pctl95.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 4.5/Indice - Number of days with precipitation greater than 1mm per day (95th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 4.5/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP85_PCTL5:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_PREP1_pctl5.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 8.5/Indice - Number of days with precipitation greater than 1mm per day (5th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 8.5/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP85_PCTL25:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_PREP1_pctl25.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 8.5/Indice - Number of days with precipitation greater than 1mm per day (25th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 8.5/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP85_PCTL50:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_PREP1_pctl50.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 8.5/Indice - Number of days with precipitation greater than 1mm per day (50th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 8.5/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP85_PCTL75:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_PREP1_pctl75.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 8.5/Indice - Number of days with precipitation greater than 1mm per day (75th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 8.5/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.PREP1.RCP85_PCTL95:
+    <<: *template_prep1
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_PREP1_pctl95.nc
+    label_en: Number of days with precipitation greater than 1mm per day/RCP 8.5/Indice - Number of days with precipitation greater than 1mm per day (95th percentile)
+    label_fr: Nombre de jours avec des précipitations supérieures à 1 mm par jour/RCP 8.5/Indice - Nombre de jours avec des précipitations supérieures à 1 mm par jour (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.HISTO_PCTL5:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TN20_pctl5.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/Historical (1951 to 2005)/Indice - Hot nights (number of days with minimum temperature above 20°C) (5th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/Historique (1951 à 2005)/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (5e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.TN20.HISTO_PCTL25:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TN20_pctl25.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/Historical (1951 to 2005)/Indice - Hot nights (number of days with minimum temperature above 20°C) (25th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/Historique (1951 à 2005)/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (25e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.TN20.HISTO_PCTL50:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TN20_pctl50.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/Historical (1951 to 2005)/Indice - Hot nights (number of days with minimum temperature above 20°C) (50th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/Historique (1951 à 2005)/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (50e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.TN20.HISTO_PCTL75:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TN20_pctl75.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/Historical (1951 to 2005)/Indice - Hot nights (number of days with minimum temperature above 20°C) (75th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/Historique (1951 à 2005)/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (75e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.TN20.HISTO_PCTL95:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TN20_pctl95.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/Historical (1951 to 2005)/Indice - Hot nights (number of days with minimum temperature above 20°C) (95th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/Historique (1951 à 2005)/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (95e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.TN20.RCP26_PCTL5:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TN20_pctl5.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 2.6/Indice - Hot nights (number of days with minimum temperature above 20°C) (5th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 2.6/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP26_PCTL25:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TN20_pctl25.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 2.6/Indice - Hot nights (number of days with minimum temperature above 20°C) (25th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 2.6/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP26_PCTL50:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TN20_pctl50.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 2.6/Indice - Hot nights (number of days with minimum temperature above 20°C) (50th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 2.6/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP26_PCTL75:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TN20_pctl75.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 2.6/Indice - Hot nights (number of days with minimum temperature above 20°C) (75th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 2.6/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP26_PCTL95:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TN20_pctl95.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 2.6/Indice - Hot nights (number of days with minimum temperature above 20°C) (95th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 2.6/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP45_PCTL5:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TN20_pctl5.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 4.5/Indice - Hot nights (number of days with minimum temperature above 20°C) (5th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 4.5/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP45_PCTL25:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TN20_pctl25.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 4.5/Indice - Hot nights (number of days with minimum temperature above 20°C) (25th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 4.5/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP45_PCTL50:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TN20_pctl50.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 4.5/Indice - Hot nights (number of days with minimum temperature above 20°C) (50th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 4.5/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP45_PCTL75:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TN20_pctl75.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 4.5/Indice - Hot nights (number of days with minimum temperature above 20°C) (75th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 4.5/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP45_PCTL95:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TN20_pctl95.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 4.5/Indice - Hot nights (number of days with minimum temperature above 20°C) (95th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 4.5/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP85_PCTL5:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TN20_pctl5.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 8.5/Indice - Hot nights (number of days with minimum temperature above 20°C) (5th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 8.5/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP85_PCTL25:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TN20_pctl25.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 8.5/Indice - Hot nights (number of days with minimum temperature above 20°C) (25th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 8.5/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP85_PCTL50:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TN20_pctl50.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 8.5/Indice - Hot nights (number of days with minimum temperature above 20°C) (50th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 8.5/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP85_PCTL75:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TN20_pctl75.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 8.5/Indice - Hot nights (number of days with minimum temperature above 20°C) (75th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 8.5/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TN20.RCP85_PCTL95:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TN20_pctl95.nc
+    label_en: Hot nights (number of days with minimum temperature above 20°C)/RCP 8.5/Indice - Hot nights (number of days with minimum temperature above 20°C) (95th percentile)
+    label_fr: Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C)/RCP 8.5/Indice - Nuits chaudes (nombre de jours avec une température minimale supérieure à 20°C) (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.HISTO_PCTL5:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TX30_pctl5.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/Historical (1951 to 2005)/Indice - Hot days (number of days with maximum temperature above 30°C) (5th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/Historique (1951 à 2005)/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (5e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.TX30.HISTO_PCTL25:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TX30_pctl25.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/Historical (1951 to 2005)/Indice - Hot days (number of days with maximum temperature above 30°C) (25th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/Historique (1951 à 2005)/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (25e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.TX30.HISTO_PCTL50:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TX30_pctl50.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/Historical (1951 to 2005)/Indice - Hot days (number of days with maximum temperature above 30°C) (50th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/Historique (1951 à 2005)/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (50e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.TX30.HISTO_PCTL75:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TX30_pctl75.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/Historical (1951 to 2005)/Indice - Hot days (number of days with maximum temperature above 30°C) (75th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/Historique (1951 à 2005)/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (75e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.TX30.HISTO_PCTL95:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_historical
+    filepath: historical
+    filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TX30_pctl95.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/Historical (1951 to 2005)/Indice - Hot days (number of days with maximum temperature above 30°C) (95th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/Historique (1951 à 2005)/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (95e percentile)
+    timestep: P1Y
+    num_bands: 55
+
+  INDICES.TX30.RCP26_PCTL5:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TX30_pctl5.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 2.6/Indice - Hot days (number of days with maximum temperature above 30°C) (5th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 2.6/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP26_PCTL25:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TX30_pctl25.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 2.6/Indice - Hot days (number of days with maximum temperature above 30°C) (25th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 2.6/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP26_PCTL50:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TX30_pctl50.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 2.6/Indice - Hot days (number of days with maximum temperature above 30°C) (50th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 2.6/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP26_PCTL75:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TX30_pctl75.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 2.6/Indice - Hot days (number of days with maximum temperature above 30°C) (75th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 2.6/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP26_PCTL95:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP2.6
+    filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TX30_pctl95.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 2.6/Indice - Hot days (number of days with maximum temperature above 30°C) (95th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 2.6/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP45_PCTL5:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TX30_pctl5.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 4.5/Indice - Hot days (number of days with maximum temperature above 30°C) (5th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 4.5/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP45_PCTL25:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TX30_pctl25.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 4.5/Indice - Hot days (number of days with maximum temperature above 30°C) (25th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 4.5/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP45_PCTL50:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TX30_pctl50.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 4.5/Indice - Hot days (number of days with maximum temperature above 30°C) (50th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 4.5/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP45_PCTL75:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TX30_pctl75.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 4.5/Indice - Hot days (number of days with maximum temperature above 30°C) (75th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 4.5/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP45_PCTL95:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP4.5
+    filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TX30_pctl95.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 4.5/Indice - Hot days (number of days with maximum temperature above 30°C) (95th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 4.5/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP85_PCTL5:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TX30_pctl5.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 8.5/Indice - Hot days (number of days with maximum temperature above 30°C) (5th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 8.5/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (5e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP85_PCTL25:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TX30_pctl25.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 8.5/Indice - Hot days (number of days with maximum temperature above 30°C) (25th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 8.5/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (25e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP85_PCTL50:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TX30_pctl50.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 8.5/Indice - Hot days (number of days with maximum temperature above 30°C) (50th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 8.5/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (50e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP85_PCTL75:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TX30_pctl75.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 8.5/Indice - Hot days (number of days with maximum temperature above 30°C) (75th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 8.5/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (75e percentile)
+    timestep: P1Y
+    num_bands: 95
+
+  INDICES.TX30.RCP85_PCTL95:
+    <<: *template_tx30_tn20
+    climate_model: *id_INDICES_rcp
+    filepath: RCP8.5
+    filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TX30_pctl95.nc
+    label_en: Hot days (number of days with maximum temperature above 30°C)/RCP 8.5/Indice - Hot days (number of days with maximum temperature above 30°C) (95th percentile)
+    label_fr: Jours chauds (nombre de jours avec une température maximale supérieure à 30°C)/RCP 8.5/Indice - Jours chauds (nombre de jours avec une température maximale supérieure à 30°C) (95e percentile)
+    timestep: P1Y
+    num_bands: 95
+
   SPEI-1.HISTO.ENS_PCTL25:
     <<: *template_spei
     climate_model: *id_SPEI_historical
@@ -15716,7 +17376,7 @@ layers:
     filename: CMIP5_hist_SPEI-1_1900-2005_latlon1x1_SPEI_pctl25.nc
     label_en: SPEI-1/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
       Index calculated for time scale of 1 month (25th percentile)
-    label_fr: IPEN-1/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+    label_fr: IPEN-1/Historique (1900-01 à 2005-11)/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 1 mois (25e percentile)
     timestep: P1M
     num_bands: 1271
@@ -15728,7 +17388,7 @@ layers:
     filename: CMIP5_hist_SPEI-1_1900-2005_latlon1x1_SPEI_pctl50.nc
     label_en: SPEI-1/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
       Index calculated for time scale of 1 month (50th percentile)
-    label_fr: IPEN-1/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+    label_fr: IPEN-1/Historique (1900-01 à 2005-11)/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 1 mois (50e percentile)
     timestep: P1M
     num_bands: 1271
@@ -15740,7 +17400,7 @@ layers:
     filename: CMIP5_hist_SPEI-1_1900-2005_latlon1x1_SPEI_pctl75.nc
     label_en: SPEI-1/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-1 - Standardized Precipitation Evapotranspiration
       Index calculated for time scale of 1 month (75th percentile)
-    label_fr: IPEN-1/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
+    label_fr: IPEN-1/Historique (1900-01 à 2005-11)/Ensembles mensuels/INPE-1 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 1 mois (75e percentile)
     timestep: P1M
     num_bands: 1271
@@ -15751,8 +17411,8 @@ layers:
     filepath: SPEI-3
     filename: CMIP5_hist_SPEI-3_1900-2005_latlon1x1_SPEI_pctl25.nc
     label_en: SPEI-3/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 3 month (25th percentile)
-    label_fr: IPEN-3/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      Index calculated for time scale of 3 months (25th percentile)
+    label_fr: IPEN-3/Historique (1900-01 à 2005-11)/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 3 mois (25e percentile)
     timestep: P1M
     num_bands: 1271
@@ -15763,8 +17423,8 @@ layers:
     filepath: SPEI-3
     filename: CMIP5_hist_SPEI-3_1900-2005_latlon1x1_SPEI_pctl50.nc
     label_en: SPEI-3/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 3 month (50th percentile)
-    label_fr: IPEN-1/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      Index calculated for time scale of 3 months (50th percentile)
+    label_fr: IPEN-1/Historique (1900-01 à 2005-11)/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 3 mois (50e percentile)
     timestep: P1M
     num_bands: 1271
@@ -15775,8 +17435,8 @@ layers:
     filepath: SPEI-3
     filename: CMIP5_hist_SPEI-3_1900-2005_latlon1x1_SPEI_pctl75.nc
     label_en: SPEI-3/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 3 month (75th percentile)
-    label_fr: IPEN-3/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
+      Index calculated for time scale of 3 months (75th percentile)
+    label_fr: IPEN-3/Historique (1900-01 à 2005-11)/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 3 mois (75e percentile)
     timestep: P1M
     num_bands: 1271
@@ -15787,8 +17447,8 @@ layers:
     filepath: SPEI-12
     filename: CMIP5_hist_SPEI-12_1900-2005_latlon1x1_SPEI_pctl25.nc
     label_en: SPEI-12/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 12 month (25th percentile)
-    label_fr: IPEN-12/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      Index calculated for time scale of 12 months (25th percentile)
+    label_fr: IPEN-12/Historique (1900-01 à 2005-11)/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 12 mois (25e percentile)
     timestep: P1M
     num_bands: 1271
@@ -15799,8 +17459,8 @@ layers:
     filepath: SPEI-12
     filename: CMIP5_hist_SPEI-12_1900-2005_latlon1x1_SPEI_pctl50.nc
     label_en: SPEI-12/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 12 month (50th percentile)
-    label_fr: IPEN-12/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      Index calculated for time scale of 12 months (50th percentile)
+    label_fr: IPEN-12/Historique (1900-01 à 2005-11)/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 12 mois (50e percentile)
     timestep: P1M
     num_bands: 1271
@@ -15811,8 +17471,8 @@ layers:
     filepath: SPEI-12
     filename: CMIP5_hist_SPEI-12_1900-2005_latlon1x1_SPEI_pctl75.nc
     label_en: SPEI-12/Historical (1900-01 to 2005-11)/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 12 month (75th percentile)
-    label_fr: IPEN-12/(Historique 1900-01 à 2005-11)/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
+      Index calculated for time scale of 12 months (75th percentile)
+    label_fr: IPEN-12/Historique (1900-01 à 2005-11)/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 12 mois (75e percentile)
     timestep: P1M
     num_bands: 1271
@@ -15859,7 +17519,7 @@ layers:
     filepath: RCP2.6/SPEI-3
     filename: CMIP5_rcp2.6_SPEI-3_2006-2100_latlon1x1_SPEI_pctl25.nc
     label_en: SPEI-3/RCP 2.6/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 3 month (25th percentile)
+      Index calculated for time scale of 3 months (25th percentile)
     label_fr: IPEN-3/RCP 2.6/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 3 mois (25e percentile)
     timestep: P1M
@@ -15871,7 +17531,7 @@ layers:
     filepath: RCP2.6/SPEI-3
     filename: CMIP5_rcp2.6_SPEI-3_2006-2100_latlon1x1_SPEI_pctl50.nc
     label_en: SPEI-3/RCP 2.6/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 3 month (50th percentile)
+      Index calculated for time scale of 3 months (50th percentile)
     label_fr: IPEN-1/RCP 2.6/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 3 mois (50e percentile)
     timestep: P1M
@@ -15883,7 +17543,7 @@ layers:
     filepath: RCP2.6/SPEI-3
     filename: CMIP5_rcp2.6_SPEI-3_2006-2100_latlon1x1_SPEI_pctl75.nc
     label_en: SPEI-3/RCP 2.6/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 3 month (75th percentile)
+      Index calculated for time scale of 3 months (75th percentile)
     label_fr: IPEN-3/RCP 2.6/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 3 mois (75e percentile)
     timestep: P1M
@@ -15895,7 +17555,7 @@ layers:
     filepath: RCP2.6/SPEI-12
     filename: CMIP5_rcp2.6_SPEI-12_2006-2100_latlon1x1_SPEI_pctl25.nc
     label_en: SPEI-12/RCP 2.6/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 12 month (25th percentile)
+      Index calculated for time scale of 12 months (25th percentile)
     label_fr: IPEN-12/RCP 2.6/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 12 mois (25e percentile)
     timestep: P1M
@@ -15907,7 +17567,7 @@ layers:
     filepath: RCP2.6/SPEI-12
     filename: CMIP5_rcp2.6_SPEI-12_2006-2100_latlon1x1_SPEI_pctl50.nc
     label_en: SPEI-12/RCP 2.6/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 12 month (50th percentile)
+      Index calculated for time scale of 12 months (50th percentile)
     label_fr: IPEN-12/RCP 2.6/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 12 mois (50e percentile)
     timestep: P1M
@@ -15919,7 +17579,7 @@ layers:
     filepath: RCP2.6/SPEI-12
     filename: CMIP5_rcp2.6_SPEI-12_2006-2100_latlon1x1_SPEI_pctl75.nc
     label_en: SPEI-12/RCP 2.6/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 12 month (75th percentile)
+      Index calculated for time scale of 12 months (75th percentile)
     label_fr: IPEN-12/RCP 2.6/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 12 mois (75e percentile)
     timestep: P1M
@@ -15967,7 +17627,7 @@ layers:
     filepath: RCP4.5/SPEI-3
     filename: CMIP5_rcp4.5_SPEI-3_2006-2100_latlon1x1_SPEI_pctl25.nc
     label_en: SPEI-3/RCP 4.5/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 3 month (25th percentile)
+      Index calculated for time scale of 3 months (25th percentile)
     label_fr: IPEN-3/RCP 4.5/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 3 mois (25e percentile)
     timestep: P1M
@@ -15979,7 +17639,7 @@ layers:
     filepath: RCP4.5/SPEI-3
     filename: CMIP5_rcp4.5_SPEI-3_2006-2100_latlon1x1_SPEI_pctl50.nc
     label_en: SPEI-3/RCP 4.5/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 3 month (50th percentile)
+      Index calculated for time scale of 3 months (50th percentile)
     label_fr: IPEN-1/RCP 4.5/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 3 mois (50e percentile)
     timestep: P1M
@@ -15991,7 +17651,7 @@ layers:
     filepath: RCP4.5/SPEI-3
     filename: CMIP5_rcp4.5_SPEI-3_2006-2100_latlon1x1_SPEI_pctl75.nc
     label_en: SPEI-3/RCP 4.5/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 3 month (75th percentile)
+      Index calculated for time scale of 3 months (75th percentile)
     label_fr: IPEN-3/RCP 4.5/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 3 mois (75e percentile)
     timestep: P1M
@@ -16003,7 +17663,7 @@ layers:
     filepath: RCP4.5/SPEI-12
     filename: CMIP5_rcp4.5_SPEI-12_2006-2100_latlon1x1_SPEI_pctl25.nc
     label_en: SPEI-12/RCP 4.5/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 12 month (25th percentile)
+      Index calculated for time scale of 12 months (25th percentile)
     label_fr: IPEN-12/RCP 4.5/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 12 mois (25e percentile)
     timestep: P1M
@@ -16015,7 +17675,7 @@ layers:
     filepath: RCP4.5/SPEI-12
     filename: CMIP5_rcp4.5_SPEI-12_2006-2100_latlon1x1_SPEI_pctl50.nc
     label_en: SPEI-12/RCP 4.5/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 12 month (50th percentile)
+      Index calculated for time scale of 12 months (50th percentile)
     label_fr: IPEN-12/RCP 4.5/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 12 mois (50e percentile)
     timestep: P1M
@@ -16027,7 +17687,7 @@ layers:
     filepath: RCP4.5/SPEI-12
     filename: CMIP5_rcp4.5_SPEI-12_2006-2100_latlon1x1_SPEI_pctl75.nc
     label_en: SPEI-12/RCP 4.5/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 12 month (75th percentile)
+      Index calculated for time scale of 12 months (75th percentile)
     label_fr: IPEN-12/RCP 4.5/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 12 mois (75e percentile)
     timestep: P1M
@@ -16075,7 +17735,7 @@ layers:
     filepath: RCP8.5/SPEI-3
     filename: CMIP5_rcp8.5_SPEI-3_2006-2100_latlon1x1_SPEI_pctl25.nc
     label_en: SPEI-3/RCP 8.5/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 3 month (25th percentile)
+      Index calculated for time scale of 3 months (25th percentile)
     label_fr: IPEN-3/RCP 8.5/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 3 mois (25e percentile)
     timestep: P1M
@@ -16087,7 +17747,7 @@ layers:
     filepath: RCP8.5/SPEI-3
     filename: CMIP5_rcp8.5_SPEI-3_2006-2100_latlon1x1_SPEI_pctl50.nc
     label_en: SPEI-3/RCP 8.5/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 3 month (50th percentile)
+      Index calculated for time scale of 3 months (50th percentile)
     label_fr: IPEN-1/RCP 8.5/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 3 mois (50e percentile)
     timestep: P1M
@@ -16099,7 +17759,7 @@ layers:
     filepath: RCP8.5/SPEI-3
     filename: CMIP5_rcp8.5_SPEI-3_2006-2100_latlon1x1_SPEI_pctl75.nc
     label_en: SPEI-3/RCP 8.5/Monthly Ensembles/SPEI-3 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 3 month (75th percentile)
+      Index calculated for time scale of 3 months (75th percentile)
     label_fr: IPEN-3/RCP 8.5/Ensembles mensuels/INPE-3 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 3 mois (75e percentile)
     timestep: P1M
@@ -16111,7 +17771,7 @@ layers:
     filepath: RCP8.5/SPEI-12
     filename: CMIP5_rcp8.5_SPEI-12_2006-2100_latlon1x1_SPEI_pctl25.nc
     label_en: SPEI-12/RCP 8.5/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 12 month (25th percentile)
+      Index calculated for time scale of 12 months (25th percentile)
     label_fr: IPEN-12/RCP 8.5/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 12 mois (25e percentile)
     timestep: P1M
@@ -16123,7 +17783,7 @@ layers:
     filepath: RCP8.5/SPEI-12
     filename: CMIP5_rcp8.5_SPEI-12_2006-2100_latlon1x1_SPEI_pctl50.nc
     label_en: SPEI-12/RCP 8.5/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 12 month (50th percentile)
+      Index calculated for time scale of 12 months (50th percentile)
     label_fr: IPEN-12/RCP 8.5/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 12 mois (50e percentile)
     timestep: P1M
@@ -16135,7 +17795,7 @@ layers:
     filepath: RCP8.5/SPEI-12
     filename: CMIP5_rcp8.5_SPEI-12_2006-2100_latlon1x1_SPEI_pctl75.nc
     label_en: SPEI-12/RCP 8.5/Monthly Ensembles/SPEI-12 - Standardized Precipitation Evapotranspiration
-      Index calculated for time scale of 12 month (75th percentile)
+      Index calculated for time scale of 12 months (75th percentile)
     label_fr: IPEN-12/RCP 8.5/Ensembles mensuels/INPE-12 - indice de précipitations et d’évapotranspiration
       normalisé calculé pour une période de 12 mois (75e percentile)
     timestep: P1M
@@ -22208,7 +23868,7 @@ layers:
     label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Wind Speed simulations simulations (5th
       percentile)
-    label_fr: Vitesse du vent près de la surface/(Historique 1900-01 à 2005-11)/Ensembles
+    label_fr: Vitesse du vent près de la surface/Historique (1900-01 à 2005-11)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de la vitesse du vent près de la surface (5e percentile)
     timestep: P1M
@@ -22222,7 +23882,7 @@ layers:
     label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Wind Speed simulations simulations (25th
       percentile)
-    label_fr: Vitesse du vent près de la surface/(Historique 1900-01 à 2005-11)/Ensembles
+    label_fr: Vitesse du vent près de la surface/Historique (1900-01 à 2005-11)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de la vitesse du vent près de la surface (25e percentile)
     timestep: P1M
@@ -22236,7 +23896,7 @@ layers:
     label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Wind Speed simulations simulations (50th
       percentile)
-    label_fr: Vitesse du vent près de la surface/(Historique 1900-01 à 2005-11)/Ensembles
+    label_fr: Vitesse du vent près de la surface/Historique (1900-01 à 2005-11)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de la vitesse du vent près de la surface (50e percentile)
     timestep: P1M
@@ -22250,7 +23910,7 @@ layers:
     label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Wind Speed simulations simulations (75th
       percentile)
-    label_fr: Vitesse du vent près de la surface/(Historique 1900-01 à 2005-11)/Ensembles
+    label_fr: Vitesse du vent près de la surface/Historique (1900-01 à 2005-11)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de la vitesse du vent près de la surface (75e percentile)
     timestep: P1M
@@ -22264,7 +23924,7 @@ layers:
     label_en: Near surface wind speed/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Wind Speed simulations simulations (95th
       percentile)
-    label_fr: Vitesse du vent près de la surface/(Historique 1900-01 à 2005-11)/Ensembles
+    label_fr: Vitesse du vent près de la surface/Historique (1900-01 à 2005-11)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de la vitesse du vent près de la surface (95e percentile)
     timestep: P1M
@@ -25565,7 +27225,7 @@ layers:
     filename: CMIP5_hist_monthly_abs_latlon1x1_SNDPT_pctl5_P1M.nc
     label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Snow Depth simulations simulations (5th percentile)
-    label_fr: Profondeur de la neige/(Historique 1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
+    label_fr: Profondeur de la neige/Historique (1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
       profondeur de la neige (5e percentile)
     timestep: P1M
@@ -25578,7 +27238,7 @@ layers:
     filename: CMIP5_hist_monthly_abs_latlon1x1_SNDPT_pctl25_P1M.nc
     label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Snow Depth simulations simulations (25th percentile)
-    label_fr: Profondeur de la neige/(Historique 1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
+    label_fr: Profondeur de la neige/Historique (1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
       profondeur de la neige (25e percentile)
     timestep: P1M
@@ -25591,7 +27251,7 @@ layers:
     filename: CMIP5_hist_monthly_abs_latlon1x1_SNDPT_pctl50_P1M.nc
     label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Snow Depth simulations simulations (50th percentile)
-    label_fr: Profondeur de la neige/(Historique 1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
+    label_fr: Profondeur de la neige/Historique (1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
       profondeur de la neige (50e percentile)
     timestep: P1M
@@ -25604,7 +27264,7 @@ layers:
     filename: CMIP5_hist_monthly_abs_latlon1x1_SNDPT_pctl75_P1M.nc
     label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Snow Depth simulations simulations (75th percentile)
-    label_fr: Profondeur de la neige/(Historique 1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
+    label_fr: Profondeur de la neige/Historique (1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
       profondeur de la neige (75e percentile)
     timestep: P1M
@@ -25617,7 +27277,7 @@ layers:
     filename: CMIP5_hist_monthly_abs_latlon1x1_SNDPT_pctl95_P1M.nc
     label_en: Snow depth/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Snow Depth simulations simulations (95th percentile)
-    label_fr: Profondeur de la neige/(Historique 1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
+    label_fr: Profondeur de la neige/Historique (1900-01 à 2005-12)/Ensembles mensuels/Absolue/CMIP5
       (ensembles mensuels)- Ensemble des simulations historiques mensuelles de la
       profondeur de la neige (95e percentile)
     timestep: P1M
@@ -35631,7 +37291,7 @@ layers:
     label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Sea Ice Concentration simulations
       simulations (5th percentile)
-    label_fr: Concentration de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
+    label_fr: Concentration de la glace de mer/Historique (1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de la concentration de la glace de mer (5e percentile)
     timestep: P1M
@@ -35645,7 +37305,7 @@ layers:
     label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Sea Ice Concentration simulations
       simulations (25th percentile)
-    label_fr: Concentration de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
+    label_fr: Concentration de la glace de mer/Historique (1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de la concentration de la glace de mer (25e percentile)
     timestep: P1M
@@ -35659,7 +37319,7 @@ layers:
     label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Sea Ice Concentration simulations
       simulations (50th percentile)
-    label_fr: Concentration de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
+    label_fr: Concentration de la glace de mer/Historique (1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de la concentration de la glace de mer (50e percentile)
     timestep: P1M
@@ -35673,7 +37333,7 @@ layers:
     label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Sea Ice Concentration simulations
       simulations (75th percentile)
-    label_fr: Concentration de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
+    label_fr: Concentration de la glace de mer/Historique (1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de la concentration de la glace de mer (75e percentile)
     timestep: P1M
@@ -35687,7 +37347,7 @@ layers:
     label_en: Sea ice concentration/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5
       (Ensembles)- Monthly ensembles of Historical Sea Ice Concentration simulations
       simulations (95th percentile)
-    label_fr: Concentration de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
+    label_fr: Concentration de la glace de mer/Historique (1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de la concentration de la glace de mer (95e percentile)
     timestep: P1M
@@ -39016,7 +40676,7 @@ layers:
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICETHKN_pctl5_P1M.nc
     label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Sea Ice Thickness simulations simulations (5th percentile)
-    label_fr: Épaisseur de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
+    label_fr: Épaisseur de la glace de mer/Historique (1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de l'épaisseur de la glace de mer (5e percentile)
     timestep: P1M
@@ -39029,7 +40689,7 @@ layers:
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICETHKN_pctl25_P1M.nc
     label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Sea Ice Thickness simulations simulations (25th percentile)
-    label_fr: Épaisseur de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
+    label_fr: Épaisseur de la glace de mer/Historique (1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de l'épaisseur de la glace de mer (25e percentile)
     timestep: P1M
@@ -39042,7 +40702,7 @@ layers:
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICETHKN_pctl50_P1M.nc
     label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Sea Ice Thickness simulations simulations (50th percentile)
-    label_fr: Épaisseur de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
+    label_fr: Épaisseur de la glace de mer/Historique (1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de l'épaisseur de la glace de mer (50e percentile)
     timestep: P1M
@@ -39055,7 +40715,7 @@ layers:
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICETHKN_pctl75_P1M.nc
     label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Sea Ice Thickness simulations simulations (75th percentile)
-    label_fr: Épaisseur de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
+    label_fr: Épaisseur de la glace de mer/Historique (1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de l'épaisseur de la glace de mer (75e percentile)
     timestep: P1M
@@ -39068,7 +40728,7 @@ layers:
     filename: CMIP5_hist_monthly_abs_latlon1x1_SICETHKN_pctl95_P1M.nc
     label_en: Sea ice thickness/Historical (1900-2005)/Monthly Ensembles/Absolute/CMIP5 (Ensembles)-
       Monthly ensembles of Historical Sea Ice Thickness simulations simulations (95th percentile)
-    label_fr: Épaisseur de la glace de mer/(Historique 1900-01 à 2005-12)/Ensembles
+    label_fr: Épaisseur de la glace de mer/Historique (1900-01 à 2005-12)/Ensembles
       mensuels/Absolue/CMIP5 (ensembles mensuels)- Ensemble des simulations historiques
       mensuelles de l'épaisseur de la glace de mer (95e percentile)
     timestep: P1M
