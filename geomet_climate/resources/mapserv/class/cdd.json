@@ -1,9 +1,9 @@
 [
   {
     "__type__": "class",
-    "name": "20",
+    "name": "<= 20",
     "group": "CDD",
-    "expression": "([pixel] = 20)",
+    "expression": "([pixel] <= 20)",
     "style": {
       "__type__": "style",
       "color": [
@@ -15,7 +15,7 @@
   },
   {
     "__type__": "class",
-    "name": "21 — 39",
+    "name": "20 — 40",
     "group": "CDD",
     "expression": "([pixel] > 20 AND [pixel] < 40)",
     "style": {
@@ -29,7 +29,7 @@
   },
   {
     "__type__": "class",
-    "name": "40 — 59",
+    "name": "40 — 60",
     "group": "CDD",
     "expression": "([pixel] >= 40 AND [pixel] < 60 )",
     "style": {
@@ -43,7 +43,7 @@
   },
   {
     "__type__": "class",
-    "name": "60 — 79",
+    "name": "60 — 80",
     "group": "CDD",
     "expression": "([pixel] >= 60 AND [pixel] < 80)",
     "style": {
@@ -57,7 +57,7 @@
   },
   {
     "__type__": "class",
-    "name": "80 — 99",
+    "name": "80 — 100",
     "group": "CDD",
     "expression": "([pixel] >= 80 AND [pixel] < 100)",
     "style": {
@@ -71,7 +71,7 @@
   },
   {
     "__type__": "class",
-    "name": "100 — 149",
+    "name": "100 — 150",
     "group": "CDD",
     "expression": "([pixel] >= 100 AND [pixel] < 150)",
     "style": {
@@ -85,9 +85,9 @@
   },
   {
     "__type__": "class",
-    "name": "150 — 199",
+    "name": "150 — 200",
     "group": "CDD",
-    "expression": "([pixel] >= 150 AND [pixel] < 199)",
+    "expression": "([pixel] >= 150 AND [pixel] < 200)",
     "style": {
       "__type__": "style",
       "color": [

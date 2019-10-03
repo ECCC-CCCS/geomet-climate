@@ -3,7 +3,7 @@
     "__type__": "class",
     "name": "5",
     "group": "TX30_TN20",
-    "expression": "([pixel] = 5)",
+    "expression": "([pixel] >= 5 AND [pixel] < 6))",
     "style": {
       "__type__": "style",
       "color": [
@@ -15,9 +15,9 @@
   },
   {
     "__type__": "class",
-    "name": "6 — 9",
+    "name": "5 — 10",
     "group": "TX30_TN20",
-    "expression": "([pixel] > 5 AND [pixel] <= 9 )",
+    "expression": "([pixel] >= 5 AND [pixel] < 10 )",
     "style": {
       "__type__": "style",
       "color": [
@@ -29,7 +29,7 @@
   },
   {
     "__type__": "class",
-    "name": "10 — 19",
+    "name": "10 — 20",
     "group": "TX30_TN20",
     "expression": "([pixel] >= 10 AND [pixel] < 20)",
     "style": {
@@ -43,7 +43,7 @@
   },
   {
     "__type__": "class",
-    "name": "20 — 29",
+    "name": "20 — 30",
     "group": "TX30_TN20",
     "expression": "([pixel] >= 20 AND [pixel] < 30)",
     "style": {
@@ -57,7 +57,7 @@
   },
   {
     "__type__": "class",
-    "name": "30 — 39",
+    "name": "30 — 40",
     "group": "TX30_TN20",
     "expression": "([pixel] >= 30 AND [pixel] < 40)",
     "style": {
@@ -71,7 +71,7 @@
   },
   {
     "__type__": "class",
-    "name": "40 — 49",
+    "name": "40 — 50",
     "group": "TX30_TN20",
     "expression": "([pixel] >= 40 AND [pixel] <  50)",
     "style": {
@@ -85,7 +85,7 @@
   },
   {
     "__type__": "class",
-    "name": "> 50",
+    "name": ">= 50",
     "group": "TX30_TN20",
     "expression": "([pixel] >= 50)",
     "style": {
