@@ -1,9 +1,9 @@
 [
   {
     "__type__": "class",
-    "name": "2000",
+    "name": "<= 2000",
     "group": "HDD",
-    "expression": "([pixel] = 2000)",
+    "expression": "([pixel] <= 2000)",
     "style": {
       "__type__": "style",
       "color": [
@@ -15,7 +15,7 @@
   },
   {
     "__type__": "class",
-    "name": "2001 — 3999",
+    "name": "2000 — 4000",
     "group": "HDD",
     "expression": "([pixel] > 2000 AND [pixel] < 4000)",
     "style": {
@@ -29,7 +29,7 @@
   },
   {
     "__type__": "class",
-    "name": "4000 — 5999",
+    "name": "4000 — 6000",
     "group": "HDD",
     "expression": "([pixel] >= 4000 AND [pixel] < 6000 )",
     "style": {
@@ -43,7 +43,7 @@
   },
   {
     "__type__": "class",
-    "name": "6000 — 7999",
+    "name": "6000 — 8000",
     "group": "HDD",
     "expression": "([pixel] >= 6000 AND [pixel] < 8000)",
     "style": {
@@ -57,7 +57,7 @@
   },
   {
     "__type__": "class",
-    "name": "8000 — 9999",
+    "name": "8000 — 10000",
     "group": "HDD",
     "expression": "([pixel] >= 8000 AND [pixel] < 10000)",
     "style": {
@@ -71,7 +71,7 @@
   },
   {
     "__type__": "class",
-    "name": "10000 — 14999",
+    "name": "10000 — 15000",
     "group": "HDD",
     "expression": "([pixel] >= 10000 AND [pixel] < 15000)",
     "style": {
