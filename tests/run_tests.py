@@ -202,7 +202,7 @@ class GeoMetClimateTest(unittest.TestCase):
 
         self.assertTrue(os.path.isfile(out_file))
 
-    def test_gen_web_metadata_En(self):
+    def test_gen_web_metadata(self):
         """test mapfile MAP.WEB.METADATA section creation (En)"""
         url = 'https://fake.url/geomet-climate'
         mapfile = os.path.join(THISDIR,
@@ -210,35 +210,16 @@ class GeoMetClimateTest(unittest.TestCase):
         with io.open(mapfile) as fh:
             m = json.load(fh, object_pairs_hook=OrderedDict)
         c = self.cfg['metadata']
-        lang = 'en'
         services = ['wms', 'wcs']
 
         for service in services:
-            result = gen_web_metadata(m, c, lang, service, url)
+            result = gen_web_metadata(m, c, service, url)
             self.assertTrue(result['ows_extent'] == '-141,42,-52,84')
             self.assertTrue(result['ows_stateorprovince'] == 'Quebec')
             self.assertTrue(result['ows_country'] == 'Canada')
             self.assertTrue(result['ows_contactinstructions'] ==
                             'During hours of service')
-
-    def test_gen_web_metadata_Fr(self):
-        """test mapfile MAP.WEB.METADATA section creation (Fr)"""
-        url = 'https://fake.url/geomet-climate'
-        mapfile = os.path.join(THISDIR,
-                               '../geomet_climate/resources/mapfile-base.json')
-        with io.open(mapfile) as fh:
-            m = json.load(fh, object_pairs_hook=OrderedDict)
-        c = self.cfg['metadata']
-        lang = 'fr'
-        services = ['wms', 'wcs']
-
-        for service in services:
-            result = gen_web_metadata(m, c, lang, service, url)
-
-            self.assertTrue(result['ows_extent'] == '-141,42,-52,84')
-            self.assertTrue(result['ows_stateorprovince'] == u'Qu\xe9bec')
-            self.assertTrue(result['ows_country'] == 'Canada')
-            self.assertTrue(result['ows_contactinstructions'] ==
+            self.assertTrue(result['ows_contactinstructions_fr'] ==
                             'Durant les heures de service')
 
     def test_gen_layer_metadataurl(self):
@@ -263,50 +244,24 @@ class GeoMetClimateTest(unittest.TestCase):
                                                           '467a-496f-a71c-'
                                                           'fb0aad0171a8')
 
-    def test_gen_layer_En(self):
+    def test_gen_layer(self):
         """returns a list of mappyfile layer objects of layer (En)"""
-        lang = 'en'
         layer_name = 'CMIP5.TT.RCP26.SPRING.2021-2040_PCTL50'
         layer_info = self.cfg['layers'][layer_name]
         template_path = '/foo/bar/path'
-        ows_title = 'CMIP5 (Spring)- Projected average change in Air' \
-                    ' Temperature for 2021-2040 (50th percentile)'
-        ows_layer_group = '/CMIP5-based climate scenarios (CMIP5)' \
-                          '/Air temperature/RCP 2.6/Spring/2021-2040'
+        ows_title_en = 'CMIP5 (Spring)- Projected average change in Air' \
+                       ' Temperature for 2021-2040 (50th percentile)'
+        ows_layer_group_en = '/CMIP5-based climate scenarios (CMIP5)' \
+                             '/Air temperature/RCP 2.6/Spring/2021-2040'
+        ows_title_fr = u"CMIP5 (printemps)- Changement moyen projet\xe9 de " \
+                       u"la temp\xe9rature de l'air pour 2021 \xe0 2040 " \
+                       u"(50e percentile)"
+        ows_layer_group_fr = u"/Sc\xe9narios climatiques fond\xe9s sur " \
+                             u"CMIP5 (CMIP5)/Temp\xe9rature de l'air/" \
+                             u"RCP 2.6/Printemps/2021 \xe0 2040"
 
         result = gen_layer(layer_name, layer_info,
-                           lang,  template_path, service='WMS')
-        self.assertTrue(result[0]['projection'] == ['+proj=longlat'
-                                                    ' +datum=WGS84 +no_defs'])
-        self.assertTrue(result[0]['name'] == 'CMIP5.TT.RCP26.SPRING.'
-                                             '2021-2040_PCTL50')
-
-        print(result[0]['data'])
-
-        self.assertTrue(result[0]['data'] == 'tests/data/climate/'
-                                             'cmip5/netcdf/scenarios/RCP2.6/'
-                                             'seasonal/MAM/avg_20years/'
-                                             'CMIP5_rcp2.6_MAM_2021-2040_'
-                                             'latlon1x1_TEMP_pctl50_P1Y.nc')
-        self.assertTrue(result[0]['metadata']['ows_title'] == ows_title)
-        self.assertTrue(result[0]['metadata']['ows_layer_group'] ==
-                        ows_layer_group)
-
-    def test_gen_layer_Fr(self):
-        """returns a list of mappyfile layer objects of layer (Fr)"""
-        lang = 'fr'
-        layer_name = 'CMIP5.TT.RCP26.SPRING.2021-2040_PCTL50'
-        layer_info = self.cfg['layers'][layer_name]
-        template_path = '/foo/bar/path'
-        ows_title = u"CMIP5 (printemps)- Changement moyen projet\xe9 de " \
-                    u"la temp\xe9rature de l'air pour 2021 \xe0 2040 " \
-                    u"(50e percentile)"
-        ows_layer_group = u"/Sc\xe9narios climatiques fond\xe9s sur " \
-                          u"CMIP5 (CMIP5)/Temp\xe9rature de l'air/" \
-                          u"RCP 2.6/Printemps/2021 \xe0 2040"
-
-        result = gen_layer(layer_name, layer_info,
-                           lang,  template_path, service='WMS')
+                           template_path, service='WMS')
         self.assertTrue(result[0]['projection'] == ['+proj=longlat'
                                                     ' +datum=WGS84 +no_defs'])
         self.assertTrue(result[0]['name'] == 'CMIP5.TT.RCP26.SPRING.'
@@ -316,9 +271,12 @@ class GeoMetClimateTest(unittest.TestCase):
                                              'seasonal/MAM/avg_20years/'
                                              'CMIP5_rcp2.6_MAM_2021-2040_'
                                              'latlon1x1_TEMP_pctl50_P1Y.nc')
-        self.assertTrue(result[0]['metadata']['ows_title'] == ows_title)
+        self.assertTrue(result[0]['metadata']['ows_title'] == ows_title_en)
         self.assertTrue(result[0]['metadata']['ows_layer_group'] ==
-                        ows_layer_group)
+                        ows_layer_group_en)
+        self.assertTrue(result[0]['metadata']['ows_title_fr'] == ows_title_fr)
+        self.assertTrue(result[0]['metadata']['ows_layer_group_fr'] ==
+                        ows_layer_group_fr)
 
 
 if __name__ == '__main__':
