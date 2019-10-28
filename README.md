@@ -66,14 +66,14 @@ geomet-climate tileindex generate
 # generate tileindex for single layer
 geomet-climate tileindex generate --layer=CMIP5.SND.RCP26.FALL.ANO_PCTL50
 
-# generate mapfile for WMS (English)
-geomet-climate mapfile generate --language=en --service=WMS
+# generate mapfile for WMS
+geomet-climate mapfile generate --service=WMS
 
-# generate mapfile for WMS (English) with specific configuration for single layer
-geomet-climate mapfile generate --language=en --service=WMS --layer=CMIP5.SND.RCP26.FALL.ANO_PCTL50
+# generate mapfile for WMS with specific configuration for single layer
+geomet-climate mapfile generate --service=WMS --layer=CMIP5.SND.RCP26.FALL.ANO_PCTL50
 
-# generate mapfile for WCS (French)
-geomet-climate mapfile generate --language=fr --service=WCS
+# generate mapfile for WCS
+geomet-climate mapfile generate --service=WCS
 
 # run server
 geomet-climate serve  # server runs on port 8099
@@ -96,7 +96,7 @@ mapserv -nh QUERY_STRING="map=$GEOMET_CLIMATE_BASEDIR/mapfile/geomet-climate-WCS
 ### Running Tests
 
 ```bash
-. test/geomet-climate-test.env
+. tests/geomet-climate-test.env
 python setup.py test
 ```
 

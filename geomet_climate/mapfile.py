@@ -18,6 +18,7 @@
 ###############################################################################
 
 from collections import OrderedDict
+import copy
 from datetime import datetime
 import io
 import json
@@ -42,13 +43,12 @@ LOGGER = logging.getLogger(__name__)
 THISDIR = os.path.dirname(os.path.realpath(__file__))
 
 
-def gen_web_metadata(m, c, lang, service, url):
+def gen_web_metadata(m, c, service, url):
     """
     update mapfile MAP.WEB.METADATA section
 
     :param m: base mapfile JSON object
     :param c: configuration YAML metadata object
-    :param lang: language (en or fr)
     :param service: service (WMS or WCS)
     :param url: URL of service
 
@@ -61,26 +61,11 @@ def gen_web_metadata(m, c, lang, service, url):
         '__type__': 'metadata'
     }
 
-    LOGGER.debug('Language: {}'.format(lang))
     LOGGER.debug('Service: {}'.format(service))
-
-    if lang == 'fr':
-        d['ows_onlineresource'] = '{}?lang=fr'.format(url)
-    else:
-        d['ows_onlineresource'] = url
-
-    LOGGER.debug('URL: {}'.format(d['ows_onlineresource']))
 
     LOGGER.debug('Setting service identification metadata')
 
-    service_title = u'{} {}'.format(
-        c['identification']['title'][lang], __version__)
-
-    d['ows_title'] = service_title
-    d['ows_abstract'] = c['identification']['abstract'][lang]
     d['ows_keywordlist_vocabulary'] = 'http://purl.org/dc/terms/'
-    d['ows_keywordlist_http://purl.org/dc/terms/_items'] = ','.join(
-        c['identification']['keywords'][lang])
 
     d['ows_fees'] = c['identification']['fees']
     d['ows_accessconstraints'] = c['identification']['accessconstraints']
@@ -89,52 +74,74 @@ def gen_web_metadata(m, c, lang, service, url):
     d['ows_role'] = c['provider']['role']
     d['ows_http_max_age'] = 604800  # cache for one week
     d['ows_updatesequence'] = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
-    d['ows_service_onlineresource'] = c['identification']['url'][lang]
     d['encoding'] = 'UTF-8'
     d['ows_srs'] = m['web']['metadata']['ows_srs']
 
     LOGGER.debug('Setting contact information')
-    d['ows_contactperson'] = c['provider']['contact']['name'][lang]
-    d['ows_contactposition'] = c['provider']['contact']['position'][lang]
-    d['ows_contactorganization'] = c['provider']['name'][lang]
-    d['ows_address'] = \
-        c['provider']['contact']['address']['delivery_point'][lang]
 
     d['ows_addresstype'] = 'postal'
     d['ows_addresstype'] = 'postal'
-    d['ows_city'] = c['provider']['contact']['address']['city'][lang]
-    d['ows_stateorprovince'] = \
-        c['provider']['contact']['address']['stateorprovince'][lang]
 
     d['ows_postcode'] = c['provider']['contact']['address']['postalcode']
-    d['ows_country'] = c['provider']['contact']['address']['country'][lang]
     d['ows_contactelectronicmailaddress'] = \
         c['provider']['contact']['address']['email']
 
     d['ows_contactvoicetelephone'] = c['provider']['contact']['phone']['voice']
     d['ows_contactfacsimiletelephone'] = \
         c['provider']['contact']['phone']['fax']
+    d['wms_enable_request'] = '*'
+    d['wms_getfeatureinfo_formatlist'] = \
+        'text/plain,application/json,application/vnd.ogc.gml'
+    d['wms_attribution_logourl_format'] = c['provider']['logo']['format']
+    d['wms_attribution_logourl_width'] = c['provider']['logo']['width']
+    d['wms_attribution_logourl_height'] = c['provider']['logo']['height']
+    d['wms_attribution_logourl_href'] = c['provider']['logo']['href']
+    d['wcs_enable_request'] = '*'
 
-    d['ows_contactinstructions'] = \
-        c['provider']['contact']['instructions'][lang]
+    for lang in ['en', 'fr']:
+        if lang == 'fr':
+            _lang = '_fr'
+            d['ows_onlineresource_fr'] = '{}?lang=fr'.format(url)
+        else:
+            _lang = ''
+            d['ows_onlineresource'] = url
 
-    d['ows_hoursofservice'] = c['provider']['contact']['hours'][lang]
-
-    if service == 'WMS':
-        d['wms_enable_request'] = '*'
-        d['wms_getfeatureinfo_formatlist'] = \
-            'text/plain,application/json,application/vnd.ogc.gml'
-        d['wms_attribution_onlineresource'] = c['attribution']['url'][lang]
-        d['wms_attribution_title'] = c['attribution']['title'][lang]
-        d['wms_attribution_logourl_format'] = c['provider']['logo']['format']
-        d['wms_attribution_logourl_width'] = c['provider']['logo']['width']
-        d['wms_attribution_logourl_height'] = c['provider']['logo']['height']
-        d['wms_attribution_logourl_href'] = c['provider']['logo']['href']
-    elif service == 'WCS':
-        d['wcs_enable_request'] = '*'
-        d['wcs_label'] = service_title
-        d['wcs_description'] = c['identification']['abstract'][lang]
-        d['ows_keywordlist'] = ','.join(c['identification']['keywords'][lang])
+        d['ows_address{}'.format(_lang)] = \
+            c['provider']['contact']['address']['delivery_point'][lang]
+        d['ows_keywordlist_http://purl.org/dc/terms/_items{}'.format(_lang)] =\
+            ','.join(c['identification']['keywords'][lang])
+        d['ows_contactinstructions{}'.format(_lang)] = \
+            c['provider']['contact']['instructions'][lang]
+        d['ows_contactperson{}'.format(_lang)] = \
+            c['provider']['contact']['name'][lang]
+        d['ows_contactposition{}'.format(_lang)] = \
+            c['provider']['contact']['position'][lang]
+        d['ows_contactorganization{}'.format(_lang)] = \
+            c['provider']['name'][lang]
+        d['ows_abstract{}'.format(_lang)] = \
+            c['identification']['abstract'][lang]
+        d['ows_service_onlineresource{}'.format(_lang)] = \
+            c['identification']['url'][lang]
+        service_title = u'{} {}'.format(
+            c['identification']['title'][lang], __version__)
+        d['ows_title{}'.format(_lang)] = service_title
+        d['wcs_label{}'.format(_lang)] = service_title
+        d['ows_hoursofservice{}'.format(_lang)] = \
+            c['provider']['contact']['hours'][lang]
+        d['ows_stateorprovince{}'.format(_lang)] = \
+            c['provider']['contact']['address']['stateorprovince'][lang]
+        d['ows_city{}'.format(_lang)] = \
+            c['provider']['contact']['address']['city'][lang]
+        d['ows_country{}'.format(_lang)] = \
+            c['provider']['contact']['address']['country'][lang]
+        d['wms_attribution_title{}'.format(_lang)] = \
+            c['attribution']['title'][lang]
+        d['wms_attribution_onlineresource{}'.format(_lang)] = \
+            c['attribution']['url'][lang]
+        d['wcs_description{}'.format(_lang)] = \
+            c['identification']['abstract'][lang]
+        d['ows_keywordlist{}'.format(_lang)] = \
+            ','.join(c['identification']['keywords'][lang])
 
     return d
 
@@ -173,13 +180,12 @@ def gen_layer_metadataurl(layer_name, layer_info):
     return meta_dict
 
 
-def gen_layer(layer_name, layer_info, lang,  template_path, service='WMS'):
+def gen_layer(layer_name, layer_info,  template_path, service='WMS'):
     """
     mapfile layer object generator
 
     :param layer_name: name of layer
     :param layer_info: layer information
-    :param lang: language (en or fr)
     :param service: service (WMS or WCS)
 
     :returns: list of mappyfile layer objects of layer
@@ -265,7 +271,6 @@ def gen_layer(layer_name, layer_info, lang,  template_path, service='WMS'):
         layer['projection'] = [projection.ExportToProj4().strip()]
 
     if service == 'WCS' and layer_info['type'] == 'RASTER':
-        layer['metadata']['wcs_label'] = layer_info['label_{}'.format(lang)]
         layer['metadata']['wcs_bandcount'] = layer_info['num_bands']
 
         xsize, ysize = layer_info['climate_model']['dimensions']
@@ -315,19 +320,26 @@ def gen_layer(layer_name, layer_info, lang,  template_path, service='WMS'):
     layer['metadata']['ows_extent'] = extent
 
     LOGGER.debug('Setting WMS layer hierarchy')
-    layer_title_tokens = layer_info['label_{}'.format(lang)].split('/')
-    layer_group_end = '/'.join(layer_title_tokens[:-1])
 
-    layer_group = '/'.join([
-        '/' + layer_info['climate_model']['label_{}'.format(lang)],
-        layer_group_end
-    ])
+    for lang in ['en', 'fr']:
+        if lang == 'fr':
+            _lang = '_fr'
+        else:
+            _lang = ''
 
-    if layer_group.endswith('/'):
-        layer_group = layer_group[:-1]
+        layer_title_tokens = layer_info['label_{}'.format(lang)].split('/')
+        layer_group_end = '/'.join(layer_title_tokens[:-1])
+        layer_group = '/'.join([
+            '/' + layer_info['climate_model']['label_{}'.format(lang)],
+            layer_group_end
+        ])
 
-    layer['metadata']['ows_layer_group'] = layer_group
-    layer['metadata']['ows_title'] = layer_title_tokens[-1]
+        if layer_group.endswith('/'):
+            layer_group = layer_group[:-1]
+
+        layer['metadata']['ows_layer_group{}'.format(_lang)] = layer_group
+        layer['metadata']['ows_title{}'.format(_lang)] = layer_title_tokens[-1]
+
     if 'metadata_id' in layer_info['climate_model']:
         meta_url_dict = gen_layer_metadataurl(layer_name, layer_info)
         layer['metadata'].update(meta_url_dict)
@@ -368,21 +380,16 @@ def mapfile():
 
 @click.command()
 @click.pass_context
-@click.option('--language', '-l', 'lang', type=click.Choice(['en', 'fr']),
-              help='language')
 @click.option('--service', '-s', type=click.Choice(['WMS', 'WCS']),
               help='service')
 @click.option('--layer', '-lyr', help='layer')
-def generate(ctx, lang, service, layer):
+def generate(ctx, service, layer):
     """generate mapfile"""
 
     output_dir = '{}{}mapfile'.format(BASEDIR, os.sep)
     template_dir = '{}{}mapfile{}template'.format(BASEDIR, os.sep, os.sep)
 
     all_layers = []
-
-    if lang is None or service is None:
-        raise click.UsageError('Missing arguments')
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -406,7 +413,7 @@ def generate(ctx, lang, service, layer):
         mapfiles = cfg['layers']
 
     mapfile['web']['metadata'] = gen_web_metadata(mapfile, cfg['metadata'],
-                                                  lang, service, URL)
+                                                  service, URL)
 
     for key, value in mapfiles.items():
         mapfile['layers'] = []
@@ -433,13 +440,13 @@ def generate(ctx, lang, service, layer):
                     template_vector = template_vector.read().replace('{}', key)
                     fh.write(template_vector)
 
-        layers = gen_layer(key, value, lang, template_path, service)
+        layers = gen_layer(key, value, template_path, service)
 
         for lyr in layers:
             mapfile['layers'].append(lyr)
             all_layers.append(lyr)
 
-        filename = 'geomet-climate-{}-{}-{}.map'.format(service, key, lang)
+        filename = 'geomet-climate-{}-{}.map'.format(service, key)
         filepath = '{}{}{}'.format(output_dir, os.sep, filename)
 
         for i in mapfile['outputformats']:
@@ -450,13 +457,32 @@ def generate(ctx, lang, service, layer):
             mappyfile.dump(mapfile, fh)
 
     if layer is None:  # generate entire mapfile
-        filename = 'geomet-climate-{}-{}.map'.format(service, lang)
-        filepath = '{}{}{}'.format(output_dir, os.sep, filename)
+        metadata_dict = mapfile['web']['metadata'].copy()
+        for lang_ in ['en', 'fr']:
 
-        mapfile['layers'] = all_layers
+            lang_map = copy.deepcopy(mapfile)
+            lang_map['layers'] = all_layers
 
-        with io.open(filepath, 'w', encoding='utf-8') as fh:
-            mappyfile.dump(mapfile, fh)
+            filename = 'geomet-climate-{}-{}.map'.format(service, lang_)
+            filepath = '{}{}{}'.format(output_dir, os.sep, filename)
+
+            if lang_ == 'fr':
+                for metadata in metadata_dict:
+                    if metadata.endswith('_{}'.format(lang_)):
+                        key_ = metadata.replace('_{}'.format(lang_), '')
+                        value_ = mapfile['web']['metadata'][metadata]
+                        lang_map['web']['metadata'][key_] = value_
+
+                for lyr_ in range(0, len(lang_map['layers'])):
+                    lm = lang_map['layers'][lyr_]['metadata']
+                    if 'ows_title' in lm:
+                        lm['ows_layer_group'] = \
+                            lm['ows_layer_group_{}'.format(lang_)]
+                        lm['ows_title'] = \
+                            lm['ows_title_{}'.format(lang_)]
+
+            with io.open(filepath, 'w', encoding='utf-8') as fh:
+                mappyfile.dump(lang_map, fh)
 
     epsg_file = os.path.join(THISDIR, 'resources', 'mapserv', 'epsg')
     shutil.copy2(epsg_file, os.path.join(BASEDIR, 'mapfile'))
