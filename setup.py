@@ -48,7 +48,10 @@ class PyCleanBuild(Command):
         ]
 
         remove_dirs = [
-            'debian/geomet-climate'
+            'build',
+            'debian/geomet-climate',
+            'dist',
+            'geomet_climate.egg-info'
         ]
 
         for file_ in remove_files:
