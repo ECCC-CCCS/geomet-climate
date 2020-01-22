@@ -10,6 +10,9 @@ geomet-climate vrt generate
 echo "Generating tileindexes"
 geomet-climate tileindex generate
 
+echo "Generating legends"
+geomet-climate legend generate
+
 echo "Generating WMS"
 geomet-climate mapfile generate -s WMS
 

@@ -1,7 +1,7 @@
 [
   {
     "__type__": "class",
-    "name": "-1.0 -0.9",
+    "name": "-100 -90",
     "group": "PRECIP-TREND",
     "expression": "([pixel] <  -0.9)",
     "style": {
@@ -22,7 +22,7 @@
   },
   {
     "__type__": "class",
-    "name": "-0.9 -0.8",
+    "name": "-90 -80",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= -0.9 AND [pixel] <  -0.8)",
     "style": {
@@ -43,7 +43,7 @@
   },
   {
     "__type__": "class",
-    "name": "-0.8 -0.7",
+    "name": "-80 -70",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= -0.8 AND [pixel] <  -0.7)",
     "style": {
@@ -64,7 +64,7 @@
   },
   {
     "__type__": "class",
-    "name": "-0.7 -0.6",
+    "name": "-70 -60",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= -0.7 AND [pixel] <  -0.6)",
     "style": {
@@ -85,7 +85,7 @@
   },
   {
     "__type__": "class",
-    "name": "-0.6 -0.5",
+    "name": "-60 -50",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= -0.6 AND [pixel] <  -0.5)",
     "style": {
@@ -106,7 +106,7 @@
   },
   {
     "__type__": "class",
-    "name": "-0.5 -0.4",
+    "name": "-50 -40",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= -0.5 AND [pixel] <  -0.4)",
     "style": {
@@ -127,7 +127,7 @@
   },
   {
     "__type__": "class",
-    "name": "-0.4 -0.3",
+    "name": "-40 -30",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= -0.4 AND [pixel] <  -0.3)",
     "style": {
@@ -148,7 +148,7 @@
   },
   {
     "__type__": "class",
-    "name": "-0.3 -0.2",
+    "name": "-30 -20",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= -0.3 AND [pixel] <  -0.2)",
     "style": {
@@ -169,7 +169,7 @@
   },
   {
     "__type__": "class",
-    "name": "-0.2 -0.1",
+    "name": "-20 -10",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= -0.2 AND [pixel] <  -0.1)",
     "style": {
@@ -190,7 +190,7 @@
   },
   {
     "__type__": "class",
-    "name": "-0.1 0.0",
+    "name": "-10 0",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= -0.1 AND [pixel] <  0.0)",
     "style": {
@@ -211,7 +211,7 @@
   },
   {
     "__type__": "class",
-    "name": "0.0 0.1",
+    "name": "0 10",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= 0.0 AND [pixel] <  0.1)",
     "style": {
@@ -232,7 +232,7 @@
   },
   {
     "__type__": "class",
-    "name": "0.1 0.2",
+    "name": "10 20",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= 0.1 AND [pixel] <  0.2)",
     "style": {
@@ -253,7 +253,7 @@
   },
   {
     "__type__": "class",
-    "name": "0.2 0.3",
+    "name": "20 30",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= 0.2 AND [pixel] <  0.3)",
     "style": {
@@ -274,7 +274,7 @@
   },
   {
     "__type__": "class",
-    "name": "0.3 0.4",
+    "name": "30 40",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= 0.3 AND [pixel] <  0.4)",
     "style": {
@@ -295,7 +295,7 @@
   },
   {
     "__type__": "class",
-    "name": "0.4 0.5",
+    "name": "40 50",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= 0.4 AND [pixel] <  0.5)",
     "style": {
@@ -316,7 +316,7 @@
   },
   {
     "__type__": "class",
-    "name": "0.5 0.6",
+    "name": "50 60",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= 0.5 AND [pixel] <  0.6)",
     "style": {
@@ -337,7 +337,7 @@
   },
   {
     "__type__": "class",
-    "name": "0.6 0.7",
+    "name": "60 70",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= 0.6 AND [pixel] <  0.7)",
     "style": {
@@ -358,7 +358,7 @@
   },
   {
     "__type__": "class",
-    "name": "0.7 0.8",
+    "name": "70 80",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= 0.7 AND [pixel] <  0.8)",
     "style": {
@@ -379,7 +379,7 @@
   },
   {
     "__type__": "class",
-    "name": "0.8 0.9",
+    "name": "80 90",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= 0.8 AND [pixel] <  0.9)",
     "style": {
@@ -400,7 +400,7 @@
   },
   {
     "__type__": "class",
-    "name": "0.9 1.0",
+    "name": "90 100",
     "group": "PRECIP-TREND",
     "expression": "([pixel] >= 0.9)",
     "style": {

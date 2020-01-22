@@ -155,7 +155,7 @@ def gen_layer_metadataurl(layer_name, layer_info):
     :param layer_name: name of layer
     :param layer_info: layer information
 
-    :return: dict of layer metadata url keys
+    :returns: dict of layer metadata url keys
     """
     meta_dict = {}
 
