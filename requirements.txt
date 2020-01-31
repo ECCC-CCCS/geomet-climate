@@ -1,4 +1,6 @@
 click
 gdal
 mappyfile
+matplotlib
+numpy
 pyyaml

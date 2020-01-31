@@ -21,6 +21,7 @@ __version__ = '1.5.dev0'
 
 import click
 
+from geomet_climate.legend import legend
 from geomet_climate.mapfile import mapfile
 from geomet_climate.tileindex import tileindex
 from geomet_climate.vrt import vrt
@@ -37,3 +38,4 @@ cli.add_command(mapfile)
 cli.add_command(vrt)
 cli.add_command(tileindex)
 cli.add_command(serve)
+cli.add_command(legend)

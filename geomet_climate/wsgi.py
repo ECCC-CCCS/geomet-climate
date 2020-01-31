@@ -121,6 +121,7 @@ def application(env, start_response):
     layer_ = request.getValueByName('LAYER')
     coverageid_ = request.getValueByName('COVERAGEID')
     format_ = request.getValueByName('FORMAT')
+    style_ = request.getValueByName('STYLE')
 
     if lang_ is not None and lang_ in ['f', 'fr', 'fra']:
         lang = 'fr'
@@ -156,20 +157,45 @@ def application(env, start_response):
         return [SERVICE_EXCEPTION.format(msg)]
 
     # if requesting GetCapabilities for entire service, return cache
-    if request_ == 'GetCapabilities' and layer is None:
-        if service_ == 'WMS':
-            filename = 'geomet-climate-WMS-1.3.0-capabilities-{}.xml'.format(
-                lang)
-            cached_caps = os.path.join(BASEDIR, 'mapfile', filename)
-        elif service_ == 'WCS':
-            filename = 'geomet-climate-WCS-2.0.1-capabilities-{}.xml'.format(
-                lang)
-            cached_caps = os.path.join(BASEDIR, 'mapfile', filename)
+    if request_ == 'GetCapabilities':
+        if layer is None:
+            if service_ == 'WMS':
+                filename = 'geomet-climate-WMS-1.3.0-capabilities-{}.xml'.format( # noqa
+                    lang)
+                cached_caps = os.path.join(BASEDIR, 'mapfile', filename)
+            elif service_ == 'WCS':
+                filename = 'geomet-climate-WCS-2.0.1-capabilities-{}.xml'.format( # noqa
+                    lang)
+                cached_caps = os.path.join(BASEDIR, 'mapfile', filename)
 
-        if os.path.isfile(cached_caps):
-            start_response('200 OK', [('Content-Type', 'application/xml')])
-            with io.open(cached_caps, 'rb') as fh:
-                return [fh.read()]
+            if os.path.isfile(cached_caps):
+                start_response('200 OK', [('Content-Type', 'application/xml')])
+                with io.open(cached_caps, 'rb') as fh:
+                    return [fh.read()]
+        else:
+            LOGGER.debug('Loading mapfile: {}'.format(mapfile_))
+            mapfile = mapscript.mapObj(mapfile_)
+            if request_ == 'GetCapabilities' and lang == 'fr':
+                metadata_lang(mapfile, lang)
+                layerobj = mapfile.getLayerByName(layer)
+                layerobj.setMetaData('ows_title',
+                                     layerobj.getMetaData('ows_title_{}'.format(lang))) # noqa
+                layerobj.setMetaData('ows_layer_group',
+                                     layerobj.getMetaData('ows_layer_group_{}'.format(lang))) # noqa
+
+    elif request_ == 'GetLegendGraphic' and layer is not None:
+        if style_ in [None, '']:
+            mapfile = mapscript.mapObj(mapfile_)
+            layerobj = mapfile.getLayerByName(layer)
+            style_ = layerobj.classgroup
+        filename = '{}-{}.png'.format(style_, lang)
+        cached_legends = os.path.join(BASEDIR, 'legends', filename)
+
+        if os.path.isfile(cached_legends):
+            start_response('200 OK', [('Content-Type', 'image/png')])
+            with io.open(cached_legends, 'rb') as ff:
+                return [ff.read()]
+
     else:
         LOGGER.debug('Loading mapfile: {}'.format(mapfile_))
         mapfile = mapscript.mapObj(mapfile_)

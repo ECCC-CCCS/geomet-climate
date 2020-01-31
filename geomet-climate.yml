@@ -512,126 +512,201 @@ layer_templates:
   temp_anomalies: &template_temp_anomalies
     type: RASTER
     classgroup: TEMP-ANOMALIES
+    name_en: Temperature anomaly (°C)
+    name_fr: Anomalie de température (°C)
     styles:
     - mapserv/class/temp_anomalies.json
 
   temp_absolute: &template_temp_absolute
     type: RASTER
     classgroup: TEMP-ABSOLUTE
+    name_en: Temperature (°C)
+    name_fr: Température (°C)
     styles:
     - mapserv/class/temp_absolute.json
 
   precip_trend: &template_precip_trend
     type: RASTER
     classgroup: PRECIP-TREND
+    name_en: Precipitation trend (%)
+    name_fr: Tendance des précipitations (%)
     styles:
     - mapserv/class/precip_trend.json
 
   precip_anomaly: &template_precip_anomaly
     type: RASTER
     classgroup: PRECIP-ANOMALY
+    name_en: Relative precipitation anomaly (%)
+    name_fr: Anomalie relative de précipitation (%)
     styles:
     - mapserv/class/precip_anomaly.json
 
   precip_absolute: &template_precip_absolute
     type: RASTER
     classgroup: PRECIPITATION
+    name_en: Total precipitation (mm/year)
+    name_fr: Précipitation totale (mm/année)
     styles:
     - mapserv/class/precip_absolute.json
 
   precip_absolute_cmip5: &template_precip_absolute_cmip5
     type: RASTER
     classgroup: PRECIPITATION-CMIP5
+    name_en: Total precipitation (mm/day)
+    name_fr: Précipitation totale (mm/jour)
     styles:
     - mapserv/class/precip_absolute_cmip5.json
 
   snow_depth_anomaly: &template_snow_depth_anomaly
     type: RASTER
     classgroup: SNOWDEPTH-ANOMALY
+    name_en: Relative snow depth anomaly (%)
+    name_fr: Anomalie relative d'épaisseur de la neige (%)
     styles:
     - mapserv/class/snow-depth_anomaly.json
 
   snow_depth_absolute: &template_snow_depth_absolute
     type: RASTER
     classgroup: SNOWDEPTH-ABSOLUTE
+    name_en: Snow depth (m)
+    name_fr: Épaisseur de la neige (m)
     styles:
     - mapserv/class/snow_depth.json
 
   snow_depth_anomaly_average: &template_snow_depth_anomaly_average
     type: RASTER
     classgroup: SNOWDEPTH-ANOMALY-AVERAGE
+    name_en: Relative snow depth anomaly (%)
+    name_fr: Anomalie relative d'épaisseur de la neige (%)
     styles:
     - mapserv/class/snow_depth_20years.json
 
   wind_anomaly: &template_wind_anomaly
     type: RASTER
     classgroup: SFCWINDSPEED-ANOMALY
+    name_en: Relative wind speed anomaly (%)
+    name_fr: Anomalie relative de vitesse des vents (%)
     styles:
     - mapserv/class/wind_anomaly.json
 
   wind_absolute: &template_wind_absolute
     type: RASTER
     classgroup: SFCWINDSPEED-ABSOLUTE
+    name_en: Wind speed (kn)
+    name_fr: Vitesse des vents (kn)
     styles:
     - mapserv/class/wind_absolute.json
 
   sea-ice-concentration_anomaly: &template_sea-ice-concentration
     type: RASTER
     classgroup: SEAICECONCENTRATION-ANOMALY
+    name_en: Relative sea ice concentration anomaly (%)
+    name_fr: Anomalie relative de concentration de la glace (%)
     styles:
     - mapserv/class/sea-ice-concentration_anomaly.json
 
   sea-ice-concentration_absolute: &template_sea-ice-concentration_absolute
     type: RASTER
     classgroup: SEAICECONCENTRATION-ABSOLUTE
+    name_en: Sea ice concentration (%)
+    name_fr: Concentration de la glace (%)
     styles:
     - mapserv/class/sea-ice-concentration_absolute.json
 
   sea-ice-thickness_anomaly: &template_sea-ice-thickness
     type: RASTER
     classgroup: SEAICETHICKNESS-ANOMALY
+    name_en: Relative sea ice thickness anomaly (%)
+    name_fr: Anomalie relative d'épaisseur de la glace (%)
     styles:
     - mapserv/class/sea-ice-thickness_anomaly.json
 
   sea-ice-thickness_absolute: &template_sea-ice-thickness_absolute
     type: RASTER
     classgroup: SEAICETHICKNESS-ABSOLUTE
+    name_en: Sea ice thickness (m)
+    name_fr: Épaisseur de la glace (m)
     styles:
     - mapserv/class/sea-ice-thickness_absolute.json
 
   spei: &template_spei
     type: RASTER
     classgroup: SPEI
+    name_en: Standardized Precipitation Evapotranspiration Index
+    name_fr: Indice de précipitations et d’évapotranspiration normalisé
+    bounds: [-2.5, -2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0, 2.5]
     styles:
     - mapserv/class/spei.json
 
   cdd: &template_cdd
     type: RASTER
     classgroup: CDD
+    name_en: Cooling degree days
+    name_fr: Degrés-jours de climatisation
+    bounds: [2000, 4000, 6000, 8000, 10000, 15000]
     styles:
     - mapserv/class/cdd.json
 
-  gsc_gsw_gso: &template_gsc_gsw_gso
+  gsc: &template_gsc
     type: RASTER
     classgroup: GSC_GSW_GSO
+    name_en: Length of growing season for cool season crops
+    name_fr: Durée de la saison de croissance des cultures de saison fraiche
+    bounds: [50, 100, 150, 200, 250, 300, 350]
+    styles:
+    - mapserv/class/gsc_gsw_gso.json
+
+  gsw: &template_gsw
+    type: RASTER
+    classgroup: GSC_GSW_GSO
+    name_en: Length of growing season for warm season crops
+    name_fr: Durée de la saison de croissance des cultures de saison chaude
+    bounds: [50, 100, 150, 200, 250, 300, 350]
+    styles:
+    - mapserv/class/gsc_gsw_gso.json
+
+  gso: &template_gso
+    type: RASTER
+    classgroup: GSC_GSW_GSO
+    name_en: Length of growing season for overwintering crops
+    name_fr: Durée de la saison de croissance des cultures d’hiver
+    bounds: [50, 100, 150, 200, 250, 300, 350]
     styles:
     - mapserv/class/gsc_gsw_gso.json
 
   hdd: &template_hdd
     type: RASTER
     classgroup: HDD
+    name_en: Heating degree days
+    name_fr: Degrés-jours de chauffe
+    bounds: [2000, 4000, 6000, 8000, 10000, 15000]
     styles:
     - mapserv/class/hdd.json
 
   prep1: &template_prep1
     type: RASTER
     classgroup: PREP1
+    name_en: Number of days with precipitation > 1mm
+    name_fr: Nombre de jours avec précipitations > 1mm
+    bounds: [10, 20, 50, 150, 200]
     styles:
     - mapserv/class/prep1.json
 
-  tx30_tn20: &template_tx30_tn20
+  tx30: &template_tx30
     type: RASTER
     classgroup: TX30_TN20
+    name_en: Number of days with maximum temperature above 30°C
+    name_fr: Nombre de jours avec une température maximale supérieure à 30°C
+    bounds: [5, 10, 20, 30, 40, 50]
+    styles:
+    - mapserv/class/tx30_tn20.json
+
+  tn20: &template_tn20
+    type: RASTER
+    classgroup: TX30_TN20
+    name_en: Number of nights with minimum temperature above 20°C
+    name_fr: Nombre de nuits avec une température minimale supérieure à 20°C
+    bounds: [5, 10, 20, 30, 40, 50]
     styles:
     - mapserv/class/tx30_tn20.json
 
@@ -15970,7 +16045,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.HISTO_PCTL5:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSC_pctl5.nc
@@ -15980,7 +16055,7 @@ layers:
     num_bands: 55
 
   INDICES.GSC.HISTO_PCTL25:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSC_pctl25.nc
@@ -15990,7 +16065,7 @@ layers:
     num_bands: 55
 
   INDICES.GSC.HISTO_PCTL50:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSC_pctl50.nc
@@ -16000,7 +16075,7 @@ layers:
     num_bands: 55
 
   INDICES.GSC.HISTO_PCTL75:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSC_pctl75.nc
@@ -16010,7 +16085,7 @@ layers:
     num_bands: 55
 
   INDICES.GSC.HISTO_PCTL95:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSC_pctl95.nc
@@ -16020,7 +16095,7 @@ layers:
     num_bands: 55
 
   INDICES.GSC.RCP26_PCTL5:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSC_pctl5.nc
@@ -16030,7 +16105,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP26_PCTL25:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSC_pctl25.nc
@@ -16040,7 +16115,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP26_PCTL50:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSC_pctl50.nc
@@ -16050,7 +16125,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP26_PCTL75:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSC_pctl75.nc
@@ -16060,7 +16135,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP26_PCTL95:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSC_pctl95.nc
@@ -16070,7 +16145,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP45_PCTL5:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSC_pctl5.nc
@@ -16080,7 +16155,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP45_PCTL25:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSC_pctl25.nc
@@ -16090,7 +16165,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP45_PCTL50:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSC_pctl50.nc
@@ -16100,7 +16175,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP45_PCTL75:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSC_pctl75.nc
@@ -16110,7 +16185,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP45_PCTL95:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSC_pctl95.nc
@@ -16120,7 +16195,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP85_PCTL5:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSC_pctl5.nc
@@ -16130,7 +16205,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP85_PCTL25:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSC_pctl25.nc
@@ -16140,7 +16215,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP85_PCTL50:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSC_pctl50.nc
@@ -16150,7 +16225,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP85_PCTL75:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSC_pctl75.nc
@@ -16160,7 +16235,7 @@ layers:
     num_bands: 95
 
   INDICES.GSC.RCP85_PCTL95:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsc
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSC_pctl95.nc
@@ -16170,7 +16245,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.HISTO_PCTL5:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSO_pctl5.nc
@@ -16180,7 +16255,7 @@ layers:
     num_bands: 55
 
   INDICES.GSO.HISTO_PCTL25:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSO_pctl25.nc
@@ -16190,7 +16265,7 @@ layers:
     num_bands: 55
 
   INDICES.GSO.HISTO_PCTL50:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSO_pctl50.nc
@@ -16200,7 +16275,7 @@ layers:
     num_bands: 55
 
   INDICES.GSO.HISTO_PCTL75:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSO_pctl75.nc
@@ -16210,7 +16285,7 @@ layers:
     num_bands: 55
 
   INDICES.GSO.HISTO_PCTL95:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSO_pctl95.nc
@@ -16220,7 +16295,7 @@ layers:
     num_bands: 55
 
   INDICES.GSO.RCP26_PCTL5:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSO_pctl5.nc
@@ -16230,7 +16305,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP26_PCTL25:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSO_pctl25.nc
@@ -16240,7 +16315,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP26_PCTL50:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSO_pctl50.nc
@@ -16250,7 +16325,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP26_PCTL75:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSO_pctl75.nc
@@ -16260,7 +16335,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP26_PCTL95:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSO_pctl95.nc
@@ -16270,7 +16345,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP45_PCTL5:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSO_pctl5.nc
@@ -16280,7 +16355,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP45_PCTL25:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSO_pctl25.nc
@@ -16290,7 +16365,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP45_PCTL50:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSO_pctl50.nc
@@ -16300,7 +16375,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP45_PCTL75:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSO_pctl75.nc
@@ -16310,7 +16385,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP45_PCTL95:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSO_pctl95.nc
@@ -16320,7 +16395,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP85_PCTL5:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSO_pctl5.nc
@@ -16330,7 +16405,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP85_PCTL25:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSO_pctl25.nc
@@ -16340,7 +16415,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP85_PCTL50:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSO_pctl50.nc
@@ -16350,7 +16425,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP85_PCTL75:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSO_pctl75.nc
@@ -16360,7 +16435,7 @@ layers:
     num_bands: 95
 
   INDICES.GSO.RCP85_PCTL95:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gso
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSO_pctl95.nc
@@ -16370,7 +16445,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.HISTO_PCTL5:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSW_pctl5.nc
@@ -16380,7 +16455,7 @@ layers:
     num_bands: 55
 
   INDICES.GSW.HISTO_PCTL25:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSW_pctl25.nc
@@ -16390,7 +16465,7 @@ layers:
     num_bands: 55
 
   INDICES.GSW.HISTO_PCTL50:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSW_pctl50.nc
@@ -16400,7 +16475,7 @@ layers:
     num_bands: 55
 
   INDICES.GSW.HISTO_PCTL75:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSW_pctl75.nc
@@ -16410,7 +16485,7 @@ layers:
     num_bands: 55
 
   INDICES.GSW.HISTO_PCTL95:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_GSW_pctl95.nc
@@ -16420,7 +16495,7 @@ layers:
     num_bands: 55
 
   INDICES.GSW.RCP26_PCTL5:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSW_pctl5.nc
@@ -16430,7 +16505,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP26_PCTL25:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSW_pctl25.nc
@@ -16440,7 +16515,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP26_PCTL50:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSW_pctl50.nc
@@ -16450,7 +16525,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP26_PCTL75:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSW_pctl75.nc
@@ -16460,7 +16535,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP26_PCTL95:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_GSW_pctl95.nc
@@ -16470,7 +16545,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP45_PCTL5:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSW_pctl5.nc
@@ -16480,7 +16555,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP45_PCTL25:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSW_pctl25.nc
@@ -16490,7 +16565,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP45_PCTL50:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSW_pctl50.nc
@@ -16500,7 +16575,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP45_PCTL75:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSW_pctl75.nc
@@ -16510,7 +16585,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP45_PCTL95:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_GSW_pctl95.nc
@@ -16520,7 +16595,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP85_PCTL5:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSW_pctl5.nc
@@ -16530,7 +16605,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP85_PCTL25:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSW_pctl25.nc
@@ -16540,7 +16615,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP85_PCTL50:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSW_pctl50.nc
@@ -16550,7 +16625,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP85_PCTL75:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSW_pctl75.nc
@@ -16560,7 +16635,7 @@ layers:
     num_bands: 95
 
   INDICES.GSW.RCP85_PCTL95:
-    <<: *template_gsc_gsw_gso
+    <<: *template_gsw
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_GSW_pctl95.nc
@@ -16970,7 +17045,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.HISTO_PCTL5:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TN20_pctl5.nc
@@ -16980,7 +17055,7 @@ layers:
     num_bands: 55
 
   INDICES.TN20.HISTO_PCTL25:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TN20_pctl25.nc
@@ -16990,7 +17065,7 @@ layers:
     num_bands: 55
 
   INDICES.TN20.HISTO_PCTL50:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TN20_pctl50.nc
@@ -17000,7 +17075,7 @@ layers:
     num_bands: 55
 
   INDICES.TN20.HISTO_PCTL75:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TN20_pctl75.nc
@@ -17010,7 +17085,7 @@ layers:
     num_bands: 55
 
   INDICES.TN20.HISTO_PCTL95:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TN20_pctl95.nc
@@ -17020,7 +17095,7 @@ layers:
     num_bands: 55
 
   INDICES.TN20.RCP26_PCTL5:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TN20_pctl5.nc
@@ -17030,7 +17105,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP26_PCTL25:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TN20_pctl25.nc
@@ -17040,7 +17115,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP26_PCTL50:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TN20_pctl50.nc
@@ -17050,7 +17125,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP26_PCTL75:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TN20_pctl75.nc
@@ -17060,7 +17135,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP26_PCTL95:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TN20_pctl95.nc
@@ -17070,7 +17145,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP45_PCTL5:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TN20_pctl5.nc
@@ -17080,7 +17155,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP45_PCTL25:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TN20_pctl25.nc
@@ -17090,7 +17165,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP45_PCTL50:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TN20_pctl50.nc
@@ -17100,7 +17175,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP45_PCTL75:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TN20_pctl75.nc
@@ -17110,7 +17185,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP45_PCTL95:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TN20_pctl95.nc
@@ -17120,7 +17195,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP85_PCTL5:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TN20_pctl5.nc
@@ -17130,7 +17205,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP85_PCTL25:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TN20_pctl25.nc
@@ -17140,7 +17215,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP85_PCTL50:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TN20_pctl50.nc
@@ -17150,7 +17225,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP85_PCTL75:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TN20_pctl75.nc
@@ -17160,7 +17235,7 @@ layers:
     num_bands: 95
 
   INDICES.TN20.RCP85_PCTL95:
-    <<: *template_tx30_tn20
+    <<: *template_tn20
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TN20_pctl95.nc
@@ -17170,7 +17245,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.HISTO_PCTL5:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TX30_pctl5.nc
@@ -17180,7 +17255,7 @@ layers:
     num_bands: 55
 
   INDICES.TX30.HISTO_PCTL25:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TX30_pctl25.nc
@@ -17190,7 +17265,7 @@ layers:
     num_bands: 55
 
   INDICES.TX30.HISTO_PCTL50:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TX30_pctl50.nc
@@ -17200,7 +17275,7 @@ layers:
     num_bands: 55
 
   INDICES.TX30.HISTO_PCTL75:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TX30_pctl75.nc
@@ -17210,7 +17285,7 @@ layers:
     num_bands: 55
 
   INDICES.TX30.HISTO_PCTL95:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_historical
     filepath: historical
     filename: INDICES_hist_1951-2005_latlon_0.086x0.086_TX30_pctl95.nc
@@ -17220,7 +17295,7 @@ layers:
     num_bands: 55
 
   INDICES.TX30.RCP26_PCTL5:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TX30_pctl5.nc
@@ -17230,7 +17305,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP26_PCTL25:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TX30_pctl25.nc
@@ -17240,7 +17315,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP26_PCTL50:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TX30_pctl50.nc
@@ -17250,7 +17325,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP26_PCTL75:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TX30_pctl75.nc
@@ -17260,7 +17335,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP26_PCTL95:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP2.6
     filename: INDICES_rcp2.6_2006-2100_latlon_0.086x0.086_TX30_pctl95.nc
@@ -17270,7 +17345,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP45_PCTL5:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TX30_pctl5.nc
@@ -17280,7 +17355,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP45_PCTL25:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TX30_pctl25.nc
@@ -17290,7 +17365,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP45_PCTL50:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TX30_pctl50.nc
@@ -17300,7 +17375,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP45_PCTL75:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TX30_pctl75.nc
@@ -17310,7 +17385,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP45_PCTL95:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP4.5
     filename: INDICES_rcp4.5_2006-2100_latlon_0.086x0.086_TX30_pctl95.nc
@@ -17320,7 +17395,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP85_PCTL5:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TX30_pctl5.nc
@@ -17330,7 +17405,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP85_PCTL25:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TX30_pctl25.nc
@@ -17340,7 +17415,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP85_PCTL50:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TX30_pctl50.nc
@@ -17350,7 +17425,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP85_PCTL75:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TX30_pctl75.nc
@@ -17360,7 +17435,7 @@ layers:
     num_bands: 95
 
   INDICES.TX30.RCP85_PCTL95:
-    <<: *template_tx30_tn20
+    <<: *template_tx30
     climate_model: *id_INDICES_rcp
     filepath: RCP8.5
     filename: INDICES_rcp8.5_2006-2100_latlon_0.086x0.086_TX30_pctl95.nc
