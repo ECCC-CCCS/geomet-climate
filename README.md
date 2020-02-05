@@ -66,6 +66,9 @@ geomet-climate tileindex generate
 # generate tileindex for single layer
 geomet-climate tileindex generate --layer=CMIP5.SND.RCP26.FALL.ANO_PCTL50
 
+# generate legends for all layers
+geomet-climate legend generate
+
 # generate mapfile for WMS
 geomet-climate mapfile generate --service=WMS
 

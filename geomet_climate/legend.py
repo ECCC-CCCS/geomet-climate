@@ -79,9 +79,11 @@ def generate_legend(layer_info, output_dir):
         min_value = style_json[0]['name'].split(' ')[0]
         max_value = style_json[-1]['name'].split(' ')[-1]
 
-        fig = Figure(figsize=(1, 4), constrained_layout=True)
+        fig = Figure(figsize=(2, 5))  # , constrained_layout=True)
         canvas = FigureCanvasAgg(fig) # noqa
-        ax = fig.subplots()
+        # when moving to ubuntu 18.04 and remove add_subplots
+        # ax = fig.subplots()
+        ax = fig.add_subplot(121)
 
         all_vals = np.array([[0, 0, 0, 1]])
 
@@ -113,9 +115,11 @@ def generate_legend(layer_info, output_dir):
         bounds = layer_info['bounds']
         vals = np.ones((1, 4))
 
-        fig = Figure(figsize=(1, 5), constrained_layout=True)
+        fig = Figure(figsize=(2, 6))  # , constrained_layout=True)
         canvas = FigureCanvasAgg(fig) # noqa
-        ax = fig.subplots()
+        # when moving to ubuntu 18.04 and remove add_subplots
+        # ax = fig.subplots()
+        ax = fig.add_subplot(121)
 
         all_vals = np.array([[color_arr[0][0] / 256.0,
                               color_arr[0][1] / 256.0,
