@@ -184,8 +184,8 @@ def application(env, start_response):
                                      layerobj.getMetaData('ows_layer_group_{}'.format(lang))) # noqa
 
     elif request_ == 'GetLegendGraphic' and layer is not None:
+        mapfile = mapscript.mapObj(mapfile_)
         if style_ in [None, '']:
-            mapfile = mapscript.mapObj(mapfile_)
             layerobj = mapfile.getLayerByName(layer)
             style_ = layerobj.classgroup
         filename = '{}-{}.png'.format(style_, lang)
