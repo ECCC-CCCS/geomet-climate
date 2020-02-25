@@ -31,6 +31,7 @@ script:
   - find . -type f -name "*.py" | xargs flake8
   - geomet-climate vrt generate
   - geomet-climate tileindex generate
+  - geomet-climate legend generate
   - geomet-climate mapfile generate -s WMS
   - geomet-climate mapfile generate -s WCS
   - mapserv -nh QUERY_STRING="map=$GEOMET_CLIMATE_BASEDIR/mapfile/geomet-climate-WMS-en.map&service=WMS&version=1.3.0&request=GetCapabilities" > $GEOMET_CLIMATE_BASEDIR/geomet-climate-WMS-1.3.0-capabilities-en.xml

@@ -360,24 +360,32 @@ layer_templates:
   temp_anomalies: &template_temp_anomalies
     type: RASTER
     classgroup: TEMP-ANOMALIES
+    name_en: Temperature anomaly (°C)
+    name_fr: Anomalie de température (°C)
     styles:
     - mapserv/class/temp_anomalies.json
 
   precip_trend: &template_precip_trend
     type: RASTER
     classgroup: PRECIP-TREND
+    name_en: Precipitation trend (%)
+    name_fr: Tendance des précipitations (%)
     styles:
     - mapserv/class/precip_trend.json
 
   sea-ice-concentration_anomaly: &template_sea-ice-concentration
     type: RASTER
     classgroup: SEAICECONCENTRATION-ANOMALY
+    name_en: Relative sea ice concentration anomaly (%)
+    name_fr: Anomalie relative de concentration de la glace (%)
     styles:
     - mapserv/class/sea-ice-concentration_anomaly.json
 
   sea-ice-thickness_anomaly: &template_sea-ice-thickness
     type: RASTER
     classgroup: SEAICETHICKNESS-ANOMALY
+    name_en: Relative sea ice thickness anomaly (%)
+    name_fr: Anomalie relative d'épaisseur de la glace (%)
     styles:
     - mapserv/class/sea-ice-thickness_anomaly.json
 
