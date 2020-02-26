@@ -2,6 +2,7 @@
 [resultset layer={}]
 {
   "type": "FeatureCollection",
+  "layer": "[layer]",
   "features": [
     [feature trimlast=","]
     {
