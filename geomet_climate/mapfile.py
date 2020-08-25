@@ -260,7 +260,7 @@ def gen_layer(layer_name, layer_info,  template_path, service='WMS'):
             layer_info['filename']
         )
 
-        layer['data'] = datapath
+        layer['data'] = [datapath]
 
     LOGGER.debug('Setting projection')
     if layer_name.startswith('CANGRD'):
@@ -453,7 +453,7 @@ def generate(ctx, service, layer):
             if i['name'] == 'GeoJSON':
                 i['formatoption'] = ['FILE={}'.format(template_path)]
 
-        with io.open(filepath, 'w', encoding='utf-8') as fh:
+        with io.open(filepath, 'w') as fh:
             mappyfile.dump(mapfile, fh)
 
     if layer is None:  # generate entire mapfile
@@ -481,7 +481,7 @@ def generate(ctx, service, layer):
                         lm['ows_title'] = \
                             lm['ows_title_{}'.format(lang_)]
 
-            with io.open(filepath, 'w', encoding='utf-8') as fh:
+            with io.open(filepath, 'w') as fh:
                 mappyfile.dump(lang_map, fh)
 
     epsg_file = os.path.join(THISDIR, 'resources', 'mapserv', 'epsg')
