@@ -30,6 +30,7 @@ from geomet_climate.env import BASEDIR, CONFIG, DATADIR
 LOGGER = logging.getLogger(__name__)
 
 VRT_TEMPLATE_HEADER = '''<VRTDataset rasterXSize="{}" rasterYSize="{}">
+ <SRS dataAxisToSRSAxisMapping="2,1">{}</SRS>
  <GeoTransform>{}</GeoTransform>'''
 
 VRT_TEMPLATE_BODY = '''<VRTRasterBand dataType="Float64" band="{}">
@@ -70,7 +71,8 @@ def create_vrt(layer_info, vrt_list, output_dir, vrt_name):
 
     LOGGER.debug('Creating VRT file for CanGRD')
     vrt_header = VRT_TEMPLATE_HEADER.format(
-        xsize, ysize, layer_info['climate_model']['geo_transform'])
+        xsize, ysize, layer_info['climate_model']['projection'],
+        layer_info['climate_model']['geo_transform'])
 
     vrt_footer = VRT_TEMPLATE_FOOTER
 
@@ -83,8 +85,8 @@ def create_vrt(layer_info, vrt_list, output_dir, vrt_name):
 
     vrt = '{}{}{}'.format(vrt_header, '\n'.join(sources), vrt_footer)
 
-    with io.open(filepath, 'w', encoding='utf-8') as fh:
-        fh.write(vrt.decode('utf-8'))
+    with io.open(filepath, 'w') as fh:
+        fh.write(vrt)
 
 
 def generate_vrt_list(layer_info, output_dir):

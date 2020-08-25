@@ -30,17 +30,19 @@ from geomet_climate.env import BASEDIR, CONFIG, DATADIR
 
 LOGGER = logging.getLogger(__name__)
 
-VRT_TEMPLATE_FULL = '''<VRTDataset rasterXSize="{}" rasterYSize="{}">
- <GeoTransform>{}</GeoTransform>
-  <VRTRasterBand dataType="Float64" band="1">
-    <SimpleSource>
-      <SourceFilename relativeToVRT="0">{}</SourceFilename>
-      <SourceBand>{}</SourceBand>
-      <SourceProperties RasterXSize="{}" RasterYSize="{}"
-          DataType="Float64" BlockXSize="{}" BlockYSize="1" />
-    </SimpleSource>
-    <NoDataValue>{}</NoDataValue>
-    <HideNoDataValue>0</HideNoDataValue>
+VRT_TEMPLATE_FULL = '''<VRTDataset rasterXSize="{x}" rasterYSize="{y}">
+  <GeoTransform>{gtf}</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <NoDataValue>{nodata}</NoDataValue>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">{filename}</SourceFilename>
+      <SourceBand>{band}</SourceBand>
+      <SourceProperties RasterXSize="{x}" RasterYSize="{y}"
+          DataType="Float32" BlockXSize="{x}" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="{x}" ySize="{y}" />
+      <DstRect xOff="0" yOff="0" xSize="{x}" ySize="{y}" />
+      <NODATA>{nodata}</NODATA>
+    </ComplexSource>
   </VRTRasterBand>
 </VRTDataset>'''
 
@@ -215,9 +217,15 @@ def create_dataset(layer_info, input_dir, output_dir):
                     nodata_check = True
                     netcdf_ds = None
                 band = key.split('_')[-1].replace('.vrt', '')
-                filename_gpkg = VRT_TEMPLATE_FULL.format(
-                    xsize, ysize, layer_info['climate_model']['geo_transform'],
-                    filename, band, xsize, ysize, xsize, nodata)
+                gtf = layer_info['climate_model']['geo_transform']
+
+                gpkg_dict = {'filename': filename, 'x': xsize,
+                             'y': ysize,
+                             'gtf': gtf,
+                             'nodata': nodata,
+                             'band': band}
+
+                filename_gpkg = VRT_TEMPLATE_FULL.format(**gpkg_dict)
             elif key.endswith('.tif'):
                 filename_gpkg = os.path.abspath(
                     os.path.join(
