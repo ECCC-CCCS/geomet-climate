@@ -7,7 +7,7 @@ Vcs-Git: https://github.com/ECCC-CCCS/geomet-climate.git
 
 Package: geomet-climate
 Architecture: all
-Depends: mapserver-bin, python, python-click, python-gdal, python-mappyfile, python-mapscript, python-matplotlib, python-numpy, python-pyproj, python-yaml, proj-bin, proj-data
+Depends: mapserver-bin, python3, python3-click, python3-gdal, python3-mappyfile, python3-mapscript, python3-matplotlib, python3-numpy, python3-pyproj, python3-yaml, proj-bin, proj-data
 Suggests: gdal-bin
 Homepage: https://github.com/ECCC-CCCS/geomet-climate
 Description: MSC GeoMet climate services
