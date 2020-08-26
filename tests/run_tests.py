@@ -262,6 +262,8 @@ class GeoMetClimateTest(unittest.TestCase):
 
         result = gen_layer(layer_name, layer_info,
                            template_path, service='WMS')
+
+        print("RESULT", result)
         self.assertTrue(result[0]['projection'] == ['+proj=longlat'
                                                     ' +datum=WGS84 +no_defs'])
         self.assertTrue(result[0]['name'] == 'CMIP5.TT.RCP26.SPRING.'
