@@ -6,28 +6,40 @@ sudo: false
 python:
   - "3.6"
 
-virtualenv:
-  system_site_packages: true
+#virtualenv:
+#  system_site_packages: true
 
 env:
   global:
+    - DEBIAN_FRONTEND=noninteractive
+    - CPLUS_INCLUDE_PATH=/usr/include/gdal
+    - C_INCLUDE_PATH=/usr/include/gdal
     - GEOMET_CLIMATE_BASEDIR=$TRAVIS_BUILD_DIR/_build
     - GEOMET_CLIMATE_DATADIR=$TRAVIS_BUILD_DIR/tests/data/climate
     - GEOMET_CLIMATE_CONFIG=$TRAVIS_BUILD_DIR/tests/geomet-climate-test.yml
     - GEOMET_CLIMATE_URL=http://localhost:8099/
-    - DEBIAN_FRONTEND=noninteractive
+
+addons:
+  apt:
+    sources:
+      - sourceline: 'ppa:ubuntugis/ubuntugis-stable'
+    packages:
+      - gdal-bin
+      - libgdal-dev
+      - libsqlite3-mod-spatialite
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y python3-software-properties
-  - sudo add-apt-repository -y ppa:ubuntugis/ppa
-  - sudo apt-get update
+#  - sudo apt-get install -y python3-software-properties
+#  - sudo add-apt-repository -y ppa:ubuntugis/ppa
+#  - sudo apt-get update
   - sudo apt-get install -y python3-gdal devscripts fakeroot mapserver-bin python3-matplotlib python3-mapscript debhelper python3-setuptools
 
 install:
+  - pip3 install GDAL==`gdalinfo --version | cut -d' ' -f2 | cut -d',' -f1`
   - pip3 install click mappyfile pyyaml
   - pip3 install -r requirements-dev.txt
-  - pip3 install -e .
+  - python3 setup.py install
 
 script:
   - . tests/geomet-climate-test.env
