@@ -27,13 +27,14 @@ addons:
       - gdal-bin
       - libgdal-dev
       - libsqlite3-mod-spatialite
+      - python3-mapscript
 
 before_install:
   - sudo apt-get -qq update
 #  - sudo apt-get install -y python3-software-properties
 #  - sudo add-apt-repository -y ppa:ubuntugis/ppa
 #  - sudo apt-get update
-  - sudo apt-get install -y python3-gdal devscripts fakeroot mapserver-bin python3-matplotlib python3-mapscript debhelper python3-setuptools
+  - sudo apt-get install -y python3-gdal devscripts fakeroot mapserver-bin python3-matplotlib debhelper python3-setuptools
 
 install:
   - pip3 install GDAL==`gdalinfo --version | cut -d' ' -f2 | cut -d',' -f1`
