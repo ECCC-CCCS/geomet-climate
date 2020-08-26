@@ -22,7 +22,7 @@ env:
 addons:
   apt:
     sources:
-      - sourceline: 'ppa:ubuntugis/ubuntugis-stable'
+      - sourceline: 'ppa:ubuntugis/ppa'
     packages:
       - gdal-bin
       - libgdal-dev
