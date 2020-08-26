@@ -266,8 +266,11 @@ class GeoMetClimateTest(unittest.TestCase):
                                                     ' +datum=WGS84 +no_defs'])
         self.assertTrue(result[0]['name'] == 'CMIP5.TT.RCP26.SPRING.'
                                              '2021-2040_PCTL50')
-        self.assertTrue(result[0]['data'] == 'tests/data/climate/cmip5/netcdf/scenarios/RCP2.6/seasonal/MAM/avg_20years/CMIP5_rcp2.6_MAM_2021-2040_latlon1x1_TEMP_pctl50_P1Y.nc')  # noqa
-
+        self.assertTrue(result[0]['data'] == 'tests/data/climate/'
+                                             'cmip5/netcdf/scenarios/RCP2.6/'
+                                             'seasonal/MAM/avg_20years/'
+                                             'CMIP5_rcp2.6_MAM_2021-2040_'
+                                             'latlon1x1_TEMP_pctl50_P1Y.nc')
         self.assertTrue(result[0]['metadata']['ows_title'] == ows_title_en)
         self.assertTrue(result[0]['metadata']['ows_layer_group'] ==
                         ows_layer_group_en)
