@@ -123,12 +123,7 @@ def get_package_version():
     raise RuntimeError('Unable to find version string.')
 
 
-try:
-    import pypandoc
-    LONG_DESCRIPTION = pypandoc.convert('README.md', 'rst')
-except(IOError, ImportError, OSError):
-    print('Conversion to rST failed.  Using default (will look weird on PyPI)')
-    LONG_DESCRIPTION = read('README.md')
+LONG_DESCRIPTION = read('README.md')
 
 if os.path.exists('MANIFEST'):
     os.unlink('MANIFEST')
@@ -158,8 +153,9 @@ setup(
         ]
     },
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
+        'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
