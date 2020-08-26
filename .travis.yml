@@ -43,6 +43,10 @@ script:
   - mapserv -nh QUERY_STRING="map=$GEOMET_CLIMATE_BASEDIR/mapfile/geomet-climate-WCS-fr.map&lang=fr&service=WCS&version=2.1.0&request=GetCapabilities" > $GEOMET_CLIMATE_BASEDIR/geomet-climate-WCS-2.0.1-capabilities-fr.xml
 
 after_success:
+  - echo $GEOMET_CLIMATE_BASEDIR
+  - echo $GEOMET_CLIMATE_DATADIR
+  - echo $GEOMET_CLIMATE_CONFIG
+  - echo $GEOMET_CLIMATE_URL
   - python3 setup.py cleanbuild
   - python3 setup.py sdist bdist_wheel --universal
   - debuild -b -uc -us
