@@ -6,8 +6,8 @@ sudo: false
 python:
   - "3.6"
 
-virtualenv:
-  system_site_packages: true
+#virtualenv:
+#  system_site_packages: true
 
 env:
   global:
@@ -15,6 +15,7 @@ env:
     - GEOMET_CLIMATE_DATADIR=$TRAVIS_BUILD_DIR/tests/data/climate
     - GEOMET_CLIMATE_CONFIG=$TRAVIS_BUILD_DIR/tests/geomet-climate-test.yml
     - GEOMET_CLIMATE_URL=http://localhost:8099/
+    - DEBIAN_FRONTEND=noninteractive
 
 before_install:
   - sudo apt-get -qq update
