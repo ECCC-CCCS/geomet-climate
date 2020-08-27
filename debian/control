@@ -2,12 +2,13 @@ Source: geomet-climate
 Section: non-free/web
 Priority: optional
 Maintainer: Tom Kralidis <tom.kralidis@canada.ca>
-Build-Depends: debhelper (>= 9), dh-python, python, python-setuptools
+Build-Depends: debhelper (>= 9), dh-python, python3-all, python3-setuptools
+Standards-Version: 4.3.0
 Vcs-Git: https://github.com/ECCC-CCCS/geomet-climate.git
 
 Package: geomet-climate
 Architecture: all
-Depends: mapserver-bin, python, python-click, python-gdal, python-mappyfile, python-mapscript, python-matplotlib, python-numpy, python-pyproj, python-yaml, proj-bin, proj-data
+Depends: ${python3:Depends}, mapserver-bin, python3-all, python3-click, python3-gdal, python3-mappyfile, python3-mapscript, python3-matplotlib, python3-numpy, python3-pyproj, python3-yaml, proj-bin, proj-data, ${misc:Depends}
 Suggests: gdal-bin
 Homepage: https://github.com/ECCC-CCCS/geomet-climate
 Description: MSC GeoMet climate services

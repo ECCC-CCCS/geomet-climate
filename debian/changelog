@@ -1,3 +1,11 @@
+geomet-climate (1.6.0-beta1) bionic; urgency=medium
+
+  * update to bionic
+  * update for Python 3
+  * drop Python 2 support
+
+ -- Tom Kralidis <tom.kralidis@canada.ca>  Wed, 26 Aug 2020 20:46:03 +0000
+
 geomet-climate (1.4.0) trusty; urgency=medium
 
   * added NoData value handling to tileindexing

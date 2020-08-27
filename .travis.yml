@@ -34,7 +34,10 @@ addons:
       - devscripts
       - fakeroot
       - debhelper
+      - python-setuptools 
       - python3-setuptools 
+      - python3-all
+      - python3-matplotlib
 
 before_install:
   - sudo apt-get install -y mapserver-bin
@@ -65,4 +68,4 @@ script:
 after_success:
   - python setup.py cleanbuild
   - python setup.py sdist bdist_wheel --universal
-  - debuild -b -uc -us
+  - sudo debuild -b -uc -us
