@@ -1,27 +1,50 @@
 language: python
 
-dist: xenial
+dist: bionic
 sudo: false
 
 python:
-  - "2.7"
-#  - "3.5"
+  - "3.6"
 
 virtualenv:
   system_site_packages: true
 
 env:
-  - GEOMET_CLIMATE_BASEDIR=$TRAVIS_BUILD_DIR/_build GEOMET_CLIMATE_DATADIR=$TRAVIS_BUILD_DIR/tests/data/climate GEOMET_CLIMATE_CONFIG=$TRAVIS_BUILD_DIR/tests/geomet-climate-test.yml GEOMET_CLIMATE_URL=http://localhost:8099/
+    global:
+        - DEBIAN_FRONTEND=noninteractive
+        - CPLUS_INCLUDE_PATH=/usr/include/gdal
+        - C_INCLUDE_PATH=/usr/include/gdal
+        - GEOMET_CLIMATE_BASEDIR=$TRAVIS_BUILD_DIR/_build
+        - GEOMET_CLIMATE_DATADIR=$TRAVIS_BUILD_DIR/tests/data/climate
+        - GEOMET_CLIMATE_CONFIG=$TRAVIS_BUILD_DIR/tests/geomet-climate-test.yml
+        - GEOMET_CLIMATE_URL=http://localhost:8099/
+
+addons:
+  apt:
+    sources:
+      - sourceline: 'ppa:ubuntugis/ppa'
+    packages:
+      - gdal-bin
+      - libgdal-dev
+      - libsqlite3-mod-spatialite
+      - libproj-dev
+      - python3-dev
+      - python3-gdal
+      - python3-mapscript
+      - devscripts
+      - fakeroot
+      - debhelper
+      - python3-setuptools 
 
 before_install:
+  - sudo apt-get install -y mapserver-bin
+  - mapserv -v
   - sudo apt-get -qq update
-  - sudo apt-get install -y python-software-properties
-  - sudo add-apt-repository -y ppa:ubuntugis/ppa
-  - sudo apt-get update
-  - sudo apt-get install -y python-gdal python3-gdal devscripts fakeroot mapserver-bin python-mapscript debhelper python-setuptools
+  - sudo apt-get install -y software-properties-common
 
 install:
-  - pip install click mappyfile pyyaml
+  - pip install GDAL==`gdalinfo --version | cut -d' ' -f2 | cut -d',' -f1`
+  - pip install -r requirements.txt
   - pip install -r requirements-dev.txt
   - pip install -e .
 

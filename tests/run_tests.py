@@ -20,9 +20,9 @@
 from collections import OrderedDict
 import io
 import json
-import mock
 import os
 import unittest
+from unittest.mock import patch
 
 import yaml
 
@@ -51,9 +51,10 @@ class GeoMetClimateTest(unittest.TestCase):
     data_dir = os.path.join(THISDIR, 'data/climate')
     yml_file = os.path.join(THISDIR, 'geomet-climate-test.yml')
 
-    mock.patch('os.environ', {'BASEDIR': THISDIR,
-                              'CONFIG': yml_file,
-                              'DATADIR': data_dir})
+    patch('os.environ', {'BASEDIR': THISDIR,
+                         'CONFIG': yml_file,
+                         'DATADIR': data_dir},
+          create=True)
     with io.open(yml_file) as fh:
         cfg = yaml.load(fh)
 
@@ -259,6 +260,9 @@ class GeoMetClimateTest(unittest.TestCase):
         ows_layer_group_fr = u"/Sc\xe9narios climatiques fond\xe9s sur " \
                              u"CMIP5 (CMIP5)/Temp\xe9rature de l'air/" \
                              u"RCP 2.6/Printemps/2021 \xe0 2040"
+        outfile = os.path.join('cmip5/netcdf/scenarios/RCP2.6/',
+                               'seasonal/MAM/avg_20years/',
+                               'CMIP5_rcp2.6_MAM_2021-2040_latlon1x1_TEMP_pctl50_P1Y.nc') # noqa
 
         result = gen_layer(layer_name, layer_info,
                            template_path, service='WMS')
@@ -266,11 +270,7 @@ class GeoMetClimateTest(unittest.TestCase):
                                                     ' +datum=WGS84 +no_defs'])
         self.assertTrue(result[0]['name'] == 'CMIP5.TT.RCP26.SPRING.'
                                              '2021-2040_PCTL50')
-        self.assertTrue(result[0]['data'] == 'tests/data/climate/'
-                                             'cmip5/netcdf/scenarios/RCP2.6/'
-                                             'seasonal/MAM/avg_20years/'
-                                             'CMIP5_rcp2.6_MAM_2021-2040_'
-                                             'latlon1x1_TEMP_pctl50_P1Y.nc')
+        self.assertTrue(result[0]['data'][0].endswith(outfile))
         self.assertTrue(result[0]['metadata']['ows_title'] == ows_title_en)
         self.assertTrue(result[0]['metadata']['ows_layer_group'] ==
                         ows_layer_group_en)
