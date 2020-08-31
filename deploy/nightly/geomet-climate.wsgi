@@ -23,7 +23,7 @@ import sys
 os.environ['GEOMET_CLIMATE_BASEDIR'] = '/data/web/geomet-climate-nightly/latest/geomet-climate/_build'
 os.environ['GEOMET_CLIMATE_DATADIR'] = '/data/geomet/dev/feeds/amqp/climate'
 os.environ['GEOMET_CLIMATE_CONFIG'] = '/data/web/geomet-climate-nightly/latest/geomet-climate/geomet-climate.yml'
-os.environ['GEOMET_CLIMATE_URL'] = 'http://geomet-dev-03-nightly.cmc.ec.gc.ca/msc-pygeoapi/nightly/latest/'
+os.environ['GEOMET_CLIMATE_URL'] = 'http://geomet-dev-03-nightly.cmc.ec.gc.ca/geomet-climate/nightly/latest/'
 
 sys.path.insert(0, '/data/web/geomet-climate-nightly/latest/lib/python3.6/site-packages')
 
