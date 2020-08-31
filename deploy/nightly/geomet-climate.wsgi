@@ -26,9 +26,9 @@ PYTHON_SITE_PACKAGES = '/data/web/geomet-climate-nightly/latest/lib/python3.6/si
 os.environ['GEOMET_CLIMATE_BASEDIR'] = '/data/web/geomet-climate-nightly/latest/geomet-climate/_build'
 os.environ['GEOMET_CLIMATE_DATADIR'] = '/data/geomet/dev/feeds/amqp/climate'
 os.environ['GEOMET_CLIMATE_CONFIG'] = '/data/web/geomet-climate-nightly/latest/geomet-climate/geomet-climate.yml'
-os.environ['GEOMET_CLIMATE_URL'] = 'http://geomet-dev-03-nightly.cmc.ec.gc.ca/geomet-climate/nightly/latest/'
+os.environ['GEOMET_CLIMATE_URL'] = 'http://geomet-dev-03-nightly.cmc.ec.gc.ca/geomet-climate/nightly/latest'
 
-site.addsitesir(PYTHON_SITE_PACKAGES)
+site.addsitedir(PYTHON_SITE_PACKAGES)
 sys.path.insert(0, PYTHON_SITE_PACKAGES)
 
 from geomet_climate.wsgi import application
