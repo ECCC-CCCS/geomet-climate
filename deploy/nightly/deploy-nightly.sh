@@ -53,7 +53,7 @@ pip install -e .
 export GEOMET_CLIMATE_BASEDIR=/data/web/geomet-climate-nightly/$NIGHTLYDIR/geomet-climate/_build
 export GEOMET_CLIMATE_DATADIR=/data/geomet/dev/feeds/amqp/climate
 export GEOMET_CLIMATE_CONFIG=/data/web/geomet-climate-nightly/$NIGHTLYDIR/geomet-climate/geomet-climate.yml
-export GEOMET_CLIMATE_URL=http://geomet-dev-03-nightly.cmc.ec.gc.ca/msc-pygeoapi/nightly/latest
+export GEOMET_CLIMATE_URL=http://geomet-dev-03-nightly.cmc.ec.gc.ca/geomet-climate/nightly/latest
 geomet-climate vrt generate
 geomet-climate tileindex generate
 geomet-climate legend generate
