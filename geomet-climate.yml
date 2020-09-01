@@ -477,37 +477,6 @@ layer_groups:
       begin: 2006
       end: 2100
 
-  HYDROMETRIC: &id_hydrometric
-    projection: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4326"]]
-    metadata_id:
-      stations: 1ee9e14d-0814-5201-a3be-705809d8ee0e
-    extent: [-141, 42, -52, 84]
-    basepath: http://localhost:9200
-    label_en: Hydrometric Data
-    label_fr: Données hydrométriques
-    is_vrt: false
-
-  CLIMATE: &id_climate
-    projection: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4326"]]
-    metadata_id:
-      stations: 5f963c2d-d4ed-5a79-8a31-c9c582ca5098
-    extent: [-141, 42, -52, 84]
-    basepath: http://localhost:9200
-    label_en: Climate Data
-    label_fr: Données climatiques
-    is_vrt: false
-
-  AHCCD: &id_ahccd
-    projection: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4326"]]
-    metadata_id:
-      stations: 9c4ebc00-3ea4-4fe0-8bf2-66cfe1cddd1d
-    extent: [-141, 42, -52, 84]
-    basepath: http://localhost:9200
-    label_en: Adjusted and Homogenized Canadian Climate Data (AHCCD)
-    label_fr: Données Climatiques Canadiennes Ajustées et Homogénéisées (DCCAH)
-    is_vrt: false
-
-
 layer_templates:
   temp_anomalies: &template_temp_anomalies
     type: RASTER
@@ -709,11 +678,6 @@ layer_templates:
     bounds: [5, 10, 20, 30, 40, 50]
     styles:
     - mapserv/class/tx30_tn20.json
-
-  stations: &template_stations
-    type: POINT
-    styles:
-    - mapserv/class/stations.json
 
 layers:
   DCS.TN.HISTO.YEAR.ABS_PCTL5:
@@ -41396,24 +41360,3 @@ layers:
     label_fr: Tendance/Précipitation totale/CANGRD (automne)- Tendance relative des
       précipitations totales (1948 à 2012)
     num_bands: 1
-
-  CLIMATE.STATIONS:
-    <<: *template_stations
-    climate_model: *id_climate
-    filename: climate_station_information
-    label_en: Climate stations
-    label_fr: Stations climatiques
-
-  HYDROMETRIC.STATIONS:
-    <<: *template_stations
-    climate_model: *id_hydrometric
-    filename: hydrometric_stations
-    label_en: Hydrometric stations
-    label_fr: Stations hydrométriques
-
-  AHCCD.STATIONS:
-    <<: *template_stations
-    climate_model: *id_ahccd
-    filename: ahccd_stations
-    label_en: AHCCD stations
-    label_fr: Stations DCCAH

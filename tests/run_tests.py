@@ -136,7 +136,7 @@ class GeoMetClimateTest(unittest.TestCase):
         result = get_time_index_novrt(layer_info)
 
         self.assertEqual(result['{}{}'.format(tif_name, '_1929-05.tif')],
-                         '1929-05')
+                         '1929-05-00T00:00:00')
 
     def test_get_time_index_vrt(self):
         """Assign the right date to a file (with VRT)"""
@@ -147,11 +147,11 @@ class GeoMetClimateTest(unittest.TestCase):
         result = get_time_index_vrt(layer_info)
 
         self.assertEqual(result['{}{}'.format(vrt_name, '_95.vrt')],
-                         '2100')
+                         '2100-01-00T00:00:00')
         self.assertEqual(result['{}{}'.format(vrt_name, '_1.vrt')],
-                         '2006')
+                         '2006-01-00T00:00:00')
         self.assertEqual(result['{}{}'.format(vrt_name, '_63.vrt')],
-                         '2068')
+                         '2068-01-00T00:00:00')
 
     def test_create_dataset_no_raster(self):
         """Should not create a GPKG (Vector layer)"""

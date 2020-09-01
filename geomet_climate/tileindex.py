@@ -91,11 +91,11 @@ def get_time_index_novrt(layer_info):
         filename = i.replace('.tif', '').split('_')
         time = filename[-1].split('-')
         if len(time) == 1:
-            cangrd_dict[i] = time[0]
+            cangrd_dict[i] = '{}-01-00T00:00:00'.format(time[0])
         else:
             month = time[-1]
             year = time[0]
-            cangrd_dict[i] = '{}-{}'.format(year, month)
+            cangrd_dict[i] = '{}-{}-00T00:00:00'.format(year, month)
 
     return cangrd_dict
 
@@ -126,18 +126,18 @@ def get_time_index_vrt(layer_info):
             begin_year, begin_month = time_begin.split('-')
             begin = (int(begin_year) * 12) + int(begin_month)
             time = begin + num
-            year = (time/12)
+            year = int(time/12)
             month = (time - (year * 12))
             if month == 0:
                 year = year - 1
                 month = 12
-            time_stamp = '{}-{}'.format(year, str(month).zfill(2))
-            band_time[i] = str(time_stamp)
+            time_stamp = '{}-{}'.format(int(year), str(month).zfill(2))
+            band_time[i] = '{}-00T00:00:00'.format(str(time_stamp))
             num += 1
     else:
         for i in range(1, num_bands + 1):
             time_stamp = time_begin + num
-            band_time[i] = str(time_stamp)
+            band_time[i] = '{}-01-00T00:00:00'.format(str(time_stamp))
             num += 1
 
     for k in vrts:
