@@ -153,15 +153,6 @@ class GeoMetClimateTest(unittest.TestCase):
         self.assertEqual(result['{}{}'.format(vrt_name, '_63.vrt')],
                          '2068-01-00T00:00:00')
 
-    def test_create_dataset_no_raster(self):
-        """Should not create a GPKG (Vector layer)"""
-        layer_name = 'CLIMATE.STATIONS'
-        layer_info = self.cfg['layers'][layer_name]
-
-        result = create_dataset(layer_info, self.data_dir, self.data_dir)
-
-        self.assertIsNone(result)
-
     def test_create_dataset_raster_no_time(self):
         """Should not create a GPKG (not a time enabled layer)"""
         layer_name = 'DCS.TM.RCP85.YEAR.2041-2060_PCTL50'
