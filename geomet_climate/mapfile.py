@@ -251,7 +251,7 @@ def gen_layer(layer_name, layer_info,  template_path, service='WMS'):
         layer['tileindex'] = layer_tileindex_name
         layer['tileitem'] = 'location'
     elif layer_info['type'] == 'POINT':
-        layer['data'] = layer_info['filename']
+        layer['data'] = [layer_info['filename']]
     else:
         datapath = os.path.join(
             DATADIR,
@@ -294,7 +294,7 @@ def gen_layer(layer_name, layer_info,  template_path, service='WMS'):
             end = list(map(int, end.split('-')))
             end = (end[0] * 12) + end[1]
             for i in range(begin, end+step, step):
-                year = (i/12)
+                year = int(i/12)
                 month = (i - (year * 12))
                 if month == 0:
                     year = year - 1
@@ -305,7 +305,7 @@ def gen_layer(layer_name, layer_info,  template_path, service='WMS'):
             ' '.join(str(x) for x in band_names)
 
         if layer_name.startswith('CANGRD'):
-            layer['data'] = '{}.vrt'.format(
+            layer['data'] = ['{}.vrt'.format(
                  os.path.join(
                      BASEDIR,
                      'vrt',
@@ -313,7 +313,7 @@ def gen_layer(layer_name, layer_info,  template_path, service='WMS'):
                      layer_info['filepath'],
                      layer_info['filename']
                  )
-            )
+            )]
             layer['metadata']['wcs_bandcount'] = len(band_names)
 
     extent = ' '.join(str(x) for x in layer_info['climate_model']['extent'])
