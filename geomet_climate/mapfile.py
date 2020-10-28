@@ -33,7 +33,8 @@ import yaml
 from yaml import CLoader
 
 from geomet_climate import __version__
-from geomet_climate.env import BASEDIR, CONFIG, DATADIR, URL
+from geomet_climate.env import (
+    BASEDIR, CONFIG, DATADIR, OWS_DEBUG, OWS_LOG, URL)
 
 MAPFILE_BASE = '{}{}resources{}mapfile-base.json'.format(os.path.dirname(
     os.path.realpath(__file__)), os.sep, os.sep)
@@ -241,6 +242,9 @@ def gen_layer(layer_name, layer_info,  template_path, service='WMS'):
 
     layer['status'] = 'ON'
 
+    if OWS_DEBUG is not None:
+        layer['debug'] = int(OWS_DEBUG)
+
     if layer_info['type'] == 'POINT':
         layer['type'] = layer_info['type']
         layer['connectiontype'] = 'OGR'
@@ -401,6 +405,14 @@ def generate(ctx, service, layer):
         symbols_file = os.path.join(THISDIR, 'resources/mapserv/symbols.json')
         with io.open(symbols_file) as fh2:
             mapfile['symbols'] = json.load(fh2)
+
+    if OWS_LOG is not None:
+        mapfile['config'] = {
+            'ms_errorfile': OWS_LOG
+        }
+
+    if OWS_DEBUG is not None:
+        mapfile['debug'] = int(OWS_DEBUG)
 
     with io.open(CONFIG) as fh:
         cfg = yaml.load(fh, Loader=CLoader)

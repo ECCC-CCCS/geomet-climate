@@ -26,16 +26,20 @@ LOGGER = logging.getLogger(__name__)
 LOGGER.info('Fetching environment variables')
 
 BASEDIR = os.environ.get('GEOMET_CLIMATE_BASEDIR', None)
-DATADIR = os.environ.get('GEOMET_CLIMATE_DATADIR', None)
 CONFIG = os.environ.get('GEOMET_CLIMATE_CONFIG', None)
+DATADIR = os.environ.get('GEOMET_CLIMATE_DATADIR', None)
+OWS_DEBUG = os.environ.get('GEOMET_CLIMATE_OWS_DEBUG', None)
+OWS_LOG = os.environ.get('GEOMET_CLIMATE_OWS_LOG', None)
 URL = os.environ.get('GEOMET_CLIMATE_URL', None)
 
 LOGGER.debug(BASEDIR)
-LOGGER.debug(DATADIR)
 LOGGER.debug(CONFIG)
+LOGGER.debug(DATADIR)
+LOGGER.debug(OWS_LOG)
+LOGGER.debug(OWS_DEBUG)
 LOGGER.debug(URL)
 
-if None in [BASEDIR, DATADIR, CONFIG, URL]:
+if None in [BASEDIR, CONFIG, DATADIR, URL]:
     msg = 'Environment variables not set!'
     LOGGER.exception(msg)
     raise EnvironmentError(msg)
