@@ -3,7 +3,7 @@
     "__type__": "class",
     "name": "5",
     "group": "TX30_TN20",
-    "expression": "([pixel] >= 5 AND [pixel] < 6))",
+    "expression": "([pixel] < 5)",
     "style": {
       "__type__": "style",
       "color": [
