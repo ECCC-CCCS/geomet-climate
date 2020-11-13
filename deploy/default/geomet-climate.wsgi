@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# Copyright (C) 2018 Tom Kralidis
+# Copyright (C) 2020 Tom Kralidis
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,5 +16,10 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ###############################################################################
+
+os.environ['GEOMET_CLIMATE_BASEDIR'] = '/opt/geomet-climate'
+os.environ['GEOMET_CLIMATE_DATADIR'] = '/data/geomet/feeds/dd.ops/climate'
+os.environ['GEOMET_CLIMATE_CONFIG'] = '/opt/geomet-climate/geomet-climate.yml'
+os.environ['GEOMET_CLIMATE_URL'] = 'https://geo.wxod-dev-18-04.cmc.ec.gc.ca/geomet-climate'
 
 from geomet_climate.wsgi import application
