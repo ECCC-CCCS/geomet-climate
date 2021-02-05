@@ -5,20 +5,11 @@
 metadata:
   identification:
     title:
-      en: Canadian Centre for Climate Services Geospatial Web Services
-      fr: Services web géospatiaux du Centre canadien des services climatiques
+      en: MSC GeoMet — GeoMet-Climate
+      fr: GeoMet du SMC — GeoMet-Climat
     abstract:
-      en: The Canadian Centre for Climate Services (CCCS) is an important part of
-        the Pan-Canadian Framework on Clean Growth and Climate Change. The CCCS will
-        be the official source of reliable climate information, data, and tools from
-        the Government of Canada, and will provide training and user support to help
-        increase climate resilience across Canada.
-      fr: Le Centre canadien des services climatiques est un élément important du
-        Cadre pancanadien sur la croissance propre et les changements climatiques.
-        Le Centre canadien des services climatiques sera la source officielle de renseignements,
-        de données et d’outils climatiques fiables du gouvernement du Canada. Il offrira
-        de la formation et du soutien aux utilisateurs pour renforcer la résilience
-        climatique partout au pays.
+      en: GeoMet-Climate provides public access to the Meteorological Service of Canada (MSC) and Environment and Climate Change Canada (ECCC) data via interoperable web services and application programming interfaces (API). Through open standards, users can freely and quickly access thousands of real-time and archived weather, climate and water datasets and products from MSC GeoMet and integrate them in their domain-specific applications and decision support systems. Users can build mobile apps, create interactive web maps, and display and animate MSC data in desktop software. MSC GeoMet also enables on demand raw data clipping and reprojection, on demand format conversion and custom visualization.
+      fr: GeoMet-Climat du SMC rend publiquement accessible les données du Service météorologique du Canada (SMC) et d'Environnement et Changement climatique Canada (ECCC) via des services web interopérables et des interfaces de programme (API). Par le biais de standards ouverts, les services GeoMet du SMC donnent rapidement et gratuitement accès à des milliers de jeux de données et produits météorologiques, climatiques et hydrométriques en temps réel et archivés qui peuvent être intégrés dans les applications spécifiques de l'usager et leurs systèmes d'aide à la décision. Les usagers peuvent développer des applications mobiles, créer des cartes interactives en-ligne, ainsi que de visualiser et animer les données du SMC dans des logiciels de bureau. Les services GeoMet du SMC rendent également possible le découpage de données et la reprojection sur demande, tout autant que la conversion de formats et la visualisation personnalisée de couches de données.
     keywords:
       en:
       - Climate data
