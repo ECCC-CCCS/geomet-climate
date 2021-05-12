@@ -437,10 +437,20 @@ def generate(ctx, service, layer):
             template_dir = os.path.join(THISDIR, 'resources', 'mapserv',
                                         'templates')
 
-            trf = os.path.join(template_dir, 'TEMPLATE_RASTER.json')
-            with io.open(trf, encoding='utf-8') as template_raster:
-                template_raster = template_raster.read().replace('{}', key)
-                fh.write(template_raster)
+            stations_layers = ['CLIMATE.STATIONS', 'HYDROMETRIC.STATIONS',
+                               'AHCCD.STATIONS']
+
+            if key not in stations_layers:
+                trf = os.path.join(template_dir, 'TEMPLATE_RASTER.json')
+                with io.open(trf, encoding='utf-8') as template_raster:
+                    template_raster = template_raster.read().replace('{}', key)
+                    fh.write(template_raster)
+            else:
+                template_tmp_name = 'TEMPLATE_{}.json'.format(key)
+                tvf = os.path.join(template_dir, template_tmp_name)
+                with io.open(tvf, encoding='utf-8') as template_vector:
+                    template_vector = template_vector.read().replace('{}', key)
+                    fh.write(template_vector)
 
         layers = gen_layer(key, value, template_path, service)
 
