@@ -346,6 +346,16 @@ layer_groups:
       end: 2100
     is_vrt: true
 
+  CLIMATE: &id_climate
+    projection: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4326"]]
+    metadata_id:
+      stations: 5f963c2d-d4ed-5a79-8a31-c9c582ca5098
+    extent: [-141, 42, -52, 84]
+    basepath: http://localhost:9200
+    label_en: Climate Data
+    label_fr: Données climatiques
+    is_vrt: false
+
 layer_templates:
   temp_anomalies: &template_temp_anomalies
     type: RASTER
@@ -378,6 +388,11 @@ layer_templates:
     name_fr: Anomalie relative d'épaisseur de la glace (%)
     styles:
     - mapserv/class/sea-ice-thickness_anomaly.json
+
+  stations: &template_stations
+    type: POINT
+    styles:
+    - mapserv/class/stations.json
 
 layers:
   CANGRD.TREND.TM_ANNUAL:
@@ -476,3 +491,10 @@ layers:
       moyen projeté de la température moyenne pour 2041 à 2060 mis à l'échelle de
       manière statistique (50e percentile)
     num_bands: 1
+
+  CLIMATE.STATIONS:
+    <<: *template_stations
+    climate_model: *id_climate
+    filename: climate_station_information
+    label_en: Climate stations
+    label_fr: Stations climatiques
