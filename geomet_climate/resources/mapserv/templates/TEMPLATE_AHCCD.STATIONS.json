@@ -1,6 +1,6 @@
 // mapserver template
-[resultset layer={}]
 {
+[resultset layer={}]
   "type": "FeatureCollection",
   "features": [
     [feature trimlast=","]
@@ -27,5 +27,5 @@
     },
     [/feature]
   ]
-}
 [/resultset]
+}
