@@ -1,3 +1,13 @@
+geomet-climate (1.6.1) bionic; urgency=medium
+
+  * support empty WMS GetFeature responses
+  * update some service metadata
+  * add back station layers (climate, hydrometric, AHCCD)
+  * add environment variables to WSGI
+
+ -- Tom Kralidis <tom.kralidis@canada.ca>  Thu, 13 May 2021 15:02:05 +0000
+
+
 geomet-climate (1.6.0) bionic; urgency=medium
 
   * update to bionic
