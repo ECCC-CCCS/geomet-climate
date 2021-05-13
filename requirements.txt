@@ -1,7 +1,5 @@
 click
-gdal
 mappyfile
-mapscript
 matplotlib
 numpy
 pyyaml
