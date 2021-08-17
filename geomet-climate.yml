@@ -639,30 +639,30 @@ layer_templates:
 
   gsc: &template_gsc
     type: RASTER
-    classgroup: GSC_GSW_GSO
+    classgroup: GSC
     name_en: Length of growing season for cool season crops
     name_fr: Durée de la saison de croissance des cultures de saison fraiche
     bounds: [50, 100, 150, 200, 250, 300, 350]
     styles:
-    - mapserv/class/gsc_gsw_gso.json
+    - mapserv/class/gsc.json
 
   gsw: &template_gsw
     type: RASTER
-    classgroup: GSC_GSW_GSO
+    classgroup: GSW
     name_en: Length of growing season for warm season crops
     name_fr: Durée de la saison de croissance des cultures de saison chaude
     bounds: [50, 100, 150, 200, 250, 300, 350]
     styles:
-    - mapserv/class/gsc_gsw_gso.json
+    - mapserv/class/gsw.json
 
   gso: &template_gso
     type: RASTER
-    classgroup: GSC_GSW_GSO
+    classgroup: GSO
     name_en: Length of growing season for overwintering crops
     name_fr: Durée de la saison de croissance des cultures d’hiver
     bounds: [50, 100, 150, 200, 250, 300, 350]
     styles:
-    - mapserv/class/gsc_gsw_gso.json
+    - mapserv/class/gso.json
 
   hdd: &template_hdd
     type: RASTER

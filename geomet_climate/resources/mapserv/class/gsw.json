@@ -2,7 +2,7 @@
   {
     "__type__": "class",
     "name": "50",
-    "group": "GSC_GSW_GSO",
+    "group": "GSW",
     "expression": "([pixel] >= 50 and [pixel] < 51)",
     "style": {
       "__type__": "style",
@@ -16,7 +16,7 @@
   {
     "__type__": "class",
     "name": "50 — 100",
-    "group": "GSC_GSW_GSO",
+    "group": "GSW",
     "expression": "([pixel] >= 51 AND [pixel] < 100)",
     "style": {
       "__type__": "style",
@@ -30,7 +30,7 @@
   {
     "__type__": "class",
     "name": "100 — 150",
-    "group": "GSC_GSW_GSO",
+    "group": "GSW",
     "expression": "([pixel] >= 100 AND [pixel] <= 150 )",
     "style": {
       "__type__": "style",
@@ -44,7 +44,7 @@
   {
     "__type__": "class",
     "name": "150 — 200",
-    "group": "GSC_GSW_GSO",
+    "group": "GSW",
     "expression": "([pixel] >= 150 AND [pixel] < 200)",
     "style": {
       "__type__": "style",
@@ -58,7 +58,7 @@
   {
     "__type__": "class",
     "name": "200 — 250",
-    "group": "GSC_GSW_GSO",
+    "group": "GSW",
     "expression": "([pixel] >= 200 AND [pixel] < 250)",
     "style": {
       "__type__": "style",
@@ -72,7 +72,7 @@
   {
     "__type__": "class",
     "name": "250 — 300",
-    "group": "GSC_GSW_GSO",
+    "group": "GSW",
     "expression": "([pixel] >= 250 AND [pixel] < 300)",
     "style": {
       "__type__": "style",
@@ -86,7 +86,7 @@
   {
     "__type__": "class",
     "name": "300 — 350",
-    "group": "GSC_GSW_GSO",
+    "group": "GSW",
     "expression": "([pixel] >= 300 AND [pixel] < 350)",
     "style": {
       "__type__": "style",
@@ -100,7 +100,7 @@
   {
     "__type__": "class",
     "name": ">= 350",
-    "group": "GSC_GSW_GSO",
+    "group": "GSW",
     "expression": "([pixel] >= 350)",
     "style": {
       "__type__": "style",
