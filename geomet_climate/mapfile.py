@@ -251,6 +251,11 @@ def gen_layer(layer_name, layer_info,  template_path, service='WMS'):
         layer['connection'] = 'ES:{}'.format(
             layer_info['climate_model']['basepath'])
 
+        layer['connectionoptions'] = {
+            '__type__': 'connectionoptions',
+            '"LAYER"': '"{}"'.format(layer_info['filename'])
+        }
+
     if 'timestep' in layer_info and service == 'WMS':
         layer['tileindex'] = layer_tileindex_name
         layer['tileitem'] = 'location'
