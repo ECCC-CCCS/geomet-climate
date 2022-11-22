@@ -253,7 +253,7 @@ def gen_layer(layer_name, layer_info,  template_path, service='WMS'):
 
         layer['connectionoptions'] = {
             '__type__': 'connectionoptions',
-            '"LAYER"': '"{}"'.format(layer_info['filename'])
+            'LAYER': '{}'.format(layer_info['filename'])
         }
 
     if 'timestep' in layer_info and service == 'WMS':
