@@ -412,9 +412,7 @@ def generate(ctx, service, layer):
             mapfile['symbols'] = json.load(fh2)
 
     if OWS_LOG is not None:
-        mapfile['config'] = {
-            'ms_errorfile': OWS_LOG
-        }
+        mapfile['config']['ms_errorfile']: OWS_LOG
 
     if OWS_DEBUG is not None:
         mapfile['debug'] = int(OWS_DEBUG)
