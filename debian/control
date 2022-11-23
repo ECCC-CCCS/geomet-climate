@@ -1,7 +1,7 @@
 Source: geomet-climate
 Section: non-free/web
 Priority: optional
-Maintainer: Tom Kralidis <tom.kralidis@canada.ca>
+Maintainer: Tom Kralidis <tom.kralidis@ec.gc.ca>
 Build-Depends: debhelper (>= 9), dh-python, python3-all, python3-setuptools
 Standards-Version: 4.3.0
 Vcs-Git: https://github.com/ECCC-CCCS/geomet-climate.git

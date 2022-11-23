@@ -1,6 +1,6 @@
 # geomet-climate
 
-[![Build Status](https://travis-ci.org/ECCC-CCCS/geomet-climate.png)](https://travis-ci.org/ECCC-CCCS/geomet-climate)
+[![Build Status](https://github.com/ECCC-CCCS/geomet-climate/workflows/build%20%E2%9A%99%EF%B8%8F/badge.svg)](https://github.com/ECCC-CCCS/geomet-climate/actions)
 
 ## Overview
 

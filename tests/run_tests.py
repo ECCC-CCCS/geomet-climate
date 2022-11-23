@@ -25,6 +25,7 @@ import unittest
 from unittest.mock import patch
 
 import yaml
+from yaml import CLoader
 
 from geomet_climate.vrt import (create_vrt,
                                 generate_vrt_list)
@@ -56,7 +57,7 @@ class GeoMetClimateTest(unittest.TestCase):
                          'DATADIR': data_dir},
           create=True)
     with io.open(yml_file) as fh:
-        cfg = yaml.load(fh)
+        cfg = yaml.load(fh, Loader=CLoader)
 
     def setUp(self):
         """setup test fixtures, etc."""
