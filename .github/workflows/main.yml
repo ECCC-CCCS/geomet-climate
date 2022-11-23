@@ -41,12 +41,8 @@ jobs:
         sudo python3 setup.py install
     - name: run tests ⚙️
       run: |
-        echo "1"
-        #. tests/geomet-climate-test.env
-        echo "2"
         mapserv -v
         sudo -E python3 tests/run_tests.py
-        echo "3"
         sudo -E geomet-climate vrt generate
         sudo -E geomet-climate tileindex generate
         sudo -E geomet-climate legend generate
@@ -56,12 +52,6 @@ jobs:
         sudo -E mapserv -nh QUERY_STRING="map=$GEOMET_CLIMATE_BASEDIR/mapfile/geomet-climate-WMS-fr.map&lang=fr&service=WMS&version=1.3.0&request=GetCapabilities" > /tmp/geomet-climate-WMS-1.3.0-capabilities-fr.xml
         sudo -E mapserv -nh QUERY_STRING="map=$GEOMET_CLIMATE_BASEDIR/mapfile/geomet-climate-WCS-en.map&service=WCS&version=2.1.0&request=GetCapabilities" > /tmp/geomet-climate-WCS-2.0.1-capabilities-en.xml
         sudo -E mapserv -nh QUERY_STRING="map=$GEOMET_CLIMATE_BASEDIR/mapfile/geomet-climate-WCS-fr.map&lang=fr&service=WCS&version=2.1.0&request=GetCapabilities" > /tmp/geomet-climate-WCS-2.0.1-capabilities-fr.xml
-      env:
-        GEOMET_CLIMATE_BASEDIR: _build
-        GEOMET_CLIMATE_CONFIG: tests/geomet-climate-test.yml
-        GEOMET_CLIMATE_DATADIR: tests/data/climate
-        GEOMET_CLIMATE_URL: http://localhost:8099/
-
 
     - name: run flake8
       run: flake8
