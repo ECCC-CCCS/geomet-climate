@@ -1,7 +1,7 @@
 #!/bin/bash
 # =================================================================
 #
-# Copyright (c) 2020 Government of Canada
+# Copyright (c) 2022 Government of Canada
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -45,7 +45,7 @@ rm -fr latest
 echo "Generating nightly build for $TIMESTAMP"
 python3 -m venv --system-site-packages $NIGHTLYDIR && cd $NIGHTLYDIR
 source bin/activate
-git clone $GEOMET_CLIMATE_GITREPO
+git clone $GEOMET_CLIMATE_GITREPO -b 1.6
 cd geomet-climate
 pip install -r requirements.txt
 pip install -r requirements-dev.txt
