@@ -24,7 +24,7 @@ import sys
 PYTHON_SITE_PACKAGES = '/data/web/geomet-climate-nightly/latest/lib/python3.6/site-packages'
 
 os.environ['GEOMET_CLIMATE_BASEDIR'] = '/data/web/geomet-climate-nightly/latest/geomet-climate/_build'
-os.environ['GEOMET_CLIMATE_DATADIR'] = '/data/geomet/feeds/dd.ops/climate'
+os.environ['GEOMET_CLIMATE_DATADIR'] = '/data/geomet/feeds/dd/climate'
 os.environ['GEOMET_CLIMATE_CONFIG'] = '/data/web/geomet-climate-nightly/latest/geomet-climate/geomet-climate.yml'
 os.environ['GEOMET_CLIMATE_URL'] = 'https://geomet-dev-03-nightly.cmc.ec.gc.ca/geomet-climate/nightly/latest'
 

@@ -17,8 +17,10 @@
 #
 ###############################################################################
 
+import os
+
 os.environ['GEOMET_CLIMATE_BASEDIR'] = '/opt/geomet-climate'
-os.environ['GEOMET_CLIMATE_DATADIR'] = '/data/geomet/feeds/dd.ops/climate'
+os.environ['GEOMET_CLIMATE_DATADIR'] = '/data/geomet/feeds/dd/climate'
 os.environ['GEOMET_CLIMATE_CONFIG'] = '/opt/geomet-climate/geomet-climate.yml'
 os.environ['GEOMET_CLIMATE_URL'] = 'https://geo.wxod-dev-18-04.cmc.ec.gc.ca/geomet-climate'
 

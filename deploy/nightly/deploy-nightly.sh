@@ -51,7 +51,7 @@ pip install -r requirements.txt
 pip install -r requirements-dev.txt
 pip install -e .
 export GEOMET_CLIMATE_BASEDIR=/data/web/geomet-climate-nightly/$NIGHTLYDIR/geomet-climate/_build
-export GEOMET_CLIMATE_DATADIR=/data/geomet/feeds/dd.ops/climate
+export GEOMET_CLIMATE_DATADIR=/data/geomet/feeds/dd/climate
 export GEOMET_CLIMATE_CONFIG=/data/web/geomet-climate-nightly/$NIGHTLYDIR/geomet-climate/geomet-climate.yml
 export GEOMET_CLIMATE_URL=https://geomet-dev-03-nightly.cmc.ec.gc.ca/geomet-climate/nightly/latest
 geomet-climate vrt generate
