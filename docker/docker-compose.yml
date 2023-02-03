@@ -4,11 +4,13 @@ services:
     container_name: geomet-climate-nightly
     build: 
       context: ..
+    network_mode: host
     hostname: geomet-dev-11-docker.cmc.ec.gc.ca
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
       - "/data/geomet/feeds/dd.ops/climate:/data/geomet/feeds/dd.ops/climate:ro"
+
 networks:
   default:
     name: geomet_default
