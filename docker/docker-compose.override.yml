@@ -6,6 +6,6 @@ services:
         # GEOMET_CLIMATE_URL: http://geomet-dev-11.cmc.ec.gc.ca:8099
     environment:
       GEOMET_CLIMATE_OWS_DEBUG: 5
-      GEOMET_CLIMATE_ES_URL: http://host.docker.internal:9200
+      GEOMET_CLIMATE_ES_URL: http://localhost:9200
     ports:
       - "8099:80"
