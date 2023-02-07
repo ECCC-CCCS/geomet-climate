@@ -41,4 +41,4 @@ echo "Done."
 # server runs
 echo "Starting up geomet-climate via gunicorn..."
 # geomet-climate serve --port=80
-gunicorn -w 2 -b 0.0.0.0:80 --chdir $BASEDIR/geomet_climate wsgi:application --reload --timeout 900 --access-logfile /tmp/gunicorn-geomet-climate.log
+gunicorn -w 2 -b 0.0.0.0:8099 --chdir $BASEDIR/geomet_climate wsgi:application --reload --timeout 900 --access-logfile /tmp/gunicorn-geomet-climate.log
