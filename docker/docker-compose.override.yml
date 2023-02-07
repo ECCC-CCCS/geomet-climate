@@ -8,4 +8,4 @@ services:
       GEOMET_CLIMATE_OWS_DEBUG: 5
       GEOMET_CLIMATE_ES_URL: http://localhost:9200
     ports:
-      - "8099:80"
+      - "8099:8099"
