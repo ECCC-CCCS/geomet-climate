@@ -1,3 +1,22 @@
+geomet-climate (1.8.0) focal; urgency=medium
+
+  * update to focal
+  * fix legends for indices
+  * fix main email contact
+  * add CONNECTIONOPTION for ES layers
+  * removed specific version in requirements.txt
+  * add GitHub Actions
+  * update data directories
+  * add Docker container for nightly build
+
+ -- Kevin Ngai <kevin.ngai@ec.gc.ca>  Mon, 03 Apr 2023 13:40:00 +0000
+
+geomet-climate (1.6.1) bionic; urgency=medium
+
+  * fix for allowing empty WMS GetFeatureInfo responses
+
+ -- Tom Kralidis <tom.kralidis@canada.ca>  Thu, 13 May 2021 15:04:00 +0000
+
 geomet-climate (1.6.0) bionic; urgency=medium
 
   * update to bionic
