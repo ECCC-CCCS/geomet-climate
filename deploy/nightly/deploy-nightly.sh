@@ -47,9 +47,9 @@ python3 -m venv --system-site-packages $NIGHTLYDIR && cd $NIGHTLYDIR
 source bin/activate
 git clone $GEOMET_CLIMATE_GITREPO
 cd geomet-climate
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
-pip install -e .
+pip3 install -r requirements.txt
+pip3 install -r requirements-dev.txt
+pip3 install -e .
 export GEOMET_CLIMATE_BASEDIR=/data/web/geomet-climate-nightly/$NIGHTLYDIR/geomet-climate/_build
 export GEOMET_CLIMATE_DATADIR=/data/geomet/feeds/dd/climate
 export GEOMET_CLIMATE_CONFIG=/data/web/geomet-climate-nightly/$NIGHTLYDIR/geomet-climate/geomet-climate.yml

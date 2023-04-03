@@ -15,7 +15,7 @@ of MSC GeoMet climate service data OGC Web Services.
 - GDAL Python bindings
 
 ### Requirements
-- Python 2.7 (works with Python 3)
+- Python 3
 - [virtualenv](https://virtualenv.pypa.io/)
 
 ### Dependencies
@@ -36,9 +36,9 @@ cd geomet-climate
 # clone codebase and install
 git clone https://github.com/ECCC-CCCS/geomet-climate.git
 cd geomet-climate
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
-pip install -e .
+pip3 install -r requirements.txt
+pip3 install -r requirements-dev.txt
+pip3 install -e .
 
 # configure environment
 vi geomet-climate.env  # edit paths accordingly
@@ -100,18 +100,18 @@ mapserv -nh QUERY_STRING="map=$GEOMET_CLIMATE_BASEDIR/mapfile/geomet-climate-WCS
 
 ```bash
 . tests/geomet-climate-test.env
-python setup.py test
+python3 setup.py test
 ```
 
 ### Cleaning the build of artifacts
 ```bash
-python setup.py cleanbuild
+python3 setup.py cleanbuild
 ```
 
 ## Releasing
 
 ```bash
-python setup.py sdist bdist_wheel --universal
+python3 setup.py sdist bdist_wheel --universal
 twine upload dist/*
 ```
 
