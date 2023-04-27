@@ -474,8 +474,8 @@ layer_groups:
       stations: 1ee9e14d-0814-5201-a3be-705809d8ee0e
     extent: [-141, 42, -52, 84]
     basepath: http://localhost:9200
-    label_en: Hydrometric Data
-    label_fr: Données hydrométriques
+    label_en: Stations
+    label_fr: Stations
     is_vrt: false
 
   CLIMATE: &id_climate
@@ -484,8 +484,8 @@ layer_groups:
       stations: 5f963c2d-d4ed-5a79-8a31-c9c582ca5098
     extent: [-141, 42, -52, 84]
     basepath: http://localhost:9200
-    label_en: Climate Data
-    label_fr: Données climatiques
+    label_en: Stations
+    label_fr: Stations
     is_vrt: false
 
   AHCCD: &id_ahccd
@@ -494,8 +494,8 @@ layer_groups:
       stations: 9c4ebc00-3ea4-4fe0-8bf2-66cfe1cddd1d
     extent: [-141, 42, -52, 84]
     basepath: http://localhost:9200
-    label_en: Adjusted and Homogenized Canadian Climate Data (AHCCD)
-    label_fr: Données Climatiques Canadiennes Ajustées et Homogénéisées (DCCAH)
+    label_en: Stations
+    label_fr: Stations
     is_vrt: false
 
 layer_templates:
