@@ -1,9 +1,9 @@
 [
   {
     "__type__": "class",
-    "name": "0 1.0",
-    "group": "SEAICETHICKNESS-ABSOLUTE",
-    "expression": "([pixel] <  1.0)",
+    "name": "0 0.2",
+    "group": "SEAICETHICKNESS-ABSOLUTE_0-2",
+    "expression": "([pixel] <  0.2)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -16,15 +16,15 @@
       ],
       "datarange": [
         0,
-        1.0
+        0.2
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "1.0 2.0",
-    "group": "SEAICETHICKNESS-ABSOLUTE",
-    "expression": "([pixel] >= 1.0 AND [pixel] <  2.0)",
+    "name": "0.2 0.4",
+    "group": "SEAICETHICKNESS-ABSOLUTE_0-2",
+    "expression": "([pixel] >= 0.2 AND [pixel] <  0.4)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -36,16 +36,16 @@
         255
       ],
       "datarange": [
-        1.0,
-        2.0
+        0.2,
+        0.4
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "2.0 3.0",
-    "group": "SEAICETHICKNESS-ABSOLUTE",
-    "expression": "([pixel] >= 2.0 AND [pixel] <  3.0)",
+    "name": "0.4 0.6",
+    "group": "SEAICETHICKNESS-ABSOLUTE_0-2",
+    "expression": "([pixel] >= 0.4 AND [pixel] <  0.6)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -57,16 +57,16 @@
         255
       ],
       "datarange": [
-        2.0,
-        3.0
+        0.4,
+        0.6
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "3.0 4.0",
-    "group": "SEAICETHICKNESS-ABSOLUTE",
-    "expression": "([pixel] >= 3.0 AND [pixel] < 4.0)",
+    "name": "0.6 0.8",
+    "group": "SEAICETHICKNESS-ABSOLUTE_0-2",
+    "expression": "([pixel] >= 0.6 AND [pixel] < 0.8)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -78,16 +78,16 @@
         255
       ],
       "datarange": [
-        3.0,
-        4.0
+        0.6,
+        0.8
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "4.0 5.0",
-    "group": "SEAICETHICKNESS-ABSOLUTE",
-    "expression": "([pixel] >= 4.0 AND [pixel] <  5.0)",
+    "name": "0.8 1.0",
+    "group": "SEAICETHICKNESS-ABSOLUTE_0-2",
+    "expression": "([pixel] >= 0.8 AND [pixel] <  1.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -99,16 +99,16 @@
         223
       ],
       "datarange": [
-        4.0,
-        5.0
+        0.8,
+        1.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "5.0 6.0",
-    "group": "SEAICETHICKNESS-ABSOLUTE",
-    "expression": "([pixel] >= 5.0 AND [pixel] <  6.0)",
+    "name": "1.0 1.2",
+    "group": "SEAICETHICKNESS-ABSOLUTE_0-2",
+    "expression": "([pixel] >= 1.0 AND [pixel] <  1.2)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -120,16 +120,16 @@
         159
       ],
       "datarange": [
-        5.0,
-        6.0
+        1.0,
+        1.2
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "6.0 7.0",
-    "group": "SEAICETHICKNESS-ABSOLUTE",
-    "expression": "([pixel] >= 6.0 AND [pixel] <  7.0)",
+    "name": "1.2 1.4",
+    "group": "SEAICETHICKNESS-ABSOLUTE_0-2",
+    "expression": "([pixel] >= 1.2 AND [pixel] <  1.4)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -141,16 +141,16 @@
         96
       ],
       "datarange": [
-        6.0,
-        7.0
+        1.2,
+        1.4
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "7.0 8.0",
-    "group": "SEAICETHICKNESS-ABSOLUTE",
-    "expression": "([pixel] >= 7.0)",
+    "name": "1.4 2.0",
+    "group": "SEAICETHICKNESS-ABSOLUTE_0-2",
+    "expression": "([pixel] >= 1.4)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -162,8 +162,8 @@
         32
       ],
       "datarange": [
-        7.0,
-        35.0
+        1.4,
+        2
       ]
     }
   }

@@ -618,6 +618,7 @@ layer_templates:
     name_fr: Épaisseur de la glace (m)
     styles:
     - mapserv/class/sea-ice-thickness_absolute.json
+    - mapserv/class/sea-ice-thickness_absolute_0-2.json
 
   spei: &template_spei
     type: RASTER
