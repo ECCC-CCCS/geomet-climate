@@ -48,110 +48,112 @@ def generate_legend(layer_info, output_dir):
     :returns: True if the legends were generated
     """
 
-    group = layer_info['classgroup']
     color_arr = []
     linear = False
     discrete = False
 
-    style_path = os.path.join(THISDIR, 'resources', layer_info['styles'][0])
-    with io.open(style_path) as fh:
-        style_json = json.load(fh)
+    for style in layer_info['styles']:
+        style_path = os.path.join(THISDIR, 'resources', style)
+        with io.open(style_path) as fh:
+            style_json = json.load(fh)
 
-    for map_class in style_json:
-        if 'colorrange' in map_class['style']:
-            color = map_class['style']['colorrange']
-        else:
-            color = map_class['style']['color']
-        if len(color) == 6:
-            linear = True
-            rgb1 = color[:3]
-            rgb2 = color[3:]
-            if rgb1 not in color_arr:
-                color_arr.append(rgb1)
-            if rgb2 not in color_arr:
-                color_arr.append(rgb2)
+        group = style_json[0]['group']
 
-        elif len(color) == 3:
-            discrete = True
-            color_arr.append(color)
+        for map_class in style_json:
+            if 'colorrange' in map_class['style']:
+                color = map_class['style']['colorrange']
+            else:
+                color = map_class['style']['color']
+            if len(color) == 6:
+                linear = True
+                rgb1 = color[:3]
+                rgb2 = color[3:]
+                if rgb1 not in color_arr:
+                    color_arr.append(rgb1)
+                if rgb2 not in color_arr:
+                    color_arr.append(rgb2)
 
-    if linear:
-        min_value = style_json[0]['name'].split(' ')[0]
-        max_value = style_json[-1]['name'].split(' ')[-1]
+            elif len(color) == 3:
+                discrete = True
+                color_arr.append(color)
 
-        fig = Figure(figsize=(2, 5))  # , constrained_layout=True)
-        canvas = FigureCanvasAgg(fig) # noqa
-        # when moving to ubuntu 18.04 and remove add_subplots
-        # ax = fig.subplots()
-        ax = fig.add_subplot(121)
+        if linear:
+            min_value = style_json[0]['name'].split(' ')[0]
+            max_value = style_json[-1]['name'].split(' ')[-1]
 
-        all_vals = np.array([[0, 0, 0, 1]])
+            fig = Figure(figsize=(2, 5))  # , constrained_layout=True)
+            canvas = FigureCanvasAgg(fig) # noqa
+            # when moving to ubuntu 18.04 and remove add_subplots
+            # ax = fig.subplots()
+            ax = fig.add_subplot(121)
 
-        for i in range(0, len(color_arr) - 1):
-            # number of interpolated values between 2 color ramps
-            N = 25
-            # 4 = RGBA
-            vals = np.ones((N, 4))
-            # Red
-            vals[:, 0] = np.linspace(color_arr[i][0] / 256.0,
-                                     color_arr[i + 1][0] / 256.0,
-                                     N)
-            # Green
-            vals[:, 1] = np.linspace(color_arr[i][1] / 256.0,
-                                     color_arr[i + 1][1] / 256.0,
-                                     N)
-            # Blue
-            vals[:, 2] = np.linspace(color_arr[i][2] / 256.0,
-                                     color_arr[i + 1][2] / 256.0,
-                                     N)
-            all_vals = np.concatenate((all_vals, vals))
+            all_vals = np.array([[0, 0, 0, 1]])
 
-        newcmp = mpl.colors.ListedColormap(all_vals)
-        norm = mpl.colors.Normalize(vmin=float(min_value),
-                                    vmax=float(max_value))
-        cb = mpl.colorbar.ColorbarBase(ax, cmap=newcmp, norm=norm)
+            for i in range(0, len(color_arr) - 1):
+                # number of interpolated values between 2 color ramps
+                N = 25
+                # 4 = RGBA
+                vals = np.ones((N, 4))
+                # Red
+                vals[:, 0] = np.linspace(color_arr[i][0] / 256.0,
+                                         color_arr[i + 1][0] / 256.0,
+                                         N)
+                # Green
+                vals[:, 1] = np.linspace(color_arr[i][1] / 256.0,
+                                         color_arr[i + 1][1] / 256.0,
+                                         N)
+                # Blue
+                vals[:, 2] = np.linspace(color_arr[i][2] / 256.0,
+                                         color_arr[i + 1][2] / 256.0,
+                                         N)
+                all_vals = np.concatenate((all_vals, vals))
 
-    if discrete:
-        bounds = layer_info['bounds']
-        vals = np.ones((1, 4))
+            newcmp = mpl.colors.ListedColormap(all_vals)
+            norm = mpl.colors.Normalize(vmin=float(min_value),
+                                        vmax=float(max_value))
+            cb = mpl.colorbar.ColorbarBase(ax, cmap=newcmp, norm=norm)
 
-        fig = Figure(figsize=(2, 6))  # , constrained_layout=True)
-        canvas = FigureCanvasAgg(fig) # noqa
-        # when moving to ubuntu 18.04 and remove add_subplots
-        # ax = fig.subplots()
-        ax = fig.add_subplot(121)
+        if discrete:
+            bounds = layer_info['bounds']
+            vals = np.ones((1, 4))
 
-        all_vals = np.array([[color_arr[0][0] / 256.0,
-                              color_arr[0][1] / 256.0,
-                              color_arr[0][2] / 256.0,
-                              1]])
+            fig = Figure(figsize=(2, 6))  # , constrained_layout=True)
+            canvas = FigureCanvasAgg(fig) # noqa
+            # when moving to ubuntu 18.04 and remove add_subplots
+            # ax = fig.subplots()
+            ax = fig.add_subplot(121)
 
-        for i in range(1, len(color_arr)):
-            vals = [[color_arr[i][0] / 256.0,
-                    color_arr[i][1] / 256.0,
-                    color_arr[i][2] / 256.0,
-                    1]]
-            all_vals = np.concatenate((all_vals, vals))
+            all_vals = np.array([[color_arr[0][0] / 256.0,
+                                color_arr[0][1] / 256.0,
+                                color_arr[0][2] / 256.0,
+                                1]])
 
-        cmap = mpl.colors.ListedColormap(all_vals[1:-1])
-        cmap.set_over(all_vals[-1])
-        cmap.set_under(all_vals[0])
+            for i in range(1, len(color_arr)):
+                vals = [[color_arr[i][0] / 256.0,
+                        color_arr[i][1] / 256.0,
+                        color_arr[i][2] / 256.0,
+                        1]]
+                all_vals = np.concatenate((all_vals, vals))
 
-        norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
-        cb = mpl.colorbar.ColorbarBase(ax, cmap=cmap,
-                                       norm=norm,
-                                       extend='both',
-                                       extendfrac='auto',
-                                       ticks=bounds,
-                                       spacing='uniform')
+            cmap = mpl.colors.ListedColormap(all_vals[1:-1])
+            cmap.set_over(all_vals[-1])
+            cmap.set_under(all_vals[0])
 
-    for lang in ['en', 'fr']:
-        label = 'name_{}'.format(lang)
-        legend_title = layer_info[label]
-        cb.set_label(legend_title)
+            norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
+            cb = mpl.colorbar.ColorbarBase(ax, cmap=cmap,
+                                           norm=norm,
+                                           extend='both',
+                                           extendfrac='auto',
+                                           ticks=bounds,
+                                           spacing='uniform')
 
-        legend_name = '{}-{}.png'.format(group, lang)
-        fig.savefig(os.path.join(output_dir, legend_name))
+        for lang in ['en', 'fr']:
+            label = 'name_{}'.format(lang)
+            legend_title = layer_info[label]
+            cb.set_label(legend_title)
+
+            legend_name = '{}-{}.png'.format(group, lang)
+            fig.savefig(os.path.join(output_dir, legend_name))
 
     return True
 
