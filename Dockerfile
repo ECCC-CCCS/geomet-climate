@@ -9,6 +9,10 @@ ENV BASEDIR=/data/web/geomet-climate-nightly \
     GEOMET_CLIMATE_DATADIR=/data/geomet/feeds/dd/climate \
     GEOMET_CLIMATE_CONFIG=/data/web/geomet-climate-nightly/geomet-climate.yml \
     GEOMET_CLIMATE_URL=${GEOMET_CLIMATE_URL} \
+    # GEOMET_CLIMATE_ES_USERNAME=foo
+    # GEOMET_CLIMATE_ES_PASSWORD=bar
+    # ES credentials loaded from host env
+    GEOMET_CLIMATE_ES_URL=https://${GEOMET_CLIMATE_ES_USERNAME}:${GEOMET_CLIMATE_ES_PASSWORD}@localhost:9200 \
     GEOMET_CLIMATE_OWS_DEBUG=5
     # GEOMET_CLIMATE_OWS_LOG=/tmp/geomet-climate-ows.log
 

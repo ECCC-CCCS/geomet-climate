@@ -34,7 +34,7 @@ from yaml import CLoader
 
 from geomet_climate import __version__
 from geomet_climate.env import (
-    BASEDIR, CONFIG, DATADIR, OWS_DEBUG, OWS_LOG, URL)
+    BASEDIR, CONFIG, DATADIR, OWS_DEBUG, OWS_LOG, URL, ES_URL)
 
 MAPFILE_BASE = '{}{}resources{}mapfile-base.json'.format(os.path.dirname(
     os.path.realpath(__file__)), os.sep, os.sep)
@@ -248,8 +248,7 @@ def gen_layer(layer_name, layer_info,  template_path, service='WMS'):
     if layer_info['type'] == 'POINT':
         layer['type'] = layer_info['type']
         layer['connectiontype'] = 'OGR'
-        layer['connection'] = 'ES:{}'.format(
-            layer_info['climate_model']['basepath'])
+        layer['connection'] = 'ES:{}'.format(ES_URL)
 
         layer['connectionoptions'] = {
             '__type__': 'connectionoptions',
