@@ -48,8 +48,8 @@ git clone $GEOMET_CLIMATE_GITREPO . -b master --depth=1
 # git clone https://github.com/kngai/geomet-climate.git . -b docker-nightly --depth=1
 
 echo "Stopping/building/starting Docker setup"
+docker compose -f docker/docker-compose.yml -f docker/docker-compose.override.yml build --no-cache
 docker compose -f docker/docker-compose.yml -f docker/docker-compose.override.yml down
-docker compose -f docker/docker-compose.yml -f docker/docker-compose.override.yml build
 docker compose -f docker/docker-compose.yml -f docker/docker-compose.override.yml up -d
 
 cat > geomet-climate-nightly.conf <<EOF
