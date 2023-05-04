@@ -24,7 +24,6 @@ import os
 
 import click
 import matplotlib as mpl
-from matplotlib.backends.backend_agg import FigureCanvasAgg
 from matplotlib.figure import Figure
 import numpy as np
 import yaml
@@ -81,8 +80,7 @@ def generate_legend(layer_info, output_dir):
             min_value = style_json[0]['name'].split(' ')[0]
             max_value = style_json[-1]['name'].split(' ')[-1]
 
-            fig = Figure(figsize=(2, 5))  # , constrained_layout=True)
-            canvas = FigureCanvasAgg(fig) # noqa
+            fig = Figure(figsize=(2, 5))
             # when moving to ubuntu 18.04 and remove add_subplots
             # ax = fig.subplots()
             ax = fig.add_subplot(121)
@@ -117,8 +115,7 @@ def generate_legend(layer_info, output_dir):
             bounds = layer_info['bounds']
             vals = np.ones((1, 4))
 
-            fig = Figure(figsize=(2, 6))  # , constrained_layout=True)
-            canvas = FigureCanvasAgg(fig) # noqa
+            fig = Figure(figsize=(2, 6))
             # when moving to ubuntu 18.04 and remove add_subplots
             # ax = fig.subplots()
             ax = fig.add_subplot(121)
@@ -151,9 +148,11 @@ def generate_legend(layer_info, output_dir):
             label = 'name_{}'.format(lang)
             legend_title = layer_info[label]
             cb.set_label(legend_title)
+            cb.set_alpha(None)
 
             legend_name = '{}-{}.png'.format(group, lang)
-            fig.savefig(os.path.join(output_dir, legend_name))
+            fig.savefig(os.path.join(output_dir, legend_name),
+                        bbox_inches='tight')
 
     return True
 
