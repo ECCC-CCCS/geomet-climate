@@ -31,6 +31,7 @@ DATADIR = os.environ.get('GEOMET_CLIMATE_DATADIR', None)
 OWS_DEBUG = os.environ.get('GEOMET_CLIMATE_OWS_DEBUG', None)
 OWS_LOG = os.environ.get('GEOMET_CLIMATE_OWS_LOG', None)
 URL = os.environ.get('GEOMET_CLIMATE_URL', None)
+ES_URL = os.getenv('GEOMET_CLIMATE_ES_URL', None)
 
 LOGGER.debug(BASEDIR)
 LOGGER.debug(CONFIG)
