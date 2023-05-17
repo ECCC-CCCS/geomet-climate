@@ -3,11 +3,12 @@ geomet-climate (1.10.0) focal; urgency=medium
   * update legends to have less white space
   * add env setup for ES credentials
   * reorder docker nightly build steps with no-cache build
+  * update docker nightly build for dev-21
   * add new SIT styles and fix other SIT styles
   * update layer tree in GetCapabilities
   * add restart policy to docker-compose
 
- -- Kevin Ngai <kevin.ngai@ec.gc.ca>  Wed, 17 May 2023 16:10:00 +0000
+ -- Kevin Ngai <kevin.ngai@ec.gc.ca>  Mon, 19 Jun 2023 22:16:00 +0000
 
 geomet-climate (1.8.0) focal; urgency=medium
 
