@@ -2,8 +2,8 @@ services:
   geomet-climate-nightly:
     build:
       args:
-        GEOMET_CLIMATE_URL: https://geomet-dev-11-nightly.cmc.ec.gc.ca/geomet-climate
-        # GEOMET_CLIMATE_URL: http://geomet-dev-11.cmc.ec.gc.ca:8099
+        GEOMET_CLIMATE_URL: https://geomet-dev-21-nightly.cmc.ec.gc.ca/geomet-climate
+        # GEOMET_CLIMATE_URL: http://geomet-dev-21.cmc.ec.gc.ca:8099
     environment:
       GEOMET_CLIMATE_OWS_DEBUG: 5
       GEOMET_CLIMATE_ES_URL: http://${GEOMET_CLIMATE_ES_USERNAME}:${GEOMET_CLIMATE_ES_PASSWORD}@localhost:9200
