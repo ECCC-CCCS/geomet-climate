@@ -415,13 +415,13 @@ layer_groups:
       end: 2100-12
 
   CanDCSU6_HISTORICAL: &id_CanDCSU6_historical
-    projection: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4326"]]
-    extent: [-140.9999644, 41.0000051, -52.0000051, 83.4999949]
+    projection: GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]]
+    extent: [-141, 41, -52.0000036, 83.4999983]
     basepath: CanDCSU6/10km
     label_en: Statistically downscaled climate indices from CMIP6 global climate models (CanDCS-U6)
     label_fr: Indices climatiques mis à l’échelle statistique des modèles climatiques mondiaux du CMIP6 (CanDCS-U6)
     dimensions: [1068, 510]
-    geo_transform: -1.4099996437709132e+02,  8.3333295198277882e-02,  0.0000000000000000e+00,  8.3499994903744323e+01,  0.0000000000000000e+00,
+    geo_transform: -141.0, 0.08333332999999998, 0.0, 83.4999983, 0.0, -0.08333333000000001
     temporal_extent:
       begin: 1950
       end: 2014
@@ -435,13 +435,13 @@ layer_groups:
 
   CanDCSU6_RCP: &id_CanDCSU6_rcp
     metadata_id: 9bd4781f-533d-4a27-b4b9-18fec1c88bb6
-    projection: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4326"]]
-    extent: [-140.9999644, 41.0000051, -52.0000051, 83.4999949]
+    projection: GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]]
+    extent: [-141, 41, -52.0000036, 83.4999983]
     basepath: CanDCSU6/10km
     label_en: Statistically downscaled climate indices from CMIP6 global climate models (CanDCS-U6)
     label_fr: Indices climatiques mis à l’échelle statistique des modèles climatiques mondiaux du CMIP6 (CanDCS-U6)
     dimensions: [1068, 510]
-    geo_transform: -1.4099996437709132e+02,  8.3333295198277882e-02,  0.0000000000000000e+00,  8.3499994903744323e+01,  0.0000000000000000e+00,
+    geo_transform: -141.0, 0.08333332999999998, 0.0, 83.4999983, 0.0, -0.08333333000000001
     temporal_extent:
       begin: 2015
       end: 2100
@@ -449,8 +449,7 @@ layer_groups:
 
   CanDCSU6_RCP_ENSEMBLE: &id_CanDCSU6_rcp_ensemble
     <<: *id_CanDCSU6_rcp
-    metadata_id:
-      pr: metadata_id: 9bd4781f-533d-4a27-b4b9-18fec1c88bb6
+    metadata_id: 9bd4781f-533d-4a27-b4b9-18fec1c88bb6
     temporal_extent:
       begin: 2015-01
       end: 2100-12
@@ -1748,7 +1747,7 @@ layers:
 
   CanDCSU6-SSP126_AirTempMin-Pct50_2015-2100_P1M:
     <<: *template_temp_absolute
-    climate_model: *id_CanDCSU6_rcp
+    climate_model: *id_CanDCSU6_rcp_ensemble
     filepath: scenarios/ssp126
     filename: 2015-2100_ECCC_CanDCSU6-SSP126_AirTempMin-Pct50_Sfc_LatLon0.86_P1M.nc
     label_en: Minimum temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled minimum temperature projections (50th percentile)
@@ -1758,7 +1757,7 @@ layers:
 
   CanDCSU6-SSP126_AirTempMin-Pct90_2015-2100_P1M:
     <<: *template_temp_absolute
-    climate_model: *id_CanDCSU6_rcp
+    climate_model: *id_CanDCSU6_rcp_ensemble
     filepath: scenarios/ssp126
     filename: 2015-2100_ECCC_CanDCSU6-SSP126_AirTempMin-Pct90_Sfc_LatLon0.86_P1M.nc
     label_en: Minimum temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled minimum temperature projections (90th percentile)
@@ -3980,7 +3979,7 @@ layers:
 
   CanDCSU6-SSP126_AirTempMax-Pct50_2015-2100_P1M:
     <<: *template_temp_absolute
-    climate_model: *id_CanDCSU6_rcp
+    climate_model: *id_CanDCSU6_rcp_ensemble
     filepath: scenarios/ssp126
     filename: 2015-2100_ECCC_CanDCSU6-SSP126_AirTempMax-Pct50_Sfc_LatLon0.86_P1M.nc
     label_en: Maximum temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled maximum temperature projections (50th percentile)
@@ -3990,7 +3989,7 @@ layers:
 
   CanDCSU6-SSP126_AirTempMax-Pct90_2015-2100_P1M:
     <<: *template_temp_absolute
-    climate_model: *id_CanDCSU6_rcp
+    climate_model: *id_CanDCSU6_rcp_ensemble
     filepath: scenarios/ssp126
     filename: 2015-2100_ECCC_CanDCSU6-SSP126_AirTempMax-Pct90_Sfc_LatLon0.86_P1M.nc
     label_en: Maximum temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled maximum temperature projections (90th percentile)
@@ -6212,7 +6211,7 @@ layers:
 
   CanDCSU6-SSP126_AirTemp-Pct50_2015-2100_P1M:
     <<: *template_temp_absolute
-    climate_model: *id_CanDCSU6_rcp
+    climate_model: *id_CanDCSU6_rcp_ensemble
     filepath: scenarios/ssp126
     filename: 2015-2100_ECCC_CanDCSU6-SSP126_AirTemp-Pct50_Sfc_LatLon0.86_P1M.nc
     label_en: Mean temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled mean temperature projections (50th percentile)
@@ -6222,7 +6221,7 @@ layers:
 
   CanDCSU6-SSP126_AirTemp-Pct90_2015-2100_P1M:
     <<: *template_temp_absolute
-    climate_model: *id_CanDCSU6_rcp
+    climate_model: *id_CanDCSU6_rcp_ensemble
     filepath: scenarios/ssp126
     filename: 2015-2100_ECCC_CanDCSU6-SSP126_AirTemp-Pct90_Sfc_LatLon0.86_P1M.nc
     label_en: Mean temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled mean temperature projections (90th percentile)
@@ -8444,7 +8443,7 @@ layers:
 
   CanDCSU6-SSP126_Precip-Pct50_2015-2100_P1M:
     <<: *template_precip_absolute
-    climate_model: *id_CanDCSU6_rcp
+    climate_model: *id_CanDCSU6_rcp_ensemble
     filepath: scenarios/ssp126
     filename: 2015-2100_ECCC_CanDCSU6-SSP126_Precip-Pct50_Sfc_LatLon0.86_P1M.nc
     label_en: Total precipitation/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled total precipitation projections (50th percentile)
@@ -8454,7 +8453,7 @@ layers:
 
   CanDCSU6-SSP126_Precip-Pct90_2015-2100_P1M:
     <<: *template_precip_absolute
-    climate_model: *id_CanDCSU6_rcp
+    climate_model: *id_CanDCSU6_rcp_ensemble
     filepath: scenarios/ssp126
     filename: 2015-2100_ECCC_CanDCSU6-SSP126_Precip-Pct90_Sfc_LatLon0.86_P1M.nc
     label_en: Total precipitation/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled total precipitation projections (90th percentile)
