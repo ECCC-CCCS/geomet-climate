@@ -165,6 +165,8 @@ def gen_layer_metadataurl(layer_name, layer_info):
     for key in layer_info['climate_model']['metadata_id']:
         if key.upper() in layer_name_list:
             id_ = layer_info['climate_model']['metadata_id'][key]
+        else:
+            id_ = layer_info['climate_model']['metadata_id']
 
     metadata_url = ('https://csw.open.canada.ca/geonetwork/srv/csw?'
                     'service=CSW&'
