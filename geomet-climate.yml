@@ -1743,7 +1743,7 @@ layers:
     label_en: Minimum temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled minimum temperature projections (10th percentile)
     label_fr: Température minimale/2015-2100/CanDCSU6-SSP126 (mensuel)- Projections de la température minimale mises à l'échelle de manière statistique (10e percentile)
     timestep: P1M
-    num_bands: 1021
+    num_bands: 1032
 
   CanDCSU6-SSP126_AirTempMin-Pct50_2015-2100_P1M:
     <<: *template_temp_absolute
@@ -1753,7 +1753,7 @@ layers:
     label_en: Minimum temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled minimum temperature projections (50th percentile)
     label_fr: Température minimale/2015-2100/CanDCSU6-SSP126 (mensuel)- Projections de la température minimale mises à l'échelle de manière statistique (50e percentile)
     timestep: P1M
-    num_bands: 1021
+    num_bands: 1032
 
   CanDCSU6-SSP126_AirTempMin-Pct90_2015-2100_P1M:
     <<: *template_temp_absolute
@@ -1763,7 +1763,367 @@ layers:
     label_en: Minimum temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled minimum temperature projections (90th percentile)
     label_fr: Température minimale/2015-2100/CanDCSU6-SSP126 (mensuel)- Projections de la température minimale mises à l'échelle de manière statistique (90e percentile)
     timestep: P1M
-    num_bands: 1021
+    num_bands: 1032
+
+  CanDCSU6-SSP245_AirTempMin-Pct10_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct10_Sfc_LatLon0.86_P1Y.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Annual)- Statistically downscaled minimum temperature projections (10th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (annuel)- Projections de la température minimale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct50_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct50_Sfc_LatLon0.86_P1Y.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Annual)- Statistically downscaled minimum temperature projections (50th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (annuel)- Projections de la température minimale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct90_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct90_Sfc_LatLon0.86_P1Y.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Annual)- Statistically downscaled minimum temperature projections (90th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (annuel)- Projections de la température minimale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct10_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct10_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Winter)- Statistically downscaled minimum temperature projections (10th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (hiver)- Projections de la température minimale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct50_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct50_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Winter)- Statistically downscaled minimum temperature projections (50th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (hiver)- Projections de la température minimale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct90_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct90_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Winter)- Statistically downscaled minimum temperature projections (90th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (hiver)- Projections de la température minimale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct10_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct10_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Spring)- Statistically downscaled minimum temperature projections (10th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (printemps)- Projections de la température minimale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct50_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct50_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Spring)- Statistically downscaled minimum temperature projections (50th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (printemps)- Projections de la température minimale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct90_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct90_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Spring)- Statistically downscaled minimum temperature projections (90th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (printemps)- Projections de la température minimale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct10_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct10_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Summer)- Statistically downscaled minimum temperature projections (10th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (été)- Projections de la température minimale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct50_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct50_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Summer)- Statistically downscaled minimum temperature projections (50th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (été)- Projections de la température minimale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct90_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct90_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Summer)- Statistically downscaled minimum temperature projections (90th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (été)- Projections de la température minimale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct10_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct10_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Fall)- Statistically downscaled minimum temperature projections (10th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (automne)- Projections de la température minimale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct50_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct50_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Fall)- Statistically downscaled minimum temperature projections (50th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (automne)- Projections de la température minimale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct90_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct90_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Fall)- Statistically downscaled minimum temperature projections (90th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (automne)- Projections de la température minimale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMin-Pct10_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct10_Sfc_LatLon0.86_P1M.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Monthly)- Statistically downscaled minimum temperature projections (10th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (mensuel)- Projections de la température minimale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP245_AirTempMin-Pct50_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct50_Sfc_LatLon0.86_P1M.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Monthly)- Statistically downscaled minimum temperature projections (50th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (mensuel)- Projections de la température minimale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP245_AirTempMin-Pct90_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMin-Pct90_Sfc_LatLon0.86_P1M.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP245 (Monthly)- Statistically downscaled minimum temperature projections (90th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP245 (mensuel)- Projections de la température minimale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP585_AirTempMin-Pct10_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct10_Sfc_LatLon0.86_P1Y.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Annual)- Statistically downscaled minimum temperature projections (10th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (annuel)- Projections de la température minimale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct50_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct50_Sfc_LatLon0.86_P1Y.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Annual)- Statistically downscaled minimum temperature projections (50th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (annuel)- Projections de la température minimale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct90_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct90_Sfc_LatLon0.86_P1Y.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Annual)- Statistically downscaled minimum temperature projections (90th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (annuel)- Projections de la température minimale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct10_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct10_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Winter)- Statistically downscaled minimum temperature projections (10th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (hiver)- Projections de la température minimale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct50_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct50_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Winter)- Statistically downscaled minimum temperature projections (50th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (hiver)- Projections de la température minimale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct90_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct90_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Winter)- Statistically downscaled minimum temperature projections (90th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (hiver)- Projections de la température minimale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct10_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct10_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Spring)- Statistically downscaled minimum temperature projections (10th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (printemps)- Projections de la température minimale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct50_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct50_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Spring)- Statistically downscaled minimum temperature projections (50th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (printemps)- Projections de la température minimale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct90_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct90_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Spring)- Statistically downscaled minimum temperature projections (90th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (printemps)- Projections de la température minimale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct10_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct10_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Summer)- Statistically downscaled minimum temperature projections (10th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (été)- Projections de la température minimale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct50_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct50_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Summer)- Statistically downscaled minimum temperature projections (50th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (été)- Projections de la température minimale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct90_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct90_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Summer)- Statistically downscaled minimum temperature projections (90th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (été)- Projections de la température minimale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct10_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct10_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Fall)- Statistically downscaled minimum temperature projections (10th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (automne)- Projections de la température minimale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct50_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct50_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Fall)- Statistically downscaled minimum temperature projections (50th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (automne)- Projections de la température minimale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct90_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct90_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Fall)- Statistically downscaled minimum temperature projections (90th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (automne)- Projections de la température minimale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMin-Pct10_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct10_Sfc_LatLon0.86_P1M.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Monthly)- Statistically downscaled minimum temperature projections (10th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (mensuel)- Projections de la température minimale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP585_AirTempMin-Pct50_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct50_Sfc_LatLon0.86_P1M.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Monthly)- Statistically downscaled minimum temperature projections (50th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (mensuel)- Projections de la température minimale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP585_AirTempMin-Pct90_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMin-Pct90_Sfc_LatLon0.86_P1M.nc
+    label_en: Minimum temperature/2015-2100/CanDCSU6-SSP585 (Monthly)- Statistically downscaled minimum temperature projections (90th percentile)
+    label_fr: Température minimale/2015-2100/CanDCSU6-SSP585 (mensuel)- Projections de la température minimale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1M
+    num_bands: 1032
 
   CanDCSU6-SSP126_AirTempMinAnomaly-Pct10_2021-2050_P0Y:
     <<: *template_temp_anomalies
@@ -3975,7 +4335,7 @@ layers:
     label_en: Maximum temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled maximum temperature projections (10th percentile)
     label_fr: Température maximale/2015-2100/CanDCSU6-SSP126 (mensuel)- Projections de la température maximale mises à l'échelle de manière statistique (10e percentile)
     timestep: P1M
-    num_bands: 1021
+    num_bands: 1032
 
   CanDCSU6-SSP126_AirTempMax-Pct50_2015-2100_P1M:
     <<: *template_temp_absolute
@@ -3985,7 +4345,7 @@ layers:
     label_en: Maximum temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled maximum temperature projections (50th percentile)
     label_fr: Température maximale/2015-2100/CanDCSU6-SSP126 (mensuel)- Projections de la température maximale mises à l'échelle de manière statistique (50e percentile)
     timestep: P1M
-    num_bands: 1021
+    num_bands: 1032
 
   CanDCSU6-SSP126_AirTempMax-Pct90_2015-2100_P1M:
     <<: *template_temp_absolute
@@ -3995,7 +4355,367 @@ layers:
     label_en: Maximum temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled maximum temperature projections (90th percentile)
     label_fr: Température maximale/2015-2100/CanDCSU6-SSP126 (mensuel)- Projections de la température maximale mises à l'échelle de manière statistique (90e percentile)
     timestep: P1M
-    num_bands: 1021
+    num_bands: 1032
+
+  CanDCSU6-SSP245_AirTempMax-Pct10_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct10_Sfc_LatLon0.86_P1Y.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Annual)- Statistically downscaled maximum temperature projections (10th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (annuel)- Projections de la température maximale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct50_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct50_Sfc_LatLon0.86_P1Y.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Annual)- Statistically downscaled maximum temperature projections (50th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (annuel)- Projections de la température maximale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct90_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct90_Sfc_LatLon0.86_P1Y.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Annual)- Statistically downscaled maximum temperature projections (90th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (annuel)- Projections de la température maximale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct10_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct10_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Winter)- Statistically downscaled maximum temperature projections (10th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (hiver)- Projections de la température maximale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct50_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct50_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Winter)- Statistically downscaled maximum temperature projections (50th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (hiver)- Projections de la température maximale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct90_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct90_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Winter)- Statistically downscaled maximum temperature projections (90th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (hiver)- Projections de la température maximale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct10_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct10_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Spring)- Statistically downscaled maximum temperature projections (10th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (printemps)- Projections de la température maximale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct50_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct50_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Spring)- Statistically downscaled maximum temperature projections (50th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (printemps)- Projections de la température maximale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct90_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct90_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Spring)- Statistically downscaled maximum temperature projections (90th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (printemps)- Projections de la température maximale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct10_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct10_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Summer)- Statistically downscaled maximum temperature projections (10th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (été)- Projections de la température maximale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct50_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct50_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Summer)- Statistically downscaled maximum temperature projections (50th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (été)- Projections de la température maximale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct90_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct90_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Summer)- Statistically downscaled maximum temperature projections (90th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (été)- Projections de la température maximale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct10_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct10_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Fall)- Statistically downscaled maximum temperature projections (10th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (automne)- Projections de la température maximale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct50_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct50_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Fall)- Statistically downscaled maximum temperature projections (50th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (automne)- Projections de la température maximale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct90_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct90_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Fall)- Statistically downscaled maximum temperature projections (90th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (automne)- Projections de la température maximale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTempMax-Pct10_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct10_Sfc_LatLon0.86_P1M.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Monthly)- Statistically downscaled maximum temperature projections (10th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (mensuel)- Projections de la température maximale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP245_AirTempMax-Pct50_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct50_Sfc_LatLon0.86_P1M.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Monthly)- Statistically downscaled maximum temperature projections (50th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (mensuel)- Projections de la température maximale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP245_AirTempMax-Pct90_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTempMax-Pct90_Sfc_LatLon0.86_P1M.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP245 (Monthly)- Statistically downscaled maximum temperature projections (90th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP245 (mensuel)- Projections de la température maximale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP585_AirTempMax-Pct10_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct10_Sfc_LatLon0.86_P1Y.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Annual)- Statistically downscaled maximum temperature projections (10th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (annuel)- Projections de la température maximale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct50_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct50_Sfc_LatLon0.86_P1Y.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Annual)- Statistically downscaled maximum temperature projections (50th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (annuel)- Projections de la température maximale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct90_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct90_Sfc_LatLon0.86_P1Y.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Annual)- Statistically downscaled maximum temperature projections (90th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (annuel)- Projections de la température maximale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct10_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct10_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Winter)- Statistically downscaled maximum temperature projections (10th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (hiver)- Projections de la température maximale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct50_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct50_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Winter)- Statistically downscaled maximum temperature projections (50th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (hiver)- Projections de la température maximale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct90_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct90_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Winter)- Statistically downscaled maximum temperature projections (90th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (hiver)- Projections de la température maximale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct10_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct10_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Spring)- Statistically downscaled maximum temperature projections (10th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (printemps)- Projections de la température maximale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct50_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct50_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Spring)- Statistically downscaled maximum temperature projections (50th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (printemps)- Projections de la température maximale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct90_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct90_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Spring)- Statistically downscaled maximum temperature projections (90th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (printemps)- Projections de la température maximale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct10_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct10_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Summer)- Statistically downscaled maximum temperature projections (10th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (été)- Projections de la température maximale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct50_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct50_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Summer)- Statistically downscaled maximum temperature projections (50th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (été)- Projections de la température maximale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct90_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct90_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Summer)- Statistically downscaled maximum temperature projections (90th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (été)- Projections de la température maximale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct10_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct10_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Fall)- Statistically downscaled maximum temperature projections (10th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (automne)- Projections de la température maximale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct50_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct50_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Fall)- Statistically downscaled maximum temperature projections (50th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (automne)- Projections de la température maximale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct90_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct90_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Fall)- Statistically downscaled maximum temperature projections (90th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (automne)- Projections de la température maximale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTempMax-Pct10_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct10_Sfc_LatLon0.86_P1M.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Monthly)- Statistically downscaled maximum temperature projections (10th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (mensuel)- Projections de la température maximale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP585_AirTempMax-Pct50_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct50_Sfc_LatLon0.86_P1M.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Monthly)- Statistically downscaled maximum temperature projections (50th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (mensuel)- Projections de la température maximale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP585_AirTempMax-Pct90_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTempMax-Pct90_Sfc_LatLon0.86_P1M.nc
+    label_en: Maximum temperature/2015-2100/CanDCSU6-SSP585 (Monthly)- Statistically downscaled maximum temperature projections (90th percentile)
+    label_fr: Température maximale/2015-2100/CanDCSU6-SSP585 (mensuel)- Projections de la température maximale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1M
+    num_bands: 1032
 
   CanDCSU6-SSP126_AirTempMaxAnomaly-Pct10_2021-2050_P0Y:
     <<: *template_temp_anomalies
@@ -6207,7 +6927,7 @@ layers:
     label_en: Mean temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled mean temperature projections (10th percentile)
     label_fr: Température moyenne/2015-2100/CanDCSU6-SSP126 (mensuel)- Projections de la température moyenne mises à l'échelle de manière statistique (10e percentile)
     timestep: P1M
-    num_bands: 1021
+    num_bands: 1032
 
   CanDCSU6-SSP126_AirTemp-Pct50_2015-2100_P1M:
     <<: *template_temp_absolute
@@ -6217,7 +6937,7 @@ layers:
     label_en: Mean temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled mean temperature projections (50th percentile)
     label_fr: Température moyenne/2015-2100/CanDCSU6-SSP126 (mensuel)- Projections de la température moyenne mises à l'échelle de manière statistique (50e percentile)
     timestep: P1M
-    num_bands: 1021
+    num_bands: 1032
 
   CanDCSU6-SSP126_AirTemp-Pct90_2015-2100_P1M:
     <<: *template_temp_absolute
@@ -6227,7 +6947,367 @@ layers:
     label_en: Mean temperature/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled mean temperature projections (90th percentile)
     label_fr: Température moyenne/2015-2100/CanDCSU6-SSP126 (mensuel)- Projections de la température moyenne mises à l'échelle de manière statistique (90e percentile)
     timestep: P1M
-    num_bands: 1021
+    num_bands: 1032
+
+  CanDCSU6-SSP245_AirTemp-Pct10_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct10_Sfc_LatLon0.86_P1Y.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Annual)- Statistically downscaled mean temperature projections (10th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (annuel)- Projections de la température moyenne mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct50_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct50_Sfc_LatLon0.86_P1Y.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Annual)- Statistically downscaled mean temperature projections (50th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (annuel)- Projections de la température moyenne mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct90_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct90_Sfc_LatLon0.86_P1Y.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Annual)- Statistically downscaled mean temperature projections (90th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (annuel)- Projections de la température moyenne mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct10_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct10_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Winter)- Statistically downscaled mean temperature projections (10th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (hiver)- Projections de la température moyenne mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct50_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct50_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Winter)- Statistically downscaled mean temperature projections (50th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (hiver)- Projections de la température moyenne mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct90_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct90_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Winter)- Statistically downscaled mean temperature projections (90th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (hiver)- Projections de la température moyenne mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct10_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct10_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Spring)- Statistically downscaled mean temperature projections (10th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (printemps)- Projections de la température moyenne mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct50_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct50_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Spring)- Statistically downscaled mean temperature projections (50th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (printemps)- Projections de la température moyenne mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct90_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct90_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Spring)- Statistically downscaled mean temperature projections (90th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (printemps)- Projections de la température moyenne mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct10_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct10_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Summer)- Statistically downscaled mean temperature projections (10th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (été)- Projections de la température moyenne mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct50_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct50_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Summer)- Statistically downscaled mean temperature projections (50th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (été)- Projections de la température moyenne mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct90_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct90_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Summer)- Statistically downscaled mean temperature projections (90th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (été)- Projections de la température moyenne mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct10_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct10_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Fall)- Statistically downscaled mean temperature projections (10th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (automne)- Projections de la température moyenne mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct50_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct50_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Fall)- Statistically downscaled mean temperature projections (50th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (automne)- Projections de la température moyenne mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct90_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct90_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Fall)- Statistically downscaled mean temperature projections (90th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (automne)- Projections de la température moyenne mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_AirTemp-Pct10_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct10_Sfc_LatLon0.86_P1M.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Monthly)- Statistically downscaled mean temperature projections (10th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (mensuel)- Projections de la température moyenne mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP245_AirTemp-Pct50_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct50_Sfc_LatLon0.86_P1M.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Monthly)- Statistically downscaled mean temperature projections (50th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (mensuel)- Projections de la température moyenne mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP245_AirTemp-Pct90_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_AirTemp-Pct90_Sfc_LatLon0.86_P1M.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP245 (Monthly)- Statistically downscaled mean temperature projections (90th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP245 (mensuel)- Projections de la température moyenne mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP585_AirTemp-Pct10_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct10_Sfc_LatLon0.86_P1Y.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Annual)- Statistically downscaled mean temperature projections (10th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (annuel)- Projections de la température moyenne mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct50_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct50_Sfc_LatLon0.86_P1Y.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Annual)- Statistically downscaled mean temperature projections (50th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (annuel)- Projections de la température moyenne mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct90_2015-2100_P1Y:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct90_Sfc_LatLon0.86_P1Y.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Annual)- Statistically downscaled mean temperature projections (90th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (annuel)- Projections de la température moyenne mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct10_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct10_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Winter)- Statistically downscaled mean temperature projections (10th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (hiver)- Projections de la température moyenne mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct50_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct50_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Winter)- Statistically downscaled mean temperature projections (50th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (hiver)- Projections de la température moyenne mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct90_2015-2100_P1Y-DJF:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct90_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Winter)- Statistically downscaled mean temperature projections (90th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (hiver)- Projections de la température moyenne mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct10_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct10_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Spring)- Statistically downscaled mean temperature projections (10th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (printemps)- Projections de la température moyenne mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct50_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct50_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Spring)- Statistically downscaled mean temperature projections (50th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (printemps)- Projections de la température moyenne mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct90_2015-2100_P1Y-MAM:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct90_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Spring)- Statistically downscaled mean temperature projections (90th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (printemps)- Projections de la température moyenne mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct10_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct10_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Summer)- Statistically downscaled mean temperature projections (10th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (été)- Projections de la température moyenne mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct50_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct50_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Summer)- Statistically downscaled mean temperature projections (50th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (été)- Projections de la température moyenne mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct90_2015-2100_P1Y-JJA:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct90_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Summer)- Statistically downscaled mean temperature projections (90th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (été)- Projections de la température moyenne mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct10_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct10_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Fall)- Statistically downscaled mean temperature projections (10th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (automne)- Projections de la température moyenne mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct50_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct50_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Fall)- Statistically downscaled mean temperature projections (50th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (automne)- Projections de la température moyenne mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct90_2015-2100_P1Y-SON:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct90_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Fall)- Statistically downscaled mean temperature projections (90th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (automne)- Projections de la température moyenne mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_AirTemp-Pct10_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct10_Sfc_LatLon0.86_P1M.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Monthly)- Statistically downscaled mean temperature projections (10th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (mensuel)- Projections de la température moyenne mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP585_AirTemp-Pct50_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct50_Sfc_LatLon0.86_P1M.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Monthly)- Statistically downscaled mean temperature projections (50th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (mensuel)- Projections de la température moyenne mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP585_AirTemp-Pct90_2015-2100_P1M:
+    <<: *template_temp_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_AirTemp-Pct90_Sfc_LatLon0.86_P1M.nc
+    label_en: Mean temperature/2015-2100/CanDCSU6-SSP585 (Monthly)- Statistically downscaled mean temperature projections (90th percentile)
+    label_fr: Température moyenne/2015-2100/CanDCSU6-SSP585 (mensuel)- Projections de la température moyenne mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1M
+    num_bands: 1032
 
   CanDCSU6-SSP126_AirTempAnomaly-Pct10_2021-2050_P0Y:
     <<: *template_temp_anomalies
@@ -8439,7 +9519,7 @@ layers:
     label_en: Total precipitation/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled total precipitation projections (10th percentile)
     label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP126 (mensuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (10e percentile)
     timestep: P1M
-    num_bands: 1021
+    num_bands: 1032
 
   CanDCSU6-SSP126_Precip-Pct50_2015-2100_P1M:
     <<: *template_precip_absolute
@@ -8449,7 +9529,7 @@ layers:
     label_en: Total precipitation/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled total precipitation projections (50th percentile)
     label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP126 (mensuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (50e percentile)
     timestep: P1M
-    num_bands: 1021
+    num_bands: 1032
 
   CanDCSU6-SSP126_Precip-Pct90_2015-2100_P1M:
     <<: *template_precip_absolute
@@ -8459,7 +9539,367 @@ layers:
     label_en: Total precipitation/2015-2100/CanDCSU6-SSP126 (Monthly)- Statistically downscaled total precipitation projections (90th percentile)
     label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP126 (mensuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (90e percentile)
     timestep: P1M
-    num_bands: 1021
+    num_bands: 1032
+
+  CanDCSU6-SSP245_Precip-Pct10_2015-2100_P1Y:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct10_Sfc_LatLon0.86_P1Y.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Annual)- Statistically downscaled total precipitation projections (10th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (annuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct50_2015-2100_P1Y:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct50_Sfc_LatLon0.86_P1Y.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Annual)- Statistically downscaled total precipitation projections (50th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (annuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct90_2015-2100_P1Y:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct90_Sfc_LatLon0.86_P1Y.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Annual)- Statistically downscaled total precipitation projections (90th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (annuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct10_2015-2100_P1Y-DJF:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct10_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Winter)- Statistically downscaled total precipitation projections (10th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (hiver)- Projections de la précipitation totale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct50_2015-2100_P1Y-DJF:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct50_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Winter)- Statistically downscaled total precipitation projections (50th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (hiver)- Projections de la précipitation totale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct90_2015-2100_P1Y-DJF:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct90_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Winter)- Statistically downscaled total precipitation projections (90th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (hiver)- Projections de la précipitation totale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct10_2015-2100_P1Y-MAM:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct10_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Spring)- Statistically downscaled total precipitation projections (10th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (printemps)- Projections de la précipitation totale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct50_2015-2100_P1Y-MAM:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct50_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Spring)- Statistically downscaled total precipitation projections (50th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (printemps)- Projections de la précipitation totale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct90_2015-2100_P1Y-MAM:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct90_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Spring)- Statistically downscaled total precipitation projections (90th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (printemps)- Projections de la précipitation totale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct10_2015-2100_P1Y-JJA:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct10_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Summer)- Statistically downscaled total precipitation projections (10th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (été)- Projections de la précipitation totale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct50_2015-2100_P1Y-JJA:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct50_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Summer)- Statistically downscaled total precipitation projections (50th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (été)- Projections de la précipitation totale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct90_2015-2100_P1Y-JJA:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct90_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Summer)- Statistically downscaled total precipitation projections (90th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (été)- Projections de la précipitation totale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct10_2015-2100_P1Y-SON:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct10_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Fall)- Statistically downscaled total precipitation projections (10th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (automne)- Projections de la précipitation totale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct50_2015-2100_P1Y-SON:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct50_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Fall)- Statistically downscaled total precipitation projections (50th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (automne)- Projections de la précipitation totale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct90_2015-2100_P1Y-SON:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct90_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Fall)- Statistically downscaled total precipitation projections (90th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (automne)- Projections de la précipitation totale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP245_Precip-Pct10_2015-2100_P1M:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct10_Sfc_LatLon0.86_P1M.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Monthly)- Statistically downscaled total precipitation projections (10th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (mensuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP245_Precip-Pct50_2015-2100_P1M:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct50_Sfc_LatLon0.86_P1M.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Monthly)- Statistically downscaled total precipitation projections (50th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (mensuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP245_Precip-Pct90_2015-2100_P1M:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp245
+    filename: 2015-2100_ECCC_CanDCSU6-SSP245_Precip-Pct90_Sfc_LatLon0.86_P1M.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP245 (Monthly)- Statistically downscaled total precipitation projections (90th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP245 (mensuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP585_Precip-Pct10_2015-2100_P1Y:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct10_Sfc_LatLon0.86_P1Y.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Annual)- Statistically downscaled total precipitation projections (10th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (annuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct50_2015-2100_P1Y:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct50_Sfc_LatLon0.86_P1Y.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Annual)- Statistically downscaled total precipitation projections (50th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (annuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct90_2015-2100_P1Y:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct90_Sfc_LatLon0.86_P1Y.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Annual)- Statistically downscaled total precipitation projections (90th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (annuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct10_2015-2100_P1Y-DJF:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct10_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Winter)- Statistically downscaled total precipitation projections (10th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (hiver)- Projections de la précipitation totale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct50_2015-2100_P1Y-DJF:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct50_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Winter)- Statistically downscaled total precipitation projections (50th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (hiver)- Projections de la précipitation totale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct90_2015-2100_P1Y-DJF:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct90_Sfc_LatLon0.86_P1Y-DJF.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Winter)- Statistically downscaled total precipitation projections (90th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (hiver)- Projections de la précipitation totale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct10_2015-2100_P1Y-MAM:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct10_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Spring)- Statistically downscaled total precipitation projections (10th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (printemps)- Projections de la précipitation totale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct50_2015-2100_P1Y-MAM:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct50_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Spring)- Statistically downscaled total precipitation projections (50th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (printemps)- Projections de la précipitation totale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct90_2015-2100_P1Y-MAM:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct90_Sfc_LatLon0.86_P1Y-MAM.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Spring)- Statistically downscaled total precipitation projections (90th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (printemps)- Projections de la précipitation totale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct10_2015-2100_P1Y-JJA:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct10_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Summer)- Statistically downscaled total precipitation projections (10th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (été)- Projections de la précipitation totale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct50_2015-2100_P1Y-JJA:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct50_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Summer)- Statistically downscaled total precipitation projections (50th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (été)- Projections de la précipitation totale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct90_2015-2100_P1Y-JJA:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct90_Sfc_LatLon0.86_P1Y-JJA.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Summer)- Statistically downscaled total precipitation projections (90th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (été)- Projections de la précipitation totale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct10_2015-2100_P1Y-SON:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct10_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Fall)- Statistically downscaled total precipitation projections (10th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (automne)- Projections de la précipitation totale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct50_2015-2100_P1Y-SON:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct50_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Fall)- Statistically downscaled total precipitation projections (50th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (automne)- Projections de la précipitation totale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct90_2015-2100_P1Y-SON:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct90_Sfc_LatLon0.86_P1Y-SON.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Fall)- Statistically downscaled total precipitation projections (90th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (automne)- Projections de la précipitation totale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1Y
+    num_bands: 86
+
+  CanDCSU6-SSP585_Precip-Pct10_2015-2100_P1M:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct10_Sfc_LatLon0.86_P1M.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Monthly)- Statistically downscaled total precipitation projections (10th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (mensuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (10e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP585_Precip-Pct50_2015-2100_P1M:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct50_Sfc_LatLon0.86_P1M.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Monthly)- Statistically downscaled total precipitation projections (50th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (mensuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (50e percentile)
+    timestep: P1M
+    num_bands: 1032
+
+  CanDCSU6-SSP585_Precip-Pct90_2015-2100_P1M:
+    <<: *template_precip_absolute
+    climate_model: *id_CanDCSU6_rcp_ensemble
+    filepath: scenarios/ssp585
+    filename: 2015-2100_ECCC_CanDCSU6-SSP585_Precip-Pct90_Sfc_LatLon0.86_P1M.nc
+    label_en: Total precipitation/2015-2100/CanDCSU6-SSP585 (Monthly)- Statistically downscaled total precipitation projections (90th percentile)
+    label_fr: Précipitation totale/2015-2100/CanDCSU6-SSP585 (mensuel)- Projections de la précipitation totale mises à l'échelle de manière statistique (90e percentile)
+    timestep: P1M
+    num_bands: 1032
 
   CanDCSU6-SSP126_PrecipAnomaly-Pct10_2021-2050_P0Y:
     <<: *template_precip_anomaly
