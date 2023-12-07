@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 
 # Allow for change during docker build-time
-ARG GEOMET_CLIMATE_URL=https://geomet-dev-21-nightly.cmc.ec.gc.ca/geomet-climate
+ARG GEOMET_CLIMATE_URL=https://geomet-dev-22-nightly.cmc.ec.gc.ca/geomet-climate
 
 ENV BASEDIR=/data/web/geomet-climate-nightly \
     DOCKERDIR=/data/web/geomet-climate-nightly/docker \

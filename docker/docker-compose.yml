@@ -6,7 +6,7 @@ services:
     build: 
       context: ..
     network_mode: host
-    hostname: geomet-dev-21-docker.cmc.ec.gc.ca
+    hostname: geomet-dev-22-docker.cmc.ec.gc.ca
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
