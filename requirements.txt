@@ -2,4 +2,5 @@ click
 mappyfile
 matplotlib
 numpy
+python-dateutil
 pyyaml

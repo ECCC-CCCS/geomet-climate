@@ -22,6 +22,8 @@ import logging
 import os
 
 import click
+from dateutil.parser import isoparse
+from dateutil.relativedelta import relativedelta
 import mapscript
 
 from geomet_climate.env import BASEDIR
@@ -100,6 +102,19 @@ def metadata_lang(m, lg):
                   m.getMetaData('wcs_description_{}'.format(lg)))
 
 
+def get_custom_service_exception(code, locator, text):
+    """return custom wms:ServiceExceptionReport"""
+
+    return bytes('''<?xml version='1.0' encoding="utf-8"?>
+    <ogc:ServiceExceptionReport version="1.3.0"
+    xmlns:ogc="http://www.opengis.net/ogc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.opengis.net/ogc
+    http://schemas.opengis.net/wms/1.3.0/exceptions_1_3_0.xsd">
+    <ogc:ServiceException code="{code}" locator="{locator}">{text}</ogc:ServiceException>
+    </ogc:ServiceExceptionReport>'''.format(code=code, locator=locator, text=text), encoding='utf-8') # noqa
+
+
 def application(env, start_response):
     """WSGI application for WMS/WCS"""
     for key in MAPSERV_ENV:
@@ -122,6 +137,7 @@ def application(env, start_response):
     coverageid_ = request.getValueByName('COVERAGEID')
     format_ = request.getValueByName('FORMAT')
     style_ = request.getValueByName('STYLE')
+    time_ = request.getValueByName('TIME')
 
     if lang_ is not None and lang_ in ['f', 'fr', 'fra']:
         lang = 'fr'
@@ -199,13 +215,79 @@ def application(env, start_response):
     else:
         LOGGER.debug('Loading mapfile: {}'.format(mapfile_))
         mapfile = mapscript.mapObj(mapfile_)
+        layerobj = mapfile.getLayerByName(layer)
         if request_ == 'GetCapabilities' and lang == 'fr':
             metadata_lang(mapfile, lang)
-            layerobj = mapfile.getLayerByName(layer)
             layerobj.setMetaData('ows_title',
                                  layerobj.getMetaData('ows_title_{}'.format(lang))) # noqa
             layerobj.setMetaData('ows_layer_group',
                                  layerobj.getMetaData('ows_layer_group_{}'.format(lang))) # noqa
+
+        if time_ and 'ows_timeextent' in layerobj.metadata.keys():
+            try:
+                dates = []
+                timeextent = layerobj.getMetaData('ows_timeextent')
+
+                start_date, end_date, duration = timeextent.split('/')
+                start_date = isoparse(start_date)
+                end_date = isoparse(end_date)
+                time_iso = isoparse(time_)
+
+                end_year_month = (end_date.year - start_date.year) * 12
+                end_month = end_date.month - start_date.month
+                end_date = end_year_month + end_month
+
+                if duration == 'P1Y':
+                    if time_ != time_iso.strftime('%Y'):
+                        time_error = 'Format de temps invalide, ' \
+                                     'format attendu : YYYY / ' \
+                                     'Invalid time format, ' \
+                                     'expected format: YYYY'
+                        response = get_custom_service_exception('InvalidDimensionValue', # noqa
+                                                                'time',
+                                                                time_error)
+                        start_response('200 OK', [('Content-type',
+                                                   'text/xml')])
+                        return [response]
+
+                    for i in range(0, end_date + 1, 12):
+                        date_ = start_date + relativedelta(months=i)
+                        dates.append(date_.strftime('%Y'))
+
+                else:
+                    if time_ != time_iso.strftime('%Y-%m'):
+                        time_error = 'Format de temps invalide, ' \
+                                     'format attendu' \
+                                     ' YYYY-MM / Invalid time format, ' \
+                                     'expected format: YYYY-MM'
+                        response = get_custom_service_exception('InvalidDimensionValue', # noqa
+                                                                'time',
+                                                                time_error)
+                        start_response('200 OK', [('Content-type',
+                                                   'text/xml')])
+                        return [response]
+
+                    for i in range(0, end_date + 1, 1):
+                        date_ = start_date + relativedelta(months=i)
+                        dates.append(date_.strftime('%Y-%m'))
+
+                if time_ not in dates:
+                    time_error = 'Temps en dehors des heures valides /' \
+                                 ' Time outside valid hours'
+                    response = get_custom_service_exception('NoMatch',
+                                                            'time',
+                                                            time_error)
+                    start_response('200 OK', [('Content-type', 'text/xml')])
+                    return [response]
+
+            except ValueError:
+                time_error = 'Valeur de temps invalide  /' \
+                             ' Time value is invalid'
+                response = get_custom_service_exception('InvalidDimensionValue', # noqa
+                                                        'time',
+                                                        time_error)
+                start_response('200 OK', [('Content-type', 'text/xml')])
+                return [response]
 
     mapscript.msIO_installStdoutToBuffer()
     request.loadParamsFromURL(env['QUERY_STRING'])
