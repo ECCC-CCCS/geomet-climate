@@ -52,7 +52,7 @@
         "__type__": "web",
         "metadata": {
             "__type__": "metadata",
-            "ows_srs": "EPSG:4326 EPSG:3978 EPSG:3857 EPSG:102100"
+            "ows_srs": "EPSG:4326 EPSG:3978 EPSG:3995 EPSG:3857 EPSG:102100"
         }
     },
     "layers": []
