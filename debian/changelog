@@ -1,3 +1,18 @@
+geomet-climate (1.12.0) focal; urgency=medium
+
+  * add new CanDCSU6 layers
+  * add new CMIP6 layers
+  * add support for EPSG 3995
+  * improve handling of incorrect TIME query parameter values
+  * update CMIP6 absolute precip values
+  * update legend title for CMIP5 absolute precip layers
+  * update Docker configurations for nightly build
+  * remove seasonal interval from CMIP6 timesteps
+  * fix typos (s/nn/n/) for CMIP5 mean precipitation layers
+  * fix units for wind speed layers in CMIP*
+
+ -- Kevin Ngai <kevin.ngai@ec.gc.ca>  Wed, 06 Mar 2024 16:00:00 +0000
+
 geomet-climate (1.10.0) focal; urgency=medium
 
   * update legends to have less white space
