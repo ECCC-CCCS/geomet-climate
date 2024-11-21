@@ -1,7 +1,7 @@
-FROM ubuntu:focal
+FROM ubuntu:jammy
 
 # Allow for change during docker build-time
-ARG GEOMET_CLIMATE_URL=https://geomet-dev-22-nightly.cmc.ec.gc.ca/geomet-climate
+ARG GEOMET_CLIMATE_URL=https://geomet-dev-31-nightly.edc-mtl.ec.gc.ca/geomet-climate
 
 ENV BASEDIR=/data/web/geomet-climate-nightly \
     DOCKERDIR=/data/web/geomet-climate-nightly/docker \
@@ -21,9 +21,9 @@ WORKDIR $BASEDIR
 # Install system dependencies
 RUN apt update && apt install -y software-properties-common && \
     ## Add this WMO PPA
-    add-apt-repository ppa:gcpp-kalxas/wmo && apt update && \
+    add-apt-repository ppa:gcpp-kalxas/wmo-staging && apt update && \
     ## Install dependencies from debian/control
-    apt install -y mapserver-bin python3-all python3-pip python3-click python3-gdal python3-mappyfile python3-mapscript python3-matplotlib python3-numpy python3-pyproj python3-yaml proj-bin proj-data && \
+    apt install -y mapserver-bin python3-all python3-pip python3-click python3-gdal python3-mappyfile python3-mapscript python3-matplotlib python3-numpy python3-pyproj python3-yaml proj-bin proj-data python3-certifi && \
     # remove transient packages
     apt clean autoclean && apt autoremove --yes && rm -fr /var/lib/{apt,dpkg,cache,log}/
 
