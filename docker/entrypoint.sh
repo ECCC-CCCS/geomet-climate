@@ -3,6 +3,8 @@
 BASEDIR=/data/web/geomet-climate-nightly
 GEOMET_CLIMATE_BASEDIR=$BASEDIR/build
 GEOMET_CLIMATE_ES_URL=${GEOMET_CLIMATE_ES_URL}
+MAPSERVER_CONFIG_FILE=${MAPSERVER_CONFIG_FILE}
+MS_MAP_PATTERN=$GEOMET_CLIMATE_BASEDIR/mapfile/.*
 
 # replace localhost ES URL with docker-host URL to ES
 if [ $GEOMET_CLIMATE_ES_URL != "" ]
@@ -12,6 +14,26 @@ then
 fi
 
 cd $BASEDIR
+
+# Ensure the directory for MAPSERVER_CONFIG_FILE exists
+mkdir -p "$(dirname "$MAPSERVER_CONFIG_FILE")"
+
+# Ensure MAPSERVER_CONFIG_FILE exists; create it if it doesn't
+if [ ! -f "$MAPSERVER_CONFIG_FILE" ]; then
+    cat > "$MAPSERVER_CONFIG_FILE" <<EOF
+CONFIG
+    ENV
+        MS_MAP_PATTERN "$MS_MAP_PATTERN"
+    END
+END
+EOF
+    echo "MapServer config file created: $MAPSERVER_CONFIG_FILE"
+else
+    echo "MapServer config file already exists: $MAPSERVER_CONFIG_FILE"
+fi
+
+# Set appropriate permissions for the config file
+chmod 644 "$MAPSERVER_CONFIG_FILE"
 
 echo "Generating geomet-climate VRTs for all layers..."
 geomet-climate vrt generate
@@ -35,6 +57,9 @@ mapserv -nh QUERY_STRING="map=$GEOMET_CLIMATE_BASEDIR/mapfile/geomet-climate-WCS
 
 echo "Caching WCS (French)..."
 mapserv -nh QUERY_STRING="map=$GEOMET_CLIMATE_BASEDIR/mapfile/geomet-climate-WCS-fr.map&lang=fr&service=WCS&version=2.1.0&request=GetCapabilities" > $GEOMET_CLIMATE_BASEDIR/geomet-climate-WCS-2.0.1-capabilities-fr.xml && mv -f $GEOMET_CLIMATE_BASEDIR/geomet-climate-WCS-2.0.1-capabilities-fr.xml $GEOMET_CLIMATE_BASEDIR/mapfile
+
+
+
 
 echo "Done."
 
