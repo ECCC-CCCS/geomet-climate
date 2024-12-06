@@ -19,7 +19,8 @@
 # =================================================================
 
 BASEDIR=/data/web/geomet-climate-nightly
-GEOMET_CLIMATE_GITREPO=https://github.com/ECCC-CCCS/geomet-climate.git
+# GEOMET_CLIMATE_GITREPO=https://github.com/ECCC-CCCS/geomet-climate.git
+GEOMET_CLIMATE_GITREPO=https://github.com/kngai/geomet-climate.git
 DAYSTOKEEP=7
 
 # you should be okay from here
@@ -27,6 +28,18 @@ DAYSTOKEEP=7
 DATETIME=`date +%Y%m%d`
 TIMESTAMP=`date +%Y%m%d.%H%M`
 NIGHTLYDIR=geomet-climate-$TIMESTAMP
+
+# Check if GEOMET_CLIMATE_ES_USERNAME is set and not empty
+if [ -z "$GEOMET_CLIMATE_ES_USERNAME" ]; then
+  echo "Error: Environment variable GEOMET_CLIMATE_ES_USERNAME is not set or is empty."
+  exit 1
+fi
+
+# Check if GEOMET_CLIMATE_ES_PASSWORD is set and not empty
+if [ -z "$GEOMET_CLIMATE_ES_PASSWORD" ]; then
+  echo "Error: Environment variable GEOMET_CLIMATE_ES_PASSWORD is not set or is empty."
+  exit 1
+fi
 
 echo "Deleting nightly builds > $DAYSTOKEEP days old"
 
@@ -44,7 +57,7 @@ done
 rm -fr latest
 echo "Generating nightly build for $TIMESTAMP"
 mkdir $NIGHTLYDIR && cd $NIGHTLYDIR
-git clone $GEOMET_CLIMATE_GITREPO . -b master --depth=1
+git clone $GEOMET_CLIMATE_GITREPO . -b jammy --depth=1
 
 echo "Stopping/building/starting Docker setup"
 docker compose -f docker/docker-compose.yml -f docker/docker-compose.override.yml build --no-cache
