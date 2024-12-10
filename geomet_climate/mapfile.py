@@ -71,6 +71,7 @@ def gen_web_metadata(m, c, service, url):
     d['ows_fees'] = c['identification']['fees']
     d['ows_accessconstraints'] = c['identification']['accessconstraints']
     d['wms_getmap_formatlist'] = 'image/png,image/jpeg'
+    d['wms_allow_getmap_without_styles'] = 'true'
     d['ows_extent'] = ','.join(str(x) for x in m['extent'])
     d['ows_role'] = c['provider']['role']
     d['ows_http_max_age'] = 604800  # cache for one week
