@@ -231,7 +231,6 @@ def gen_layer(layer_name, layer_info,  template_path, service='WMS'):
         'classes': []
     }
     layer['type'] = 'RASTER'
-    layer['dump'] = True
     layer['template'] = template_path
     layer['name'] = layer_name
     layer['tolerance'] = 150

@@ -3,7 +3,6 @@
     "name": "geomet-climate",
     "imagetype": "PNG",
     "status": "ON",
-    "transparent": "ON",
     "debug": "OFF",
     "maxsize": 4096,
     "size": [500, 300],

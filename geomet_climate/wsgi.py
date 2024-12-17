@@ -60,46 +60,28 @@ def metadata_lang(m, lg):
     function to update the mapfile MAP metadata
     keys in function of the lang of the request
 
-    :param m: mapfile object to update language
+    :param m: mapfile.web object to update language
     :param lg: lang of the request
     """
 
-    m.setMetaData('ows_address',
-                  m.getMetaData('ows_address_{}'.format(lg)))
-    m.setMetaData('ows_contactperson',
-                  m.getMetaData('ows_contactperson_{}'.format(lg)))
-    m.setMetaData('ows_city',
-                  m.getMetaData('ows_city_{}'.format(lg)))
-    m.setMetaData('ows_country',
-                  m.getMetaData('ows_country_{}'.format(lg)))
-    m.setMetaData('ows_keywordlist_http://purl.org/dc/terms/_items',
-                  m.getMetaData('ows_keywordlist_http://purl.org/dc/terms/_items_{}'.format(lg))) # noqa
-    m.setMetaData('wms_attribution_title',
-                  m.getMetaData('wms_attribution_title_{}'.format(lg)))
-    m.setMetaData('ows_contactinstructions',
-                  m.getMetaData('ows_contactinstructions_{}'.format(lg)))
-    m.setMetaData('ows_contactposition',
-                  m.getMetaData('ows_contactposition_{}'.format(lg)))
-    m.setMetaData('ows_contactorganization',
-                  m.getMetaData('ows_contactorganization_{}'.format(lg)))
-    m.setMetaData('wms_attribution_onlineresource',
-                  m.getMetaData('wms_attribution_onlineresource_{}'.format(lg))) # noqa
-    m.setMetaData('ows_onlineresource',
-                  m.getMetaData('ows_onlineresource_{}'.format(lg)))
-    m.setMetaData('ows_abstract',
-                  m.getMetaData('ows_abstract_{}'.format(lg)))
-    m.setMetaData('ows_service_onlineresource',
-                  m.getMetaData('ows_service_onlineresource_{}'.format(lg)))
-    m.setMetaData('ows_title',
-                  m.getMetaData('ows_title_{}'.format(lg)))
-    m.setMetaData('ows_hoursofservice',
-                  m.getMetaData('ows_hoursofservice_{}'.format(lg)))
-    m.setMetaData('ows_stateorprovince',
-                  m.getMetaData('ows_stateorprovince_{}'.format(lg)))
-    m.setMetaData('ows_keywordlist',
-                  m.getMetaData('ows_keywordlist_{}'.format(lg)))
-    m.setMetaData('wcs_description',
-                  m.getMetaData('wcs_description_{}'.format(lg)))
+    m.metadata['ows_address'] = m.metadata[f'ows_address_{lg}']
+    m.metadata['ows_contactperson'] = m.metadata[f'ows_contactperson_{lg}']
+    m.metadata['ows_city'] = m.metadata[f'ows_city_{lg}']
+    m.metadata['ows_country'] = m.metadata[f'ows_country_{lg}']
+    m.metadata['ows_keywordlist_http://purl.org/dc/terms/_items'] = m.metadata[f'ows_keywordlist_http://purl.org/dc/terms/_items_{lg}']  # noqa
+    m.metadata['wms_attribution_title'] = m.metadata[f'wms_attribution_title_{lg}']  # noqa
+    m.metadata['ows_contactinstructions'] = m.metadata[f'ows_contactinstructions_{lg}'] # noqa
+    m.metadata['ows_contactposition'] = m.metadata[f'ows_contactposition_{lg}'] # noqa
+    m.metadata['ows_contactorganization'] = m.metadata[f'ows_contactorganization_{lg}'] # noqa
+    m.metadata['wms_attribution_onlineresource'] = m.metadata[f'wms_attribution_onlineresource_{lg}'] # noqa
+    m.metadata['ows_onlineresource'] = m.metadata[f'ows_onlineresource_{lg}']
+    m.metadata['ows_abstract'] = m.metadata[f'ows_abstract_{lg}']
+    m.metadata['ows_service_onlineresource'] = m.metadata[f'ows_service_onlineresource_{lg}'] # noqa
+    m.metadata['ows_title'] = m.metadata[f'ows_title_{lg}']
+    m.metadata['ows_hoursofservice'] = m.metadata[f'ows_hoursofservice_{lg}']
+    m.metadata['ows_stateorprovince'] = m.metadata[f'ows_stateorprovince_{lg}'] # noqa
+    m.metadata['ows_keywordlist'] = m.metadata[f'ows_keywordlist_{lg}']
+    m.metadata['wcs_description'] = m.metadata[f'wcs_description_{lg}']
 
 
 def get_custom_service_exception(code, locator, text):
@@ -192,12 +174,14 @@ def application(env, start_response):
             LOGGER.debug('Loading mapfile: {}'.format(mapfile_))
             mapfile = mapscript.mapObj(mapfile_)
             if request_ == 'GetCapabilities' and lang == 'fr':
-                metadata_lang(mapfile, lang)
+                metadata_lang(mapfile.web, lang)
                 layerobj = mapfile.getLayerByName(layer)
-                layerobj.setMetaData('ows_title',
-                                     layerobj.getMetaData('ows_title_{}'.format(lang))) # noqa
-                layerobj.setMetaData('ows_layer_group',
-                                     layerobj.getMetaData('ows_layer_group_{}'.format(lang))) # noqa
+                layerobj.metadata['ows_title'] = layerobj.metadata[
+                    f'ows_title_{lang}'
+                ]
+                layerobj.metadata['ows_layer_group'] = layerobj.metadata[
+                    f'ows_layer_group_{lang}'
+                ]
 
     elif request_ == 'GetLegendGraphic' and layer is not None:
         mapfile = mapscript.mapObj(mapfile_)
@@ -218,15 +202,13 @@ def application(env, start_response):
         layerobj = mapfile.getLayerByName(layer)
         if request_ == 'GetCapabilities' and lang == 'fr':
             metadata_lang(mapfile, lang)
-            layerobj.setMetaData('ows_title',
-                                 layerobj.getMetaData('ows_title_{}'.format(lang))) # noqa
-            layerobj.setMetaData('ows_layer_group',
-                                 layerobj.getMetaData('ows_layer_group_{}'.format(lang))) # noqa
+            layerobj.metadata['ows_title'] = layerobj.metadata[f'ows_title_{lang}'] # noqa
+            layerobj.metadata['ows_layer_group'] = layerobj.metadata[f'ows_layer_group_{lang}'] # noqa
 
         if time_ and 'ows_timeextent' in layerobj.metadata.keys():
             try:
                 dates = []
-                timeextent = layerobj.getMetaData('ows_timeextent')
+                timeextent = layerobj.metadata['ows_timeextent']
 
                 start_date, end_date, duration = timeextent.split('/')
                 start_date = isoparse(start_date)
