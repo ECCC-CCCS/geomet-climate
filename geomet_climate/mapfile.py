@@ -43,6 +43,13 @@ LOGGER = logging.getLogger(__name__)
 
 THISDIR = os.path.dirname(os.path.realpath(__file__))
 
+MAPSERVER_CONFIG = f'''CONFIG
+    ENV
+        MS_MAP_PATTERN "{BASEDIR}/mapfile/.*"
+    END
+END
+'''
+
 
 def gen_web_metadata(m, c, service, url):
     """
@@ -395,6 +402,14 @@ def mapfile():
 @click.option('--layer', '-lyr', help='layer')
 def generate(ctx, service, layer):
     """generate mapfile"""
+
+    # generate MapServer config file if not present
+    mapserver_config_file = os.path.join(BASEDIR, 'mapserver.conf')
+
+    if not os.path.exists(mapserver_config_file):
+        os.makedirs(BASEDIR, exist_ok=True)
+        with open(mapserver_config_file, 'w+') as f:
+            f.write(MAPSERVER_CONFIG)
 
     output_dir = '{}{}mapfile'.format(BASEDIR, os.sep)
     template_dir = '{}{}mapfile{}template'.format(BASEDIR, os.sep, os.sep)
