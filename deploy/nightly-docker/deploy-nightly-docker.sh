@@ -1,7 +1,7 @@
 #!/bin/bash
 # =================================================================
 #
-# Copyright (c) 2020 Government of Canada
+# Copyright (c) 2025 Government of Canada
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -56,7 +56,7 @@ done
 rm -fr latest
 echo "Generating nightly build for $TIMESTAMP"
 mkdir $NIGHTLYDIR && cd $NIGHTLYDIR
-git clone $GEOMET_CLIMATE_GITREPO . -b jammy --depth=1
+git clone $GEOMET_CLIMATE_GITREPO . -b master --depth=1
 
 echo "Stopping/building/starting Docker setup"
 docker compose -f docker/docker-compose.yml -f docker/docker-compose.override.yml build --no-cache
