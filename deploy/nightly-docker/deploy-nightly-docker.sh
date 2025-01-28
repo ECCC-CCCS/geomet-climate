@@ -1,7 +1,7 @@
 #!/bin/bash
 # =================================================================
 #
-# Copyright (c) 2020 Government of Canada
+# Copyright (c) 2025 Government of Canada
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -27,6 +27,18 @@ DAYSTOKEEP=7
 DATETIME=`date +%Y%m%d`
 TIMESTAMP=`date +%Y%m%d.%H%M`
 NIGHTLYDIR=geomet-climate-$TIMESTAMP
+
+# Check if GEOMET_CLIMATE_ES_USERNAME is set and not empty
+if [ -z "$GEOMET_CLIMATE_ES_USERNAME" ]; then
+  echo "Error: Environment variable GEOMET_CLIMATE_ES_USERNAME is not set or is empty."
+  exit 1
+fi
+
+# Check if GEOMET_CLIMATE_ES_PASSWORD is set and not empty
+if [ -z "$GEOMET_CLIMATE_ES_PASSWORD" ]; then
+  echo "Error: Environment variable GEOMET_CLIMATE_ES_PASSWORD is not set or is empty."
+  exit 1
+fi
 
 echo "Deleting nightly builds > $DAYSTOKEEP days old"
 

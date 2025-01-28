@@ -6,12 +6,15 @@ services:
     build: 
       context: ..
     network_mode: host
-    hostname: geomet-dev-22-docker.cmc.ec.gc.ca
+    hostname: geomet-dev-31-docker.cmc.ec.gc.ca
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
       - "/data/geomet/feeds/dd/climate:/data/geomet/feeds/dd/climate:ro"
-
+      # below is required so that the container has certificates required
+      # for SSL-enabled connections to internal hosts (geomet-dev-xx.edc-mtl.ec.gc.ca)
+      - "/etc/ssl/certs:/etc/ssl/certs:ro" # mount host ssl certs
+      - "/usr/local/share/ca-certificates/:/usr/local/share/ca-certificates/:ro" # mount host ca-certificates
 networks:
   default:
     name: geomet_default
