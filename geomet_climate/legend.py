@@ -80,7 +80,7 @@ def generate_legend(layer_info, output_dir):
             min_value = style_json[0]['name'].split(' ')[0]
             max_value = style_json[-1]['name'].split(' ')[-1]
 
-            fig = Figure(figsize=(2, 5))
+            fig = Figure(figsize=(1, 5))
             # when moving to ubuntu 18.04 and remove add_subplots
             # ax = fig.subplots()
             ax = fig.add_subplot(121)
@@ -115,7 +115,7 @@ def generate_legend(layer_info, output_dir):
             bounds = layer_info['bounds']
             vals = np.ones((1, 4))
 
-            fig = Figure(figsize=(2, 6))
+            fig = Figure(figsize=(1, 6))
             # when moving to ubuntu 18.04 and remove add_subplots
             # ax = fig.subplots()
             ax = fig.add_subplot(121)
