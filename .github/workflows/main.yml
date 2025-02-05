@@ -12,10 +12,10 @@ env:
 
 jobs:
   main:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
-        python-version: [3.8]
+        python-version: ["3.10"]
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
@@ -27,6 +27,8 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y software-properties-common
         sudo add-apt-repository ppa:ubuntugis/ppa
+        sudo apt-get update
+        sudo add-apt-repository ppa:gcpp-kalxas/wmo-staging
         sudo apt-get update
         sudo apt-get install -y git curl dh-python debhelper devscripts fakeroot
         sudo apt-get install -y gdal-bin libgdal-dev mapserver-bin python3-all python3-pip python3-click python3-gdal python3-mappyfile python3-mapscript python3-matplotlib python3-numpy python3-pyproj python3-yaml proj-bin proj-data
