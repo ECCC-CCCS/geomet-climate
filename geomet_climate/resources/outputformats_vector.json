@@ -1,0 +1,33 @@
+[{
+    "__type__": "outputformat",
+    "name": "CSV",
+    "driver": "OGR/CSV",
+    "mimetype": "text/csv",
+    "formatoption": [
+        "LCO:GEOMETRY=AS_YX",
+        "STORAGE=filesystem",
+        "FORM=simple",
+        "FILENAME=result.csv"
+    ]
+}, {
+    "__type__": "outputformat",
+    "name": "SHAPE-ZIP",
+    "driver": "OGR/ESRI Shapefile",
+    "mimetype": "application/shapefile",
+    "formatoption": [
+        "STORAGE=filesystem",
+        "FORM=zip",
+        "FILENAME=result.zip"
+    ]
+
+}, {
+    "__type__": "outputformat",
+    "name": "GeoJSON",
+    "driver": "OGR/GeoJSON",
+    "mimetype": "application/json",
+    "formatoption": [
+        "STORAGE=memory",
+        "FORM=simple",
+        "FILENAME=result.json"
+    ]
+}]

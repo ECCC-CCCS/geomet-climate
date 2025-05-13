@@ -1,6 +1,7 @@
 ###############################################################################
 #
 # Copyright (C) 2018 Tom Kralidis
+# Copyright (C) 2025 Louis-Philippe Rousseau-Lambert
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -36,12 +37,19 @@ from geomet_climate import __version__
 from geomet_climate.env import (
     BASEDIR, CONFIG, DATADIR, OWS_DEBUG, OWS_LOG, URL, ES_URL)
 
-MAPFILE_BASE = '{}{}resources{}mapfile-base.json'.format(os.path.dirname(
-    os.path.realpath(__file__)), os.sep, os.sep)
+THISDIR = os.path.dirname(os.path.realpath(__file__))
+
+MAPFILE_BASE = os.path.join(
+    THISDIR,
+    'resources',
+    'mapfile-base.json')
+
+VECTOR_OUTPUT_FORMAT = os.path.join(
+    THISDIR,
+    'resources',
+    'outputformats_vector.json')
 
 LOGGER = logging.getLogger(__name__)
-
-THISDIR = os.path.dirname(os.path.realpath(__file__))
 
 MAPSERVER_CONFIG = f'''CONFIG
     ENV
@@ -466,12 +474,13 @@ def generate(ctx, service, layer):
                 with io.open(trf, encoding='utf-8') as template_raster:
                     template_raster = template_raster.read().replace('{}', key)
                     fh.write(template_raster)
+                for i in mapfile['outputformats']:
+                    if i['name'] == 'GeoJSON':
+                        i['formatoption'] = ['FILE={}'.format(template_path)]
             else:
-                template_tmp_name = 'TEMPLATE_{}.json'.format(key)
-                tvf = os.path.join(template_dir, template_tmp_name)
-                with io.open(tvf, encoding='utf-8') as template_vector:
-                    template_vector = template_vector.read().replace('{}', key)
-                    fh.write(template_vector)
+                template_path = f'{key}.js'
+                with io.open(VECTOR_OUTPUT_FORMAT) as vector_output:
+                    mapfile['outputformats'] = json.load(vector_output)
 
         layers = gen_layer(key, value, template_path, service)
 
@@ -481,10 +490,6 @@ def generate(ctx, service, layer):
 
         filename = 'geomet-climate-{}-{}.map'.format(service, key)
         filepath = '{}{}{}'.format(output_dir, os.sep, filename)
-
-        for i in mapfile['outputformats']:
-            if i['name'] == 'GeoJSON':
-                i['formatoption'] = ['FILE={}'.format(template_path)]
 
         with io.open(filepath, 'w') as fh:
             mappyfile.dump(mapfile, fh)
