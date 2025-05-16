@@ -11,8 +11,8 @@ ENV BASEDIR=/data/web/geomet-climate-nightly \
     GEOMET_CLIMATE_URL=${GEOMET_CLIMATE_URL} \
     # GEOMET_CLIMATE_ES_USERNAME=foo
     # GEOMET_CLIMATE_ES_PASSWORD=bar
-    # ES credentials loaded from host env
-    GEOMET_CLIMATE_ES_URL=https://${GEOMET_CLIMATE_ES_USERNAME}:${GEOMET_CLIMATE_ES_PASSWORD}@localhost:9200 \
+    # ES credentials and GEOMET_CLIMATE_ES_URL loaded from host env
+    GEOMET_CLIMATE_ES_URL=https://username:password@localhost:9200 \
     GEOMET_CLIMATE_OWS_DEBUG=5
     # GEOMET_CLIMATE_OWS_LOG=/tmp/geomet-climate-ows.log
 ENV DEBIAN_FRONTEND=noninteractive
@@ -25,7 +25,7 @@ RUN apt update && apt install -y software-properties-common && \
     ## Add this UbuntuGIS PPA (mappyfile)
     add-apt-repository ppa:ubuntugis/ppa && apt update && \
     ## Add this WMO PPA (mapserver)
-    add-apt-repository ppa:gcpp-kalxas/wmo-staging && apt update && \
+    add-apt-repository ppa:gcpp-kalxas/wmo && apt update && \
     ## Install dependencies from debian/control
     apt install -y mapserver-bin python3-all python3-pip python3-click python3-gdal python3-mappyfile python3-mapscript python3-matplotlib python3-numpy python3-pyproj python3-yaml proj-bin proj-data python3-certifi && \
     # remove transient packages

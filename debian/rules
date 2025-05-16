@@ -14,3 +14,9 @@
 
 override_dh_auto_test:
 	@echo "nocheck set, not running tests"
+
+# clean up the test data files
+override_dh_clean:
+	dh_clean
+	find tests/data -name '*.tif' -delete
+	find tests/data -name '*.nc' -delete
