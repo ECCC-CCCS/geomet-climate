@@ -1,3 +1,10 @@
+geomet-climate (1.14.0) jammy; urgency=medium
+  * Stable release
+  * Added GFI in json for station layers
+  * mapserv to use -conf option
+
+ -- Kevin Ngai <kevin.ngai@ec.gc.ca>  Thu, 29 May 2025 15:44:00 +0000
+
 geomet-climate (1.13.0) jammy; urgency=medium
   * Testing unstable release
   * Changes for Ubuntu:jammy
