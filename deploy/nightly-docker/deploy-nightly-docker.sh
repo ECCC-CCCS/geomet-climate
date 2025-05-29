@@ -59,7 +59,7 @@ mkdir $NIGHTLYDIR && cd $NIGHTLYDIR
 git clone $GEOMET_CLIMATE_GITREPO . -b master --depth=1
 
 echo "Stopping/building/starting Docker setup"
-docker compose -f docker/docker-compose.yml -f docker/docker-compose.override.yml build --no-cache
+docker compose -f docker/docker-compose.yml -f docker/docker-compose.override.yml build --no-cache | tee docker-build.log
 docker compose -f docker/docker-compose.yml -f docker/docker-compose.override.yml down
 docker compose -f docker/docker-compose.yml -f docker/docker-compose.override.yml up -d
 
