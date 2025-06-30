@@ -108,8 +108,25 @@ def application(env, start_response):
     layer = None
     mapfile_ = None
 
-    request = mapscript.OWSRequest()
-    request.loadParams()
+    text = '''Veuillez spécifier une requête respectant le standard WMS, WFS ou WCS. 
+    Pour davantage d\'information sur les services web géospatiaux GeoMet 
+    du Service météorologique du Canada, veuillez visiter 
+    https://www.canada.ca/fr/environnement-changement-climatique/services/conditions-meteorologiques-ressources-outils-generaux/outils-donnees-specialisees/services-web-geospatiaux.html / '  # noqa
+    Please specify a request according to the WMS, WFS or WCS standards. 
+    For more information on the Meteorological Service of Canada GeoMet 
+    Geospatial Web Services, please visit 
+    https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/weather-tools-specialized-data/geospatial-web-services.html'''  # noqa
+
+    if not os.environ['QUERY_STRING']:
+        response = get_custom_service_exception('MissingParameterValue',
+                                                'request',
+                                                text)
+
+        start_response('200 OK', [('Content-type', 'text/xml')])
+        return [response]
+    else:
+        request = mapscript.OWSRequest()
+        request.loadParams()
 
     lang_ = request.getValueByName('LANG')
     service_ = request.getValueByName('SERVICE')
