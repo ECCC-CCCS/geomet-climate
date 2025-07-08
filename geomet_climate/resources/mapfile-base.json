@@ -14,6 +14,15 @@
     "projection": ["init=epsg:4326"],
     "outputformats": [{
         "__type__": "outputformat",
+        "name": "PNG",
+        "driver": "AAG/PNG",
+        "mimetype": "image/png",
+        "imagemode": "RGB",
+        "extension": "png",
+        "formatoption": ["GAMMA=0.75"],
+        "transparent": true
+    },{
+        "__type__": "outputformat",
         "name": "GEOTIFF_32",
         "driver": "GDAL/GTiff",
         "mimetype": "image/tiff",
@@ -45,7 +54,8 @@
             "__type__": "label",
             "size": 10,
             "color": [0, 0, 0]
-        }
+        },
+        "transparent": false
     },
     "web": {
         "__type__": "web",
