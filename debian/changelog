@@ -1,3 +1,11 @@
+geomet-climate (1.16.0) jammy; urgency=medium
+
+  * Update WSGI application to return exception if QUERY_STRING is empty
+  * Ensure WMS GetMap requests in PNG are transparent by default
+  * Ensure WMS GetLegendGraphic are not transparent by default
+
+ -- Kevin Ngai <kevin.ngai@ec.gc.ca>  Fri, 11 Jul 2025 10:11:42 +0000
+
 geomet-climate (1.14.0) jammy; urgency=medium
   * Stable release
   * Added GFI in json for station layers
