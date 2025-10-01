@@ -15,7 +15,7 @@
     "outputformats": [{
         "__type__": "outputformat",
         "name": "PNG",
-        "driver": "AAG/PNG",
+        "driver": "AGG/PNG",
         "mimetype": "image/png",
         "imagemode": "RGB",
         "extension": "png",
