@@ -1,9 +1,3 @@
-geomet-climate (1.16.1) jammy; urgency=medium
-
-  * Fixed typo in PNG outputformat driver name
-
- -- Kevin Ngai <kevin.ngai@ec.gc.ca>  Fri, 20 Mar 2026 16:00:49 +0000
-
 geomet-climate (1.16.0) jammy; urgency=medium
 
   * Update WSGI application to return exception if QUERY_STRING is empty
