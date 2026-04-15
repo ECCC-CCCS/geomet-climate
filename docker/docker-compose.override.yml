@@ -7,4 +7,6 @@ services:
       GEOMET_CLIMATE_OWS_DEBUG: 5
       GEOMET_CLIMATE_ES_URL: http://${GEOMET_CLIMATE_ES_USERNAME}:${GEOMET_CLIMATE_ES_PASSWORD}@localhost:9200
     ports:
-      - "8099:8099"
+    # Not needed with network_mode: host
+    # ports:
+    #   - "8099:8099"
