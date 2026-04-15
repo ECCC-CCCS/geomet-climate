@@ -1,7 +1,7 @@
 FROM ubuntu:jammy
 
 # Allow for change during docker build-time
-ARG GEOMET_CLIMATE_URL=https://geomet-dev-31-nightly.edc-mtl.ec.gc.ca/geomet-climate
+ARG GEOMET_CLIMATE_URL=https://geomet-dev-32-nightly.edc-mtl.ec.gc.ca/geomet-climate
 
 ENV BASEDIR=/data/web/geomet-climate-nightly \
     DOCKERDIR=/data/web/geomet-climate-nightly/docker \
