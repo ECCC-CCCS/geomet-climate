@@ -2,9 +2,11 @@ services:
   geomet-climate-nightly:
     build:
       args:
-        GEOMET_CLIMATE_URL: https://geomet-dev-31-nightly.edc-mtl.ec.gc.ca/geomet-climate
+        GEOMET_CLIMATE_URL: https://geomet-dev-32-nightly.edc-mtl.ec.gc.ca/geomet-climate
     environment:
       GEOMET_CLIMATE_OWS_DEBUG: 5
       GEOMET_CLIMATE_ES_URL: http://${GEOMET_CLIMATE_ES_USERNAME}:${GEOMET_CLIMATE_ES_PASSWORD}@localhost:9200
     ports:
-      - "8099:8099"
+    # Not needed with network_mode: host
+    # ports:
+    #   - "8099:8099"
