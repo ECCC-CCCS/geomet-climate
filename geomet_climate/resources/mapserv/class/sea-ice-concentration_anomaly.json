@@ -1,9 +1,9 @@
 [
   {
     "__type__": "class",
-    "name": "-40.0 -36.0",
+    "name": "-100.0 -90.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] <  -36.0)",
+    "expression": "([pixel] <  -90.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -15,16 +15,16 @@
         37
       ],
       "datarange": [
-        -50.0,
-        -36.0
+        -100.0,
+        -90.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "-36.0 -32.0",
+    "name": "-90.0 -80.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= -36.0 AND [pixel] <  -32.0)",
+    "expression": "([pixel] >= -90.0 AND [pixel] <  -80.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -36,16 +36,16 @@
         43
       ],
       "datarange": [
-        -36.0,
-        -32.0
+        -90.0,
+        -80.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "-32.0 -28.0",
+    "name": "-80.0 -70.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= -32.0 AND [pixel] <  -28.0)",
+    "expression": "([pixel] >= -80.0 AND [pixel] <  -70.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -57,16 +57,16 @@
         60
       ],
       "datarange": [
-        -32.0,
-        -28.0
+        -80.0,
+        -70.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "-28.0 -24.0",
+    "name": "-70.0 -60.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= -28.0 AND [pixel] <  -24.0)",
+    "expression": "([pixel] >= -70.0 AND [pixel] <  -60.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -78,16 +78,16 @@
         77
       ],
       "datarange": [
-        -28.0,
-        -24.0
+        -70.0,
+        -60.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "-24.0 -20.0",
+    "name": "-60.0 -50.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= -24.0 AND [pixel] <  -20.0)",
+    "expression": "([pixel] >= -60.0 AND [pixel] <  -50.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -99,16 +99,16 @@
         103
       ],
       "datarange": [
-        -24.0,
-        -20.0
+        -60.0,
+        -50.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "-20.0 -16.0",
+    "name": "-50.0 -40.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= -20.0 AND [pixel] <  -16.0)",
+    "expression": "([pixel] >= -50.0 AND [pixel] <  -40.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -120,16 +120,16 @@
         130
       ],
       "datarange": [
-        -20.0,
-        -16.0
+        -50.0,
+        -40.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "-16.0 -12.0",
+    "name": "-40.0 -30.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= -16.0 AND [pixel] <  -12.0)",
+    "expression": "([pixel] >= -40.0 AND [pixel] <  -30.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -141,16 +141,16 @@
         164
       ],
       "datarange": [
-        -16.0,
-        -12.0
+        -40.0,
+        -30.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "-12.0 -8.0",
+    "name": "-30.0 -20.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= -12.0 AND [pixel] <  -8.0)",
+    "expression": "([pixel] >= -30.0 AND [pixel] <  -20.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -162,16 +162,16 @@
         199
       ],
       "datarange": [
-        -12.0,
-        -8.0
+        -30.0,
+        -20.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "-8.0 -4.0",
+    "name": "-20.0 -10.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= -8.0 AND [pixel] <  -4.0)",
+    "expression": "([pixel] >= -20.0 AND [pixel] <  -10.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -183,16 +183,16 @@
         227
       ],
       "datarange": [
-        -8.0,
-        -4.0
+        -20.0,
+        -10.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "-4.0 0.0",
+    "name": "-10.0 0.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= -4.0 AND [pixel] <  0.0)",
+    "expression": "([pixel] >= -10.0 AND [pixel] <  0.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -204,16 +204,16 @@
         255
       ],
       "datarange": [
-        -4.0,
+        -10.0,
         0.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "0.0 4.0",
+    "name": "0.0 10.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= 0.0 AND [pixel] <  4.0)",
+    "expression": "([pixel] >= 0.0 AND [pixel] <  10.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -226,15 +226,15 @@
       ],
       "datarange": [
         0.0,
-        4.0
+        10.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "4.0 8.0",
+    "name": "10.0 20.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= 4.0 AND [pixel] <  8.0)",
+    "expression": "([pixel] >= 10.0 AND [pixel] <  20.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -246,16 +246,16 @@
         240
       ],
       "datarange": [
-        4.0,
-        8.0
+        10.0,
+        20.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "8.0 12.0",
+    "name": "20.0 30.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= 8.0 AND [pixel] <  12.0)",
+    "expression": "([pixel] >= 20.0 AND [pixel] <  30.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -267,16 +267,16 @@
         231
       ],
       "datarange": [
-        8.0,
-        12.0
+        20.0,
+        30.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "12.0 16.0",
+    "name": "30.0 40.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= 12.0 AND [pixel] <  16.0)",
+    "expression": "([pixel] >= 30.0 AND [pixel] <  40.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -288,16 +288,16 @@
         222
       ],
       "datarange": [
-        12.0,
-        16.0
+        30.0,
+        40.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "16.0 20.0",
+    "name": "40.0 50.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= 16.0 AND [pixel] <  20.0)",
+    "expression": "([pixel] >= 40.0 AND [pixel] <  50.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -309,16 +309,16 @@
         208
       ],
       "datarange": [
-        16.0,
-        20.0
+        40.0,
+        50.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "20.0 24.0",
+    "name": "50.0 60.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= 20.0 AND [pixel] <  24.0)",
+    "expression": "([pixel] >= 50.0 AND [pixel] <  60.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -330,16 +330,16 @@
         195
       ],
       "datarange": [
-        20.0,
-        24.0
+        50.0,
+        60.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "24.0 28.0",
+    "name": "60.0 70.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= 24.0 AND [pixel] <  28.0)",
+    "expression": "([pixel] >= 60.0 AND [pixel] <  70.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -351,16 +351,16 @@
         183
       ],
       "datarange": [
-        24.0,
-        28.0
+        60.0,
+        70.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "28.0 32.0",
+    "name": "70.0 80.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= 28.0 AND [pixel] <  32.0)",
+    "expression": "([pixel] >= 70.0 AND [pixel] <  80.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -372,16 +372,16 @@
         172
       ],
       "datarange": [
-        28.0,
-        32.0
+        70.0,
+        80.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "32.0 36.0",
+    "name": "80.0 90.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= 32.0 AND [pixel] <  36.0)",
+    "expression": "([pixel] >= 80.0 AND [pixel] <  90.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -393,16 +393,16 @@
         134
       ],
       "datarange": [
-        32.0,
-        36.0
+        80.0,
+        90.0
       ]
     }
   },
   {
     "__type__": "class",
-    "name": "36.0 40.0",
+    "name": "90.0 100.0",
     "group": "SEAICECONCENTRATION-ANOMALY",
-    "expression": "([pixel] >= 36.0)",
+    "expression": "([pixel] >= 90.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -414,8 +414,8 @@
         97
       ],
       "datarange": [
-        36.0,
-        50.0
+        90.0,
+        100.0
       ]
     }
   }
