@@ -1,3 +1,10 @@
+geomet-climate (1.16.2) jammy; urgency=medium
+
+  * fix legend for hot days (TN20 and TX30 styles)
+  * extend datarange from 40 to 100 for sea ice concentration
+
+ -- Tom Kralidis <tom.kralidis@ec.gc.ca>  Mon, 01 Jun 2026 13:06:22 +0000
+
 geomet-climate (1.16.1) jammy; urgency=medium
 
   * Fixed typo in PNG outputformat driver name

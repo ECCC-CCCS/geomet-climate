@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# Copyright (C) 2018 Tom Kralidis
+# Copyright (C) 2026 Tom Kralidis
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
 #
 ###############################################################################
 
-__version__ = '1.16.1'
+__version__ = '1.16.2'
 
 import click
 
