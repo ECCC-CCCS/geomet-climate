@@ -1,9 +1,9 @@
 [
   {
     "__type__": "class",
-    "name": "50",
+    "name": "< 50",
     "group": "GSW",
-    "expression": "([pixel] >= 50 and [pixel] < 51)",
+    "expression": "([pixel] < 50)",
     "style": {
       "__type__": "style",
       "color": [
@@ -17,7 +17,7 @@
     "__type__": "class",
     "name": "50 — 100",
     "group": "GSW",
-    "expression": "([pixel] >= 51 AND [pixel] < 100)",
+    "expression": "([pixel] >= 50 AND [pixel] < 100)",
     "style": {
       "__type__": "style",
       "color": [
@@ -31,7 +31,7 @@
     "__type__": "class",
     "name": "100 — 150",
     "group": "GSW",
-    "expression": "([pixel] >= 100 AND [pixel] <= 150 )",
+    "expression": "([pixel] >= 100 AND [pixel] < 150 )",
     "style": {
       "__type__": "style",
       "color": [

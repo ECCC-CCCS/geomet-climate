@@ -1,7 +1,7 @@
 [
   {
     "__type__": "class",
-    "name": "5",
+    "name": "< 5",
     "group": "TX30",
     "expression": "([pixel] < 5)",
     "style": {

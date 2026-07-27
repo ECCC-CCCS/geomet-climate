@@ -234,7 +234,7 @@
     "__type__": "class",
     "name": "22.0 24.0",
     "group": "PRECIPITATION-CMIP6",
-    "expression": "([pixel] >= 22.0)",
+    "expression": "([pixel] >= 22.0 AND [pixel] <  24.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -247,6 +247,27 @@
       ],
       "datarange": [
         22.0,
+        24.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": ">= 24.0",
+    "group": "PRECIPITATION-CMIP6",
+    "expression": "([pixel] >= 24.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        11,
+        58,
+        91,
+        11,
+        58,
+        91
+      ],
+      "datarange": [
+        24.0,
         45.0
       ]
     }

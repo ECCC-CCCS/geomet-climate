@@ -652,7 +652,7 @@
   },
   {
     "__type__": "class",
-    "name": "4650.0 4800.0",
+    "name": ">= 4650.0",
     "group": "PRECIPITATION",
     "expression": "([pixel] >= 4650.0)",
     "style": {
