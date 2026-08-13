@@ -1,6 +1,25 @@
-
-
 [
+  {
+    "__type__": "class",
+    "name": "< -2.5",
+    "group": "TEMP-ANOMALIES",
+    "expression": "([pixel] < -2.5)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        10,
+        40,
+        100,
+        10,
+        40,
+        100
+      ],
+      "datarange": [
+        -15.0,
+        -2.5
+      ]
+    }
+  },
   {
     "__type__": "class",
     "name": "-2.5 -1.5",
@@ -17,7 +36,7 @@
         217
       ],
       "datarange": [
-        -15,
+        -2.5,
         -1.5
       ]
     }
@@ -612,7 +631,7 @@
   },
   {
     "__type__": "class",
-    "name": "12.5 13",
+    "name": ">= 12.5",
     "group": "TEMP-ANOMALIES",
     "expression": "([pixel] >= 12.5)",
     "style": {

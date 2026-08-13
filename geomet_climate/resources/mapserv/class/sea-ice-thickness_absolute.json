@@ -150,7 +150,7 @@
     "__type__": "class",
     "name": "7.0 8.0",
     "group": "SEAICETHICKNESS-ABSOLUTE",
-    "expression": "([pixel] >= 7.0)",
+    "expression": "([pixel] >= 7.0 AND [pixel] <  8.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -163,6 +163,27 @@
       ],
       "datarange": [
         7.0,
+        8.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": ">= 8.0",
+    "group": "SEAICETHICKNESS-ABSOLUTE",
+    "expression": "([pixel] >= 8.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        255,
+        32,
+        32,
+        255,
+        32,
+        32
+      ],
+      "datarange": [
+        8.0,
         35.0
       ]
     }

@@ -1,9 +1,30 @@
 [
   {
     "__type__": "class",
+    "name": "< -100",
+    "group": "SNOWDEPTH-ANOMALY",
+    "expression": "([pixel] >= -999 AND [pixel] <  -100)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        103,
+        0,
+        31,
+        103,
+        0,
+        31
+      ],
+      "datarange": [
+        -300,
+        -100
+      ]
+    }
+  },
+  {
+    "__type__": "class",
     "name": "-100 -90",
     "group": "SNOWDEPTH-ANOMALY",
-    "expression": "([pixel] >= -999 AND [pixel] <  -90)",
+    "expression": "([pixel] >= -100 AND [pixel] <  -90)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -15,7 +36,7 @@
         37
       ],
       "datarange": [
-        -300,
+        -100,
         -90
       ]
     }
@@ -402,7 +423,7 @@
     "__type__": "class",
     "name": "90 100",
     "group": "SNOWDEPTH-ANOMALY",
-    "expression": "([pixel] >= 90)",
+    "expression": "([pixel] >= 90 AND [pixel] < 100)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -415,7 +436,28 @@
       ],
       "datarange": [
         90,
-        250
+        100
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": "> 100",
+    "group": "SNOWDEPTH-ANOMALY",
+    "expression": "([pixel] >= 100)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        5,
+        48,
+        97,
+        5,
+        48,
+        97
+      ],
+      "datarange": [
+        100,
+        300
       ]
     }
   }

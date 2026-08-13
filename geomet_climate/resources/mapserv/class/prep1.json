@@ -1,9 +1,9 @@
 [
   {
     "__type__": "class",
-    "name": "<= 10",
+    "name": "< 10",
     "group": "PREP1",
-    "expression": "([pixel] <= 10)",
+    "expression": "([pixel] < 10)",
     "style": {
       "__type__": "style",
       "color": [
@@ -17,7 +17,7 @@
     "__type__": "class",
     "name": "10 — 20",
     "group": "PREP1",
-    "expression": "([pixel] > 10 AND [pixel] < 20)",
+    "expression": "([pixel] >= 10 AND [pixel] < 20)",
     "style": {
       "__type__": "style",
       "color": [

@@ -21,6 +21,7 @@ import io
 import json
 import logging
 import os
+import re
 
 import click
 import matplotlib as mpl
@@ -34,6 +35,8 @@ from geomet_climate.env import BASEDIR, CONFIG
 LOGGER = logging.getLogger(__name__)
 
 THISDIR = os.path.dirname(os.path.realpath(__file__))
+
+NUMERIC_VALUE_RE = r'[-+]?\d*\.?\d+([eE][-+]?\d+)?|[-+]?\d+([eE][-+]?\d+)?'
 
 
 def generate_legend(layer_info, output_dir):
@@ -77,15 +80,39 @@ def generate_legend(layer_info, output_dir):
                 color_arr.append(color)
 
         if linear:
-            min_value = style_json[0]['name'].split(' ')[0]
+            discrete = False
+            # if starts with a symbol, get lower bound from next class
+            if re.search(r'-?\d+\.?\d*', style_json[0]['name'].split(' ')[0]):
+                min_value = style_json[0]['name'].split(' ')[0]
+            else:
+                min_value = style_json[1]['name'].split(' ')[0]
+
             max_value = style_json[-1]['name'].split(' ')[-1]
+            max_value_first_part = style_json[-1]['name'].split(' ')[0]
+            min_value_first_part = style_json[0]['name'].split(' ')[0]
+            min_value_number_part = re.search(NUMERIC_VALUE_RE, min_value)
+            max_value_numer_part = re.search(NUMERIC_VALUE_RE, max_value)
+
+            if min_value_number_part:
+                min_value = min_value_number_part.group()
+            else:
+                if len(style_json[0]['name'].split(' ')) >= 2:
+                    min_value = style_json[0]['name'].split(' ')[1]
+
+            if max_value_numer_part:
+                max_value = max_value_numer_part.group()
+            else:
+                max_value = style_json[-1]['name'].split(' ')[-2]
 
             fig = Figure(figsize=(1, 5))
             # when moving to ubuntu 18.04 and remove add_subplots
             # ax = fig.subplots()
             ax = fig.add_subplot(121)
 
-            all_vals = np.array([[0, 0, 0, 1]])
+            all_vals = np.array([[color_arr[0][0] / 256.0,
+                                color_arr[0][1] / 256.0,
+                                color_arr[0][2] / 256.0,
+                                1]])
 
             for i in range(0, len(color_arr) - 1):
                 # number of interpolated values between 2 color ramps
@@ -109,7 +136,21 @@ def generate_legend(layer_info, output_dir):
             newcmp = mpl.colors.ListedColormap(all_vals)
             norm = mpl.colors.Normalize(vmin=float(min_value),
                                         vmax=float(max_value))
-            cb = mpl.colorbar.ColorbarBase(ax, cmap=newcmp, norm=norm)
+            # Arrow cap only on the ends that are open-ended.
+            min_open = min_value_first_part in ['<', '<=']
+            max_open = max_value_first_part in ['>', '>=']
+            if min_open and max_open:
+                extend = 'both'
+            elif max_open:
+                extend = 'max'
+            elif min_open:
+                extend = 'min'
+            else:
+                extend = 'neither'
+
+            cb = mpl.colorbar.ColorbarBase(
+                ax, cmap=newcmp, norm=norm, extend=extend
+            )
 
         if discrete:
             bounds = layer_info['bounds']
@@ -132,14 +173,33 @@ def generate_legend(layer_info, output_dir):
                         1]]
                 all_vals = np.concatenate((all_vals, vals))
 
-            cmap = mpl.colors.ListedColormap(all_vals[1:-1])
-            cmap.set_over(all_vals[-1])
-            cmap.set_under(all_vals[0])
+            # Reserve an arrow-cap color only on ends that are open-ended.
+            min_value_first_part = style_json[0]['name'].split(' ')[0]
+            max_value_first_part = style_json[-1]['name'].split(' ')[0]
+            min_open = min_value_first_part in ['<', '<=']
+            max_open = max_value_first_part in ['>', '>=']
+
+            if min_open and max_open:
+                cmap = mpl.colors.ListedColormap(all_vals[1:-1])
+                cmap.set_under(all_vals[0])
+                cmap.set_over(all_vals[-1])
+                extend = 'both'
+            elif max_open:
+                cmap = mpl.colors.ListedColormap(all_vals[:-1])
+                cmap.set_over(all_vals[-1])
+                extend = 'max'
+            elif min_open:
+                cmap = mpl.colors.ListedColormap(all_vals[1:])
+                cmap.set_under(all_vals[0])
+                extend = 'min'
+            else:
+                cmap = mpl.colors.ListedColormap(all_vals)
+                extend = 'neither'
 
             norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
             cb = mpl.colorbar.ColorbarBase(ax, cmap=cmap,
                                            norm=norm,
-                                           extend='both',
+                                           extend=extend,
                                            extendfrac='auto',
                                            ticks=bounds,
                                            spacing='uniform')

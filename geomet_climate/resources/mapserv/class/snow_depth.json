@@ -1,7 +1,7 @@
 [
   {
     "__type__": "class",
-    "name": "-1.5 -1.125",
+    "name": "<  -1.125",
     "group": "SNOWDEPTH-ABSOLUTE",
     "expression": "([pixel] <  -1.125)",
     "style": {
@@ -148,7 +148,7 @@
   },
   {
     "__type__": "class",
-    "name": "1.125 1.5",
+    "name": ">= 1.125",
     "group": "SNOWDEPTH-ABSOLUTE",
     "expression": "([pixel] >= 1.125)",
     "style": {
