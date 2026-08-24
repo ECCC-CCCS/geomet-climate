@@ -1,7 +1,7 @@
 [
   {
     "__type__": "class",
-    "name": "-31.5 -28.0",
+    "name": "< -28.0",
     "group": "SEAICECONCENTRATION-ABSOLUTE",
     "expression": "([pixel] <  -28.0)",
     "style": {
@@ -316,7 +316,7 @@
   },
   {
     "__type__": "class",
-    "name": "28.0 31.5",
+    "name": ">= 28.0",
     "group": "SEAICECONCENTRATION-ABSOLUTE",
     "expression": "([pixel] >= 28.0)",
     "style": {

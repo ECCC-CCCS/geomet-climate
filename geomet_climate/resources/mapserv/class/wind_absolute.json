@@ -171,7 +171,7 @@
     "__type__": "class",
     "name": "16.0 18.0",
     "group": "SFCWINDSPEED-ABSOLUTE",
-    "expression": "([pixel] >= 16.0)",
+    "expression": "([pixel] >= 16.0 AND [pixel] <  18.0)",
     "style": {
       "__type__": "style",
       "colorrange": [
@@ -184,6 +184,27 @@
       ],
       "datarange": [
         16.0,
+        18.0
+      ]
+    }
+  },
+  {
+    "__type__": "class",
+    "name": ">= 18.0",
+    "group": "SFCWINDSPEED-ABSOLUTE",
+    "expression": "([pixel] >= 18.0)",
+    "style": {
+      "__type__": "style",
+      "colorrange": [
+        103,
+        0,
+        31,
+        103,
+        0,
+        31
+      ],
+      "datarange": [
+        18.0,
         45.0
       ]
     }
